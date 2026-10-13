@@ -1,0 +1,18 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "notes": false
+    }
+  }
+}

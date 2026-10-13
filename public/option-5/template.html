@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PAGE TITLE FROM docs/COPY.md</title>
+<meta name="description" content="META DESCRIPTION FROM docs/COPY.md">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#161314">
+<link rel="icon" href="../shared/brand/favicon.png">
+<link rel="preload" href="../shared/fonts/Neco-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../shared/fonts/fonts.css">
+<link rel="stylesheet" href="../shared/motion.css">
+<link rel="stylesheet" href="css/site.css">
+<script type="module" blocking="render">import { init } from '../shared/motion.js'; init();</script>
+</head>
+<!-- Option 5 "The Archive": an empty inner page. Copy this file, then:
+     1. <title> and meta description from docs/COPY.md.
+     2. aria-current="page": pass it on the right corner link, menu print and footer link (search for aria-current).
+     3. Add data-prices to <body> if the page shows a price (shop.html, product.html).
+     4. Build the page inside <main>. Components and page plans: docs/option-5/DESIGN.md.
+     product.html also needs the two extra <head> lines from the top of ../shared/motion.js (THE PIECE). -->
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="corners" aria-label="Site">
+  <a class="corner corner--tl" href="index.html"><img src="../shared/brand/logo-white-v1-400.webp" width="400" height="298" alt="The Global Collage"></a>
+  <a class="corner corner--tr" href="shop.html" data-pull>Shop</a>
+  <button class="corner corner--bl" type="button" data-menu-open data-pull aria-haspopup="dialog" aria-controls="menu" commandfor="menu" command="show-modal">Menu</button>
+  <button class="corner corner--br" type="button" data-cart-open data-pull aria-haspopup="dialog" aria-controls="cart">Cart <span class="corner__count" data-cart-count>0</span></button>
+</nav>
+
+<main id="main">
+
+  <!-- The page opening: h1 and intro in the middle of a few of her things. data-table makes the objects
+       movable, data-scroll makes them (and the words) slide away as the page moves on. -->
+  <section class="opening" data-table data-scroll aria-labelledby="page-h">
+    <div class="opening__copy">
+      <h1 class="t-hero" id="page-h" data-words>Page title</h1>
+      <p class="opening__intro lead">The page's intro line from docs/COPY.md.</p>
+    </div>
+    <div class="objs" aria-hidden="true">
+    <div class="obj" style="--x:4%;--y:44%;--w:15vw;--r:-7deg;--d:1.2;--ox:-40vw;--oy:6vh;--i:0;--xm:-6%;--ym:66%;--wm:30vw"><img src="../shared/img/cutouts/lips-960.webp" srcset="../shared/img/cutouts/lips-480.webp 480w, ../shared/img/cutouts/lips-960.webp 960w" sizes="(max-width: 699px) 30vw, 15vw" width="960" height="835" alt="" decoding="async"></div>
+    <div class="obj" style="--x:80%;--y:30%;--w:14vw;--r:6deg;--d:.9;--ox:40vw;--oy:-8vh;--i:1;--xm:70%;--ym:8%;--wm:30vw"><img src="../shared/img/cutouts/cactus-960.webp" srcset="../shared/img/cutouts/cactus-480.webp 480w, ../shared/img/cutouts/cactus-960.webp 960w" sizes="(max-width: 699px) 30vw, 14vw" width="960" height="1150" alt="" decoding="async"></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="needs-content">This page is built next</div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <a href="index.html"><img class="foot__logo" src="../shared/brand/logo-white-v1-400.webp" srcset="../shared/brand/logo-white-v1-400.webp 400w, ../shared/brand/logo-white-v1-1000.webp 1000w" sizes="210px" width="1000" height="744" alt="The Global Collage" loading="lazy" decoding="async"></a>
+      <p class="foot__base">Based in Miami, available in the US</p>
+    </div>
+    <nav class="foot__nav" aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><span class="is-soon">Services <small>soon</small></span></li>
+        <li><span class="is-soon">Exhibition <small>soon</small></span></li>
+        <li><span class="is-soon">Commissions <small>soon</small></span></li>
+        <li><span class="is-soon">Contact <small>soon</small></span></li>
+      </ul>
+    </nav>
+    <div class="foot__contact">
+      <ul>
+        <li><a href="mailto:theglobalcollage@gmail.com">theglobalcollage@gmail.com</a></li>
+        <li><a href="tel:+13053353506">+1 (305) 335-3506</a></li>
+        <li><a href="https://www.instagram.com/theglobalcollage/" rel="noopener">@theglobalcollage</a></li>
+      </ul>
+      <form class="join" data-newsletter>
+        <label class="field__label" for="foot-email">Email</label>
+        <div class="join__row">
+          <input class="input" id="foot-email" name="email" type="email" autocomplete="email" required>
+          <button class="btn btn--line btn--plain" type="submit">Join</button>
+        </div>
+      </form>
+    </div>
+    <p class="foot__legal"><span class="is-soon">Shipping &amp; Returns <small>soon</small></span> <span class="is-soon">Privacy <small>soon</small></span></p>
+  </div>
+</footer>
+
+<dialog class="menu" id="menu" aria-label="Menu">
+  <nav aria-label="Pages">
+    <ul class="menu__prints">
+      <li style="--i:0"><a class="mprint" href="index.html"><span class="print print--crop mprint__pic" style="--pos:48% 47%"><img src="../shared/img/collage-photos/bw-100-960.webp" srcset="../shared/img/collage-photos/bw-100-480.webp 480w, ../shared/img/collage-photos/bw-100-960.webp 960w" sizes="(max-width: 699px) 44vw, 18vw" width="3674" height="2449" alt="Camila's ringed hands arranging sliced magazine faces beside her green cutting mat" loading="lazy" decoding="async"></span><span class="mprint__name"><span>Home</span></span></a></li>
+      <li style="--i:1"><a class="mprint" href="about.html"><span class="print print--crop mprint__pic" style="--pos:48% 22%"><img src="../shared/img/about/portrait/cami-754-960.webp" srcset="../shared/img/about/portrait/cami-754-480.webp 480w, ../shared/img/about/portrait/cami-754-960.webp 960w" sizes="(max-width: 699px) 44vw, 18vw" width="1901" height="1832" alt="Camila in a white shirt against a dark backdrop" loading="lazy" decoding="async"></span><span class="mprint__name"><span>About</span></span></a></li>
+      <li style="--i:2"><a class="mprint" href="shop.html"><span class="print print--crop mprint__pic" style="--pos:59% 40%"><img src="../shared/img/shop/originals/female-cactus-960.webp" srcset="../shared/img/shop/originals/female-cactus-480.webp 480w, ../shared/img/shop/originals/female-cactus-960.webp 960w" sizes="(max-width: 699px) 44vw, 18vw" width="4866" height="5706" alt="Female Cactus, a collage of a green cactus with pink flowers" loading="lazy" decoding="async"></span><span class="mprint__name"><span>Shop</span></span></a></li>
+      <li style="--i:3"><div class="mprint is-soon"><span class="print print--crop mprint__pic" style="--pos:60% 53%"><img src="../shared/img/collage-photos/bw-119-960.webp" srcset="../shared/img/collage-photos/bw-119-480.webp 480w, ../shared/img/collage-photos/bw-119-960.webp 960w" sizes="(max-width: 699px) 44vw, 18vw" width="2449" height="3674" alt="A face pieced together from magazine eyes and lips on the cutting mat" loading="lazy" decoding="async"></span><span class="mprint__name"><span>Services</span> <small class="mprint__soon">soon</small></span></div></li>
+      <li style="--i:4"><div class="mprint is-soon"><span class="print print--crop mprint__pic" style="--pos:57% 60%"><img src="../shared/img/exhibition/tripping-animals-2024/img-5709-960.webp" srcset="../shared/img/exhibition/tripping-animals-2024/img-5709-480.webp 480w, ../shared/img/exhibition/tripping-animals-2024/img-5709-960.webp 960w" sizes="(max-width: 699px) 44vw, 18vw" width="3024" height="4032" alt="Six framed collages on a block wall under a green neon sign" loading="lazy" decoding="async"></span><span class="mprint__name"><span>Exhibition</span> <small class="mprint__soon">soon</small></span></div></li>
+      <li style="--i:5"><div class="mprint is-soon"><span class="print print--crop mprint__pic" style="--pos:52% 78%"><img src="../shared/img/commissions/finished/feet-on-the-ground-960.webp" srcset="../shared/img/commissions/finished/feet-on-the-ground-480.webp 480w, ../shared/img/commissions/finished/feet-on-the-ground-960.webp 960w" sizes="(max-width: 699px) 44vw, 18vw" width="5046" height="6288" alt="Feet on the Ground, a finished commission" loading="lazy" decoding="async"></span><span class="mprint__name"><span>Commissions</span> <small class="mprint__soon">soon</small></span></div></li>
+      <li style="--i:6"><div class="mprint is-soon"><span class="print print--crop mprint__pic" style="--pos:50% 45%"><img src="../shared/img/collage-photos/bw-97-960.webp" srcset="../shared/img/collage-photos/bw-97-480.webp 480w, ../shared/img/collage-photos/bw-97-960.webp 960w" sizes="(max-width: 699px) 44vw, 18vw" width="3674" height="2449" alt="Camila sitting cross-legged among magazines, lifting a cut piece from a page" loading="lazy" decoding="async"></span><span class="mprint__name"><span>Contact</span> <small class="mprint__soon">soon</small></span></div></li>
+    </ul>
+  </nav>
+  <button class="corner corner--bl" type="button" data-menu-close commandfor="menu" command="close">Close</button>
+  <button class="corner corner--br" type="button" data-cart-open aria-haspopup="dialog" aria-controls="cart">Cart <span class="corner__count" data-cart-count>0</span></button>
+</dialog>
+
+<dialog class="cart" id="cart" aria-labelledby="cart-title">
+  <header class="cart__head">
+    <h2 class="cart__title" id="cart-title">Cart</h2>
+    <button class="cart__close" type="button" data-cart-close>Close</button>
+  </header>
+  <ul class="cart__lines" data-cart-lines hidden></ul>
+  <div class="cart__empty" data-cart-empty>
+    <img src="../shared/img/cutouts/meditator-480.webp" srcset="../shared/img/cutouts/meditator-480.webp 480w" sizes="130px" width="960" height="1544" alt="" loading="lazy" decoding="async">
+    <p>Your cart is empty.</p>
+    <a class="btn" href="shop.html">Explore the collection</a>
+  </div>
+  <footer class="cart__foot" data-cart-foot hidden>
+    <p class="cart__sum"><span>Subtotal</span> <span data-cart-subtotal></span></p>
+    <p class="cart__ship">Ships from Miami, insured, US only.</p>
+    <p class="cart__error" data-cart-error role="alert"></p>
+    <button class="btn btn--plain btn--wide cart__checkout" type="button" data-cart-checkout>Checkout</button>
+  </footer>
+</dialog>
+
+<script type="module" src="js/site.js"></script>
+</body>
+</html>

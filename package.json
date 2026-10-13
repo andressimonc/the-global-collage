@@ -1,0 +1,13 @@
+{
+  "name": "the-global-collage",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node dev/server.mjs",
+    "test": "node dev/shop.test.mjs && node dev/contact.test.mjs && node dev/notes.test.mjs",
+    "shot": "node tools/shot.mjs"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2"
+  }
+}

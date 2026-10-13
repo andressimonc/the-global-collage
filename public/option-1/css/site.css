@@ -1,0 +1,510 @@
+/* The Global Collage — Option 1, "The Cutting Mat".
+   The page is her work table seen from above: a drawn green cutting mat, with paper lying on it.
+   Order of this file: 1 tokens · 2 base · 3 the table (mat, sheets) · 4 paper pieces · 5 labels and tags ·
+   6 header · 7 footer · 8 forms · 9 motion · 10 HOME ONLY.   Spec: docs/option-1/DESIGN.md */
+
+/* ---------- 1. Tokens ---------- */
+:root {
+  --cobalt: #122FAB;      /* all type on paper */
+  --paper: #EFEDEA;       /* sheets, cards */
+  --white: #FBFAF7;       /* print borders, headline strips, tags: the brighter paper */
+  --ink: #231F20;         /* type on orange, black strips, footer ground */
+  --orange: #FF5630;      /* stickers and labels only, never text on paper */
+  --mat: #028B71;         /* the table */
+  --mat-line: rgba(247, 240, 180, .30);
+  --tape: rgba(234, 222, 184, .88);
+
+  --font-display: "Neco", Georgia, "Times New Roman", serif;
+  --font-body: "TT Interphases", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "TT Interphases Mono", ui-monospace, Menlo, monospace;
+
+  --u: 64px;                              /* one square of the mat */
+  --gutter: clamp(16px, 4vw, 56px);       /* page edge to content */
+  --edge: clamp(8px, 2.6vw, 38px);        /* page edge to a sheet of paper: the strip of mat left showing */
+  --wrap: 1240px;
+  --header-h: 80px;
+
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --shadow-flat: 0 1px 1px rgba(0, 20, 14, .30), 0 2px 5px rgba(0, 20, 14, .16);
+  --shadow-rest: 0 1px 1px rgba(0, 20, 14, .34), 0 9px 16px -7px rgba(0, 20, 14, .45);
+  --shadow-lift: 0 2px 3px rgba(0, 20, 14, .22), 0 30px 38px -14px rgba(0, 20, 14, .55);
+  --drop-flat: drop-shadow(0 1px 1px rgba(0, 20, 14, .34)) drop-shadow(0 3px 4px rgba(0, 20, 14, .16));
+  --drop-lift: drop-shadow(0 2px 2px rgba(0, 20, 14, .22)) drop-shadow(0 16px 14px rgba(0, 20, 14, .30));
+}
+@media (max-width: 1099px) { :root { --u: 56px; } }
+@media (max-width: 699px) { :root { --u: 44px; --header-h: 70px; } }
+
+/* ---------- 2. Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
+body {
+  margin: 0; position: relative;
+  font: 400 1.0625rem/1.55 var(--font-body); color: var(--cobalt);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  /* the mat: one pale line every --u, measured from the middle of the page; a soft light from the top left */
+  background-color: var(--mat);
+  background-image:
+    linear-gradient(to right, var(--mat-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--mat-line) 1px, transparent 1px),
+    radial-gradient(ellipse 90% 70% at 28% 0, rgba(255, 255, 255, .13), transparent 72%);
+  background-size: var(--u) var(--u), var(--u) var(--u), 100% 1300px;
+  background-position: calc(50% + var(--u) / 2) 0, 0 0, 0 0;
+  background-repeat: repeat, repeat, no-repeat;
+}
+/* the mat's printed ruler down the left edge, in the strip the sheets leave bare */
+body::before {
+  content: ""; position: absolute; z-index: 0; top: 0; bottom: 0; left: 0; width: 14px;
+  background: url("../img/ruler-y.svg") 0 0 / 34px calc(var(--u) * 160) repeat-y; opacity: .62; pointer-events: none;
+}
+@media (min-width: 1320px) { body::before { width: 34px; } }
+@media (max-width: 699px) { body::before { display: none; } }
+
+img { max-width: 100%; height: auto; }
+h1, h2, h3, p, ul, ol, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+::selection { background: var(--orange); color: var(--ink); }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.site-footer :focus-visible { outline-color: var(--white); }
+
+.skip { position: absolute; left: 12px; top: -80px; z-index: 100; padding: .7em 1em; background: var(--white); color: var(--cobalt); font-weight: 700; box-shadow: var(--shadow-rest); }
+.skip:focus { top: 12px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.body-lg { font-size: clamp(1.14rem, .95rem + .75vw, 1.5rem); line-height: 1.42; letter-spacing: -.005em; text-wrap: pretty; }
+.body-md { font-size: clamp(1.03rem, .98rem + .25vw, 1.19rem); line-height: 1.5; text-wrap: pretty; }
+/* the brand board's small label: mono capitals, widely tracked. One per section at most. */
+.mono-label { font: 500 .74rem/1.3 var(--font-mono); letter-spacing: .15em; text-transform: uppercase; }
+.text-link { font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: .22em; }
+.text-link:hover { text-decoration-color: var(--orange); }
+
+/* ---------- 3. The table ---------- */
+main { position: relative; z-index: 1; overflow-x: clip; }   /* turned paper may poke past the edge; never a sideways scroll */
+.wrap { width: min(100% - var(--gutter) * 2, var(--wrap)); margin-inline: auto; }
+section { position: relative; }
+
+/* a section where the mat shows; .ruled adds the mat's ruler along its top edge */
+.on-mat { padding-block: clamp(3.5rem, 7.5vw, 6.5rem); color: var(--white); }
+/* the first section of a page starts under the header strip (which floats over the table) */
+.page-top { padding-top: calc(var(--header-h) + clamp(2rem, 4.5vw, 4rem)); }
+.ruled::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 34px; pointer-events: none; opacity: .62;
+  background: url("../img/ruler-x.svg") 50% 0 / calc(var(--u) * 40) 34px no-repeat;   /* its 20 sits on the centre line */
+}
+
+/* a big sheet of paper laid on the mat. The paper is the ::before, turned a fraction of a degree,
+   so its edges are never square to the screen; the words on it stay level. */
+.sheet { margin-inline: var(--edge); padding-block: clamp(3.5rem, 7.5vw, 6.5rem); isolation: isolate; color: var(--cobalt); }
+.sheet::before {
+  content: ""; position: absolute; z-index: -1; inset: 0 -3px;
+  background: linear-gradient(178deg, #F5F3F0, var(--paper) 34%, #E9E6E1);
+  box-shadow: var(--shadow-rest); transform: rotate(var(--sheet-r, -.28deg));
+}
+.sheet--b { --sheet-r: .22deg; }
+.sheet .wrap { width: min(100% - (var(--gutter) - var(--edge)) * 2, var(--wrap)); }
+
+/* ---------- 4. Paper pieces ---------- */
+/* 4a. Headline strips: every word (or pair of words) is its own cut strip of paper.
+   <h2 class="strips"><span class="strip">The</span> <span class="strip strip--cobalt">work</span></h2> */
+.strips {
+  display: flex; flex-wrap: wrap; align-items: center; margin: 0;
+  font: 700 var(--strip-size, clamp(2.1rem, 1.2rem + 3.6vw, 4rem)) / 1 var(--font-display); letter-spacing: -.012em;
+}
+.strips--stack { flex-direction: column; align-items: flex-start; }
+.strip {
+  position: relative; z-index: 0; display: inline-block; padding: .13em .3em .17em; white-space: nowrap;
+  color: var(--cobalt); transform: translate(var(--sx, 0px), var(--sy, 0px)) rotate(var(--r, -1.6deg)); filter: var(--drop-flat);
+}
+.strip::before {
+  content: ""; position: absolute; z-index: -1; inset: 0; background: var(--strip-bg, var(--white));
+  clip-path: polygon(0 7%, 99.2% 0, 100% 91%, 1.1% 100%);          /* scissor cut: no two edges parallel */
+}
+.strip:nth-child(3n + 2) { --r: 1.3deg; }
+.strip:nth-child(3n + 2)::before { clip-path: polygon(.8% 0, 100% 5%, 98.9% 100%, 0 94%); }
+.strip:nth-child(3n) { --r: -.6deg; }
+.strip:nth-child(3n)::before { clip-path: polygon(0 3%, 100% 0, 99.4% 96%, 1.6% 100%); }
+.strip + .strip { margin-left: -.1em; }
+.strips--stack .strip + .strip, .strips--stack .strip-row { margin-left: 0; margin-top: -.09em; }
+.strip--paper { --strip-bg: var(--paper); }
+.strip--cobalt { --strip-bg: var(--cobalt); color: var(--white); }
+.strip--ink { --strip-bg: var(--ink); color: var(--white); }
+.strip--sans { font-family: var(--font-body); font-weight: 800; font-stretch: 78%; text-transform: uppercase; letter-spacing: .02em; }
+.strip-row { display: flex; align-items: center; }
+/* on a paper sheet a white strip would vanish: strips there are cobalt unless told otherwise */
+.sheet .strip:not(.strip--ink, .strip--white) { --strip-bg: var(--cobalt); color: var(--white); }
+.sheet .strip--white { --strip-bg: var(--white); }
+
+/* 4b. A card: a cut piece of paper that carries text */
+.card { position: relative; z-index: 0; padding: clamp(1.1rem, .8rem + 1.4vw, 1.9rem); color: var(--cobalt); transform: rotate(var(--r, 0deg)); filter: var(--drop-flat); }
+.card::before { content: ""; position: absolute; z-index: -1; inset: 0; background: var(--paper); clip-path: polygon(0 1.4%, 99.5% 0, 100% 98.8%, .7% 100%); }
+.card--white::before { background: var(--white); }
+
+/* 4c. Torn: top and bottom edges ripped, not cut. Add to .card or use alone. */
+.torn::before {
+  clip-path: polygon(0 0, 99.4% 0, 100% 100%, .5% 100%);
+  -webkit-mask: url("../img/torn-top.svg") 0 0 / 240px 12px repeat-x, linear-gradient(#000, #000) 0 11px / 100% calc(100% - 22px) no-repeat, url("../img/torn-bottom.svg") 0 100% / 240px 12px repeat-x;
+          mask: url("../img/torn-top.svg") 0 0 / 240px 12px repeat-x, linear-gradient(#000, #000) 0 11px / 100% calc(100% - 22px) no-repeat, url("../img/torn-bottom.svg") 0 100% / 240px 12px repeat-x;
+}
+
+/* 4d. A photograph: a print with a white border. Add .taped for a piece of masking tape across the top. */
+.photo {
+  display: block; position: relative; padding: clamp(6px, .75vw, 11px); background: var(--white); box-shadow: var(--shadow-rest);
+  transform: rotate(var(--r, 0deg)); transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.photo img { display: block; width: 100%; height: auto; }
+.taped::after, .tape {
+  content: ""; position: absolute; z-index: 2; top: -13px; left: calc(50% - 46px); width: 92px; height: 27px;
+  background: linear-gradient(rgba(255, 255, 255, .22), rgba(255, 255, 255, 0) 45%), var(--tape);
+  transform: rotate(var(--tape-r, -3.5deg));
+  clip-path: polygon(0 0, 2.5% 17%, 0 34%, 2.5% 50%, 0 67%, 2.5% 84%, 0 100%, 100% 100%, 97.5% 84%, 100% 67%, 97.5% 50%, 100% 34%, 97.5% 17%, 100% 0);
+}
+
+/* 4e. An artwork: the collage sheet itself lying on the table. No border; never cropped. */
+.piece { display: block; position: relative; text-decoration: none; color: inherit; transform: rotate(var(--r, 0deg)); transition: transform .5s var(--ease); }
+.piece img { display: block; width: 100%; height: auto; background: var(--avg, #8a8378); box-shadow: var(--shadow-rest); transition: box-shadow .5s var(--ease); }
+/* its caption: a slip of paper beside it */
+.slip {
+  display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .1em .7em; margin-top: .7rem; padding: .42em .7em .46em;
+  background: var(--white); color: var(--cobalt); box-shadow: var(--shadow-flat); transform: rotate(calc(var(--r, 0deg) * -.6));
+}
+.slip-title { font: 700 1.08rem/1.15 var(--font-display); }
+.slip-meta { font-size: .86rem; font-weight: 500; }
+
+@media (hover: hover) {
+  a.piece:hover, a.photo:hover, a.piece:focus-visible { transform: rotate(0deg) translateY(-7px); z-index: 3; }
+  a.piece:hover img, a.piece:focus-visible img, a.photo:hover { box-shadow: var(--shadow-lift); }
+}
+
+/* 4f. A scrap: one of her real cut-outs (an eye, lips, a torn strip). Decoration; shifts away from the pointer. */
+.scrap {
+  position: absolute; display: block; height: auto; pointer-events: none; user-select: none;
+  transform: translate(var(--sx, 0px), var(--sy, 0px)) rotate(calc(var(--r, 0deg) + var(--sr, 0deg)));
+  filter: drop-shadow(0 1px 1px rgba(0, 20, 14, .45)) drop-shadow(0 3px 3px rgba(0, 20, 14, .2));
+  transition: transform .5s var(--ease);
+}
+
+/* ---------- 5. Labels and tags (the buttons) ---------- */
+/* primary: an orange price label with a printed frame */
+.label {
+  position: relative; display: inline-flex; align-items: center; gap: .65em; min-height: 52px; padding: .78em 1.25em .8em;
+  border: 0; border-radius: 3px; background: var(--orange); color: var(--ink);
+  font: 800 1.02rem/1.12 var(--font-body); font-stretch: 88%; letter-spacing: .012em; text-decoration: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .34), 0 4px 7px rgba(0, 20, 14, .24);
+  transform: rotate(var(--r, -1.4deg)); transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.label::before { content: ""; position: absolute; inset: 4px; border: 1.5px solid currentColor; border-radius: 1px; pointer-events: none; }
+.label::after { content: "\2192"; font-weight: 600; transition: transform .5s var(--ease); }
+.label--plain::after { content: none; }
+/* secondary: a white paper hang-tag with clipped corners and a punched hole */
+.tag {
+  position: relative; z-index: 0; display: inline-flex; align-items: center; min-height: 50px; padding: .7em 1.15em .72em 2.5em;
+  border: 0; background: none; color: var(--cobalt); font: 700 1.02rem/1.12 var(--font-body); text-decoration: none;
+  transform: rotate(var(--r, 1.3deg)); filter: var(--drop-flat); transition: transform .5s var(--ease), filter .5s var(--ease);
+}
+.tag::before {
+  content: ""; position: absolute; z-index: -1; inset: 0; background: var(--white);
+  clip-path: polygon(15px 0, 100% 0, 100% 100%, 15px 100%, 0 calc(100% - 13px), 0 13px);
+  -webkit-mask: radial-gradient(circle at 19px 50%, transparent 5px, #000 5.6px);
+          mask: radial-gradient(circle at 19px 50%, transparent 5px, #000 5.6px);
+}
+@media (hover: hover) {
+  .label:hover { transform: rotate(0deg) translateY(-3px); box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 16px 20px -8px rgba(0, 20, 14, .5); }
+  .label:hover::after { transform: translateX(4px); }
+  .tag:hover { transform: rotate(0deg) translateY(-3px); filter: var(--drop-lift); }
+}
+/* a round orange sticker: the cart count, an arrow on a doorway */
+.sticker { display: inline-grid; place-items: center; flex: none; width: 2.3em; height: 2.3em; border-radius: 50%; background: var(--orange); color: var(--ink); font-weight: 800; line-height: 1; box-shadow: 0 1px 0 rgba(0, 0, 0, .3); }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.4rem; }
+
+/* a loud placeholder for anything Camila has not sent yet */
+.needs-content { border: 2px dashed var(--orange); padding: 1rem; background: repeating-linear-gradient(-45deg, transparent 0 14px, rgba(255, 86, 48, .1) 14px 28px); color: var(--ink); font: 600 .95rem/1.35 var(--font-mono); }
+
+/* ---------- 6. Header: a strip of paper across the top of the table, with her sticker on its end ---------- */
+.site-header { position: sticky; top: 0; z-index: 60; height: var(--header-h); margin-bottom: calc(var(--header-h) * -1); padding: 12px var(--edge) 0; pointer-events: none; }
+.header-strip { position: relative; display: flex; align-items: center; gap: clamp(.6rem, 1.6vw, 1.5rem); height: 56px; padding: 0 clamp(.7rem, 1.4vw, 1.1rem); pointer-events: auto; }
+.header-strip::before { content: ""; position: absolute; z-index: -1; inset: 0 -2px; background: var(--white); box-shadow: var(--shadow-rest); transform: rotate(-.32deg); }
+/* the logo sits on its own tab of white paper stuck over the end of the strip, so it is always black on white */
+.brand { position: relative; z-index: 0; flex: none; align-self: flex-start; display: block; margin: -7px 0 0 -2px; padding: 8px 11px 10px; transform: rotate(-4deg); filter: var(--drop-flat); transition: transform .5s var(--ease); }
+.brand::before { content: ""; position: absolute; z-index: -1; inset: 0; background: var(--white); clip-path: polygon(1.5% 0, 100% 3%, 97.5% 100%, 0 96%); }
+.brand img { display: block; width: auto; height: 74px; }
+.brand:hover { transform: rotate(0deg) translateY(2px); }
+.site-nav { margin-left: auto; }
+.site-nav ul { display: flex; align-items: center; gap: clamp(.2rem, 1.1vw, 1.1rem); }
+.site-nav a { position: relative; z-index: 0; display: block; padding: .5em .55em; color: var(--cobalt); font-weight: 600; font-size: .98rem; text-decoration: none; white-space: nowrap; }
+.site-nav a::before { content: ""; position: absolute; z-index: -1; inset: .12em 0; background: var(--cobalt); clip-path: polygon(0 8%, 100% 0, 98% 100%, 2% 92%); transform: rotate(-2deg) scaleX(0); transform-origin: 0 50%; transition: transform .5s var(--ease); }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--white); }
+.site-nav a:hover::before, .site-nav a[aria-current="page"]::before { transform: rotate(-2deg) scaleX(1); }
+.site-nav a { transition: color .3s; }
+.cart-button { display: inline-flex; align-items: center; gap: .5em; min-height: 44px; padding: 0 .1em 0 .5em; border: 0; background: none; color: var(--cobalt); font-weight: 700; font-size: .98rem; }
+.cart-button .sticker { transform: rotate(-8deg); transition: transform .5s var(--ease); }
+.cart-button:hover .sticker { transform: rotate(0deg) scale(1.08); }
+.menu-button { display: none; min-height: 44px; }
+
+@media (max-width: 899px) {
+  .brand { padding: 6px 9px 8px; }
+  .brand img { height: 62px; }
+  .menu-button { display: inline-flex; }
+  .cart-button { margin-left: auto; }
+  .site-nav { margin: 0; }
+  /* without JavaScript the menu is simply a wrapping row under the strip */
+  html:not(.js) .header-strip { flex-wrap: wrap; height: auto; padding-block: 6px; }
+  html:not(.js) .site-nav ul { flex-wrap: wrap; }
+  html:not(.js) .menu-button { display: none; }
+  /* with it, the menu is a sheet of paper that slides over the whole table */
+  .js .site-nav {
+    position: fixed; z-index: -2; inset: 0; display: flex; align-items: center; padding: calc(var(--header-h) + 1.5rem) var(--gutter) 2rem; overflow-y: auto;
+    background: var(--paper); visibility: hidden; transform: translateY(-103%); transition: transform .7s var(--ease), visibility 0s .7s;
+  }
+  .js .menu-open .site-nav { visibility: visible; transform: none; transition: transform .7s var(--ease); }
+  .js .site-nav ul { flex-direction: column; align-items: flex-start; gap: .1rem; width: 100%; }
+  .js .site-nav a { padding: .16em .34em .2em; font: 700 clamp(2rem, 9.5vw, 2.9rem)/1.12 var(--font-display); }
+  .js .site-nav li:nth-child(odd) a { margin-left: .5rem; }
+  .menu-locked { overflow: hidden; }
+}
+
+/* ---------- 6b. Cart: a paper receipt that slides in from the right over the dimmed table ----------
+   Markup at the end of index.html; js/site.js fills it from the shared shop layer. */
+.cart {
+  position: fixed; inset: 0 0 0 auto; width: min(420px, 100%); height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0;
+  background: var(--white); color: var(--cobalt); overflow-y: auto; overscroll-behavior: contain; box-shadow: var(--shadow-lift);
+}
+.cart[open] { display: flex; flex-direction: column; animation: cart-in .6s var(--ease); }
+@keyframes cart-in { from { translate: 100% 0; } }
+.cart::backdrop { background: rgba(0, 25, 18, .45); }
+.cart [hidden] { display: none; }
+.cart-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 2px dashed currentColor; }
+.cart-title { font: 700 1.7rem/1 var(--font-display); }
+.cart-lines { display: grid; gap: 1.1rem; padding: 1.25rem; }
+.cart-lines:empty { display: none; }
+.cart-line { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: .15rem .9rem; align-items: start; }
+.cart-line img { grid-area: 1 / 1 / span 3 / auto; width: 64px; height: auto; box-shadow: var(--shadow-flat); }
+.cart-line-title { grid-column: 2; color: inherit; font: 700 1.08rem/1.15 var(--font-display); text-decoration: none; }
+.cart-line-price { grid-area: 1 / 3; }
+.cart-line-price, .cart-sum { font-family: var(--font-mono); font-weight: 600; }
+.cart-line-meta { grid-column: 2; font-size: .86rem; font-weight: 500; }
+.cart-remove { grid-column: 2; justify-self: start; min-height: 44px; padding: 0; border: 0; background: none; color: inherit; font: inherit; font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .22em; cursor: pointer; }
+.cart-empty { padding: 1.5rem 1.25rem; font-weight: 600; }
+.cart-foot { display: grid; gap: .7rem; margin-top: auto; padding: 1.1rem 1.25rem 1.4rem; border-top: 2px dashed currentColor; }
+.cart-sum { display: flex; justify-content: space-between; gap: 1rem; font-size: 1.1rem; }
+.cart-ship { font-size: .92rem; }
+.cart-foot .label { --r: 0deg; justify-content: center; width: 100%; }
+/* the shop layer's two notices, as slips on the receipt (they are only ever shown inside the cart on this page) */
+.cart :is(.tgc-sample-note, .tgc-checkout-note) { position: static; flex: none; justify-content: space-between; width: auto; max-width: none; margin: 0 1.25rem 1rem; border: 1.5px dashed currentColor; color: var(--cobalt); font: 500 .78rem/1.4 var(--font-mono); }
+.cart :is(.tgc-sample-note, .tgc-checkout-note) button { flex: none; min-width: 36px; min-height: 36px; border: 0; background: none; color: inherit; font-size: 1.15rem; cursor: pointer; }
+/* "Add to cart" under a featured piece: a small hang-tag */
+.piece-add { min-height: 44px; margin-top: .6rem; font-size: .92rem; cursor: pointer; }
+
+/* ---------- 7. Footer: the dark underside of the mat ---------- */
+.site-footer {
+  position: relative; z-index: 1; overflow-x: clip; padding: clamp(3.5rem, 7vw, 6rem) 0 2rem; color: var(--paper);
+  background-color: var(--ink);
+  background-image: linear-gradient(to right, rgba(239, 237, 234, .07) 1px, transparent 1px), linear-gradient(to bottom, rgba(239, 237, 234, .07) 1px, transparent 1px);
+  background-size: var(--u) var(--u); background-position: calc(50% + var(--u) / 2) 0, 0 0;
+}
+.footer-grid { display: grid; grid-template-columns: 1.15fr .8fr minmax(max-content, 1.2fr) 1.35fr; gap: 2.5rem clamp(1.5rem, 4vw, 4rem); align-items: start; }
+.footer-logo img { display: block; width: min(100%, 230px); height: auto; transform: rotate(-3deg); }
+.footer-nav a, .footer-contact a, .footer-legal a { display: inline-block; padding: .28em 0; text-decoration: none; }
+.footer-nav a { font: 600 1.22rem/1.2 var(--font-display); }
+.footer-nav a:hover, .footer-contact a:hover, .footer-legal a:hover { text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: .22em; }
+.footer-contact { display: grid; gap: .1rem; justify-items: start; font-weight: 500; }
+.footer-contact a { overflow-wrap: anywhere; }
+.footer-head { margin-bottom: .7rem; color: var(--paper); opacity: .78; }
+.footer-base { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .8rem 2rem; margin-top: clamp(2.5rem, 5vw, 4rem); padding-top: 1.3rem; border-top: 1px solid rgba(239, 237, 234, .22); font-size: .95rem; }
+.footer-legal { display: flex; gap: 1.6rem; }
+@media (max-width: 979px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 559px) { .footer-grid { grid-template-columns: 1fr; gap: 2rem; } .footer-logo img { width: 190px; } .footer-nav ul { columns: 2; } }
+
+/* ---------- 8. Forms: a field is a line to write on; the submit is a label ---------- */
+.field { display: grid; gap: .3rem; }
+.field > span, .field-name { font-weight: 700; font-size: .92rem; }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 50px; padding: .6em .75em; border: 0; border-bottom: 2px solid currentColor; border-radius: 0;
+  background: var(--white); color: var(--cobalt); font-size: 1.05rem;
+}
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline-offset: 0; }
+.field [aria-invalid="true"] { border-bottom-color: var(--orange); box-shadow: inset 0 -3px 0 var(--orange); }
+.join-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: .8rem 1rem; }
+.join-row .field { flex: 1 1 14rem; min-width: 0; }
+.form-error { display: block; flex-basis: 100%; font-weight: 700; font-size: .92rem; }
+.form-status { flex-basis: 100%; margin-top: .7rem; font-weight: 700; }
+.form-status:empty { display: none; }
+.site-footer .field input { background: transparent; color: var(--paper); }
+.site-footer .field input::placeholder { color: rgba(239, 237, 234, .6); }
+
+/* ---------- 9. Motion: things slide onto the table and settle ----------
+   Armed only when JavaScript runs (html.js). The resting angle lives in `transform`; the arrival uses the
+   separate `translate` and `rotate` properties, so the two never fight. --i staggers by .07s. */
+.js [data-arrive] { opacity: 0; translate: var(--ax, 0px) var(--ay, 38px); rotate: var(--ar, 3deg); }
+.js [data-arrive="left"] { --ax: -44px; --ay: 0px; --ar: -4deg; }
+.js [data-arrive="right"] { --ax: 44px; --ay: 0px; --ar: 4deg; }
+.js [data-arrive="down"] { --ay: -38px; --ar: -3deg; }
+.js [data-arrive].is-in {
+  opacity: 1; translate: 0 0; rotate: 0deg;
+  transition: opacity .6s linear calc(var(--i, 0) * .07s), translate 1.3s var(--ease) calc(var(--i, 0) * .07s), rotate 1.3s var(--ease) calc(var(--i, 0) * .07s);
+}
+@media (prefers-reduced-motion: reduce) {
+  .js [data-arrive], .js [data-arrive].is-in { opacity: 1; translate: none; rotate: none; transition: none; }
+  .cart[open] { animation: none; }
+  *, *::before, *::after { transition-duration: .01s !important; scroll-behavior: auto !important; }
+  a.piece:hover, a.photo:hover, .label:hover, .tag:hover, .brand:hover img { transform: rotate(var(--r, 0deg)); }
+}
+/* on a phone the angles are smaller and nothing overlaps text */
+@media (max-width: 699px) {
+  .strip { --r: -.8deg; }
+  .strip:nth-child(3n + 2) { --r: .7deg; }
+  .strip:nth-child(3n) { --r: -.3deg; }
+  .photo, .piece, .card { transform: rotate(calc(var(--r, 0deg) * .4)); }
+}
+
+/* ======================================================================================================
+   10. HOME ONLY
+   ====================================================================================================== */
+
+/* --- hero: the mat, her hands at work on it, the headline in cut strips --- */
+.hero { padding: calc(var(--header-h) + clamp(2.2rem, 4.6vw, 4.2rem)) 0 clamp(6rem, 10vw, 8.5rem); overflow-x: clip; }
+.hero-copy { position: relative; z-index: 3; max-width: 46rem; }
+.hero-title { --strip-size: clamp(3rem, 1.1rem + 6.3vw, 6.5rem); }
+/* small strips lie on top of big ones, so an overlap only ever covers a big strip's margin, never a word */
+.hero-title .s-a { font-size: .6em; font-weight: 600; --r: -3deg; z-index: 2; }
+.hero-title .s-b { font-size: 1.3em; font-weight: 800; --r: 1.4deg; margin-left: .3em; margin-top: -.05em; }
+.hero-title .s-c { font-size: .36em; --r: -2.2deg; margin-left: 1em; margin-top: -.3em; z-index: 2; }
+.hero-title .strip-row { margin-top: -.1em; }
+/* one word, cut in two */
+.hero-title .s-d { font-weight: 800; --r: -1.4deg; padding-right: .1em; }
+.hero-title .s-e { font-weight: 800; --r: 2.2deg; padding-left: .1em; margin-left: -.02em; margin-top: .14em; }
+.hero-card { max-width: 33rem; margin-top: clamp(1.1rem, 2vw, 1.7rem); --r: -.7deg; }
+.hero .actions { margin-top: clamp(1.2rem, 2vw, 1.7rem); }
+
+/* her hands, lifted off the photograph, working on the drawn mat; the loose pieces are separate scraps */
+.hero-table { position: absolute; z-index: 1; top: 0; right: clamp(0px, 3.4vw, 64px); width: min(47vw, 650px); aspect-ratio: 1800 / 2011; translate: 0 -9%; }
+.hero-hands { position: relative; z-index: 1; display: block; width: 100%; height: auto; filter: drop-shadow(0 3px 3px rgba(0, 24, 16, .5)) drop-shadow(0 22px 22px rgba(0, 24, 16, .34)); }
+.hero-table .scrap { left: var(--l); top: var(--t); width: var(--w); }
+/* the finished piece on the table */
+.hero-piece { position: absolute; z-index: 0; right: clamp(8px, 2.4vw, 44px); bottom: clamp(1rem, 3.4vw, 3.2rem); width: clamp(170px, 18.5vw, 272px); --r: 5deg; }
+a.hero-piece:hover, a.hero-piece:focus-visible { z-index: 2; }
+
+/* a faint pair of the mat's diagonal guides in the open middle of the hero, on the grid */
+.hero::before {
+  content: ""; position: absolute; top: calc(var(--u) * 9); left: calc(50% - var(--u) * 2); width: calc(var(--u) * 4); height: calc(var(--u) * 4); pointer-events: none;
+  background:
+    linear-gradient(45deg, transparent calc(50% - .6px), var(--mat-line) calc(50% - .6px) calc(50% + .6px), transparent calc(50% + .6px)),
+    linear-gradient(-45deg, transparent calc(50% - .6px), var(--mat-line) calc(50% - .6px) calc(50% + .6px), transparent calc(50% + .6px));
+}
+
+/* stacked: her hands reach in under the header, the two nearest scraps trail down beside the first strip */
+@media (max-width: 899px) {
+  .hero { padding-top: var(--header-h); }
+  .hero::before { display: none; }
+  .hero-shot { --hw: min(132vw, 660px); display: flow-root; height: calc(var(--hw) * .49); margin-bottom: 3.5rem; }
+  .hero-table { position: relative; right: auto; width: var(--hw); margin: calc(var(--hw) * -.29) calc(var(--hw) * -.12) 0 auto; translate: none; }
+  .hero-table .scrap:nth-of-type(3), .hero-piece { display: none; }
+}
+@media (max-width: 699px) {
+  .hero-title .s-b { margin-left: .12em; }
+  .hero-title .s-c { margin-left: .5em; }
+}
+
+/* --- social proof: a torn strip of paper lying across the join between the mat and the next sheet --- */
+.proof { z-index: 5; margin-block: -3.3rem -2.6rem; }
+.proof-strip { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem 1.6rem; width: min(100% - var(--edge) * 2 - 8px, 1280px); margin-inline: auto; padding: 1.35rem clamp(1.1rem, 3vw, 2.4rem) 1.4rem; --r: -.7deg; }
+.proof-strip::before { background: var(--white); }
+.proof-names { display: flex; flex-wrap: wrap; gap: .1rem 0; font: 600 clamp(1.02rem, .9rem + .5vw, 1.3rem)/1.3 var(--font-display); }
+.proof-names li:not(:last-child)::after { content: "\00B7"; margin: 0 .55em; color: var(--orange); font-weight: 900; }
+@media (max-width: 699px) {
+  .proof-strip { --r: 0deg; }
+  .proof-names { flex-direction: column; gap: .2rem; }
+  .proof-names li:not(:last-child)::after { content: none; }
+}
+
+/* --- about teaser --- */
+.about-teaser { padding-top: clamp(5rem, 8vw, 6.6rem); }
+.about-teaser .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.about-prints { position: relative; padding: 0 12% 9% 0; }
+.about-prints .photo--main { --r: -3deg; z-index: 1; }
+.about-prints .photo--main img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 52% 22%; }
+.about-prints .photo--tucked { position: absolute; z-index: 0; right: -2%; bottom: 0; width: 47%; --r: 6.5deg; }
+.about-prints .scrap { left: -7%; bottom: 3%; width: 21%; --r: -14deg; z-index: 2; }
+.about-copy .tag { margin-top: 1.7rem; }
+@media (max-width: 859px) {
+  .about-teaser { padding-bottom: 2.6rem; }
+  .about-teaser .wrap { grid-template-columns: 1fr; }
+  .about-prints { width: min(82%, 380px); margin-inline: auto; }
+}
+
+/* --- the work: six originals spread on the mat, then three doorways --- */
+.work { padding-top: clamp(5rem, 9vw, 7.5rem); }
+.work-head { margin-bottom: clamp(1.8rem, 3.5vw, 3rem); }
+.work > .wrap { position: relative; }
+.work .scrap { top: -.4rem; right: 5%; width: clamp(84px, 11vw, 150px); --r: 11deg; }
+.spread { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(1.6rem, 3.4vw, 3.4rem) clamp(1.1rem, 2.6vw, 2.6rem); align-items: start; }
+.spread > li { min-width: 0; }
+.spread > li:nth-child(1) { grid-area: 1 / 1 / auto / span 5; --r: -2deg; }
+.spread > li:nth-child(2) { grid-area: 1 / 6 / auto / span 4; --r: 1.6deg; margin-top: clamp(1.5rem, 4vw, 3.5rem); }
+.spread > li:nth-child(3) { grid-area: 1 / 10 / auto / span 3; --r: -1.2deg; align-self: center; }
+.spread > li:nth-child(4) { grid-area: 2 / 8 / auto / span 5; --r: 1.4deg; }
+.spread > li:nth-child(5) { grid-area: 2 / 1 / auto / span 3; --r: 2.2deg; align-self: center; }
+.spread > li:nth-child(6) { grid-area: 2 / 4 / auto / span 4; --r: -1.8deg; margin-top: 1.2rem; }
+@media (max-width: 859px) {
+  .spread { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spread > li:nth-child(n) { grid-area: auto; margin-top: 0; align-self: start; }
+  .spread > li:nth-child(3n + 1) { grid-column: 1 / -1; }
+  .spread > li:nth-child(3n) { margin-top: 1.6rem; }
+}
+.doorways-head { margin: clamp(3.5rem, 7vw, 6rem) 0 clamp(1.3rem, 2.4vw, 2rem); --strip-size: clamp(1.7rem, 1.1rem + 2.2vw, 2.9rem); }
+.doorways { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem clamp(1rem, 2.4vw, 2.2rem); }
+.doorway { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: .2rem 1rem; width: 100%; min-height: 104px; padding: 1.05rem 1.2rem 1.1rem 3rem; }
+.doorway::before { clip-path: polygon(22px 0, 100% 0, 100% 100%, 22px 100%, 0 calc(100% - 20px), 0 20px); -webkit-mask: radial-gradient(circle at 25px 50%, transparent 6.5px, #000 7.1px); mask: radial-gradient(circle at 25px 50%, transparent 6.5px, #000 7.1px); }
+.doorway-name { grid-column: 1; font: 700 clamp(1.45rem, 1.1rem + 1.2vw, 2rem)/1.08 var(--font-display); }
+.doorway-note { grid-column: 1; font-weight: 500; font-size: 1rem; line-height: 1.3; }
+.doorway .sticker { grid-area: 1 / 2 / span 2; font-size: 1.15rem; transition: transform .5s var(--ease); }
+.doorways li:nth-child(1) .doorway { --r: -1.4deg; }
+.doorways li:nth-child(2) .doorway { --r: .9deg; }
+.doorways li:nth-child(3) .doorway { --r: -.5deg; }
+.doorway:hover .sticker { transform: translateX(4px) rotate(-10deg); }
+.work .actions { margin-top: clamp(1.8rem, 3.5vw, 2.8rem); }
+@media (max-width: 859px) { .doorways { grid-template-columns: 1fr; } .doorway { min-height: 88px; } }
+
+/* --- services arm --- */
+.services-arm .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.services-arm .tag { margin-top: 1.7rem; }
+.services-list { --strip-size: clamp(1.5rem, .85rem + 2.3vw, 2.75rem); }
+.services-list li { display: flex; flex-wrap: wrap; align-items: center; }
+.services-list li:nth-child(2) { margin-left: 1.1em; }
+.services-list li:nth-child(2) .strip { --strip-bg: var(--ink); }
+.services-list li:nth-child(3) { margin-left: .3em; }
+.services-list li:nth-child(3) .strip { --strip-bg: var(--white); color: var(--cobalt); }
+.services-list li + li { margin-top: .04em; }
+@media (max-width: 859px) {
+  .services-arm .wrap { grid-template-columns: 1fr; }
+  .services-list li:nth-child(2) { margin-left: .4em; }
+}
+
+/* --- stay in touch --- */
+.join .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; }
+.join-photo { --r: -2.4deg; z-index: 0; }
+.join-card { --r: .5deg; z-index: 1; margin-left: clamp(-4rem, -4vw, -1rem); padding: clamp(1.4rem, 1rem + 2.2vw, 2.6rem); }
+.join-card .strips { --strip-size: clamp(1.8rem, 1.1rem + 2.4vw, 3rem); margin: -2.6rem 0 1.1rem -.4rem; }
+.join-card form { margin-top: 1.4rem; }
+@media (max-width: 859px) {
+  .join .wrap { grid-template-columns: 1fr; gap: 0; }
+  .join-photo { width: min(88%, 420px); margin-inline: auto; }
+  .join-card { margin: -1.5rem 0 0; }
+  .join-card .strips { margin-top: -2.2rem; }
+}
+
+/* --- the local collage --- */
+.local .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.local-title { --strip-size: clamp(2.6rem, 1.2rem + 5.2vw, 5.6rem); }
+.local-title .s-a { font-size: .36em; --r: -3deg; z-index: 2; }
+.local-title .s-b { --r: 1.2deg; margin-left: .2em; }
+.local-title .s-c { --r: -1.6deg; }
+.local .actions { margin-top: 2rem; }
+.local-prints { position: relative; width: min(100%, 600px); margin-left: auto; padding: 0 0 12% 32%; }
+.local-prints .photo--main { --r: 2.6deg; z-index: 1; }
+.local-prints .photo--tucked { position: absolute; z-index: 2; left: 0; bottom: 0; width: 56%; --r: -4deg; }
+@media (max-width: 859px) {
+  .local .wrap { grid-template-columns: 1fr; }
+  .local-prints { padding-left: 22%; }
+}

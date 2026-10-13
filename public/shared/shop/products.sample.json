@@ -1,0 +1,1089 @@
+{
+ "sample": true,
+ "products": [
+  {
+   "handle": "curiosity",
+   "title": "Curiosity",
+   "type": "original",
+   "year": 2023,
+   "number": "001",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-curiosity",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/curiosity-480.webp",
+      "960": "shared/img/shop/originals/curiosity-960.webp",
+      "1600": "shared/img/shop/originals/curiosity-1600.webp",
+      "2400": "shared/img/shop/originals/curiosity-2400.webp"
+     },
+     "width": 2544,
+     "height": 3067,
+     "alt": "Curiosity, collage: a man and two children seen from behind study an antique wall map, below a wooden wall with a sign, Radical Intimacy.",
+     "avg": "#91785F",
+     "lowres": false
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8837-480.webp",
+      "960": "shared/img/shop/framed/img-8837-960.webp",
+      "1600": "shared/img/shop/framed/img-8837-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Curiosity in a deep white frame, set at an angle on a black surface: people seen from behind looking up at an old map with a red bag on it.",
+     "avg": "#3D3735",
+     "lowres": false,
+     "framed": true
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8838-480.webp",
+      "960": "shared/img/shop/framed/img-8838-960.webp",
+      "1600": "shared/img/shop/framed/img-8838-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Curiosity in a deep white frame with a wide mat on black: figures from behind looking up at an antique map, a red handbag hanging above.",
+     "avg": "#463E3C",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "artstract",
+   "title": "Artstract",
+   "type": "original",
+   "year": 2025,
+   "number": "003",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-artstract",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/artstract-480.webp",
+      "960": "shared/img/shop/originals/artstract-960.webp",
+      "1600": "shared/img/shop/originals/artstract-1600.webp",
+      "2400": "shared/img/shop/originals/artstract-2400.webp"
+     },
+     "width": 2549,
+     "height": 3473,
+     "alt": "Artstract, collage: a blonde woman's head on a white surrealist body with a red face disc and an orange guitar shape, on mustard yellow.",
+     "avg": "#A38764",
+     "lowres": false
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8841-480.webp",
+      "960": "shared/img/shop/framed/img-8841-960.webp",
+      "1600": "shared/img/shop/framed/img-8841-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Artstract in a red frame on black: a blonde woman in a kitchen overtaken by playful orange, white and black shapes on a yellow ground.",
+     "avg": "#49342E",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "modern-love",
+   "title": "Modern Love",
+   "type": "original",
+   "year": 2024,
+   "number": "004",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-modern-love",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/modern-love-480.webp",
+      "960": "shared/img/shop/originals/modern-love-960.webp",
+      "1600": "shared/img/shop/originals/modern-love-1600.webp",
+      "2400": "shared/img/shop/originals/modern-love-2400.webp"
+     },
+     "width": 5054,
+     "height": 6436,
+     "alt": "Modern Love, collage: long dark hair over a black sweatshirt lettered LOVE, with cut-out headlines, a red label and small photos.",
+     "avg": "#484441",
+     "lowres": false
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "candy",
+   "title": "Candy",
+   "type": "original",
+   "year": 2024,
+   "number": "005",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-candy",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/candy-480.webp"
+     },
+     "width": 849,
+     "height": 1026,
+     "alt": "Candy, collage: a face with an orange bob, its mouth replaced by a psychedelic sticker of red lips, above a pink blazer and a hand of candy.",
+     "avg": "#C58273",
+     "lowres": true
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8880-480.webp",
+      "960": "shared/img/shop/framed/img-8880-960.webp",
+      "1600": "shared/img/shop/framed/img-8880-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Candy in a red frame on black: a face with an orange bob and a psychedelic mouth sticker, pink blazer, a hand holding sweets.",
+     "avg": "#583C3A",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "the-art-of-art",
+   "title": "The Art of Art",
+   "type": "original",
+   "year": 2025,
+   "number": "006",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-the-art-of-art",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/the-art-of-art-480.webp",
+      "960": "shared/img/shop/originals/the-art-of-art-960.webp",
+      "1600": "shared/img/shop/originals/the-art-of-art-1600.webp",
+      "2400": "shared/img/shop/originals/the-art-of-art-2400.webp"
+     },
+     "width": 2549,
+     "height": 3505,
+     "alt": "The Art of Art, collage: a blue cloudy sky with cut-out words This is Art, TAKE a harder look HONEY, a butterfly and a quill.",
+     "avg": "#81999C",
+     "lowres": false
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8810-480.webp",
+      "960": "shared/img/shop/framed/img-8810-960.webp",
+      "1600": "shared/img/shop/framed/img-8810-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "The Art of Art in a white frame on a black surface: blue sky and clouds, a butterfly on a yellow flower, cut-out words and a black feather.",
+     "avg": "#3D3736",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "senor-tigre",
+   "title": "Senor Tigre",
+   "type": "original",
+   "year": 2025,
+   "number": "007",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-senor-tigre",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/senor-tigre-480.webp",
+      "960": "shared/img/shop/originals/senor-tigre-960.webp",
+      "1600": "shared/img/shop/originals/senor-tigre-1600.webp",
+      "2400": "shared/img/shop/originals/senor-tigre-2400.webp"
+     },
+     "width": 4784,
+     "height": 6438,
+     "alt": "Senor Tigre, collage: a laughing woman in a white swimsuit on a jungle veranda pets a tiger; more tigers prowl along the bottom.",
+     "avg": "#6E624B",
+     "lowres": false
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8811-480.webp",
+      "960": "shared/img/shop/framed/img-8811-960.webp",
+      "1600": "shared/img/shop/framed/img-8811-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Senor Tigre in a thin black frame on a black surface: a woman reading in a garden room with tigers beside her and along the bottom.",
+     "avg": "#2F2623",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "stuck",
+   "title": "Stuck",
+   "type": "original",
+   "year": 2025,
+   "number": "008",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-stuck",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/stuck-480.webp",
+      "960": "shared/img/shop/originals/stuck-960.webp",
+      "1600": "shared/img/shop/originals/stuck-1600.webp",
+      "2400": "shared/img/shop/originals/stuck-2400.webp"
+     },
+     "width": 4946,
+     "height": 6918,
+     "alt": "Stuck, collage: a woman at a night festival, fireworks, grey loudspeakers and a man meditating on sheet music, on white paper.",
+     "avg": "#8F8A88",
+     "lowres": false
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "home",
+   "title": "Home",
+   "type": "original",
+   "year": 2023,
+   "number": "009",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-home",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/home-480.webp"
+     },
+     "width": 840,
+     "height": 1016,
+     "alt": "Home, collage: two young people play-fight in a field below a highway overpass, above a cut-paper garden with a small red barn.",
+     "avg": "#838A6C",
+     "lowres": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "zenda-beach",
+   "title": "Zenda Beach",
+   "type": "original",
+   "year": 2023,
+   "number": "010",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-zenda-beach",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/zenda-beach-480.webp",
+      "960": "shared/img/shop/originals/zenda-beach-960.webp",
+      "1600": "shared/img/shop/originals/zenda-beach-1600.webp",
+      "2400": "shared/img/shop/originals/zenda-beach-2400.webp"
+     },
+     "width": 2527,
+     "height": 3136,
+     "alt": "Zenda Beach, collage: a giant woman in a yellow coat strides along the horizon above a crowded beach; blue shorts fill the foreground.",
+     "avg": "#95A0A3",
+     "lowres": false
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8821-480.webp",
+      "960": "shared/img/shop/framed/img-8821-960.webp",
+      "1600": "shared/img/shop/framed/img-8821-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Zenda Beach in a red frame with a white mat on black: a figure in yellow striding over a crowded beach, blue denim shorts in the foreground.",
+     "avg": "#503D3D",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "looking",
+   "title": "Looking",
+   "type": "original",
+   "year": 2023,
+   "number": "011",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-looking",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/looking-480.webp"
+     },
+     "width": 819,
+     "height": 1098,
+     "alt": "Looking, collage: a small crowd seen from behind watches a launch site with a rocket and a tall tower, under squares of sky-coloured paper.",
+     "avg": "#A29C98",
+     "lowres": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "society",
+   "title": "Society",
+   "type": "original",
+   "year": 2025,
+   "number": "012",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-society",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/society-480.webp",
+      "960": "shared/img/shop/originals/society-960.webp",
+      "1600": "shared/img/shop/originals/society-1600.webp",
+      "2400": "shared/img/shop/originals/society-2400.webp"
+     },
+     "width": 5066,
+     "height": 5634,
+     "alt": "Society, collage: wave-cut bands of snowy mountains, a city skyline and a snow-covered town, dotted with small cut-out people.",
+     "avg": "#7D8D92",
+     "lowres": false
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "tears-water-the-soul-green",
+   "title": "Tears Water The Soul - Green",
+   "type": "original",
+   "year": 2025,
+   "number": "013",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-tears-water-the-soul-green",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/tears-water-the-soul-green-480.webp",
+      "960": "shared/img/shop/originals/tears-water-the-soul-green-960.webp",
+      "1600": "shared/img/shop/originals/tears-water-the-soul-green-1600.webp"
+     },
+     "width": 2372,
+     "height": 2376,
+     "alt": "Tears Water The Soul - Green, collage: a woman's face under a green embroidered mask and headdress, with iridescent paper tears.",
+     "avg": "#918D86",
+     "lowres": false
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "royal-love-story",
+   "title": "Royal Love Story",
+   "type": "original",
+   "year": 2025,
+   "number": "016",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-royal-love-story",
+   "images": [
+    {
+     "sizes": {
+      "459": "shared/img/shop/originals/royal-love-story-459.webp"
+     },
+     "width": 459,
+     "height": 640,
+     "alt": "Royal Love Story, collage: a man and a woman cheek to cheek under a giant diamond bottle, a gilded opera house and a red heart.",
+     "avg": "#78574C",
+     "lowres": true
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8808-480.webp",
+      "960": "shared/img/shop/framed/img-8808-960.webp",
+      "1600": "shared/img/shop/framed/img-8808-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Royal Love Story in a red frame with a white mat, lying on a black surface: a couple's faces, a diamond perfume bottle and a red heart.",
+     "avg": "#3E2725",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "be-you",
+   "title": "Be You",
+   "type": "original",
+   "year": 2024,
+   "number": "017",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-be-you",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/be-you-480.webp",
+      "960": "shared/img/shop/originals/be-you-960.webp",
+      "1600": "shared/img/shop/originals/be-you-1600.webp",
+      "2400": "shared/img/shop/originals/be-you-2400.webp"
+     },
+     "width": 2507,
+     "height": 2884,
+     "alt": "Be You, collage: a woman in pink satin hides her face behind a ringed hand, with a photographer on a rainbow flag and the letters BE YOU.",
+     "avg": "#7D524B",
+     "lowres": false
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8856-480.webp",
+      "960": "shared/img/shop/framed/img-8856-960.webp",
+      "1600": "shared/img/shop/framed/img-8856-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Be You in a thin black frame on black: a woman in a pink satin dress covering her face, a rainbow flag, flowers and the words Be You.",
+     "avg": "#433A39",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "small-world",
+   "title": "Small World",
+   "type": "original",
+   "year": 2023,
+   "number": "018",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-small-world",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/small-world-480.webp"
+     },
+     "width": 846,
+     "height": 1126,
+     "alt": "Small World, collage: black-and-white women, one shouldering a rake, beside hand-painted blue words KEEP YOUR EYES TO THE SKY.",
+     "avg": "#A5AEB5",
+     "lowres": true
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8833-480.webp",
+      "960": "shared/img/shop/framed/img-8833-960.webp",
+      "1600": "shared/img/shop/framed/img-8833-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Small World in a thin black frame on black: two black-and-white fashion figures with hand-painted blue words, Keep your eyes to the sky.",
+     "avg": "#383435",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "blues",
+   "title": "Blues",
+   "type": "original",
+   "year": 2025,
+   "number": "019",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-blues",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/blues-480.webp"
+     },
+     "width": 556,
+     "height": 640,
+     "alt": "Blues, collage: a woman in a black swimsuit stands behind a white sports car on dark blue sea, under a patchwork of blue paper squares.",
+     "avg": "#4E7484",
+     "lowres": true
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8823-480.webp",
+      "960": "shared/img/shop/framed/img-8823-960.webp",
+      "1600": "shared/img/shop/framed/img-8823-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Blues in a thin black frame on black: a white sports car in blue water, a figure standing in its roof, pale blue squares scattered above.",
+     "avg": "#363334",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "reflections-of-me",
+   "title": "Reflections of Me",
+   "type": "original",
+   "year": 2024,
+   "number": "021",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-reflections-of-me",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/reflections-of-me-480.webp",
+      "960": "shared/img/shop/originals/reflections-of-me-960.webp",
+      "1600": "shared/img/shop/originals/reflections-of-me-1600.webp",
+      "2400": "shared/img/shop/originals/reflections-of-me-2400.webp"
+     },
+     "width": 2543,
+     "height": 2969,
+     "alt": "Reflections of Me, collage: a woman seen from behind in a black dress with a white snake, flanked by wavy paper silhouettes.",
+     "avg": "#837967",
+     "lowres": false
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8871-480.webp",
+      "960": "shared/img/shop/framed/img-8871-960.webp",
+      "1600": "shared/img/shop/framed/img-8871-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Reflections of Me in a deep white frame on black: a woman from behind in a black dress with a white snake, echoed by cut-out silhouettes.",
+     "avg": "#585455",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "i-am-the-bad-guy",
+   "title": "I Am the Bad Guy",
+   "type": "original",
+   "year": 2025,
+   "number": "022",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-i-am-the-bad-guy",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/i-am-the-bad-guy-480.webp",
+      "960": "shared/img/shop/originals/i-am-the-bad-guy-960.webp",
+      "1600": "shared/img/shop/originals/i-am-the-bad-guy-1600.webp",
+      "2400": "shared/img/shop/originals/i-am-the-bad-guy-2400.webp"
+     },
+     "width": 4968,
+     "height": 6240,
+     "alt": "I Am the Bad Guy, collage: a person with long blue hair seen from behind, skateboarders, a man in a skull T-shirt and a Bad Hombres sign.",
+     "avg": "#6D6E67",
+     "lowres": false
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8832-480.webp",
+      "960": "shared/img/shop/framed/img-8832-960.webp",
+      "1600": "shared/img/shop/framed/img-8832-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "I Am the Bad Guy in a red frame on black: a figure with long blue hair seen from behind on a street, with men, boys and a roadside sign.",
+     "avg": "#443130",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "gagas-offering",
+   "title": "Gaga's Offering",
+   "type": "original",
+   "year": 2025,
+   "number": "202",
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-gagas-offering",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/gagas-offering-480.webp",
+      "960": "shared/img/shop/originals/gagas-offering-960.webp",
+      "1600": "shared/img/shop/originals/gagas-offering-1600.webp",
+      "2400": "shared/img/shop/originals/gagas-offering-2400.webp"
+     },
+     "width": 2550,
+     "height": 3498,
+     "alt": "Gaga's Offering, collage: a pink-haired woman in a red horned headpiece holds an upside-down red figure, under purple glitter stars.",
+     "avg": "#82515E",
+     "lowres": false
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "day-no-25",
+   "title": "Day # 25",
+   "type": "original",
+   "year": null,
+   "number": null,
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-day-no-25",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/day-no-25-480.webp"
+     },
+     "width": 523,
+     "height": 640,
+     "alt": "Day # 25, drawing and collage: a drawn blonde woman's face with red lips on a pink crayon ground scattered with white paper stars.",
+     "avg": "#EE9DC8",
+     "lowres": true
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8853-480.webp",
+      "960": "shared/img/shop/framed/img-8853-960.webp",
+      "1600": "shared/img/shop/framed/img-8853-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Day # 25 in a red frame on black: an illustrated blonde face with red lips on bright pink textured paper scattered with pale stars.",
+     "avg": "#523437",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "female-cactus",
+   "title": "Female Cactus",
+   "type": "original",
+   "year": null,
+   "number": null,
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-female-cactus",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/female-cactus-480.webp",
+      "960": "shared/img/shop/originals/female-cactus-960.webp",
+      "1600": "shared/img/shop/originals/female-cactus-1600.webp",
+      "2400": "shared/img/shop/originals/female-cactus-2400.webp"
+     },
+     "width": 4866,
+     "height": 5706,
+     "alt": "Female Cactus, collage: a green cactus cut from ruched fabric, with paper thorns and pink flowers, rising from sandy rock on white paper.",
+     "avg": "#ABAC92",
+     "lowres": false
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8851-480.webp",
+      "960": "shared/img/shop/framed/img-8851-960.webp",
+      "1600": "shared/img/shop/framed/img-8851-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Female Cactus in a deep white frame on black: a tall green cactus with pink flowers rising from grey rock, with the words Wildlife sees it.",
+     "avg": "#554E4C",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "let-out",
+   "title": "Let Out",
+   "type": "original",
+   "year": null,
+   "number": null,
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-let-out",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/let-out-480.webp",
+      "960": "shared/img/shop/originals/let-out-960.webp",
+      "1600": "shared/img/shop/originals/let-out-1600.webp",
+      "2400": "shared/img/shop/originals/let-out-2400.webp"
+     },
+     "width": 2550,
+     "height": 3197,
+     "alt": "Let Out, collage: a red profile shouting inside a jagged burst, a black-and-white face with closed eyes, banknotes and red letters Let Out.",
+     "avg": "#846A5C",
+     "lowres": false
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "lucky-pleasures",
+   "title": "Lucky Pleasures",
+   "type": "original",
+   "year": null,
+   "number": null,
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-lucky-pleasures",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/lucky-pleasures-480.webp",
+      "960": "shared/img/shop/originals/lucky-pleasures-960.webp",
+      "1600": "shared/img/shop/originals/lucky-pleasures-1600.webp",
+      "2400": "shared/img/shop/originals/lucky-pleasures-2400.webp"
+     },
+     "width": 2539,
+     "height": 3502,
+     "alt": "Lucky Pleasures, collage: a woman in a tan bra with red lips pasted over her eyes, reaching hands and a Lucky Strike pack on red-pink paint.",
+     "avg": "#AB4D51",
+     "lowres": false
+    },
+    {
+     "sizes": {
+      "480": "shared/img/shop/framed/img-8865-480.webp",
+      "960": "shared/img/shop/framed/img-8865-960.webp",
+      "1600": "shared/img/shop/framed/img-8865-1600.webp"
+     },
+     "width": 6000,
+     "height": 4000,
+     "alt": "Lucky Pleasures in a deep white frame on black: a figure in a tan bikini with red lips over the eyes, on hot pink, with a cigarette pack.",
+     "avg": "#534746",
+     "lowres": false,
+     "framed": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "tears-water-the-soul-pink",
+   "title": "Tears Water The Soul - Pink",
+   "type": "original",
+   "year": null,
+   "number": null,
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-tears-water-the-soul-pink",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/tears-water-the-soul-pink-480.webp",
+      "960": "shared/img/shop/originals/tears-water-the-soul-pink-960.webp"
+     },
+     "width": 988,
+     "height": 1167,
+     "alt": "Tears Water The Soul - Pink, collage: a woman in a pink dress under a headdress of flowers and pink jewels, gem tears on her cheeks.",
+     "avg": "#E1C6C5",
+     "lowres": true
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  },
+  {
+   "handle": "tears-water-the-soul-silver",
+   "title": "Tears Water The Soul - Silver",
+   "type": "original",
+   "year": null,
+   "number": null,
+   "medium": "Mixed-media collage on paper, recycled magazines and found materials",
+   "dimensions": null,
+   "story": null,
+   "price": {
+    "amount": 111,
+    "currency": "USD"
+   },
+   "available": true,
+   "badge": "Original, 1 of 1",
+   "shipping": "Ships from Miami, insured, US only",
+   "variantId": "sample-tears-water-the-soul-silver",
+   "images": [
+    {
+     "sizes": {
+      "480": "shared/img/shop/originals/tears-water-the-soul-silver-480.webp",
+      "960": "shared/img/shop/originals/tears-water-the-soul-silver-960.webp",
+      "1600": "shared/img/shop/originals/tears-water-the-soul-silver-1600.webp",
+      "2400": "shared/img/shop/originals/tears-water-the-soul-silver-2400.webp"
+     },
+     "width": 3203,
+     "height": 3952,
+     "alt": "Tears Water The Soul - Silver, collage: a bare-shouldered woman under a silver crown piled with watches, gold coins, rings and cars.",
+     "avg": "#DCC5B7",
+     "lowres": false
+    }
+   ],
+   "sampleFields": [
+    "price"
+   ]
+  }
+ ]
+}

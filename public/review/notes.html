@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>The Global Collage — notes on the options</title>
+<link rel="icon" href="../shared/brand/favicon.png">
+<link rel="stylesheet" href="review.css">
+</head>
+<!-- Dre's side: every reviewer's notes as plain text. Open it with ?k=<the review key>. Not linked from the review page. -->
+<body class="reader">
+<main>
+  <h1>Notes on the website options</h1>
+  <p class="lede" id="state" role="status">Loading…</p>
+  <div id="reviewers"></div>
+</main>
+<script type="module">
+import { summarize } from './summary.js';
+
+const state = document.getElementById('state');
+const el = (tag, props = {}, ...children) => { const node = Object.assign(document.createElement(tag), props); node.append(...children); return node; };
+const from = new URL('../api/notes', import.meta.url);
+from.search = new URLSearchParams({ all: '1', k: new URLSearchParams(location.search).get('k') ?? '' });
+
+let trouble = 'The notes could not be loaded.';
+try {
+  const [config, res] = await Promise.all([fetch('options.json').then((r) => r.json()), fetch(from)]);
+  if (res.status === 401) trouble = 'The key in this link is missing or wrong.';
+  if (res.status === 501) trouble = 'Notes are not set up on this site yet.';
+  if (!res.ok) throw new Error(res.status);
+  const docs = (await res.json()).reviewers.filter((doc) => doc?.notes).sort((a, b) => String(b.savedAt).localeCompare(String(a.savedAt)));
+  state.textContent = docs.length ? `${docs.length === 1 ? '1 person has' : `${docs.length} people have`} left notes. Newest first.` : 'No notes yet.';
+  document.getElementById('reviewers').replaceChildren(...docs.map((doc) => {
+    const text = el('pre', { textContent: summarize(doc, config.options) }); // textContent: what a reviewer typed is never read as HTML
+    const copy = el('button', { type: 'button', className: 'plain', textContent: 'Copy' });
+    copy.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(text.textContent); copy.textContent = 'Copied'; }
+      catch { getSelection().selectAllChildren(text); copy.textContent = 'Selected: now copy'; }
+    });
+    return el('article', {}, el('header', {}, el('h2', { textContent: doc.who }), copy), text);
+  }));
+} catch {
+  state.textContent = trouble;
+}
+</script>
+</body>
+</html>

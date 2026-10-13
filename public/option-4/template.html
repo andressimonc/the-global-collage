@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Page title from docs/COPY.md | The Global Collage</title>
+  <meta name="description" content="This page's SEO meta from docs/COPY.md.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#EFEDEA">
+  <link rel="icon" href="../shared/brand/favicon.png">
+  <link rel="preload" href="../shared/fonts/TTInterphasesProTrial-Variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="../shared/fonts/Neco-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../shared/fonts/fonts.css">
+  <link rel="stylesheet" href="../shared/motion.css">
+  <link rel="stylesheet" href="css/site.css">
+  <script type="module" blocking="render" src="js/site.js"></script>
+  <noscript><style>.dock [data-menu-toggle], .dock [data-cart-toggle] { display: none; }</style></noscript>
+</head>
+<body>
+  <!-- TEMPLATE for an inner page of Option 4 "The Poster". Copy this file, then:
+       1. <title> and meta description from docs/COPY.md.
+       2. Put aria-current="page" on this page's row in the menu sheet AND in the footer nav.
+       3. Replace what is inside <main>. Keep everything outside it exactly as it is (all pages share it).
+       4. A page script is a second module after js/site.js:  <script type="module" src="js/shop.js"></script>
+          and may  import { pieceCard, renderPieces, addToCart, openCart } from './site.js';
+       Component list and page plans: docs/option-4/DESIGN.md. -->
+  <a class="skip" href="#main">Skip to content</a>
+
+  <a class="logo" href="index.html">
+    <img class="logo__dark" src="../shared/brand/logo-black-v1-400.webp" alt="The Global Collage" width="400" height="298">
+    <img class="logo__light" src="../shared/brand/logo-white-v1-400.webp" alt="" width="400" height="298">
+  </a>
+
+  <main id="main" class="stack">
+
+    <!-- THE OPENING of an inner page: the giant h1 in three bands, then the intro and an action beside it.
+         Tune the h1 with style="--mega: NNvw" so it runs edge to edge (widths: docs/option-4/DESIGN.md). -->
+    <section class="poster page-top" data-tone="paper" data-scroll>
+      <h1 class="mega page-top__title"><span class="bands" data-t="Page name"><span class="band">Page name</span></span></h1>
+      <div class="page-top__intro wrap">
+        <p class="lead needs-content" data-enter="up" style="--enter-delay:.4s">This page&rsquo;s intro line from docs/COPY.md goes here.</p>
+        <p data-enter="up" style="--enter-delay:.55s"><a class="btn" href="shop.html" data-pull>Explore the collection <span class="arr" aria-hidden="true">&rarr;</span></a></p>
+      </div>
+    </section>
+
+    <!-- Every section after it is one more poster: .poster (paper) / .poster--orange / .poster--cobalt,
+         with data-tone="paper|orange|cobalt" (the logo reads it) and data-scroll (the giant lines travel). -->
+    <section class="poster poster--cobalt" data-tone="cobalt" data-scroll aria-labelledby="next-h">
+      <h2 class="mega" id="next-h" style="--mega: 15vw; padding-left: 1.6vw" data-words data-reveal><span class="mega__line">Next poster</span></h2>
+      <div class="wrap" style="margin-top: 2rem">
+        <p class="needs-content" data-reveal>The page&rsquo;s sections go here, one poster each.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" data-tone="footer" id="site-footer">
+    <div class="wrap footer__grid">
+      <a class="footer__logo" href="index.html"><img src="../shared/brand/logo-white-v1-400.webp" alt="The Global Collage" width="400" height="298" loading="lazy"></a>
+      <nav class="footer__nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><span>Services <i class="soon">soon</i></span></li>
+          <li><span>Exhibition <i class="soon">soon</i></span></li>
+          <li><span>Commissions <i class="soon">soon</i></span></li>
+          <li><span>Contact <i class="soon">soon</i></span></li>
+        </ul>
+      </nav>
+      <div class="footer__side">
+        <form class="join" data-newsletter>
+          <label class="field"><span class="label">Email</span><input id="footer-email" type="email" name="email" autocomplete="email" inputmode="email" required></label>
+          <button class="btn" type="submit">Join</button>
+        </form>
+        <ul class="footer__contact">
+          <li><a href="mailto:theglobalcollage@gmail.com">theglobalcollage@gmail.com</a></li>
+          <li><a href="tel:+13053353506">+1 (305) 335-3506</a></li>
+          <li><a href="https://www.instagram.com/theglobalcollage/" rel="noopener">@theglobalcollage</a></li>
+        </ul>
+      </div>
+      <div class="footer__base">
+        <p>Based in Miami, available in the US</p>
+        <ul class="footer__legal">
+          <li><span>Shipping &amp; Returns <i class="soon">soon</i></span></li>
+          <li><span>Privacy <i class="soon">soon</i></span></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- the cart's dimmer -->
+  <div class="scrim" data-close></div>
+
+  <!-- MENU: a full-screen sheet that slides up from the dock -->
+  <div class="sheet menu" id="menu" role="dialog" aria-label="Menu" tabindex="-1" hidden>
+    <img class="menu__logo" src="../shared/brand/logo-white-v1-400.webp" alt="" width="400" height="298" loading="lazy">
+    <nav aria-label="Main">
+      <ol class="menu__list">
+        <li style="--i:0"><a class="menu__row" href="index.html" data-pic="home"><span class="menu__word">Home</span></a></li>
+        <li style="--i:1"><a class="menu__row" href="about.html" data-pic="about"><span class="menu__word">About</span></a></li>
+        <li style="--i:2"><a class="menu__row" href="shop.html" data-pic="shop"><span class="menu__word">Shop</span></a></li>
+        <li style="--i:3"><span class="menu__row is-soon" data-pic="services"><span class="menu__word">Services</span> <span class="soon">soon</span></span></li>
+        <li style="--i:4"><span class="menu__row is-soon" data-pic="exhibition"><span class="menu__word">Exhibition</span> <span class="soon">soon</span></span></li>
+        <li style="--i:5"><span class="menu__row is-soon" data-pic="commissions"><span class="menu__word">Commissions</span> <span class="soon">soon</span></span></li>
+        <li style="--i:6"><span class="menu__row is-soon" data-pic="contact"><span class="menu__word">Contact</span> <span class="soon">soon</span></span></li>
+      </ol>
+    </nav>
+    <div class="menu__pics" aria-hidden="true">
+      <img data-pic="home" src="../shared/img/shop/originals/society-960.webp" width="2400" height="2669" loading="lazy" alt="">
+      <img data-pic="about" class="cut-bw" src="../shared/img/cutouts/camila-960.webp" width="960" height="1412" loading="lazy" alt="">
+      <img data-pic="shop" src="../shared/img/shop/originals/be-you-960.webp" width="2400" height="2761" loading="lazy" alt="">
+      <img data-pic="services" class="cut-bw" src="../shared/img/cutouts/hands-cutting-960.webp" width="960" height="1117" loading="lazy" alt="">
+      <img data-pic="exhibition" src="../shared/img/exhibition/tripping-animals-2024/img-5929-960.webp" width="1600" height="2133" loading="lazy" alt="">
+      <img data-pic="commissions" src="../shared/img/commissions/finished/feet-on-the-ground-960.webp" width="2400" height="2991" loading="lazy" alt="">
+      <img data-pic="contact" class="cut-bw" src="../shared/img/cutouts/hand-rings-960.webp" width="960" height="1047" loading="lazy" alt="">
+    </div>
+    <p class="menu__foot"><a href="mailto:theglobalcollage@gmail.com">theglobalcollage@gmail.com</a> <a href="https://www.instagram.com/theglobalcollage/" rel="noopener">@theglobalcollage</a></p>
+  </div>
+
+  <!-- CART: a sheet that rises out of the dock -->
+  <div class="sheet cart" id="cart" role="dialog" aria-labelledby="cart-h" tabindex="-1" hidden>
+    <div class="cart__head">
+      <h2 class="cart__title" id="cart-h">Cart</h2>
+      <button class="cart__close" type="button" data-close>Close</button>
+    </div>
+    <ul class="cart__lines" data-cart-lines></ul>
+    <div class="cart__empty" data-cart-empty>
+      <p>Your cart is empty.</p>
+      <a class="link" href="shop.html">Explore the collection <span class="arr" aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div class="cart__foot" data-cart-foot hidden>
+      <p class="cart__sum"><span>Subtotal</span><span data-cart-subtotal></span></p>
+      <p class="cart__ship">Ships from Miami, insured, US only.</p>
+      <button class="btn btn--block" type="button" data-checkout>Checkout <span class="arr" aria-hidden="true">&rarr;</span></button>
+    </div>
+    <p class="cart__status form-status" data-cart-status aria-live="polite"></p>
+  </div>
+
+  <!-- THE DOCK: how you move around. No top bar. -->
+  <nav class="dock" aria-label="Site">
+    <button class="dock__btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu"><span class="dock__bars" aria-hidden="true"></span><span data-label>Menu</span></button>
+    <a class="dock__btn dock__shop" href="shop.html">Shop</a>
+    <button class="dock__btn" type="button" data-cart-toggle aria-expanded="false" aria-controls="cart"><span data-label>Cart</span><span class="dock__count" data-cart-count>0</span></button>
+  </nav>
+</body>
+</html>

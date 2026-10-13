@@ -1,0 +1,28 @@
+# Option 8 "The Floor" — choices Dre or Camila may want to change
+
+- Headline face: the brand sans (TT Interphases 640, cobalt, sentence case) rather than Neco, so this option reads unlike 5, 6, 7 and 9; Neco carries her sentences.
+- Floor colour is `#E7E2D9`, a step warmer and deeper than brand paper `#EFEDEA`, so white-edged prints show on it. Not on her brand board.
+- Every print has a plain white border and a soft contact shadow. No tape, no pins, no frames.
+- All 25 originals are on the hero floor. The 8 low-resolution ones (Candy, Home, Looking, Royal Love Story, Small World, Blues, Day # 25, Tears Water The Soul - Pink) lie on the outskirts, never beside the headline, and zoom in less.
+- Prints beside the headline on the first screen: Gaga's Offering, Tears Water The Soul - Green (tucked into the headline), The Art of Art, Society, Be You, Lucky Pleasures, Female Cactus, Senor Tigre, Tears Water The Soul - Silver.
+- Three prints deliberately touch the headline: The Art of Art over the top of "worlds", Tears Green under it, Society under "fragments.". Every word stays readable.
+- Where each print lies is hand-placed (two layouts: wide, and narrow under 900px). The numbers are on each `<li>` in `index.html`.
+- Featured six in "The work": Be You, Society, The Art of Art, Gaga's Offering, Senor Tigre, Female Cactus (all high resolution).
+- Pressing a floor print zooms in on it first; its own page is one more press ("See the full piece", or the print again).
+- Menu and footer: only Home is a link. About, Shop, Services, Exhibition, Commissions, Contact and the two legal links are marked "soon" and are not links, because this option is Home only. Home's own buttons still point at `shop.html`, `about.html`, `services.html`, `commissions.html`, `exhibition.html#the-local-collage`.
+- The pad (map, Menu, Cart) is ink, bottom-right, on every width. No Shop shortcut in it.
+- No cut-outs anywhere in this option, and nothing cut from an artwork. Pictures only as whole prints or whole photographs.
+- About teaser: her portrait (About > Portrait) plus one process photo, bw-97, from Collage Photos (her on the floor among magazines), both reused outside their folders. No Home portrait was supplied.
+- About teaser: her first sentence is set large as the opening of the same paragraph. No words added or moved.
+- Stay in touch shows one original, Let Out, as a print that links to its page.
+- The deeper why: two Local Collage pictures (dscf7903 and The Local Collage #3: The Butterfly Effect) from Exhibition > The Local Collage. The caption "The Local Collage #3: The Butterfly Effect" comes from the file's name. No sentence was added, because the copy gives only the button.
+- Section headings taken from the copy's own section names, in sentence case: "The work", "Ways to own it", "Stay in touch", "The deeper why".
+- Wording I had to add (not in the copy): "Drag to look around", "Drag sideways", the mouse words "Drag", "View", "Back", "Open its page"; "Back to the floor", "See the full piece", "Add to cart", "Sold"; "Menu", "Cart", "Close", "soon"; cart: "Your cart is empty.", "Subtotal", "Remove", "Checkout", "Ships from Miami, insured, US only."; "Skip to content", "Skip the prints"; hidden headings "About" and "Services"; the "Email" label; screen-reader labels for the floor, the map and the six originals.
+- Footer line is "Based in Miami, available in the US" without the copy's trailing comma.
+- Instagram links to instagram.com/theglobalcollage (from the handle in the copy).
+- The pad steps aside: when a headline, a button, a price or a field comes under it, it slides below the screen edge and returns once the spot is clear (it used to sit on a card's Add button or the end of a line). The other way to get this is a full-width bar on phones; that is a look, so it is Dre's call.
+- Switching between the wide and the phone layout (the review site's Phone switch, a narrowed window) puts the floor back on its headline; before, the headline could land half off the screen.
+- The sample-price note sits in the page under the cards in "The work" (it used to float top-right over whatever scrolled by), small, and can be closed. The checkout note leaves when the cart closes. It is the shop layer's, shown while prices are samples.
+- Primary buttons are orange with ink text; secondary ones cobalt. Corners 14px.
+- Nothing is left as a placeholder on Home.
+- Trial fonts (TT Interphases) as in every option: license before launch.

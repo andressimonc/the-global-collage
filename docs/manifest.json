@@ -1,0 +1,2406 @@
+[
+ {
+  "section": "about/portrait",
+  "source": "02 — About/Portraits & Studio/Cami-754.png",
+  "width": 1901,
+  "height": 1832,
+  "ratio": 1.0377,
+  "alpha": false,
+  "avg": "#585358",
+  "palette": [
+   "#2A272A",
+   "#1D1A1C",
+   "#D9D4E1",
+   "#C4B7C1",
+   "#474044"
+  ],
+  "id": "about/portrait/cami-754",
+  "sizes": {
+   "480": "shared/img/about/portrait/cami-754-480.webp",
+   "960": "shared/img/about/portrait/cami-754-960.webp",
+   "1600": "shared/img/about/portrait/cami-754-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF5885 (1).JPG",
+  "width": 4240,
+  "height": 2832,
+  "ratio": 1.4972,
+  "alpha": false,
+  "avg": "#635859",
+  "palette": [
+   "#121217",
+   "#492F30",
+   "#776560",
+   "#A7A6AA",
+   "#CECDCE"
+  ],
+  "id": "about/process/dscf5885-1",
+  "sizes": {
+   "480": "shared/img/about/process/dscf5885-1-480.webp",
+   "960": "shared/img/about/process/dscf5885-1-960.webp",
+   "1600": "shared/img/about/process/dscf5885-1-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF5889.JPG",
+  "width": 4240,
+  "height": 2832,
+  "ratio": 1.4972,
+  "alpha": false,
+  "avg": "#6A5E5F",
+  "palette": [
+   "#543633",
+   "#1B1920",
+   "#82716B",
+   "#A5AAB0",
+   "#C9C8CB"
+  ],
+  "id": "about/process/dscf5889",
+  "sizes": {
+   "480": "shared/img/about/process/dscf5889-480.webp",
+   "960": "shared/img/about/process/dscf5889-960.webp",
+   "1600": "shared/img/about/process/dscf5889-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8176.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#60554D",
+  "palette": [
+   "#1D110D",
+   "#736A5C",
+   "#4A3329",
+   "#938E87",
+   "#BCBDB9"
+  ],
+  "id": "about/process/dscf8176",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8176-480.webp",
+   "960": "shared/img/about/process/dscf8176-960.webp",
+   "1600": "shared/img/about/process/dscf8176-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8179.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#6D6055",
+  "palette": [
+   "#877B6B",
+   "#BEBBB5",
+   "#1D120C",
+   "#432415",
+   "#604A3B"
+  ],
+  "id": "about/process/dscf8179",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8179-480.webp",
+   "960": "shared/img/about/process/dscf8179-960.webp",
+   "1600": "shared/img/about/process/dscf8179-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8180.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#4E3F34",
+  "palette": [
+   "#574131",
+   "#989086",
+   "#2D190D",
+   "#130B09",
+   "#3E2210"
+  ],
+  "id": "about/process/dscf8180",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8180-480.webp",
+   "960": "shared/img/about/process/dscf8180-960.webp",
+   "1600": "shared/img/about/process/dscf8180-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8181.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#5D5F5B",
+  "palette": [
+   "#647374",
+   "#1F2026",
+   "#5C493D",
+   "#BDAB86",
+   "#6E96A4"
+  ],
+  "id": "about/process/dscf8181",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8181-480.webp",
+   "960": "shared/img/about/process/dscf8181-960.webp",
+   "1600": "shared/img/about/process/dscf8181-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8182.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#685950",
+  "palette": [
+   "#221D1E",
+   "#563627",
+   "#776552",
+   "#C9C6C1",
+   "#9D968E"
+  ],
+  "id": "about/process/dscf8182",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8182-480.webp",
+   "960": "shared/img/about/process/dscf8182-960.webp",
+   "1600": "shared/img/about/process/dscf8182-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8185.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#4C4A4C",
+  "palette": [
+   "#545152",
+   "#131822",
+   "#989A9C",
+   "#262122",
+   "#3A2A20"
+  ],
+  "id": "about/process/dscf8185",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8185-480.webp",
+   "960": "shared/img/about/process/dscf8185-960.webp",
+   "1600": "shared/img/about/process/dscf8185-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8186.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#5B524E",
+  "palette": [
+   "#171922",
+   "#453127",
+   "#685D57",
+   "#8D847B",
+   "#BFBCB6"
+  ],
+  "id": "about/process/dscf8186",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8186-480.webp",
+   "960": "shared/img/about/process/dscf8186-960.webp",
+   "1600": "shared/img/about/process/dscf8186-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8188.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#58483D",
+  "palette": [
+   "#ABA69E",
+   "#645242",
+   "#180C07",
+   "#2D160B",
+   "#431F0D"
+  ],
+  "id": "about/process/dscf8188",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8188-480.webp",
+   "960": "shared/img/about/process/dscf8188-960.webp",
+   "1600": "shared/img/about/process/dscf8188-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8189.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#675549",
+  "palette": [
+   "#B3ACA3",
+   "#7A6957",
+   "#1F1009",
+   "#613F2C",
+   "#3A2314"
+  ],
+  "id": "about/process/dscf8189",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8189-480.webp",
+   "960": "shared/img/about/process/dscf8189-960.webp",
+   "1600": "shared/img/about/process/dscf8189-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8190.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#645447",
+  "palette": [
+   "#796856",
+   "#B3ACA3",
+   "#1C1009",
+   "#361D0E",
+   "#5D3926"
+  ],
+  "id": "about/process/dscf8190",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8190-480.webp",
+   "960": "shared/img/about/process/dscf8190-960.webp",
+   "1600": "shared/img/about/process/dscf8190-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8191.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#665549",
+  "palette": [
+   "#BAB2A8",
+   "#7B6957",
+   "#1B100A",
+   "#39180A",
+   "#533A2B"
+  ],
+  "id": "about/process/dscf8191",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8191-480.webp",
+   "960": "shared/img/about/process/dscf8191-960.webp",
+   "1600": "shared/img/about/process/dscf8191-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8192.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#5F4F44",
+  "palette": [
+   "#746251",
+   "#B3ACA3",
+   "#180D08",
+   "#341406",
+   "#473023"
+  ],
+  "id": "about/process/dscf8192",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8192-480.webp",
+   "960": "shared/img/about/process/dscf8192-960.webp",
+   "1600": "shared/img/about/process/dscf8192-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8193.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#695141",
+  "palette": [
+   "#BBAA99",
+   "#1B100B",
+   "#835E45",
+   "#362317",
+   "#5B2F1C"
+  ],
+  "id": "about/process/dscf8193",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8193-480.webp",
+   "960": "shared/img/about/process/dscf8193-960.webp",
+   "1600": "shared/img/about/process/dscf8193-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8194.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#98948D",
+  "palette": [
+   "#878279",
+   "#5E5850",
+   "#AEABA5",
+   "#C6C4BF",
+   "#D1D0CC"
+  ],
+  "id": "about/process/dscf8194",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8194-480.webp",
+   "960": "shared/img/about/process/dscf8194-960.webp",
+   "1600": "shared/img/about/process/dscf8194-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8195.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#91887E",
+  "palette": [
+   "#C3BEB7",
+   "#AAA298",
+   "#56493E",
+   "#756D62",
+   "#8C8071"
+  ],
+  "id": "about/process/dscf8195",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8195-480.webp",
+   "960": "shared/img/about/process/dscf8195-960.webp",
+   "1600": "shared/img/about/process/dscf8195-1600.webp"
+  }
+ },
+ {
+  "section": "about/process",
+  "source": "02 — About/Process Shots/DSCF8196.JPG",
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "alpha": false,
+  "avg": "#655045",
+  "palette": [
+   "#1C100C",
+   "#7A6153",
+   "#4E2E1F",
+   "#A2917F",
+   "#BDB4AA"
+  ],
+  "id": "about/process/dscf8196",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8196-480.webp",
+   "960": "shared/img/about/process/dscf8196-960.webp",
+   "1600": "shared/img/about/process/dscf8196-1600.webp"
+  }
+ },
+ {
+  "section": "brand",
+  "source": "00 — Brand & Logos/Banner.png",
+  "width": 3360,
+  "height": 840,
+  "ratio": 4.0,
+  "alpha": false,
+  "avg": "#9A7751",
+  "palette": [
+   "#3F4B33",
+   "#B88657",
+   "#8F5835",
+   "#DBA776",
+   "#E9C396"
+  ],
+  "id": "brand/banner",
+  "sizes": {
+   "480": "shared/img/brand/banner-480.webp",
+   "960": "shared/img/brand/banner-960.webp",
+   "1600": "shared/img/brand/banner-1600.webp"
+  }
+ },
+ {
+  "section": "collage-photos",
+  "source": "Cool Collage Photos /bw-100.jpg",
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "alpha": false,
+  "avg": "#836548",
+  "palette": [
+   "#303126",
+   "#724D37",
+   "#BF9165",
+   "#A77A53",
+   "#C9A780"
+  ],
+  "id": "collage-photos/bw-100",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-100-480.webp",
+   "960": "shared/img/collage-photos/bw-100-960.webp",
+   "1600": "shared/img/collage-photos/bw-100-1600.webp"
+  }
+ },
+ {
+  "section": "collage-photos",
+  "source": "Cool Collage Photos /bw-107.jpg",
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "alpha": false,
+  "avg": "#68573F",
+  "palette": [
+   "#B88A64",
+   "#676647",
+   "#262D23",
+   "#3E3527",
+   "#754832"
+  ],
+  "id": "collage-photos/bw-107",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-107-480.webp",
+   "960": "shared/img/collage-photos/bw-107-960.webp",
+   "1600": "shared/img/collage-photos/bw-107-1600.webp"
+  }
+ },
+ {
+  "section": "collage-photos",
+  "source": "Cool Collage Photos /bw-110.jpg",
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "alpha": false,
+  "avg": "#725943",
+  "palette": [
+   "#60402D",
+   "#2B211A",
+   "#B38C6B",
+   "#7F6749",
+   "#CBAD8D"
+  ],
+  "id": "collage-photos/bw-110",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-110-480.webp",
+   "960": "shared/img/collage-photos/bw-110-960.webp",
+   "1600": "shared/img/collage-photos/bw-110-1600.webp"
+  }
+ },
+ {
+  "section": "collage-photos",
+  "source": "Cool Collage Photos /bw-115.jpg",
+  "width": 2449,
+  "height": 3674,
+  "ratio": 0.6666,
+  "alpha": false,
+  "avg": "#503827",
+  "palette": [
+   "#3E2315",
+   "#1F120C",
+   "#603F2D",
+   "#635A3D",
+   "#9F7E5E"
+  ],
+  "id": "collage-photos/bw-115",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-115-480.webp",
+   "960": "shared/img/collage-photos/bw-115-960.webp",
+   "1600": "shared/img/collage-photos/bw-115-1600.webp"
+  }
+ },
+ {
+  "section": "collage-photos",
+  "source": "Cool Collage Photos /bw-119.jpg",
+  "width": 2449,
+  "height": 3674,
+  "ratio": 0.6666,
+  "alpha": false,
+  "avg": "#7D684E",
+  "palette": [
+   "#2F3629",
+   "#704F3A",
+   "#BF9771",
+   "#8E7656",
+   "#CFB08C"
+  ],
+  "id": "collage-photos/bw-119",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-119-480.webp",
+   "960": "shared/img/collage-photos/bw-119-960.webp",
+   "1600": "shared/img/collage-photos/bw-119-1600.webp"
+  }
+ },
+ {
+  "section": "collage-photos",
+  "source": "Cool Collage Photos /bw-120.jpg",
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "alpha": false,
+  "avg": "#867258",
+  "palette": [
+   "#5C5D41",
+   "#A98564",
+   "#412F24",
+   "#CAAB89",
+   "#DCC0A2"
+  ],
+  "id": "collage-photos/bw-120",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-120-480.webp",
+   "960": "shared/img/collage-photos/bw-120-960.webp",
+   "1600": "shared/img/collage-photos/bw-120-1600.webp"
+  }
+ },
+ {
+  "section": "collage-photos",
+  "source": "Cool Collage Photos /bw-92.jpg",
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "alpha": false,
+  "avg": "#7F6345",
+  "palette": [
+   "#303D2B",
+   "#BB8C60",
+   "#9E734E",
+   "#6D4832",
+   "#C7A177"
+  ],
+  "id": "collage-photos/bw-92",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-92-480.webp",
+   "960": "shared/img/collage-photos/bw-92-960.webp",
+   "1600": "shared/img/collage-photos/bw-92-1600.webp"
+  }
+ },
+ {
+  "section": "collage-photos",
+  "source": "Cool Collage Photos /bw-94.jpg",
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "alpha": false,
+  "avg": "#856446",
+  "palette": [
+   "#343A29",
+   "#A3744F",
+   "#BE8C61",
+   "#784A33",
+   "#CAA47E"
+  ],
+  "id": "collage-photos/bw-94",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-94-480.webp",
+   "960": "shared/img/collage-photos/bw-94-960.webp",
+   "1600": "shared/img/collage-photos/bw-94-1600.webp"
+  }
+ },
+ {
+  "section": "collage-photos",
+  "source": "Cool Collage Photos /bw-96.jpg",
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "alpha": false,
+  "avg": "#76573B",
+  "palette": [
+   "#322216",
+   "#B1845C",
+   "#683D24",
+   "#816947",
+   "#C2A079"
+  ],
+  "id": "collage-photos/bw-96",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-96-480.webp",
+   "960": "shared/img/collage-photos/bw-96-960.webp",
+   "1600": "shared/img/collage-photos/bw-96-1600.webp"
+  }
+ },
+ {
+  "section": "collage-photos",
+  "source": "Cool Collage Photos /bw-97.jpg",
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "alpha": false,
+  "avg": "#816347",
+  "palette": [
+   "#2F3025",
+   "#6F4A33",
+   "#BB8F65",
+   "#A37851",
+   "#C9A781"
+  ],
+  "id": "collage-photos/bw-97",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-97-480.webp",
+   "960": "shared/img/collage-photos/bw-97-960.webp",
+   "1600": "shared/img/collage-photos/bw-97-1600.webp"
+  }
+ },
+ {
+  "section": "commissions/finished",
+  "source": "06 — Commissions/Finished Commissions/Feet on the ground_12x16 inches_Collage on Paper_Camila Castillo.png",
+  "width": 5046,
+  "height": 6288,
+  "ratio": 0.8025,
+  "alpha": false,
+  "avg": "#8A7156",
+  "palette": [
+   "#AB835A",
+   "#CEBAAA",
+   "#3A2D1C",
+   "#5A5737",
+   "#915F38"
+  ],
+  "title": "Feet on the Ground",
+  "dimensions": "12 x 16 in",
+  "medium": "Collage on paper",
+  "artwork": true,
+  "id": "commissions/finished/feet-on-the-ground",
+  "sizes": {
+   "480": "shared/img/commissions/finished/feet-on-the-ground-480.webp",
+   "960": "shared/img/commissions/finished/feet-on-the-ground-960.webp",
+   "1600": "shared/img/commissions/finished/feet-on-the-ground-1600.webp",
+   "2400": "shared/img/commissions/finished/feet-on-the-ground-2400.webp"
+  }
+ },
+ {
+  "section": "exhibition/local-collage",
+  "source": "05 — Exhibition/The Local Collage/DSCF7903.JPG",
+  "width": 4240,
+  "height": 2384,
+  "ratio": 1.7785,
+  "alpha": false,
+  "avg": "#6F6865",
+  "palette": [
+   "#221C1D",
+   "#8E8886",
+   "#6A5D58",
+   "#9B9592",
+   "#A6A59F"
+  ],
+  "id": "exhibition/local-collage/dscf7903",
+  "sizes": {
+   "480": "shared/img/exhibition/local-collage/dscf7903-480.webp",
+   "960": "shared/img/exhibition/local-collage/dscf7903-960.webp",
+   "1600": "shared/img/exhibition/local-collage/dscf7903-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/local-collage",
+  "source": "05 — Exhibition/The Local Collage/DSCF7921.JPG",
+  "width": 2384,
+  "height": 4240,
+  "ratio": 0.5623,
+  "alpha": false,
+  "avg": "#464446",
+  "palette": [
+   "#0A090C",
+   "#2A2A31",
+   "#575150",
+   "#7F7B7B",
+   "#A09B98"
+  ],
+  "id": "exhibition/local-collage/dscf7921",
+  "sizes": {
+   "480": "shared/img/exhibition/local-collage/dscf7921-480.webp",
+   "960": "shared/img/exhibition/local-collage/dscf7921-960.webp",
+   "1600": "shared/img/exhibition/local-collage/dscf7921-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/local-collage",
+  "source": "05 — Exhibition/The Local Collage/DSCF7924.JPG",
+  "width": 4240,
+  "height": 2384,
+  "ratio": 1.7785,
+  "alpha": false,
+  "avg": "#696261",
+  "palette": [
+   "#211A1D",
+   "#625552",
+   "#86807D",
+   "#979493",
+   "#A19F9D"
+  ],
+  "id": "exhibition/local-collage/dscf7924",
+  "sizes": {
+   "480": "shared/img/exhibition/local-collage/dscf7924-480.webp",
+   "960": "shared/img/exhibition/local-collage/dscf7924-960.webp",
+   "1600": "shared/img/exhibition/local-collage/dscf7924-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/local-collage",
+  "source": "05 — Exhibition/The Local Collage/The Local Collage #3 The Butterfly Effect_30x30 inches_Collage on Canvas_Camila Castillo.png",
+  "width": 3685,
+  "height": 4914,
+  "ratio": 0.7499,
+  "alpha": false,
+  "avg": "#7E7567",
+  "palette": [
+   "#6F6455",
+   "#3B3835",
+   "#AEA392",
+   "#918371",
+   "#CBC4B4"
+  ],
+  "title": "The Local Collage #3: The Butterfly Effect",
+  "dimensions": "30 x 30 in",
+  "medium": "Collage on canvas",
+  "artwork": true,
+  "id": "exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect",
+  "sizes": {
+   "480": "shared/img/exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect-480.webp",
+   "960": "shared/img/exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect-960.webp",
+   "1600": "shared/img/exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect-1600.webp",
+   "2400": "shared/img/exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect-2400.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2024",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2024/IMG_5709.JPG",
+  "width": 3024,
+  "height": 4032,
+  "ratio": 0.75,
+  "alpha": false,
+  "avg": "#5F664A",
+  "palette": [
+   "#7F7E6D",
+   "#1D1E05",
+   "#B0A99E",
+   "#4F522E",
+   "#6BAB6E"
+  ],
+  "id": "exhibition/tripping-animals-2024/img-5709",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2024/img-5709-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2024/img-5709-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2024/img-5709-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2024",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2024/IMG_5929.JPG",
+  "width": 3024,
+  "height": 4032,
+  "ratio": 0.75,
+  "alpha": false,
+  "avg": "#756452",
+  "palette": [
+   "#5A4732",
+   "#2B190F",
+   "#8D7D65",
+   "#B6A790",
+   "#CCC2AF"
+  ],
+  "id": "exhibition/tripping-animals-2024/img-5929",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2024/img-5929-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2024/img-5929-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2024/img-5929-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8888.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#59534E",
+  "palette": [
+   "#4A423B",
+   "#645F57",
+   "#231B16",
+   "#7D7875",
+   "#A7A5A7"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8888",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8888-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8888-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8888-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8889.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#605854",
+  "palette": [
+   "#524139",
+   "#2B2722",
+   "#69645E",
+   "#888484",
+   "#A9A6A7"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8889",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8889-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8889-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8889-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8890.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#6C635E",
+  "palette": [
+   "#5C4F46",
+   "#382824",
+   "#77706A",
+   "#92908F",
+   "#B6B7BB"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8890",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8890-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8890-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8890-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8891.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#615954",
+  "palette": [
+   "#53473F",
+   "#68625A",
+   "#352521",
+   "#837F7E",
+   "#AAA8AB"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8891",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8891-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8891-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8891-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8892.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#695F5B",
+  "palette": [
+   "#584C44",
+   "#726963",
+   "#3A2A24",
+   "#8C8784",
+   "#B4B5B8"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8892",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8892-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8892-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8892-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8893.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#695F5C",
+  "palette": [
+   "#63534E",
+   "#2F211E",
+   "#8B8884",
+   "#797571",
+   "#A19C9D"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8893",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8893-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8893-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8893-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8894.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#655C59",
+  "palette": [
+   "#5C4C49",
+   "#372D29",
+   "#726C69",
+   "#84817E",
+   "#959493"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8894",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8894-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8894-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8894-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8895.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#574C49",
+  "palette": [
+   "#4E3D38",
+   "#5E5650",
+   "#291D19",
+   "#746F6C",
+   "#9A9697"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8895",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8895-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8895-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8895-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8896.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#584E4A",
+  "palette": [
+   "#4F3E39",
+   "#615753",
+   "#261F1C",
+   "#756D6A",
+   "#9E999C"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8896",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8896-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8896-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8896-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8897.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#665D5A",
+  "palette": [
+   "#6C645E",
+   "#9C9698",
+   "#38322D",
+   "#58443D",
+   "#5B514A"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8897",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8897-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8897-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8897-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8898.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#625D58",
+  "palette": [
+   "#54504D",
+   "#6F6B68",
+   "#392620",
+   "#83817D",
+   "#96A69A"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8898",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8898-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8898-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8898-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8899.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#67635D",
+  "palette": [
+   "#58544F",
+   "#382720",
+   "#787471",
+   "#8D8B89",
+   "#9EACA2"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8899",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8899-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8899-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8899-1600.webp"
+  }
+ },
+ {
+  "section": "exhibition/tripping-animals-2025",
+  "source": "05 — Exhibition/Tripping Animals — On The Wall/2025/IMG_8900.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#6A6560",
+  "palette": [
+   "#5D5955",
+   "#3E2E26",
+   "#797471",
+   "#8C8A86",
+   "#9EACA1"
+  ],
+  "id": "exhibition/tripping-animals-2025/img-8900",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8900-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8900-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8900-1600.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Icon Black.png",
+  "width": 3512,
+  "height": 2002,
+  "ratio": 1.7542,
+  "alpha": true,
+  "avg": "#000000",
+  "palette": [
+   "#000000"
+  ],
+  "id": "logo/icon-black",
+  "sizes": {
+   "400": "shared/brand/icon-black-400.webp",
+   "1000": "shared/brand/icon-black-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Icon White.png",
+  "width": 3512,
+  "height": 2002,
+  "ratio": 1.7542,
+  "alpha": true,
+  "avg": "#FFFFFF",
+  "palette": [
+   "#FFFFFF"
+  ],
+  "id": "logo/icon-white",
+  "sizes": {
+   "400": "shared/brand/icon-white-400.webp",
+   "1000": "shared/brand/icon-white-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Logo Black V1.png",
+  "width": 3244,
+  "height": 2414,
+  "ratio": 1.3438,
+  "alpha": true,
+  "avg": "#000000",
+  "palette": [
+   "#000000"
+  ],
+  "id": "logo/logo-black-v1",
+  "sizes": {
+   "400": "shared/brand/logo-black-v1-400.webp",
+   "1000": "shared/brand/logo-black-v1-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Logo Black V2.png",
+  "width": 3349,
+  "height": 2517,
+  "ratio": 1.3306,
+  "alpha": true,
+  "avg": "#000000",
+  "palette": [
+   "#000000"
+  ],
+  "id": "logo/logo-black-v2",
+  "sizes": {
+   "400": "shared/brand/logo-black-v2-400.webp",
+   "1000": "shared/brand/logo-black-v2-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Logo Black V3.png",
+  "width": 3350,
+  "height": 2517,
+  "ratio": 1.3309,
+  "alpha": true,
+  "avg": "#000000",
+  "palette": [
+   "#000000"
+  ],
+  "id": "logo/logo-black-v3",
+  "sizes": {
+   "400": "shared/brand/logo-black-v3-400.webp",
+   "1000": "shared/brand/logo-black-v3-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Logo White V1.png",
+  "width": 3244,
+  "height": 2414,
+  "ratio": 1.3438,
+  "alpha": true,
+  "avg": "#FFFFFF",
+  "palette": [
+   "#FFFFFF"
+  ],
+  "id": "logo/logo-white-v1",
+  "sizes": {
+   "400": "shared/brand/logo-white-v1-400.webp",
+   "1000": "shared/brand/logo-white-v1-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Logo White V2.png",
+  "width": 3349,
+  "height": 2516,
+  "ratio": 1.3311,
+  "alpha": true,
+  "avg": "#FFFFFF",
+  "palette": [
+   "#FFFFFF"
+  ],
+  "id": "logo/logo-white-v2",
+  "sizes": {
+   "400": "shared/brand/logo-white-v2-400.webp",
+   "1000": "shared/brand/logo-white-v2-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Logo White V3.png",
+  "width": 3350,
+  "height": 2517,
+  "ratio": 1.3309,
+  "alpha": true,
+  "avg": "#FFFFFF",
+  "palette": [
+   "#FFFFFF"
+  ],
+  "id": "logo/logo-white-v3",
+  "sizes": {
+   "400": "shared/brand/logo-white-v3-400.webp",
+   "1000": "shared/brand/logo-white-v3-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Text Only Black V1.png",
+  "width": 3055,
+  "height": 1869,
+  "ratio": 1.6346,
+  "alpha": true,
+  "avg": "#000000",
+  "palette": [
+   "#000000"
+  ],
+  "id": "logo/text-only-black-v1",
+  "sizes": {
+   "400": "shared/brand/text-only-black-v1-400.webp",
+   "1000": "shared/brand/text-only-black-v1-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Text Only Black V2.png",
+  "width": 3184,
+  "height": 1993,
+  "ratio": 1.5976,
+  "alpha": true,
+  "avg": "#000000",
+  "palette": [
+   "#000000"
+  ],
+  "id": "logo/text-only-black-v2",
+  "sizes": {
+   "400": "shared/brand/text-only-black-v2-400.webp",
+   "1000": "shared/brand/text-only-black-v2-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Text Only Black V3.png",
+  "width": 3184,
+  "height": 1993,
+  "ratio": 1.5976,
+  "alpha": true,
+  "avg": "#000000",
+  "palette": [
+   "#000000",
+   "#121212"
+  ],
+  "id": "logo/text-only-black-v3",
+  "sizes": {
+   "400": "shared/brand/text-only-black-v3-400.webp",
+   "1000": "shared/brand/text-only-black-v3-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Text Only White V1.png",
+  "width": 3055,
+  "height": 1870,
+  "ratio": 1.6337,
+  "alpha": true,
+  "avg": "#FFFFFF",
+  "palette": [
+   "#FFFFFF"
+  ],
+  "id": "logo/text-only-white-v1",
+  "sizes": {
+   "400": "shared/brand/text-only-white-v1-400.webp",
+   "1000": "shared/brand/text-only-white-v1-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Text Only White V2.png",
+  "width": 3184,
+  "height": 1992,
+  "ratio": 1.5984,
+  "alpha": true,
+  "avg": "#FFFFFF",
+  "palette": [
+   "#FFFFFF"
+  ],
+  "id": "logo/text-only-white-v2",
+  "sizes": {
+   "400": "shared/brand/text-only-white-v2-400.webp",
+   "1000": "shared/brand/text-only-white-v2-1000.webp"
+  }
+ },
+ {
+  "section": "logo",
+  "source": "00 — Brand & Logos/LOGO/TGC Text Only White V3.png",
+  "width": 3184,
+  "height": 1992,
+  "ratio": 1.5984,
+  "alpha": true,
+  "avg": "#FFFFFF",
+  "palette": [
+   "#FFFFFF"
+  ],
+  "id": "logo/text-only-white-v3",
+  "sizes": {
+   "400": "shared/brand/text-only-white-v3-400.webp",
+   "1000": "shared/brand/text-only-white-v3-1000.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8808.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#3E2725",
+  "palette": [
+   "#0E0A09",
+   "#B97771",
+   "#140B0A",
+   "#0A0706",
+   "#1E1111"
+  ],
+  "id": "shop/framed/img-8808",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8808-480.webp",
+   "960": "shared/img/shop/framed/img-8808-960.webp",
+   "1600": "shared/img/shop/framed/img-8808-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8810.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#3D3736",
+  "palette": [
+   "#120B09",
+   "#090706",
+   "#161312",
+   "#F0E2E1",
+   "#8A8280"
+  ],
+  "id": "shop/framed/img-8810",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8810-480.webp",
+   "960": "shared/img/shop/framed/img-8810-960.webp",
+   "1600": "shared/img/shop/framed/img-8810-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8811.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#2F2623",
+  "palette": [
+   "#161110",
+   "#150A09",
+   "#0A0706",
+   "#CAB3A7",
+   "#271F1D"
+  ],
+  "id": "shop/framed/img-8811",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8811-480.webp",
+   "960": "shared/img/shop/framed/img-8811-960.webp",
+   "1600": "shared/img/shop/framed/img-8811-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8821.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#503D3D",
+  "palette": [
+   "#100B0A",
+   "#090807",
+   "#EEDFE0",
+   "#B6979C",
+   "#441717"
+  ],
+  "id": "shop/framed/img-8821",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8821-480.webp",
+   "960": "shared/img/shop/framed/img-8821-960.webp",
+   "1600": "shared/img/shop/framed/img-8821-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8823.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#363334",
+  "palette": [
+   "#171515",
+   "#100B0B",
+   "#A3A2A7",
+   "#090807",
+   "#0D0A09"
+  ],
+  "id": "shop/framed/img-8823",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8823-480.webp",
+   "960": "shared/img/shop/framed/img-8823-960.webp",
+   "1600": "shared/img/shop/framed/img-8823-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8832.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#443130",
+  "palette": [
+   "#140C0B",
+   "#090807",
+   "#A05B57",
+   "#E4D1CF",
+   "#2A1615"
+  ],
+  "id": "shop/framed/img-8832",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8832-480.webp",
+   "960": "shared/img/shop/framed/img-8832-960.webp",
+   "1600": "shared/img/shop/framed/img-8832-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8833.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#383435",
+  "palette": [
+   "#151212",
+   "#AAA1A5",
+   "#0C0A0A",
+   "#080706",
+   "#110A0A"
+  ],
+  "id": "shop/framed/img-8833",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8833-480.webp",
+   "960": "shared/img/shop/framed/img-8833-960.webp",
+   "1600": "shared/img/shop/framed/img-8833-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8837.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#3D3735",
+  "palette": [
+   "#C3B3AE",
+   "#171515",
+   "#080605",
+   "#100C0B",
+   "#0B0B0A"
+  ],
+  "id": "shop/framed/img-8837",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8837-480.webp",
+   "960": "shared/img/shop/framed/img-8837-960.webp",
+   "1600": "shared/img/shop/framed/img-8837-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8838.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#463E3C",
+  "palette": [
+   "#0E0C0C",
+   "#090706",
+   "#191516",
+   "#F4E7EA",
+   "#B9988D"
+  ],
+  "id": "shop/framed/img-8838",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8838-480.webp",
+   "960": "shared/img/shop/framed/img-8838-960.webp",
+   "1600": "shared/img/shop/framed/img-8838-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8841.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#49342E",
+  "palette": [
+   "#120C0C",
+   "#DBA68F",
+   "#090806",
+   "#0D0B0A",
+   "#2B1514"
+  ],
+  "id": "shop/framed/img-8841",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8841-480.webp",
+   "960": "shared/img/shop/framed/img-8841-960.webp",
+   "1600": "shared/img/shop/framed/img-8841-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8848.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#2F2826",
+  "palette": [
+   "#110E0D",
+   "#0D0807",
+   "#070604",
+   "#E1CBC5",
+   "#332826"
+  ],
+  "id": "shop/framed/img-8848",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8848-480.webp",
+   "960": "shared/img/shop/framed/img-8848-960.webp",
+   "1600": "shared/img/shop/framed/img-8848-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8851.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#554E4C",
+  "palette": [
+   "#120F0F",
+   "#F0E1DE",
+   "#090908",
+   "#0F0A0A",
+   "#443E38"
+  ],
+  "id": "shop/framed/img-8851",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8851-480.webp",
+   "960": "shared/img/shop/framed/img-8851-960.webp",
+   "1600": "shared/img/shop/framed/img-8851-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8853.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#523437",
+  "palette": [
+   "#130909",
+   "#080705",
+   "#F2CBCF",
+   "#EF748A",
+   "#240F0F"
+  ],
+  "id": "shop/framed/img-8853",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8853-480.webp",
+   "960": "shared/img/shop/framed/img-8853-960.webp",
+   "1600": "shared/img/shop/framed/img-8853-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8856.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#433A39",
+  "palette": [
+   "#13100F",
+   "#CDB2B1",
+   "#0B0908",
+   "#211B1B",
+   "#0E0E0D"
+  ],
+  "id": "shop/framed/img-8856",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8856-480.webp",
+   "960": "shared/img/shop/framed/img-8856-960.webp",
+   "1600": "shared/img/shop/framed/img-8856-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8859.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#2F2222",
+  "palette": [
+   "#120F0E",
+   "#0B0908",
+   "#100909",
+   "#8E696B",
+   "#080605"
+  ],
+  "id": "shop/framed/img-8859",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8859-480.webp",
+   "960": "shared/img/shop/framed/img-8859-960.webp",
+   "1600": "shared/img/shop/framed/img-8859-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8865.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#534746",
+  "palette": [
+   "#150F0F",
+   "#F0D9D7",
+   "#0B0A09",
+   "#100E0D",
+   "#3C282A"
+  ],
+  "id": "shop/framed/img-8865",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8865-480.webp",
+   "960": "shared/img/shop/framed/img-8865-960.webp",
+   "1600": "shared/img/shop/framed/img-8865-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8871.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#585455",
+  "palette": [
+   "#121010",
+   "#0B0909",
+   "#ECE3E4",
+   "#F5F5F8",
+   "#4F4849"
+  ],
+  "id": "shop/framed/img-8871",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8871-480.webp",
+   "960": "shared/img/shop/framed/img-8871-960.webp",
+   "1600": "shared/img/shop/framed/img-8871-1600.webp"
+  }
+ },
+ {
+  "section": "shop/framed",
+  "source": "03 — Shop/Originals/framed art/IMG_8880.JPG",
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "alpha": false,
+  "avg": "#583C3A",
+  "palette": [
+   "#120C0C",
+   "#0A0907",
+   "#E38B86",
+   "#F2E0E0",
+   "#511E1C"
+  ],
+  "id": "shop/framed/img-8880",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8880-480.webp",
+   "960": "shared/img/shop/framed/img-8880-960.webp",
+   "1600": "shared/img/shop/framed/img-8880-1600.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/003-artstract-original-art-the-global-collage-2025.png",
+  "width": 2549,
+  "height": 3473,
+  "ratio": 0.7339,
+  "alpha": false,
+  "avg": "#A38764",
+  "palette": [
+   "#ECE8DC",
+   "#DBA760",
+   "#302719",
+   "#705F41",
+   "#BB7339"
+  ],
+  "title": "Artstract",
+  "year": 2025,
+  "number": "003",
+  "artwork": true,
+  "id": "shop/originals/artstract",
+  "sizes": {
+   "480": "shared/img/shop/originals/artstract-480.webp",
+   "960": "shared/img/shop/originals/artstract-960.webp",
+   "1600": "shared/img/shop/originals/artstract-1600.webp",
+   "2400": "shared/img/shop/originals/artstract-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/017-be-you-original-art-the-global-collage-2024.png",
+  "width": 2507,
+  "height": 2884,
+  "ratio": 0.8693,
+  "alpha": false,
+  "avg": "#7D524B",
+  "palette": [
+   "#221B19",
+   "#8D6457",
+   "#892F35",
+   "#AE8A7C",
+   "#C6A790"
+  ],
+  "title": "Be You",
+  "year": 2024,
+  "number": "017",
+  "artwork": true,
+  "id": "shop/originals/be-you",
+  "sizes": {
+   "480": "shared/img/shop/originals/be-you-480.webp",
+   "960": "shared/img/shop/originals/be-you-960.webp",
+   "1600": "shared/img/shop/originals/be-you-1600.webp",
+   "2400": "shared/img/shop/originals/be-you-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/019-blues-original-art-the-global-collage-2025.jpeg",
+  "width": 556,
+  "height": 640,
+  "ratio": 0.8688,
+  "alpha": false,
+  "avg": "#4E7484",
+  "palette": [
+   "#10273C",
+   "#2C586D",
+   "#4F828C",
+   "#88BACD",
+   "#D2E5EA"
+  ],
+  "lowres": true,
+  "title": "Blues",
+  "year": 2025,
+  "number": "019",
+  "artwork": true,
+  "id": "shop/originals/blues",
+  "sizes": {
+   "480": "shared/img/shop/originals/blues-480.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/005-candy-original-art-the-global-collage-2024.jpeg",
+  "width": 849,
+  "height": 1026,
+  "ratio": 0.8275,
+  "alpha": false,
+  "avg": "#C58273",
+  "palette": [
+   "#E0CFC3",
+   "#CA8D6D",
+   "#DB534F",
+   "#DE6E65",
+   "#8E4A44"
+  ],
+  "lowres": true,
+  "title": "Candy",
+  "year": 2024,
+  "number": "005",
+  "artwork": true,
+  "id": "shop/originals/candy",
+  "sizes": {
+   "480": "shared/img/shop/originals/candy-480.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/001-curiosity-original-art-the-global-collage-2023.png",
+  "width": 2544,
+  "height": 3067,
+  "ratio": 0.8295,
+  "alpha": false,
+  "avg": "#91785F",
+  "palette": [
+   "#896D54",
+   "#A68B6D",
+   "#4D382A",
+   "#BAA081",
+   "#D4BEA3"
+  ],
+  "title": "Curiosity",
+  "year": 2023,
+  "number": "001",
+  "artwork": true,
+  "id": "shop/originals/curiosity",
+  "sizes": {
+   "480": "shared/img/shop/originals/curiosity-480.webp",
+   "960": "shared/img/shop/originals/curiosity-960.webp",
+   "1600": "shared/img/shop/originals/curiosity-1600.webp",
+   "2400": "shared/img/shop/originals/curiosity-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/Day # 25 Dibujo Medium.jpeg",
+  "width": 523,
+  "height": 640,
+  "ratio": 0.8172,
+  "alpha": false,
+  "avg": "#EE9DC8",
+  "palette": [
+   "#F2A4D4",
+   "#F693D3",
+   "#EEC6CF",
+   "#E776B3",
+   "#EA93C2"
+  ],
+  "lowres": true,
+  "title": "Day # 25",
+  "year": null,
+  "number": null,
+  "artwork": true,
+  "id": "shop/originals/day-no-25",
+  "sizes": {
+   "480": "shared/img/shop/originals/day-no-25-480.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/Female Cactus.png",
+  "width": 4866,
+  "height": 5706,
+  "ratio": 0.8528,
+  "alpha": false,
+  "avg": "#ABAC92",
+  "palette": [
+   "#7F894F",
+   "#554E34",
+   "#FFFFFF",
+   "#FEFEFE",
+   "#C1C19D"
+  ],
+  "title": "Female Cactus",
+  "year": null,
+  "number": null,
+  "artwork": true,
+  "id": "shop/originals/female-cactus",
+  "sizes": {
+   "480": "shared/img/shop/originals/female-cactus-480.webp",
+   "960": "shared/img/shop/originals/female-cactus-960.webp",
+   "1600": "shared/img/shop/originals/female-cactus-1600.webp",
+   "2400": "shared/img/shop/originals/female-cactus-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/2025_Gaga's Offering_Collage_300dpi.png",
+  "width": 2550,
+  "height": 3498,
+  "ratio": 0.729,
+  "alpha": false,
+  "avg": "#82515E",
+  "palette": [
+   "#1F1926",
+   "#872038",
+   "#C3A6AA",
+   "#975965",
+   "#D4C3C5"
+  ],
+  "title": "Gaga's Offering",
+  "year": 2025,
+  "number": "202",
+  "artwork": true,
+  "id": "shop/originals/gagas-offering",
+  "sizes": {
+   "480": "shared/img/shop/originals/gagas-offering-480.webp",
+   "960": "shared/img/shop/originals/gagas-offering-960.webp",
+   "1600": "shared/img/shop/originals/gagas-offering-1600.webp",
+   "2400": "shared/img/shop/originals/gagas-offering-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/009-home-original-art-the-global-collage-2023.jpeg",
+  "width": 840,
+  "height": 1016,
+  "ratio": 0.8268,
+  "alpha": false,
+  "avg": "#838A6C",
+  "palette": [
+   "#606A45",
+   "#8D955F",
+   "#373B26",
+   "#F5F9FB",
+   "#D6DBC8"
+  ],
+  "lowres": true,
+  "title": "Home",
+  "year": 2023,
+  "number": "009",
+  "artwork": true,
+  "id": "shop/originals/home",
+  "sizes": {
+   "480": "shared/img/shop/originals/home-480.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/022-i-am-the-bad-guy-original-art-the-global-collage-2025.jpeg",
+  "width": 4968,
+  "height": 6240,
+  "ratio": 0.7962,
+  "alpha": false,
+  "avg": "#6D6E67",
+  "palette": [
+   "#7F8477",
+   "#24272B",
+   "#625047",
+   "#91B0AC",
+   "#CAC6B8"
+  ],
+  "title": "I Am the Bad Guy",
+  "year": 2025,
+  "number": "022",
+  "artwork": true,
+  "id": "shop/originals/i-am-the-bad-guy",
+  "sizes": {
+   "480": "shared/img/shop/originals/i-am-the-bad-guy-480.webp",
+   "960": "shared/img/shop/originals/i-am-the-bad-guy-960.webp",
+   "1600": "shared/img/shop/originals/i-am-the-bad-guy-1600.webp",
+   "2400": "shared/img/shop/originals/i-am-the-bad-guy-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/Let Out by Camila Castillo .png",
+  "width": 2550,
+  "height": 3197,
+  "ratio": 0.7976,
+  "alpha": false,
+  "avg": "#846A5C",
+  "palette": [
+   "#20221E",
+   "#8E8271",
+   "#9F4031",
+   "#B4B8A2",
+   "#D1CFC0"
+  ],
+  "title": "Let Out",
+  "year": null,
+  "number": null,
+  "artwork": true,
+  "id": "shop/originals/let-out",
+  "sizes": {
+   "480": "shared/img/shop/originals/let-out-480.webp",
+   "960": "shared/img/shop/originals/let-out-960.webp",
+   "1600": "shared/img/shop/originals/let-out-1600.webp",
+   "2400": "shared/img/shop/originals/let-out-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/011-looking-original-art-the-global-collage-2023.jpeg",
+  "width": 819,
+  "height": 1098,
+  "ratio": 0.7459,
+  "alpha": false,
+  "avg": "#A29C98",
+  "palette": [
+   "#BFBEB6",
+   "#513A35",
+   "#E8EAE7",
+   "#718798",
+   "#B09889"
+  ],
+  "lowres": true,
+  "title": "Looking",
+  "year": 2023,
+  "number": "011",
+  "artwork": true,
+  "id": "shop/originals/looking",
+  "sizes": {
+   "480": "shared/img/shop/originals/looking-480.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/Lucky Pleasures by Camila Castillo .png",
+  "width": 2539,
+  "height": 3502,
+  "ratio": 0.725,
+  "alpha": false,
+  "avg": "#AB4D51",
+  "palette": [
+   "#39292D",
+   "#EB263D",
+   "#B4785D",
+   "#C34F5A",
+   "#D4B49D"
+  ],
+  "title": "Lucky Pleasures",
+  "year": null,
+  "number": null,
+  "artwork": true,
+  "id": "shop/originals/lucky-pleasures",
+  "sizes": {
+   "480": "shared/img/shop/originals/lucky-pleasures-480.webp",
+   "960": "shared/img/shop/originals/lucky-pleasures-960.webp",
+   "1600": "shared/img/shop/originals/lucky-pleasures-1600.webp",
+   "2400": "shared/img/shop/originals/lucky-pleasures-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/004-modern-love-original-art-the-global-collage-2024.png",
+  "width": 5054,
+  "height": 6436,
+  "ratio": 0.7853,
+  "alpha": false,
+  "avg": "#484441",
+  "palette": [
+   "#C2BDB5",
+   "#131111",
+   "#0A0A0A",
+   "#433633",
+   "#0E0E0E"
+  ],
+  "title": "Modern Love",
+  "year": 2024,
+  "number": "004",
+  "artwork": true,
+  "id": "shop/originals/modern-love",
+  "sizes": {
+   "480": "shared/img/shop/originals/modern-love-480.webp",
+   "960": "shared/img/shop/originals/modern-love-960.webp",
+   "1600": "shared/img/shop/originals/modern-love-1600.webp",
+   "2400": "shared/img/shop/originals/modern-love-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/021-reflections-of-me-original-art-the-global-collage-2024.png",
+  "width": 2543,
+  "height": 2969,
+  "ratio": 0.8565,
+  "alpha": false,
+  "avg": "#837967",
+  "palette": [
+   "#6E503E",
+   "#1C1513",
+   "#A39471",
+   "#E0F5E7",
+   "#DCE0C8"
+  ],
+  "title": "Reflections of Me",
+  "year": 2024,
+  "number": "021",
+  "artwork": true,
+  "id": "shop/originals/reflections-of-me",
+  "sizes": {
+   "480": "shared/img/shop/originals/reflections-of-me-480.webp",
+   "960": "shared/img/shop/originals/reflections-of-me-960.webp",
+   "1600": "shared/img/shop/originals/reflections-of-me-1600.webp",
+   "2400": "shared/img/shop/originals/reflections-of-me-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/016-royal-love-story-original-art-the-global-collage-2025.jpeg",
+  "width": 459,
+  "height": 640,
+  "ratio": 0.7172,
+  "alpha": false,
+  "avg": "#78574C",
+  "palette": [
+   "#100A0A",
+   "#9F6F5E",
+   "#5D3028",
+   "#C9A38E",
+   "#D9C1AB"
+  ],
+  "lowres": true,
+  "title": "Royal Love Story",
+  "year": 2025,
+  "number": "016",
+  "artwork": true,
+  "id": "shop/originals/royal-love-story",
+  "sizes": {
+   "459": "shared/img/shop/originals/royal-love-story-459.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/007-senor-tigre-original-art-the-global-collage-2025.png",
+  "width": 4784,
+  "height": 6438,
+  "ratio": 0.7431,
+  "alpha": false,
+  "avg": "#6E624B",
+  "palette": [
+   "#5E4129",
+   "#27271A",
+   "#766947",
+   "#A3946E",
+   "#D1D8D0"
+  ],
+  "title": "Senor Tigre",
+  "year": 2025,
+  "number": "007",
+  "artwork": true,
+  "id": "shop/originals/senor-tigre",
+  "sizes": {
+   "480": "shared/img/shop/originals/senor-tigre-480.webp",
+   "960": "shared/img/shop/originals/senor-tigre-960.webp",
+   "1600": "shared/img/shop/originals/senor-tigre-1600.webp",
+   "2400": "shared/img/shop/originals/senor-tigre-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/018-small-world-original-art-the-global-collage-2023.jpeg",
+  "width": 846,
+  "height": 1126,
+  "ratio": 0.7513,
+  "alpha": false,
+  "avg": "#A5AEB5",
+  "palette": [
+   "#9CA7B1",
+   "#C8D8E0",
+   "#353B47",
+   "#FFFFFF",
+   "#F6F7F6"
+  ],
+  "lowres": true,
+  "title": "Small World",
+  "year": 2023,
+  "number": "018",
+  "artwork": true,
+  "id": "shop/originals/small-world",
+  "sizes": {
+   "480": "shared/img/shop/originals/small-world-480.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/012-society-original-art-the-global-collage-2025.png",
+  "width": 5066,
+  "height": 5634,
+  "ratio": 0.8992,
+  "alpha": false,
+  "avg": "#7D8D92",
+  "palette": [
+   "#6C787B",
+   "#8EA1A7",
+   "#423F3E",
+   "#9DD4EE",
+   "#D3E2E3"
+  ],
+  "title": "Society",
+  "year": 2025,
+  "number": "012",
+  "artwork": true,
+  "id": "shop/originals/society",
+  "sizes": {
+   "480": "shared/img/shop/originals/society-480.webp",
+   "960": "shared/img/shop/originals/society-960.webp",
+   "1600": "shared/img/shop/originals/society-1600.webp",
+   "2400": "shared/img/shop/originals/society-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/008-stuck-original-art-the-global-collage-2025.png",
+  "width": 4946,
+  "height": 6918,
+  "ratio": 0.7149,
+  "alpha": false,
+  "avg": "#8F8A88",
+  "palette": [
+   "#1A1518",
+   "#BBB7AF",
+   "#FFFFFF",
+   "#695E5B",
+   "#FEFEF7"
+  ],
+  "title": "Stuck",
+  "year": 2025,
+  "number": "008",
+  "artwork": true,
+  "id": "shop/originals/stuck",
+  "sizes": {
+   "480": "shared/img/shop/originals/stuck-480.webp",
+   "960": "shared/img/shop/originals/stuck-960.webp",
+   "1600": "shared/img/shop/originals/stuck-1600.webp",
+   "2400": "shared/img/shop/originals/stuck-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/013-tears-water-the-soul-green-original-art-the-global-collage-2025.jpeg",
+  "width": 2372,
+  "height": 2376,
+  "ratio": 0.9983,
+  "alpha": false,
+  "avg": "#918D86",
+  "palette": [
+   "#FEFFFF",
+   "#4E4F45",
+   "#302A2A",
+   "#685D4E",
+   "#B9B3A4"
+  ],
+  "title": "Tears Water The Soul - Green",
+  "year": 2025,
+  "number": "013",
+  "artwork": true,
+  "id": "shop/originals/tears-water-the-soul-green",
+  "sizes": {
+   "480": "shared/img/shop/originals/tears-water-the-soul-green-480.webp",
+   "960": "shared/img/shop/originals/tears-water-the-soul-green-960.webp",
+   "1600": "shared/img/shop/originals/tears-water-the-soul-green-1600.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/Tears Water The Soul - Pink.jpg",
+  "width": 988,
+  "height": 1167,
+  "ratio": 0.8466,
+  "alpha": false,
+  "avg": "#E1C6C5",
+  "palette": [
+   "#FEFEFE",
+   "#B1727A",
+   "#DDB5B0",
+   "#F8EEEA",
+   "#FEFEFC"
+  ],
+  "lowres": true,
+  "title": "Tears Water The Soul - Pink",
+  "year": null,
+  "number": null,
+  "artwork": true,
+  "id": "shop/originals/tears-water-the-soul-pink",
+  "sizes": {
+   "480": "shared/img/shop/originals/tears-water-the-soul-pink-480.webp",
+   "960": "shared/img/shop/originals/tears-water-the-soul-pink-960.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/Tears Water The Soul - Silver .JPG",
+  "width": 3203,
+  "height": 3952,
+  "ratio": 0.8105,
+  "alpha": false,
+  "avg": "#DCC5B7",
+  "palette": [
+   "#DDB08F",
+   "#FCFDFD",
+   "#9E7560",
+   "#FBFCFB",
+   "#F4F1EE"
+  ],
+  "title": "Tears Water The Soul - Silver",
+  "year": null,
+  "number": null,
+  "artwork": true,
+  "id": "shop/originals/tears-water-the-soul-silver",
+  "sizes": {
+   "480": "shared/img/shop/originals/tears-water-the-soul-silver-480.webp",
+   "960": "shared/img/shop/originals/tears-water-the-soul-silver-960.webp",
+   "1600": "shared/img/shop/originals/tears-water-the-soul-silver-1600.webp",
+   "2400": "shared/img/shop/originals/tears-water-the-soul-silver-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/006-the-art-of-art-original-art-the-global-collage-2025.png",
+  "width": 2549,
+  "height": 3505,
+  "ratio": 0.7272,
+  "alpha": false,
+  "avg": "#81999C",
+  "palette": [
+   "#2F2E29",
+   "#608892",
+   "#96C8D5",
+   "#E5F1F0",
+   "#D7DBD2"
+  ],
+  "title": "The Art of Art",
+  "year": 2025,
+  "number": "006",
+  "artwork": true,
+  "id": "shop/originals/the-art-of-art",
+  "sizes": {
+   "480": "shared/img/shop/originals/the-art-of-art-480.webp",
+   "960": "shared/img/shop/originals/the-art-of-art-960.webp",
+   "1600": "shared/img/shop/originals/the-art-of-art-1600.webp",
+   "2400": "shared/img/shop/originals/the-art-of-art-2400.webp"
+  }
+ },
+ {
+  "section": "shop/originals",
+  "source": "03 — Shop/Originals/010-zenda-beach-original-art-the-global-collage-2023.png",
+  "width": 2527,
+  "height": 3136,
+  "ratio": 0.8058,
+  "alpha": false,
+  "avg": "#95A0A3",
+  "palette": [
+   "#262D3F",
+   "#E8F6F2",
+   "#898785",
+   "#BCDCE2",
+   "#E5E8D9"
+  ],
+  "title": "Zenda Beach",
+  "year": 2023,
+  "number": "010",
+  "artwork": true,
+  "id": "shop/originals/zenda-beach",
+  "sizes": {
+   "480": "shared/img/shop/originals/zenda-beach-480.webp",
+   "960": "shared/img/shop/originals/zenda-beach-960.webp",
+   "1600": "shared/img/shop/originals/zenda-beach-1600.webp",
+   "2400": "shared/img/shop/originals/zenda-beach-2400.webp"
+  }
+ }
+]

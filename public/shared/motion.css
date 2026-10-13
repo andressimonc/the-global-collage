@@ -1,0 +1,75 @@
+/* The Global Collage: shared motion kit, the CSS half.
+   Link it on every page, before the site's own CSS:  <link rel="stylesheet" href="../shared/motion.css">
+   The contract (attributes, classes, custom properties) is written at the top of motion.js.
+
+   The rule of this file: nothing is hidden unless motion.js has armed it (data-armed, or the .w/.wi
+   spans it creates), every entrance is a keyframe animation that ends on the element's own natural
+   style, and everything that moves sits inside (prefers-reduced-motion: no-preference). No
+   JavaScript, a background tab, print or reduced motion all give a plain, fully visible page. */
+
+.w, .wi, .ww { display: inline-block; }   /* the spans splitWords() makes; .ww keeps a word whole in char mode */
+.ww { white-space: nowrap; }
+.is-dragging { cursor: grabbing; }
+
+@media screen and (prefers-reduced-motion: no-preference) {
+
+  /* ---- 1. Pages glide into each other (same-site page loads, where the browser supports it) ---- */
+  @view-transition { navigation: auto; }
+
+  /* Default: the old page fades and slides up a little, the new page slides in.
+     A site replaces it by redefining @keyframes vt-out / vt-in after this file, or by writing its
+     own ::view-transition-old(root) / ::view-transition-new(root) rules. Durations: --vt-out-dur,
+     --vt-in-dur, --vt-piece-dur on :root. */
+  ::view-transition-old(root),
+  ::view-transition-new(root) { mix-blend-mode: normal; }
+  ::view-transition-old(root) { animation: vt-out var(--vt-out-dur, .45s) cubic-bezier(.16,1,.3,1) both; }
+  ::view-transition-new(root) { animation: vt-in var(--vt-in-dur, 1s) cubic-bezier(.16,1,.3,1) both; }
+  @keyframes vt-out { to { opacity: 0; transform: translateY(-28px); } }
+  @keyframes vt-in { from { opacity: 0; transform: translateY(44px); } 55% { opacity: 1; } }
+
+  /* The picture that travels between a shop card and the product page (view-transition-name: piece,
+     set by pieceTransition() and pieceHero()). The card's picture stays solid for the whole flight
+     and the product page's picture fades in over it, so a picture still loading never shows a gap. */
+  ::view-transition-group(piece) { animation-duration: var(--vt-piece-dur, 1.15s); animation-timing-function: cubic-bezier(.16,1,.3,1); }
+  ::view-transition-old(piece),
+  ::view-transition-new(piece) { height: 100%; object-fit: cover; mix-blend-mode: normal; }
+  ::view-transition-old(piece) { animation: none; }
+  ::view-transition-old(piece):only-child { animation: vt-fade .3s linear both reverse; }
+  ::view-transition-new(piece) { animation: vt-fade .4s linear both; }
+  @keyframes vt-fade { from { opacity: 0; } }
+
+  /* ---- 2. Reveals. Waiting = armed by reveal() and not yet in. Arriving = one animation that
+     ends on the element's own style, so nothing of ours is left on it afterwards. ---- */
+  [data-reveal] { --rx: 0px; --ry: var(--reveal-dist, 40px); --reveal-delay: 0s; }
+  [data-reveal="down"] { --ry: calc(var(--reveal-dist, 40px) * -1); }
+  [data-reveal="left"] { --rx: calc(var(--reveal-dist, 40px) * -1); --ry: 0px; }
+  [data-reveal="right"] { --rx: var(--reveal-dist, 40px); --ry: 0px; }
+  [data-reveal="fade"] { --ry: 0px; }
+
+  [data-reveal][data-armed]:not(.is-in):not([data-words]) { opacity: 0; }
+  [data-reveal][data-armed].is-in:not([data-words]) {
+    animation:
+      reveal-fade calc(var(--reveal-dur, 1.2s) * .6) cubic-bezier(.16,1,.3,1) var(--reveal-delay) backwards,
+      reveal-move var(--reveal-dur, 1.2s) cubic-bezier(.16,1,.3,1) var(--reveal-delay) backwards;
+  }
+  [data-reveal="clip"][data-armed].is-in:not([data-words]) { animation-name: reveal-clip; animation-duration: var(--reveal-dur, 1.2s); }
+  @keyframes reveal-fade { from { opacity: 0; } }
+  @keyframes reveal-move { from { translate: var(--rx) var(--ry); } }   /* translate, not transform: your own transform is untouched */
+  @keyframes reveal-clip { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+
+  /* ---- 3. Words. Each word rises out of a mask, .07 s apart. Plays as soon as the headline is
+     split; inside an armed element it waits for .is-in. The mask only exists while a word moves. ---- */
+  .w {
+    animation: w-mask var(--words-dur, 1.1s) linear
+      calc(var(--reveal-delay, 0s) + var(--words-delay, 0s) + var(--i, 0) * var(--words-step, .07s)) backwards;
+  }
+  .wi {
+    animation: w-rise var(--words-dur, 1.1s) cubic-bezier(.16,1,.3,1)
+      calc(var(--reveal-delay, 0s) + var(--words-delay, 0s) + var(--i, 0) * var(--words-step, .07s)) backwards;
+  }
+  [data-armed]:not(.is-in) .w,
+  [data-armed]:not(.is-in) .wi { animation: none; }
+  [data-armed]:not(.is-in) .wi { opacity: 0; }
+  @keyframes w-mask { from, to { clip-path: inset(-.3em -.3em -.12em); } }
+  @keyframes w-rise { from { opacity: 0; transform: translateY(calc(100% + .3em)); } 45% { opacity: 1; } }
+}

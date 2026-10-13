@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>The Global Collage — choose your website</title>
+<link rel="icon" href="shared/brand/favicon.png">
+<link rel="stylesheet" href="review/review.css">
+<script type="module" src="review/review.js"></script>
+</head>
+<!-- The review site: one link for the artist. Options and Dre's opening message live in review/options.json;
+     how it works and how to read the notes is in docs/REVIEW-SITE.md. -->
+<body class="review">
+<header class="bar">
+  <div class="nav">
+    <button type="button" class="arrow" id="prev" aria-label="Previous option"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+    <div class="where" aria-live="polite">
+      <h1 id="title">The Global Collage</h1>
+      <p id="line">Loading the options…</p>
+    </div>
+    <button type="button" class="arrow" id="next" aria-label="Next option"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+  </div>
+  <nav class="dots" id="dots" aria-label="Jump to an option"></nav>
+  <div class="tools">
+    <div class="switch" id="size" role="group" aria-label="Show the site as">
+      <button type="button" data-size="desktop" aria-pressed="true">Desktop</button>
+      <button type="button" data-size="phone" aria-pressed="false">Phone</button>
+    </div>
+    <a class="full" id="full" target="_blank" rel="noopener" aria-label="Open full screen, in a new tab"><span>Open full screen</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg></a>
+    <button type="button" class="primary notes-open" id="notes-open" aria-controls="panel">Notes</button>
+  </div>
+</header>
+
+<main>
+  <div class="stage" id="stage" data-size="desktop"></div>
+
+  <section class="wrap" id="wrap" hidden>
+    <div class="wrap-inner">
+      <p class="wrap-favorite" id="wrap-favorite"></p>
+      <ol class="picks" id="picks"></ol>
+      <fieldset class="plan" id="plan">
+        <legend>Choose one</legend>
+        <label><input type="radio" name="plan" value="favorite"> Go with my favorite</label>
+        <label><input type="radio" name="plan" value="mix"> Mix pieces from several</label>
+      </fieldset>
+      <label class="field" for="overall">How should we move forward?</label>
+      <textarea id="overall" rows="5" maxlength="4000"></textarea>
+      <div class="send-row">
+        <button type="button" class="primary" id="send">Send my notes to Dre</button>
+        <button type="button" class="plain" id="copy" hidden>Copy all my notes</button>
+        <span class="status" data-status></span>
+      </div>
+      <p class="after" id="after" role="status"></p>
+      <textarea id="copy-box" rows="8" readonly hidden aria-label="All your notes, to copy"></textarea>
+    </div>
+  </section>
+</main>
+
+<div class="scrim" id="scrim"></div>
+<aside class="panel" id="panel" aria-label="Your notes">
+  <header class="panel-head">
+    <h2>Notes for Dre</h2>
+    <span class="status" data-status role="status"></span>
+    <button type="button" class="plain panel-close" id="notes-close">Close</button>
+  </header>
+  <div class="thread" id="thread">
+    <div class="from-dre">
+      <span class="from">Dre</span>
+      <div id="intro"></div>
+    </div>
+    <div class="about">
+      <p id="about"></p>
+      <div class="marks" id="marks" role="group" aria-label="Your mark for this option">
+        <button type="button" data-mark="favorite" aria-pressed="false">★ Favorite</button>
+        <button type="button" data-mark="like" aria-pressed="false">I like it</button>
+        <button type="button" data-mark="no" aria-pressed="false">Not for me</button>
+      </div>
+    </div>
+    <ol class="mine" id="mine" aria-label="Your notes for this option"></ol>
+  </div>
+  <form class="composer" id="composer">
+    <label class="sr" for="note">Your note for this option</label>
+    <textarea id="note" rows="2" maxlength="4000" placeholder="What do you like or not like here?"></textarea>
+    <button type="submit" class="primary">Send</button>
+  </form>
+</aside>
+
+<noscript><p class="noscript">This page needs JavaScript to show the options and keep your notes.</p></noscript>
+</body>
+</html>

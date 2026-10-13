@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Motion kit demo: product page stand-in</title>
+<link rel="stylesheet" href="motion.css">
+<link rel="expect" blocking="render" href="#piece-hero">
+<style>
+  /* A bare stand-in for product.html, to test pieceHero(). Not a design. */
+  * { box-sizing: border-box; }
+  html { background: #EFEDEA; color: #231F20; font: 16px/1.45 system-ui, sans-serif; }
+  body { margin: 0; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+  h1 { font-size: clamp(30px, 5vw, 60px); line-height: 1; margin: 0 0 12px; color: #122FAB; }
+  #piece-hero { display: block; width: 100%; max-width: 480px; height: auto; margin-left: auto; }
+  .out { display: block; font: 14px/1.4 ui-monospace, Menlo, monospace; background: #fff; padding: 6px 10px; margin: 8px 0; overflow-wrap: anywhere; }
+  @media (max-width: 700px) { main { grid-template-columns: minmax(0, 1fr); } }
+</style>
+<script>
+  // demo only: note what was true at the first paint (shown in the readouts)
+  window.vtLog = {};
+  addEventListener('pagereveal', (e) => {
+    const hero = document.getElementById('piece-hero');
+    Object.assign(vtLog, {
+      pagerevealHadTransition: !!e.viewTransition,
+      heroExistsAtFirstPaint: !!hero,
+      heroSrcAtFirstPaint: hero?.getAttribute('src')?.split('/').pop() ?? 'none',
+      heroSizeAtFirstPaint: hero ? `${hero.getAttribute('width')}x${hero.getAttribute('height')}` : 'none',
+      heroNameAtFirstPaint: hero ? getComputedStyle(hero).viewTransitionName : 'none',
+      heroPictureDecodedAtFirstPaint: !!hero?.complete && hero.naturalWidth > 0,
+    });
+    e.viewTransition?.ready.then(() => { vtLog.groupsAnimated = [...new Set(document.getAnimations().map((a) => a.effect?.pseudoElement).filter(Boolean))].join(' '); }).catch(() => {});
+    e.viewTransition?.finished.then(() => setTimeout(() => { vtLog.heroNameAfterTransition = getComputedStyle(hero).viewTransitionName; }, 50));
+  });
+</script>
+<script type="module" blocking="render">
+  import { init, pieceHero } from './motion.js';
+  pieceHero(); init();
+</script>
+</head>
+<body>
+<main>
+  <div>
+    <h1 data-words>Product page stand-in</h1>
+    <p><a href="motion-demo.html" id="back">Back to the demo (a link)</a> · <button type="button" id="history-back">Back (history)</button></p>
+    <p class="out" id="out-handle">needs JavaScript</p>
+    <p class="out" id="out-first">first paint: needs JavaScript</p>
+    <p class="out" id="out-swap">listing page at pageswap: needs JavaScript</p>
+    <p class="out" id="out-now">now: needs JavaScript</p>
+  </div>
+  <img id="piece-hero" alt="The piece carried over from the listing">
+</main>
+<script type="module">
+  const $ = (id) => document.getElementById(id);
+  const hero = $('piece-hero'), handle = new URLSearchParams(location.search).get('handle');
+  $('history-back').addEventListener('click', () => history.back());
+  $('out-handle').textContent = `handle ${handle} · saved piece: ${sessionStorage.getItem('tgc-piece') ?? 'none'}`;
+  $('out-swap').textContent = `listing page at pageswap: ${sessionStorage.getItem('demo-swap') ?? 'not recorded'}`;
+  // stand-in for the shop data arriving later: the sharper file swaps in
+  if (['curiosity', 'artstract'].includes(handle)) setTimeout(() => { hero.srcset = `img/shop/originals/${handle}-480.webp 480w, img/shop/originals/${handle}-960.webp 960w`; hero.sizes = '(min-width: 700px) 480px, 100vw'; }, 1500);
+  setInterval(() => {
+    $('out-first').textContent = `first paint: ${JSON.stringify(window.vtLog)}`;
+    $('out-now').textContent = `now: hero ${hero.currentSrc.split('/').pop() || 'no picture'} · ${hero.getAttribute('width')}x${hero.getAttribute('height')} · view-transition-name ${getComputedStyle(hero).viewTransitionName}`;
+  }, 100);
+</script>
+</body>
+</html>

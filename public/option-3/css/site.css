@@ -1,0 +1,643 @@
+/* The Global Collage — Option 3 "Sticker Pop"
+   Shared by every page of this site. The system is written down in docs/option-3/DESIGN.md.
+   Order: tokens · base · type · bands (+ how they overlap) · panel · orbit + planet · buttons + links ·
+          stickers · seam pieces · badge · header + menu · marquee · fields + forms · long text ·
+          placeholder · rows · play table · shop wall · cart · footer · reveals · reduced motion · HOME ONLY */
+
+/* ---------- tokens ---------- */
+:root {
+  --cobalt: #122FAB;
+  --orange: #FF5630;
+  --green: #496843;
+  --paper: #EFEDEA;
+  --ink: #231F20;
+  --white: #FFFFFF;
+
+  --display: "Neco", Georgia, "Times New Roman", serif;
+  --sans: "TT Interphases", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "TT Interphases Mono", ui-monospace, Menlo, monospace;
+
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --gutter: clamp(20px, 4.5vw, 72px);            /* page margin */
+  --gap: clamp(16px, 2vw, 28px);                 /* column gap of the 12-column grid */
+  --band-pad: clamp(52px, 6.4vw, 96px);          /* top and bottom of a band */
+  --edge: max(var(--gutter), calc((100vw - 1320px) / 2));  /* left/right inset of full-bleed rows */
+  --head-h: 84px;
+  --sh: 5px;                                     /* hard shadow offset */
+  --border: clamp(6px, .75vw, 11px);             /* white die-cut border on a rectangular sticker */
+}
+@media (max-width: 959px) { :root { --head-h: 64px; } }
+
+/* ---------- base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--head-h) + 16px); }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 400 1.0625rem/1.6 var(--sans);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+img { max-width: 100%; height: auto; }
+a { color: inherit; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+/* the focus ring always differs from the ground it sits on (3:1 or better) */
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 4px; }
+.band--orange :focus-visible { outline-color: var(--ink); }
+.band--green :focus-visible { outline-color: var(--white); }
+.head :focus-visible, .band--paper :focus-visible, .panel :focus-visible, .cart :focus-visible { outline-color: var(--cobalt); }
+::selection { background: var(--orange); color: var(--ink); }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip {
+  position: fixed; left: 12px; top: -80px; z-index: 300; padding: 14px 18px; border-radius: 12px;
+  background: var(--ink); color: var(--white); font-weight: 800; text-decoration: none;
+}
+.skip:focus { top: 12px; }
+
+/* ---------- type ---------- */
+.display { margin: 0; font-family: var(--display); font-weight: 900; line-height: .9; letter-spacing: -.012em; text-wrap: balance; }
+.d1 { font-size: clamp(3.1rem, 7.7vw, 7.75rem); line-height: .86; }   /* the page's h1, and a section's shout */
+.d2 { font-size: clamp(2.375rem, 4.6vw, 4.5rem); line-height: .96; }  /* section headings */
+.d3 { font-size: clamp(1.625rem, 2.7vw, 2.5rem); line-height: 1; letter-spacing: -.005em; }
+.lead { font-size: clamp(1.125rem, 1.45vw, 1.3125rem); line-height: 1.45; font-weight: 500; }
+.label { font: 600 .8125rem/1.2 var(--mono); letter-spacing: .09em; text-transform: uppercase; }  /* placeholders only */
+
+/* ---------- bands: every section is one full-width band of one colour ---------- */
+.band { position: relative; isolation: isolate; padding-block: var(--band-pad); background: var(--bg); color: var(--fg); overflow-x: clip; }
+.band--cobalt { --bg: var(--cobalt); --fg: var(--white);  --btn: var(--orange); --btn-fg: var(--ink);   --ring: var(--orange); }
+.band--orange { --bg: var(--orange); --fg: var(--ink);    --btn: var(--white);  --btn-fg: var(--ink);   --ring: var(--white);
+                --panel-fg: var(--ink); --panel-btn: var(--orange); --panel-btn-fg: var(--ink); }   /* an orange screen is orange, ink and white only */
+.band--green  { --bg: var(--green);  --fg: var(--white);  --btn: var(--paper);  --btn-fg: var(--ink);   --ring: var(--white); }
+.band--paper  { --bg: var(--paper);  --fg: var(--cobalt); --btn: var(--cobalt); --btn-fg: var(--white); --ring: var(--orange); }
+/* a piece's own world (product page). Set --world with worldColour() from js/worlds.js.
+   TEXT NEVER SITS ON IT: only stickers and paper panels do. */
+.band--world  { --bg: var(--world, var(--green)); --fg: var(--ink); --btn: var(--cobalt); --btn-fg: var(--white); --ring: var(--white); }
+
+/* Bands lie on the page like sheets of paper, each one over the next: whatever hangs off the bottom
+   edge of a band (a .seam sticker, a play-table piece) shows on top of the band below it.
+   So a sticker that crosses a seam always belongs to the UPPER band. */
+main > :nth-last-child(1)  { z-index: 1; }  main > :nth-last-child(2)  { z-index: 2; }
+main > :nth-last-child(3)  { z-index: 3; }  main > :nth-last-child(4)  { z-index: 4; }
+main > :nth-last-child(5)  { z-index: 5; }  main > :nth-last-child(6)  { z-index: 6; }
+main > :nth-last-child(7)  { z-index: 7; }  main > :nth-last-child(8)  { z-index: 8; }
+main > :nth-last-child(9)  { z-index: 9; }  main > :nth-last-child(10) { z-index: 10; }
+main > :nth-last-child(11) { z-index: 11; } main > :nth-last-child(12) { z-index: 12; }
+
+.panel {
+  padding: clamp(22px, 2.6vw, 36px); border-radius: 22px; background: var(--paper); color: var(--panel-fg, var(--cobalt));
+  box-shadow: 6px 7px 0 var(--ink); --btn: var(--panel-btn, var(--cobalt)); --btn-fg: var(--panel-btn-fg, var(--white));
+}
+.panel--small { padding: 12px 16px 13px; border-radius: 14px; box-shadow: 4px 4px 0 var(--ink); }
+.wrap { width: min(100% - 2 * var(--gutter), 1320px); margin-inline: auto; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); }
+.grid > * { min-width: 0; }
+
+/* ---------- the orbit ring (from the logo's planet) and the planet itself ----------
+   A ring you can see, circling a picture. It never passes behind words or a logo. */
+.orbit { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.orbit::before {
+  content: ""; position: absolute; left: var(--orbit-x, 50%); top: var(--orbit-y, 50%);
+  width: var(--orbit-w, max(56%, 540px)); aspect-ratio: 3.4 / 1;
+  border: clamp(5px, .6vw, 9px) solid var(--ring); border-radius: 50%;
+  translate: -50% -50%; rotate: var(--tilt, -12deg);
+}
+.planet { display: block; width: var(--planet, 96px); height: auto; rotate: 0deg; transition: rotate .5s var(--ease); }
+.planet:hover, a:hover > .planet { rotate: 16deg; }
+
+/* ---------- buttons: chunky solid shapes, hard shadow, press down ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .55em;
+  min-height: 58px; padding: 0 1.55em; border: 0; border-radius: 16px;
+  background: var(--btn, var(--cobalt)); color: var(--btn-fg, var(--white));
+  font: 800 1.0625rem/1 var(--sans); letter-spacing: .005em; text-decoration: none; white-space: nowrap;
+  box-shadow: var(--sh) var(--sh) 0 var(--ink);
+  translate: 0 0; cursor: pointer;
+  transition: translate .5s var(--ease), box-shadow .5s var(--ease);
+}
+.btn::after { content: "\2192"; content: "\2192" / ""; font-weight: 700; transition: translate .5s var(--ease); }
+.btn:hover { translate: -2px -2px; box-shadow: calc(var(--sh) + 2px) calc(var(--sh) + 2px) 0 var(--ink); }
+.btn:hover::after { translate: 4px 0; }
+.btn:active { translate: var(--sh) var(--sh); box-shadow: 0 0 0 var(--ink); transition-duration: .06s; }
+.btn[disabled] { cursor: default; }
+.btn--plain::after { content: none; }
+.btn--small { min-height: 46px; padding: 0 1.05em; border-radius: 13px; font-size: .9375rem; --sh: 3px; }
+.btn--wide { width: 100%; }
+
+.link {
+  display: inline-flex; align-items: center; gap: .45em; min-height: 44px;
+  font-weight: 800; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: .32em;
+  text-decoration-color: var(--btn, currentColor); transition: text-decoration-color .5s var(--ease);
+}
+.link::after { content: "\2192"; content: "\2192" / ""; transition: translate .5s var(--ease); }
+.link:hover { text-decoration-color: currentColor; }
+.link:hover::after { translate: 5px 0; }
+
+/* ---------- stickers ----------
+   .sticker--cut  : a die-cut WebP from img/stickers/ (white border baked in by docs/option-3/make-stickers.py)
+   .sticker--rect : a whole artwork or photo; the white border is CSS and its inner corners stay square
+   Tilt with --r. Hover lifts it. Put a reveal on a parent, never on the sticker itself. */
+.sticker { display: block; position: relative; rotate: var(--r, 0deg); translate: 0 0; transition: translate .5s var(--ease), rotate .5s var(--ease); }
+.sticker > img { display: block; width: 100%; height: auto; }
+.sticker--cut > img { filter: drop-shadow(var(--sh) calc(var(--sh) + 1px) 0 var(--ink)); transition: filter .5s var(--ease); }
+.sticker--rect > img {
+  border: var(--border) solid var(--white); border-radius: calc(var(--border) * .6); background: var(--white);
+  box-shadow: var(--sh) calc(var(--sh) + 1px) 0 var(--ink); transition: box-shadow .5s var(--ease);
+}
+a:hover > .sticker, .sticker.is-live:hover { translate: -3px -5px; rotate: calc(var(--r, 0deg) * -.35); }
+a:hover > .sticker--cut > img, .sticker--cut.is-live:hover > img { filter: drop-shadow(calc(var(--sh) + 4px) calc(var(--sh) + 6px) 0 var(--ink)); }
+a:hover > .sticker--rect > img { box-shadow: calc(var(--sh) + 4px) calc(var(--sh) + 6px) 0 var(--ink); }
+
+/* ---------- seam pieces: one cut-out pasted across the join of two bands ----------
+   <span class="sticker sticker--cut seam" style="--at:8%; --w:14vw; --drop:40px; --r:6deg"> inside the UPPER band.
+   --at is its distance from the band's right edge, or --from-left its distance from the left (set one).
+   --drop is how far it hangs into the band below. */
+.seam {
+  position: absolute; z-index: 3; bottom: calc(-1 * var(--drop, clamp(22px, 3vw, 44px)));
+  left: var(--from-left, auto); right: var(--at, auto); width: var(--w, clamp(110px, 14vw, 210px)); pointer-events: none;
+}
+
+/* ---------- badge: the small label sticker ("Original, 1 of 1" on Home, "Sold" everywhere) ---------- */
+.badge {
+  display: inline-block; padding: .62em .9em .56em; border: 3px solid var(--white); border-radius: 999px;
+  background: var(--orange); color: var(--ink);
+  font: 800 .75rem/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap;
+  box-shadow: 3px 3px 0 var(--ink); rotate: var(--r, -4deg);
+}
+.badge--sold { background: var(--ink); color: var(--white); }
+
+/* ---------- header ---------- */
+.head { position: sticky; top: 0; z-index: 100; background: var(--paper); color: var(--cobalt); box-shadow: 0 3px 0 var(--ink); }
+.head__in { display: flex; align-items: center; gap: clamp(14px, 2vw, 32px); height: var(--head-h); width: min(100% - 2 * var(--gutter), 1320px); margin-inline: auto; }
+.head__logo { flex: none; display: block; margin-right: auto; }
+.head__logo img { display: block; height: calc(var(--head-h) - 26px); width: auto; }   /* clear space above and below; the mark is never re-angled */
+.nav ul { display: flex; align-items: center; gap: clamp(14px, 2.1vw, 34px); }
+.nav a {
+  position: relative; display: block; padding: 12px 0; text-decoration: none;
+  font-weight: 800; font-size: clamp(.9375rem, 1.2vw, 1.0625rem); line-height: 1;
+}
+.nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 3px; height: 4px; border-radius: 2px;
+  background: var(--orange); scale: 0 1; transform-origin: 0 50%; transition: scale .5s var(--ease);
+}
+.nav a:hover::after, .nav a[aria-current="page"]::after { scale: 1 1; }
+.nav a[aria-current="page"]::after { background: var(--cobalt); }
+.nav__extra { display: none; }
+.cartbtn { --btn: var(--cobalt); --btn-fg: var(--white); flex: none; }
+.cartbtn__n {
+  display: grid; place-items: center; min-width: 1.75em; height: 1.75em; padding: 0 .35em; margin-right: -.35em;
+  border-radius: 999px; background: var(--orange); color: var(--ink); font-size: .8125rem; font-weight: 800;
+}
+.menubtn { --btn: var(--paper); --btn-fg: var(--ink); display: none; flex: none; box-shadow: inset 0 0 0 3px var(--ink), var(--sh) var(--sh) 0 var(--ink); }
+.menubtn:hover { box-shadow: inset 0 0 0 3px var(--ink), calc(var(--sh) + 2px) calc(var(--sh) + 2px) 0 var(--ink); }
+.menubtn:active { box-shadow: inset 0 0 0 3px var(--ink), 0 0 0 var(--ink); }
+
+@media (max-width: 959px) {
+  .head__in { gap: 12px; }
+  .head__logo img { height: calc(var(--head-h) - 18px); }
+  .menubtn { display: inline-flex; }
+  .nav {
+    position: fixed; inset: calc(var(--head-h) + 3px) 0 0 0; z-index: 99; overflow: auto;
+    padding: 10px var(--gutter) 40px; background: var(--cobalt); color: var(--white);
+    visibility: hidden; opacity: 0; translate: 0 -14px;
+    transition: opacity .3s ease-out, translate .6s var(--ease), visibility 0s .3s;
+  }
+  .head.is-open .nav { visibility: visible; opacity: 1; translate: 0 0; transition-delay: 0s; }
+  .nav :focus-visible { outline-color: var(--orange); }
+  .nav ul { display: block; }
+  .nav li { border-bottom: 2px solid var(--white); }
+  .nav a { padding: .3em 0 .22em; font: 900 clamp(2.25rem, 10.5vw, 3.75rem)/1 var(--display); letter-spacing: -.01em; }
+  .nav a::after { content: none; }
+  .nav a[aria-current="page"] { color: var(--orange); }   /* 3.3:1 on cobalt: large display type only */
+  .nav__extra { display: block; margin-top: 26px; font-weight: 500; line-height: 1.7; }
+  .nav__extra a { display: inline-block; padding: 6px 0; font: inherit; font-weight: 800; letter-spacing: 0; text-decoration: underline; text-underline-offset: .25em; }
+}
+html.is-locked { overflow: hidden; }
+
+/* ---------- marquee: the one thing that keeps moving (one per page at most) ----------
+   .proof is deliberately not a .band: it stays flat on the page so stickers from the bands above and
+   below can cross onto its edges. They may only cross into its padding, never over the names. */
+.proof { display: grid; grid-template-columns: auto minmax(0, 1fr); background: var(--paper); color: var(--cobalt); }
+.proof__label {
+  display: flex; align-items: center; max-width: 19em; padding: 14px clamp(20px, 2.4vw, 36px) 14px var(--edge);
+  background: var(--ink); color: var(--white); font: 800 1.0625rem/1.25 var(--sans); text-wrap: balance;
+}
+.marquee { display: flex; overflow: hidden; padding-block: clamp(20px, 2.1vw, 30px); }
+.marquee__row {
+  flex: none; display: flex; align-items: center; justify-content: space-around; min-width: 100%;
+  animation: marquee 56s linear infinite;
+}
+.marquee:hover .marquee__row, .marquee:active .marquee__row { animation-play-state: paused; }
+.marquee__row li {
+  display: flex; align-items: center; white-space: nowrap;
+  font: 900 clamp(1.5rem, 2.5vw, 2.25rem)/1 var(--display); letter-spacing: -.005em;
+}
+.marquee__row li::after {
+  content: ""; flex: none; width: 1.7em; aspect-ratio: 400 / 228; margin-inline: clamp(22px, 2.6vw, 44px);
+  background: url("../../shared/brand/icon-black-400.webp") center / contain no-repeat;
+}
+@keyframes marquee { to { translate: -100% 0; } }
+@media (max-width: 759px) {
+  .proof { grid-template-columns: minmax(0, 1fr); }
+  .proof__label { max-width: none; padding: 12px var(--gutter); }
+}
+
+/* ---------- fields and forms (shared/forms.js writes .form-error and .form-status) ---------- */
+.fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.fields > .field--wide, .fields > .btn, .fields > div { grid-column: 1 / -1; }
+@media (max-width: 599px) { .fields { grid-template-columns: minmax(0, 1fr); } }
+.field { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.field__label { font-weight: 800; }
+.input {
+  width: 100%; min-height: 58px; padding: 0 18px; border: 0; border-radius: 16px;
+  background: var(--white); color: var(--ink); font: 500 1.0625rem/1.2 var(--sans);
+  box-shadow: inset 0 0 0 3px var(--ink);            /* fields stay flat: only things you press or peel have a shadow */
+}
+textarea.input { min-height: 160px; padding-block: 16px; line-height: 1.5; resize: vertical; }
+select.input { appearance: none; -webkit-appearance: none; padding-right: 52px; }
+.field--select { position: relative; }
+.field--select::after { content: "\2192"; position: absolute; right: 20px; bottom: 16px; rotate: 90deg; color: var(--ink); font-weight: 800; pointer-events: none; }
+.input::placeholder { color: #6B6668; opacity: 1; }
+.input:focus-visible { outline-offset: 2px; }
+.input[aria-invalid="true"] { box-shadow: inset 0 0 0 3px var(--ink), 0 0 0 3px var(--white), 0 0 0 6px var(--ink); }
+.form-error, .form-status { display: block; order: 1; flex-basis: 100%; grid-column: 1 / -1; margin: 0; font-weight: 800; }
+.form-status:empty { display: none; }
+.joinrow { display: flex; flex-wrap: wrap; gap: 10px; }         /* one email field and its button */
+.joinrow .input { flex: 1 1 180px; min-width: 0; width: auto; }
+
+/* ---------- long text (artist statement, story, legal pages) ---------- */
+.prose { max-width: 34em; }
+.prose > * + * { margin-top: 1em; }
+.prose ul { list-style: disc; padding-left: 1.2em; }
+.prose ul > li + li { margin-top: .4em; }
+.prose h2, .prose h3 { margin: 1.6em 0 0; font: 900 clamp(1.625rem, 2.7vw, 2.5rem)/1 var(--display); }
+
+/* ---------- loud placeholder for anything Camila has not sent ---------- */
+.needs-content {
+  display: grid; place-items: center; padding: 24px; border: 3px dashed currentColor; border-radius: 16px;
+  font: 600 .875rem/1.4 var(--mono); text-align: center; text-transform: uppercase; letter-spacing: .06em;
+}
+
+/* ---------- rows: a full-bleed list on paper (doorways, services, how it works, the exhibition list) ----------
+   <ul class="doors"><li><a class="door" href>…</a></li></ul>, or <div class="door"> when the row is not a link.
+   A row = .door__name + .door__note (under the name) + an arrow + at most one upright cut-out on the right. */
+.doors { border-top: 3px solid currentColor; }
+.doors > li { border-bottom: 3px solid currentColor; }
+.door {
+  position: relative; display: grid; grid-template-columns: minmax(0, 9fr) minmax(0, 3fr); align-items: center;
+  column-gap: var(--gap); row-gap: 8px; padding: clamp(20px, 2.3vw, 34px) var(--edge); text-decoration: none;
+  transition: background-color .5s var(--ease), color .5s var(--ease);
+}
+a.door:hover, a.door:focus-visible { background: var(--cobalt); color: var(--white); }
+.door__name { grid-column: 1; font: 900 clamp(2rem, 4.4vw, 4.25rem)/.95 var(--display); letter-spacing: -.012em; }
+.door__note { grid-column: 1; max-width: 34em; font-size: clamp(1.0625rem, 1.5vw, 1.375rem); line-height: 1.35; font-weight: 800; }
+.door__go { grid-column: 2; grid-row: 1 / span 2; justify-self: end; font: 900 clamp(2rem, 4vw, 3.75rem)/1 var(--display); transition: translate .5s var(--ease); }
+a.door:hover .door__go { translate: 10px 0; }
+div.door .door__go { display: none; }
+.door .sticker { position: absolute; right: calc(var(--edge) + var(--in, 8%)); top: 0; bottom: 0; margin-block: auto; height: min(100%, 150px); z-index: 1; pointer-events: none; }
+.door .sticker > img { width: auto; height: 100%; max-width: 15vw; object-fit: contain; }
+/* long lists (the exhibition list): a smaller name beside its text */
+.door--list { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr) minmax(0, 1fr); align-items: start; }
+.door--list .door__name { font-size: clamp(1.625rem, 2.7vw, 2.5rem); line-height: 1; }
+.door--list .door__note { grid-column: 2; grid-row: 1; font-size: 1.0625rem; line-height: 1.6; font-weight: 400; }
+.door--list .door__go { grid-column: 3; grid-row: 1; }
+@media (max-width: 759px) {
+  .door { grid-template-columns: minmax(0, 1fr) 92px; row-gap: 6px; padding-block: 20px; }
+  .door__go { display: none; }
+  .door .sticker { right: var(--gutter); height: min(100% - 8px, 130px); }
+  .door .sticker > img { max-width: 92px; }
+  .door--list { grid-template-columns: minmax(0, 1fr); }
+  .door--list .door__note { grid-column: 1; grid-row: auto; }
+}
+
+/* ---------- the play table: cut-outs a visitor can pick up and move ----------
+   [data-table] on a band, a .table layer inside it, each cut-out a .piece[data-piece].
+   Place a piece with --x and --y (or --b from the bottom), size it with --w. Inside .table the unit
+   cqw is 1% of the table's width, so a layout scales as one picture. --z orders the pile. */
+.table {
+  position: absolute; inset-block: 0; left: max(0px, (100% - 1452px) / 2); width: min(100%, 1452px);
+  z-index: 2; pointer-events: none; container-type: inline-size;
+}
+.piece {
+  position: absolute; left: var(--x); top: var(--y, auto); bottom: var(--b, auto); width: calc(var(--w) * var(--k, 1)); z-index: var(--z, 1);
+  translate: var(--dx, 0px) var(--dy, 0px); rotate: var(--r, 0deg);
+  pointer-events: auto; cursor: grab; touch-action: none; -webkit-user-select: none; user-select: none;
+}
+.piece img {
+  display: block; width: 100%; height: auto; pointer-events: none; -webkit-user-drag: none;
+  filter: drop-shadow(var(--sh) calc(var(--sh) + 1px) 0 var(--ink));
+  /* the whole table leans a few pixels away from the pointer; site.js sets --mx and --my (-.5 to .5) */
+  translate: calc(var(--mx, 0) * var(--z, 1) * -4px) calc(var(--my, 0) * var(--z, 1) * -4px);
+  transition: translate .9s var(--ease), scale .5s var(--ease), rotate .5s var(--ease), filter .5s var(--ease);
+}
+.piece--rect img { border: var(--border) solid var(--white); border-radius: calc(var(--border) * .6); background: var(--white); }
+.piece:hover img { scale: 1.03; rotate: -1.5deg; filter: drop-shadow(8px 10px 0 var(--ink)); }
+.piece.is-held { cursor: grabbing; }
+.piece.is-held img { scale: 1.06; rotate: 0deg; filter: drop-shadow(13px 15px 0 var(--ink)); }
+@media (pointer: coarse) { .piece { touch-action: pan-y; } }   /* a vertical swipe still scrolls the page */
+.js .table .piece { opacity: 0; scale: 1.16; }
+.js .table.is-in .piece {
+  opacity: 1; scale: 1;
+  transition: opacity .45s ease-out calc(.2s + var(--i, 0) * .07s), scale 1.2s var(--ease) calc(.2s + var(--i, 0) * .07s);
+}
+/* the hint is a sticker too; one piece shifts once to show that they are loose */
+.table__hint {
+  position: absolute; left: var(--x); top: var(--y, auto); bottom: var(--b, auto); z-index: 9; margin: 0; padding: .7em 1em .64em;
+  border: 3px solid var(--white); border-radius: 999px; background: var(--orange); color: var(--ink);
+  font: 800 clamp(.8125rem, 1.15cqw, 1rem)/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap;
+  box-shadow: 3px 3px 0 var(--ink); rotate: -6deg; transition: opacity .5s var(--ease);
+}
+.table.is-played .table__hint { opacity: 0; }
+.table.is-in:not(.is-played) .piece--nudge img { animation: nudge 1.5s var(--ease) 1.7s 1; }
+@keyframes nudge { 40% { translate: -24px 12px; rotate: -8deg; } }
+
+/* ---------- the shop wall (shop.html) and a piece's tile ----------
+   <ul class="wall"><li><a class="world" style="--world:#…" href>sticker--rect + .panel.panel--small</a></li></ul> */
+.wall { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 959px) { .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.world {
+  position: relative; display: grid; gap: 14px; align-content: space-between; height: 100%;
+  padding: clamp(16px, 3vw, 44px); background: var(--world, var(--green)); color: var(--ink); text-decoration: none;
+}
+.world .sticker { align-self: center; justify-self: center; }
+.world .sticker > img { width: auto; max-width: 100%; max-height: 70vh; }   /* the whole piece, never cropped */
+.world .badge { position: absolute; z-index: 1; top: clamp(8px, 1.6vw, 22px); right: clamp(8px, 1.6vw, 22px); }
+.world__title { display: block; font-weight: 800; line-height: 1.25; }
+.world__meta { display: block; font-size: .9375rem; line-height: 1.35; }
+.filters { display: flex; flex-wrap: wrap; gap: 10px; }
+.filter { display: inline-flex; align-items: center; min-height: 46px; padding: 0 1.05em; border-radius: 13px; font-weight: 800; text-decoration: none; box-shadow: inset 0 0 0 3px currentColor; }
+.filter[aria-current="page"] { background: var(--orange); color: var(--ink); box-shadow: none; }
+
+/* ---------- cart: a drawer from the right, on every page (markup at the end of index.html) ---------- */
+.cart {
+  position: fixed; inset: 0 0 0 auto; width: min(440px, 100vw); height: 100dvh; max-width: none; max-height: none;
+  margin: 0; padding: 0; border: 0; border-left: 3px solid var(--ink); background: var(--paper); color: var(--cobalt);
+  --btn: var(--cobalt); --btn-fg: var(--white); overflow: auto; overscroll-behavior: contain;
+}
+.cart::backdrop { background: rgb(35 31 32 / .45); }
+.cart[open] { display: flex; flex-direction: column; animation: cart-in .6s var(--ease); }
+.cart [hidden] { display: none; }
+@keyframes cart-in { from { translate: 100% 0; } }
+.cart__in { display: flex; flex-direction: column; gap: 22px; flex: 1 0 auto; padding: 20px clamp(18px, 5vw, 28px) 24px; }
+.cart__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 16px; border-bottom: 3px solid currentColor; }
+.cart__head .btn { --btn: var(--paper); --btn-fg: var(--ink); box-shadow: inset 0 0 0 3px var(--ink), var(--sh) var(--sh) 0 var(--ink); }
+.cart__lines { display: grid; gap: 20px; }
+.cart__lines:empty { display: none; }
+.cart__line { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 4px 18px; align-items: start; }
+.cart__line .sticker { --border: 5px; --sh: 3px; grid-row: 1 / span 2; }
+.cart__title { font-weight: 800; line-height: 1.25; text-decoration: none; }
+.cart__title:hover { text-decoration: underline; text-underline-offset: .2em; }
+.cart__meta { display: block; font-size: .9375rem; font-weight: 500; }
+.cart__remove, .card__add { justify-self: start; min-height: 44px; padding: 0; border: 0; background: none; color: inherit; font: inherit; font-weight: 800; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .28em; cursor: pointer; }
+.cart__empty { display: grid; justify-items: start; gap: 18px; }
+.cart__empty .sticker { width: 150px; }
+.cart__empty p { font: 900 clamp(1.625rem, 2.7vw, 2.5rem)/1 var(--display); }
+.cart__foot { display: grid; gap: 12px; margin-top: auto; padding-top: 18px; border-top: 3px solid currentColor; }
+.cart__sum { display: flex; justify-content: space-between; gap: 16px; font-weight: 800; font-size: 1.25rem; }
+/* the shop layer's two preview notices: plain lines inside the drawer, a small paper slip on the page */
+.tgc-sample-note, .tgc-checkout-note { border: 0; border-radius: 10px; box-shadow: inset 0 0 0 2px var(--ink), 3px 3px 0 var(--ink); font: 500 .8125rem/1.4 var(--sans); }
+.cart .tgc-sample-note, .cart .tgc-checkout-note { position: static; width: auto; max-width: none; margin: 0 clamp(18px, 5vw, 28px) 16px; box-shadow: inset 0 0 0 2px var(--ink); }
+
+/* ---------- footer (always cobalt; the band above it is never cobalt). No orbit here: the logo is the planet. ---------- */
+.foot { padding-block: clamp(56px, 6vw, 88px) 28px; }
+.foot__grid { row-gap: clamp(36px, 4vw, 56px); align-items: start; }
+.foot__logo { grid-column: 1 / span 4; display: block; width: min(100%, 300px); }
+.foot__logo img { display: block; width: 100%; height: auto; }
+.foot__nav { grid-column: 6 / span 3; }
+.foot__nav a { display: inline-block; padding: .1em 0; font: 900 clamp(1.5rem, 2.3vw, 2.125rem)/1.12 var(--display); text-decoration: none; }
+.foot__nav a:hover, .foot__nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: .18em; text-decoration-color: var(--orange); }
+.foot__side { grid-column: 9 / span 4; display: grid; gap: 22px; }
+.foot__news { display: flex; flex-wrap: wrap; gap: 10px; }
+.foot__news label { flex-basis: 100%; font: 900 clamp(1.5rem, 2.3vw, 2.125rem)/1.1 var(--display); }
+.foot__news .input { flex: 1 1 160px; min-width: 0; width: auto; }
+.foot__contact { display: grid; font-weight: 500; }
+.foot__contact a { justify-self: start; padding-block: 11px; line-height: 1.3; font-weight: 800; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .28em; }
+.foot__contact a:hover { text-decoration-color: var(--orange); }
+.foot__base {
+  grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 28px;
+  padding-top: 12px; border-top: 2px solid var(--white); font-size: .9375rem; font-weight: 500;
+}
+.foot__base ul { display: flex; flex-wrap: wrap; gap: 0 24px; }
+.foot__base a { display: inline-block; padding-block: 11px; text-underline-offset: .25em; }
+@media (max-width: 899px) {
+  .foot__logo { grid-column: 1 / span 6; }
+  .foot__nav { grid-column: 1 / span 5; grid-row: 2; }
+  .foot__side { grid-column: 6 / -1; grid-row: 2; }
+}
+@media (max-width: 599px) {
+  .foot__nav, .foot__side { grid-column: 1 / -1; grid-row: auto; }
+  .foot__nav ul { columns: 2; column-gap: var(--gap); }
+}
+
+/* ---------- reveals: armed only when JavaScript runs (html.js) ----------
+   data-reveal        : fades, then glides up 36px
+   data-reveal="stick": a sticker being put down (use on the sticker's parent)
+   --i on the element staggers it by .07s. Lines and rules are never hidden, only words and pictures. */
+.js [data-reveal] { opacity: 0; translate: 0 36px; }
+.js [data-reveal].is-in {
+  opacity: 1; translate: 0 0;
+  transition: opacity .6s ease-out calc(var(--i, 0) * .07s), translate 1.25s var(--ease) calc(var(--i, 0) * .07s);
+}
+.js [data-reveal="stick"] { translate: 0 0; scale: 1.12; }
+.js [data-reveal="stick"].is-in {
+  scale: 1;
+  transition: opacity .45s ease-out calc(var(--i, 0) * .07s), scale 1.2s var(--ease) calc(var(--i, 0) * .07s);
+}
+
+/* ---------- reduced motion: everything visible, nothing moving ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01s !important; transition-delay: 0s !important; animation: none !important; }
+  .js [data-reveal], .js .table .piece { opacity: 1; translate: var(--dx, 0px) var(--dy, 0px); scale: 1; }
+  .js [data-reveal] { translate: 0 0; }
+  .piece img { translate: 0 0; }
+  .marquee { padding-inline: var(--gutter); }
+  .marquee__row { flex: 1 1 auto; flex-wrap: wrap; justify-content: flex-start; row-gap: 10px; min-width: 0; }
+  .marquee__row[aria-hidden="true"] { display: none; }
+  .marquee__row li:last-child::after { content: none; }
+}
+
+/* =====================================================================================
+   HOME ONLY (index.html)
+   ===================================================================================== */
+
+/* ---------- hero: the play table ----------
+   Everything here scales with the page width up to 1452px (the headline's --u and the table's cqw),
+   so the pieces keep their places around the words at every width from 760px up. */
+.hero {
+  --u: clamp(3.1rem, 8vw, 7.25rem);
+  padding-block: clamp(34px, 4.6vw, 67px) clamp(44px, 5.2vw, 76px);
+  --orbit-x: 80%; --orbit-y: 54%; --orbit-w: max(54%, 520px); --tilt: -14deg;
+}
+.hero__in { position: relative; }
+.hero__h1 { font-size: var(--u); }
+.hero__h1 span { display: block; }
+.hero__sub { max-width: min(29em, 45%); margin-top: clamp(18px, 2vw, 28px); }
+.hero__cta { position: relative; z-index: 3; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 30px; width: fit-content; max-width: 100%; margin-top: clamp(22px, 2.4vw, 34px); }
+
+/* where the pieces start. The headline's three lines end at about 62, 28 and 48cqw. */
+.piece--hands      { --x: 66cqw;   --y: -3.2cqw; --w: 36cqw;   --r: 4deg;   --z: 3; }
+.piece--tigress    { --x: 59.5cqw; --b: -16px;   --w: 30cqw;   --r: -3deg;  --z: 5; }
+.piece--whole      { --x: 85.5cqw; --y: 14.5cqw; --w: 12.5cqw; --r: 5deg;   --z: 6; }
+.piece--crown      { --x: 90cqw;   --b: 1.5cqw;  --w: 12cqw;   --r: 9deg;   --z: 4; }
+.piece--lips       { --x: 62cqw;   --y: 12.4cqw; --w: 9cqw;    --r: -8deg;  --z: 4; }
+.piece--walker     { --x: 42.6cqw; --y: 11.5cqw; --w: 15.5cqw; --r: -2deg;  --z: 2; }
+.piece--butterfly  { --x: 31cqw;   --y: 11.3cqw; --w: 5.4cqw;  --r: 10deg;  --z: 2; }
+.piece--scrap-lips { --x: 37.4cqw; --y: 13.6cqw; --w: 3.6cqw;  --r: -14deg; --z: 1; }
+.piece--scissors   { --x: 54.6cqw; --y: 21.4cqw; --w: 4.3cqw;  --r: 58deg;  --z: 3; }
+.piece--eye        { --x: 49.8cqw; --y: 26.2cqw; --w: 4.6cqw;  --r: 12deg;  --z: 2; }
+.piece--cactus     { --x: 49.5cqw; --b: -14px;   --w: 10.5cqw; --r: -7deg;  --z: 4; }
+.hero .table__hint { --x: 48.4cqw; --y: 20.4cqw; }
+
+@media (max-width: 959px) {   /* narrow pane: the link drops under the button, the band grows taller, the pieces grow with it */
+  .hero__cta { flex-direction: column; align-items: flex-start; }
+  .hero .piece { --k: 1.16; }
+}
+@media (max-width: 759px) {   /* phone: the pile gets its own zone under the buttons; the whole hero is one screen */
+  .hero { --u: min(12.2vw, 5.75rem); --zone: clamp(290px, 82vw, 460px); padding-block: 22px calc(var(--zone) + 30px); --orbit-x: 50%; --orbit-y: calc(100% - var(--zone) / 2); --orbit-w: 120%; --tilt: -10deg; }
+  .hero__sub { max-width: 32em; margin-top: 16px; }
+  .hero__cta { gap: 8px 26px; margin-top: 20px; }
+  .hero .piece { --k: 1; --y: auto; }
+  .piece--tigress    { --x: 29cqw;  --b: 37cqw;  --w: 50cqw; }
+  .piece--crown      { --x: 3cqw;   --b: 45cqw;  --w: 30cqw; --r: -6deg; }
+  .piece--cactus     { --x: 74cqw;  --b: 49cqw;  --w: 23cqw; --r: 9deg; }
+  .piece--hands      { --x: 22cqw;  --b: 5cqw;   --w: 76cqw; --r: -5deg; }
+  .piece--whole      { --x: 2cqw;   --b: 6cqw;   --w: 25cqw; --r: -5deg; }
+  .piece--scissors   { --x: 88cqw;  --b: 24cqw;  --w: 8cqw;  --r: 24deg; }
+  .piece--eye        { --x: 60cqw;  --b: -3cqw;  --w: 12cqw; }
+  .piece--lips       { --x: 76cqw;  --b: 36cqw;  --w: 19cqw; --z: 6; }
+  /* beside "out of", clear of the lines above and below. (".hero" is needed: without it the --y: auto above wins and both land on the headline.) */
+  .hero .piece--walker    { --x: 73cqw;  --y: 20.2cqw; --b: auto; --w: 25cqw; }
+  .hero .piece--butterfly { --x: 45cqw;  --y: 17cqw;  --b: auto; --w: 7.6cqw; }
+  .piece--scrap-lips { display: none; }
+  .hero .table__hint { --x: auto; --y: auto; right: 5cqw; bottom: 3cqw; }
+}
+
+/* ---------- about teaser ---------- */
+.teaser { --pad: clamp(44px, 5vw, 72px); --orbit-x: 20%; --orbit-y: 56%; --orbit-w: max(44%, 400px); --tilt: -12deg; padding-block: var(--pad) 0; }
+.teaser__pic { grid-column: 1 / span 5; position: relative; margin: 0; }
+/* her head crosses up into the strip's padding (never over the names); her hem crosses down onto the next band */
+.teaser__pic .sticker { position: absolute; z-index: 1; inset: calc(-1 * var(--pad) - clamp(10px, 1.4vw, 20px)) -8% calc(-1 * clamp(26px, 3.4vw, 48px)) -8%; }
+.teaser__pic .sticker > img { width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%; }
+.teaser__pic .scrap { position: absolute; z-index: 0; width: var(--w); }
+.teaser__text { grid-column: 7 / -1; padding-bottom: var(--pad); }
+.teaser__text p { max-width: 34em; margin-top: clamp(18px, 2vw, 28px); }
+.teaser__text .btn { margin-top: clamp(22px, 2.4vw, 34px); }
+@media (max-width: 899px) {
+  .teaser { --orbit-x: 12%; }
+  .teaser__pic .sticker { inset-inline: -16% 4%; }
+  .teaser__text { grid-column: 6 / -1; }
+}
+@media (max-width: 699px) {
+  .teaser { --orbit-x: 50%; --orbit-y: 170px; --orbit-w: 130%; --tilt: -9deg; }
+  .teaser__pic { grid-column: 3 / span 8; grid-row: 1; margin: calc(-1 * var(--pad) - 8px) 0 22px; }
+  .teaser__pic .sticker { position: relative; inset: auto; }
+  .teaser__pic .sticker > img { height: auto; }
+  .teaser__text { grid-column: 1 / -1; grid-row: 2; }
+  .teaser__hand { --at: 4%; }   /* to the right, clear of the button */
+}
+
+/* ---------- the work: six originals in a pile, not a grid ---------- */
+.work { padding-bottom: clamp(64px, 8vw, 120px); }
+.work__head { display: flex; align-items: center; gap: .38em; margin-bottom: clamp(30px, 3.6vw, 54px); font-size: clamp(3.1rem, 7.7vw, 7.75rem); }
+.work__head .planet { --planet: 1.05em; flex: none; }
+.work__grid { display: flex; flex-wrap: wrap; align-items: flex-end; gap: clamp(30px, 3.4vw, 52px) var(--gap); }
+.work__grid > li { position: relative; min-width: 0; --f: 1; flex: var(--f) 1 calc(var(--f) * 22%); }
+.work__grid > li:nth-child(1) { --f: 1.7; }
+.work__grid > li:nth-child(2) { margin-inline: -3% -1.5%; margin-bottom: 6%; z-index: 1; }
+.work__grid > li:nth-child(3) { --f: .8; }
+.work__grid > li:nth-child(4) { --f: .8; margin-bottom: 3%; }
+.work__grid > li:nth-child(5) { margin-inline: -2.5%; margin-top: -7%; z-index: 1; }
+.work__grid > li:nth-child(6) { --f: 1.45; }
+.card { position: relative; display: block; text-decoration: none; }
+.card__title { display: block; margin-top: 20px; font-weight: 800; font-size: clamp(1.0625rem, 1.5vw, 1.3125rem); line-height: 1.2; }
+.card__title::after { content: "\2192"; content: "\2192" / ""; display: inline-block; margin-left: .45em; transition: translate .5s var(--ease); }
+.card:hover .card__title::after { translate: 5px 0; }
+.card .badge { position: absolute; z-index: 1; top: -18px; right: -12px; font-size: .875rem; }
+.card__add { display: block; }
+.work__grid > li:nth-child(2) :is(.card__title, .card__add) { margin-left: clamp(26px, 3.6vw, 52px); }   /* clear of the first sticker's white edge */
+.work__hand { --at: 3%; --w: clamp(120px, 17vw, 250px); --drop: clamp(60px, 9vw, 130px); }
+.work__crowd { --from-left: 19%; --w: clamp(96px, 12vw, 176px); --drop: clamp(14px, 1.8vw, 26px); }
+@media (max-width: 759px) {
+  .work__grid { align-items: flex-start; column-gap: 22px; row-gap: 30px; }
+  .work__grid > li:nth-child(n) { flex: 1 1 40%; margin: 0; }
+  .work__grid > li:nth-child(1) { flex-basis: 100%; margin-inline: 0 14%; }
+  .work__grid > li:nth-child(2) { margin-top: -9%; z-index: 1; }
+  .work__grid > li:nth-child(3), .work__grid > li:nth-child(5) { margin-top: 12%; }
+  .work__grid > li:nth-child(6) { flex-basis: 100%; margin-inline: 12% 0; }
+  .work__grid > li:nth-child(n) :is(.card__title, .card__add) { margin-left: 0; }
+  .work__crowd { --from-left: auto; --at: 6%; }
+  .card .badge { font-size: .75rem; right: -8px; }
+}
+
+/* ---------- ways to own it: three doorways, each cut-out bigger than its row ---------- */
+.ways { padding-bottom: clamp(56px, 6.4vw, 96px); }
+.ways .doors { margin-top: clamp(24px, 3vw, 44px); }
+@media (min-width: 760px) {
+  .ways .door .sticker { top: -38%; bottom: auto; margin: 0; height: 176%; }
+  .ways .door .sticker > img { max-width: none; }
+  .ways .doors > li:nth-child(2) { position: relative; z-index: 1; }
+}
+.ways__end { display: flex; justify-content: flex-end; margin-top: clamp(28px, 5.4vw, 78px); }
+.ways__reach { --from-left: 7%; --w: clamp(110px, 15vw, 220px); --drop: clamp(40px, 5.4vw, 80px); }
+@media (max-width: 759px) {
+  .ways .door .sticker { top: -8px; bottom: auto; margin: 0; height: calc(100% - 4px); }
+  .ways__end { justify-content: flex-start; }
+  .ways__reach { --from-left: auto; --at: 6%; --w: 88px; }
+}
+
+/* ---------- services arm: the three services, shouted ---------- */
+.arm__body { max-width: 34em; }
+.arm__list { margin-top: clamp(22px, 2.6vw, 38px); font-size: clamp(2rem, 6vw, 5.5rem); line-height: .92; }
+.arm__list li + li { margin-top: .06em; }
+.arm__cta { margin-top: clamp(24px, 2.8vw, 40px); }
+.arm__pic { position: absolute; z-index: 3; right: var(--edge); bottom: calc(-1 * clamp(20px, 2.6vw, 38px)); width: clamp(190px, 27%, 400px); margin: 0; }
+.arm__pic img { aspect-ratio: 4 / 3; object-fit: cover; object-position: 45% 52%; }
+@media (max-width: 759px) {
+  .arm { padding-bottom: 0; }
+  .arm__pic { position: relative; right: auto; bottom: auto; width: 68%; margin: 30px var(--gutter) -34px auto; }
+}
+
+/* ---------- stay in touch: one short band, words and the field side by side ---------- */
+.stay { padding-block: clamp(60px, 7vw, 100px) clamp(52px, 6vw, 88px); }
+.stay__grid { align-items: center; row-gap: 28px; }
+.stay__text { grid-column: 1 / span 6; }
+.stay__text p { max-width: 34em; margin-top: clamp(14px, 1.6vw, 22px); }
+.stay__form { grid-column: 8 / -1; position: relative; display: grid; gap: 10px; rotate: 1.5deg; }
+.stay__quill { position: absolute; z-index: 1; right: -4%; top: -46%; width: clamp(70px, 24%, 116px); pointer-events: none; }
+@media (max-width: 899px) {
+  .stay__text { grid-column: 1 / span 7; }
+  .stay__form { grid-column: 8 / -1; }
+  .stay__form .btn { flex: 1 1 100%; }
+}
+@media (max-width: 699px) {
+  .stay__text, .stay__form { grid-column: 1 / -1; }
+  .stay__form { margin-top: 26px; }
+  .stay__form .btn { flex: 0 0 auto; }
+  .stay__quill { top: -70px; right: 2%; }
+}
+
+/* ---------- the deeper why: the second play table, The Local Collage ---------- */
+.why { --orbit-x: 67%; --orbit-y: 50%; --orbit-w: max(62%, 560px); --tilt: 9deg; padding-bottom: clamp(70px, 8.4vw, 124px); }
+.why__grid { align-items: center; row-gap: 30px; }
+.why__text { grid-column: 1 / span 5; position: relative; z-index: 3; }
+.why__text .btn { margin-top: clamp(22px, 2.4vw, 34px); }
+.why__pic { grid-column: 6 / -1; margin: 0; }
+.piece--frame   { --x: 34cqw;   --b: 2.4cqw;  --w: 21cqw;  --r: -7deg;  --z: 4; }
+.piece--snip    { --x: 28cqw;   --y: 4cqw;    --w: 4.6cqw; --r: -38deg; --z: 3; }
+.piece--eye-a   { --x: 92.4cqw; --y: 3.4cqw;  --w: 6.2cqw; --r: 14deg;  --z: 3; }
+.piece--eye-b   { --x: 8cqw;    --b: 3cqw;    --w: 5.4cqw; --r: -10deg; --z: 2; }
+.piece--mouth   { --x: 17cqw;   --b: -1.2cqw; --w: 5.6cqw; --r: 8deg;   --z: 3; }
+.piece--ring    { --x: 86cqw;   --b: -4.4cqw; --w: 13cqw;  --r: -16deg; --z: 5; }
+.piece--easel   { --x: 85cqw;   --b: 1.6cqw;  --w: 12cqw;  --r: 5deg;   --z: 5; }
+.why .table__hint { --x: 57cqw; --b: 2.2cqw; }
+@media (max-width: 759px) {
+  .why { padding-bottom: 46vw; --orbit-x: 50%; --orbit-y: 46%; --orbit-w: 130%; }
+  .why__text, .why__pic { grid-column: 1 / -1; }
+  .why .piece { --y: auto; }
+  .piece--frame { --x: 38cqw; --b: 5cqw;  --w: 54cqw; }
+  .piece--snip  { --x: 16cqw; --b: 6cqw;  --w: 11cqw; --r: -20deg; }
+  .piece--eye-a { --x: 78cqw; --b: 38cqw; --w: 15cqw; }
+  .piece--eye-b { --x: 2cqw;  --b: 30cqw; --w: 14cqw; }
+  .piece--mouth { --x: 26cqw; --b: 34cqw; --w: 13cqw; }
+  .piece--ring, .piece--easel { display: none; }
+  .why .table__hint { --x: 4cqw; --b: 1cqw; }
+}

@@ -1,0 +1,626 @@
+[
+  {
+    "id": "about/portrait/cami-754",
+    "kind": "portrait",
+    "alt": "Camila in a white button-up shirt and a thin gold necklace, head tilted, half-smiling, against a dark charcoal backdrop",
+    "description": "Studio portrait of Camila from the hips up, shoulder-length brown hair, loose white shirt, looking at the camera with her head tilted and a small smile. She stands a little right of centre on a plain dark charcoal backdrop, so the left third and the strip above her head are empty and will take text in a light colour. Soft, even studio light with no hard shadows; the picture is nearly square and the source is only about 1900 px wide.",
+    "words": [],
+    "focal": [
+      48,
+      29
+    ],
+    "colors": [
+      "charcoal",
+      "white",
+      "brown",
+      "gold"
+    ],
+    "mood": "warm, direct, a little playful",
+    "quality": "good",
+    "qualityNote": "",
+    "uses": [
+      "hero",
+      "card"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf5885-1",
+    "kind": "process",
+    "alt": "Work table with a sketchbook collage reading \"This is Art, TAKE, harder look, HONEY\", red scissors, a wine glass and a pink blade case",
+    "description": "Camila's work table seen from a seat: in the middle a spiral sketchbook holds a blue-sky collage in progress (cut-out words, a feather, a butterfly on a yellow flower, a blue reclining figure over a patterned hill), which matches the shop piece The Art of Art before it was finished. Around it are red-handled scissors on a car advert at the left, a glass of rose and a coral bag at the top, a pink case of craft-knife blades at the right, all on a worn dark blue table. Natural indoor light, no flash, busy edge to edge with no empty space; a car maker's logo is plainly visible bottom left, so crop the left quarter if it goes large.",
+    "words": [
+      "This is Art",
+      "TAKE",
+      "harder look",
+      "HONEY",
+      "NISSAN",
+      "NV PASSEN"
+    ],
+    "focal": [
+      51,
+      58
+    ],
+    "colors": [
+      "blue",
+      "navy",
+      "red",
+      "pink",
+      "coral"
+    ],
+    "mood": "lived-in, mid-session, colourful",
+    "quality": "good",
+    "qualityNote": "",
+    "uses": [
+      "hero",
+      "wide-banner",
+      "card"
+    ],
+    "shows": "the-art-of-art"
+  },
+  {
+    "id": "about/process/dscf5889",
+    "kind": "process",
+    "alt": "Close view of a sky-blue sketchbook collage: cut-out words \"This is Art, TAKE, harder look, HONEY\", a butterfly and a blue figure",
+    "description": "The same collage as dscf5885-1, shot low and close so the sketchbook page fills the frame: white clouds on blue sky, the cut-out words in the centre, a butterfly on a yellow flower at the left, a blue reclining figure on a patterned hill at the right. It matches the shop piece The Art of Art while still in progress. Sharp through the middle with the near edge and the table behind it softly out of focus; natural light, no flash, the top strip (coral bag, blade case) is blurred and can be cropped away.",
+    "words": [
+      "This is Art",
+      "TAKE",
+      "harder look",
+      "HONEY",
+      "NV PASSEN"
+    ],
+    "focal": [
+      52,
+      50
+    ],
+    "colors": [
+      "sky blue",
+      "white",
+      "navy",
+      "yellow",
+      "coral"
+    ],
+    "mood": "bright, intimate, in progress",
+    "quality": "good",
+    "qualityNote": "",
+    "uses": [
+      "hero",
+      "wide-banner",
+      "card",
+      "detail"
+    ],
+    "shows": "the-art-of-art"
+  },
+  {
+    "id": "about/process/dscf8176",
+    "kind": "process",
+    "alt": "Open sketchbook with a magazine photo of a figure in a cowboy hat, beside a collage of fashion clippings reading \"ALL OR NOTHING\"",
+    "description": "Top-down on a white lap board: at the left a sketchbook page carries one stepped-cut magazine photo (a blonde figure in a cowboy hat and white fur jacket lying on gravel, legs up against a white wall, hills behind); at the right a dense collage of lips, leopard print, manga panels, a yellow price sticker and the words ALL OR NOTHING. The bottom quarter is a dark brown out-of-focus blur and the corners fall off to black. Direct on-camera flash at night, slightly tilted.",
+    "words": [
+      "Hungry Women",
+      "HIGH CLAIM ITEM",
+      "ABBANA",
+      "ALL OR NOTHING"
+    ],
+    "focal": [
+      50,
+      44
+    ],
+    "colors": [
+      "white",
+      "dark brown",
+      "black",
+      "grey",
+      "yellow"
+    ],
+    "mood": "late-night, scrappy, candid",
+    "quality": "ok",
+    "qualityNote": "Direct flash, dark corners, and the bottom quarter is a dark blur; keep it card size.",
+    "uses": [
+      "card",
+      "detail"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8179",
+    "kind": "process",
+    "alt": "Spiral sketchbook page with one cut magazine photo, on a lap board beside a collage of fashion clippings and the words \"ALL OR NOTHING\"",
+    "description": "The same set-up as dscf8176, pulled back so the whole sketchbook and its spiral binding show: the stepped-cut photo of the figure in a cowboy hat sits on a mostly blank white page, with the ALL OR NOTHING collage on the board at the right and loose black clippings at the left. The white page gives a calm area in the upper left of the sketchbook; finished collages are just visible, out of focus, along the top edge. Direct flash, warm brown surroundings, dark corners.",
+    "words": [
+      "Hungry Women",
+      "HIGH CLAIM ITEM",
+      "ABBANA",
+      "ALL OR NOTHING"
+    ],
+    "focal": [
+      50,
+      47
+    ],
+    "colors": [
+      "white",
+      "brown",
+      "black",
+      "grey",
+      "yellow"
+    ],
+    "mood": "early stage, quiet, candid",
+    "quality": "ok",
+    "qualityNote": "Direct flash with dark corners and a slight tilt; fine as a card, not for a large slot.",
+    "uses": [
+      "card"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8180",
+    "kind": "process",
+    "alt": "Collages spread on a wood-look floor: a wide finished collage propped upright, an open sketchbook on a lap board and a fan of pieces",
+    "description": "A wide look at the whole floor session: a long finished collage stands propped against navy polka-dot fabric at the top, the sketchbook and lap board sit bottom left, and a fan of finished collages lies at the right with blank sheets below it. A lot of plain wood-look floor fills the middle and upper right. Underexposed, with the flash falling off hard towards every edge.",
+    "words": [
+      "EVERYTHING HAS CHANGED. YOUR LIFE IS DIFFERENT.",
+      "EXPERIENCES",
+      "Hot Dogs",
+      "Burgers",
+      "Pastrami",
+      "Steak Sandwiches",
+      "IRV'S",
+      "Hungry Women",
+      "HIGH CLAIM ITEM",
+      "ALL OR NOTHING",
+      "SLEEK &"
+    ],
+    "focal": [
+      42,
+      30
+    ],
+    "colors": [
+      "dark brown",
+      "black",
+      "white",
+      "navy",
+      "orange"
+    ],
+    "mood": "after-hours, spread out, messy",
+    "quality": "ok",
+    "qualityNote": "Dark and underexposed with heavy flash falloff; each collage is small in the frame. Small sizes only.",
+    "uses": [
+      "card"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8181",
+    "kind": "process",
+    "alt": "Fan of finished collages on the floor; the front one pairs a wavy white tower and blue sky with a woman stretching and a blue cut-out shape",
+    "description": "Low, close view of four collages fanned out on the floor. The front one fills the right two-thirds: a cream tower of wavy balconies against blue, a flat blue cut-out blob, a crowd photo cut into a shape, a woman in sportswear lunging across the bottom, and a small letter B. Behind it are a yellow-bordered piece with a painted skull and the red C:C mark (it looks like Artstract) and a purple piece with a green car. Flash, but the colour is vivid and the middle is sharp; the far left and the corners go soft and dark.",
+    "words": [
+      "B",
+      "C:C",
+      "Driver",
+      "Bravely"
+    ],
+    "focal": [
+      62,
+      50
+    ],
+    "colors": [
+      "blue",
+      "cream",
+      "yellow",
+      "purple",
+      "green"
+    ],
+    "mood": "vivid, layered, energetic",
+    "quality": "good",
+    "qualityNote": "",
+    "uses": [
+      "wide-banner",
+      "card",
+      "detail"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8182",
+    "kind": "studio",
+    "alt": "Top-down view of a cardboard box of paints, glue and brushes on the floor beside loose magazine pages and a pair of silver platform heels",
+    "description": "Looking straight down at the floor beside a shelf: an open cardboard box crammed with acrylic paint bottles, glue, brushes, a roll of black tape and instruction sheets sits lower centre; a stack of blank sheets and torn magazine pages lies at the left; a pair of silver platform heels and a pink notebook are top right. It reads as real studio clutter, with no empty space. Direct flash, warm cast, dark at the bottom corners.",
+    "words": [
+      "VALUE PACK",
+      "B"
+    ],
+    "focal": [
+      55,
+      62
+    ],
+    "colors": [
+      "tan",
+      "white",
+      "silver",
+      "navy",
+      "pink"
+    ],
+    "mood": "messy, honest, behind the scenes",
+    "quality": "ok",
+    "qualityNote": "Direct flash and a cluttered frame with no clear subject; works small, not large.",
+    "uses": [
+      "card",
+      "detail"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8185",
+    "kind": "studio",
+    "alt": "Close-up of a silver metallic platform sandal standing on an open magazine page with a dark blue photograph",
+    "description": "A tight close-up of one silver platform sandal with a block heel, resting on a magazine spread whose dark blue photo fills the lower left. The shoe is sharp at the toe and the rest falls quickly out of focus; nothing here shows a collage. Direct flash throws a bright glare patch on the glossy page under the shoe.",
+    "words": [
+      "LYNCHBURG, TENNESSEE"
+    ],
+    "focal": [
+      52,
+      38
+    ],
+    "colors": [
+      "silver",
+      "navy",
+      "tan",
+      "black"
+    ],
+    "mood": "glam, odd, playful",
+    "quality": "ok",
+    "qualityNote": "Flash glare on the page and very shallow focus; a quirky detail only.",
+    "uses": [
+      "detail"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8186",
+    "kind": "studio",
+    "alt": "Out-of-focus photo of a pair of silver platform heels on magazines beside a shelf of notebooks",
+    "description": "The same silver heels as dscf8185 from further back, with a shelf of spiral notebooks at the right and a white storage bin behind. The whole frame is out of focus; nothing in it is sharp. Do not use it.",
+    "words": [],
+    "focal": [
+      55,
+      50
+    ],
+    "colors": [
+      "silver",
+      "brown",
+      "navy",
+      "white"
+    ],
+    "mood": "blurred, accidental",
+    "quality": "poor",
+    "qualityNote": "Completely out of focus.",
+    "uses": [
+      "avoid"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8188",
+    "kind": "process",
+    "alt": "Sketchbook page with one cut magazine photo on a lap board, loose black clippings at the left and a finished collage on the floor behind",
+    "description": "The sketchbook stands in the centre of the lap board with the stepped-cut photo of the figure in a cowboy hat on an otherwise blank page. Loose clippings wait at the left (a black strip of upside-down headlines, a striped advert, an orange SLEEK), the ALL OR NOTHING collage is at the right, and a finished collage lies dark and out of focus across the top. Direct flash, with the top third and the corners very dark.",
+    "words": [
+      "Hungry Women",
+      "HIGH CLAIM ITEM",
+      "ABBANA",
+      "ALL OR NOTHING",
+      "SLEEK &",
+      "JOIN THE SHAPE INNER CIRCLE",
+      "10 New Sneakers That Are Worth the Hype"
+    ],
+    "focal": [
+      47,
+      55
+    ],
+    "colors": [
+      "white",
+      "dark brown",
+      "black",
+      "grey",
+      "orange"
+    ],
+    "mood": "early stage, late-night",
+    "quality": "ok",
+    "qualityNote": "Direct flash; the top third is dark floor. Card size only.",
+    "uses": [
+      "card"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8189",
+    "kind": "process",
+    "alt": "Collage in progress in a sketchbook: a blonde woman and a small terrier pasted over a desert photo, a glue stick lying beside it",
+    "description": "The sketchbook page a step further on: a cut-out blonde woman in a white blouse and a small terrier are now pasted over the top-left corner of the photo, breaking out of its black border. A glue stick lies on the collage at the right, next to a gold glitter square, an \"All I need is love and WI-FI\" card and ALL OR NOTHING. Tight framing with the page well lit by flash and the corners dark.",
+    "words": [
+      "Hungry Women",
+      "HIGH CLAIM ITEM",
+      "ABBANA",
+      "Scotch Glue Stick",
+      "All I need is love and WI-FI",
+      "ALL OR NOTHING",
+      "SLEEK &",
+      "JOIN THE SHAPE INNER CIRCLE"
+    ],
+    "focal": [
+      42,
+      50
+    ],
+    "colors": [
+      "white",
+      "brown",
+      "black",
+      "gold",
+      "red"
+    ],
+    "mood": "hands-on, mid-glue, playful",
+    "quality": "ok",
+    "qualityNote": "Direct flash with dark corners; sharp enough for a card or a medium slot, not a hero.",
+    "uses": [
+      "card",
+      "detail"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8190",
+    "kind": "process",
+    "alt": "Sketchbook collage in progress with a blonde woman and a terrier pasted over a desert photo, a glue stick and \"ALL OR NOTHING\" beside it",
+    "description": "Almost the same frame as dscf8189, taken a little wider and from slightly further left, so more of the black clippings and the orange SLEEK at the left edge are in view. The glue stick still lies on the right-hand collage. Direct flash, dark corners; pick this or dscf8189, not both.",
+    "words": [
+      "Hungry Women",
+      "HIGH CLAIM ITEM",
+      "ABBANA",
+      "Scotch Glue Stick",
+      "All I need is love and WI-FI",
+      "ALL OR NOTHING",
+      "SLEEK &",
+      "JOIN THE SHAPE INNER CIRCLE"
+    ],
+    "focal": [
+      42,
+      50
+    ],
+    "colors": [
+      "white",
+      "brown",
+      "black",
+      "gold",
+      "orange"
+    ],
+    "mood": "hands-on, mid-glue",
+    "quality": "ok",
+    "qualityNote": "Direct flash with dark corners; a near-duplicate of dscf8189.",
+    "uses": [
+      "card"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8191",
+    "kind": "process",
+    "alt": "Sketchbook collage nearly done: a blonde woman, a terrier, a figure in a cowboy hat and a pasted block of magazine text, clippings around",
+    "description": "The latest stage of the sketchbook page: a small torn block of magazine text is now pasted at its bottom-right corner and the glue stick is gone. The whole lap board is in view, with the spiral binding at the top, the black clippings at the left, the ALL OR NOTHING collage at the right and the board's black ledge along the bottom. It is the sharpest frame of this series; direct flash, dark top edge and corners.",
+    "words": [
+      "Treatments done now can completely change skin's aging trajectory, experts say. It's called prejuvenation, and it puts the power in your hands. You can start here.",
+      "Hungry Women",
+      "HIGH CLAIM ITEM",
+      "ABBANA",
+      "All I need is love and WI-FI",
+      "ALL OR NOTHING",
+      "SLEEK &",
+      "JOIN THE SHAPE INNER CIRCLE"
+    ],
+    "focal": [
+      45,
+      48
+    ],
+    "colors": [
+      "white",
+      "brown",
+      "black",
+      "gold",
+      "orange"
+    ],
+    "mood": "nearly finished, focused",
+    "quality": "ok",
+    "qualityNote": "Direct flash with dark corners; the best of the sketchbook series but still a card or medium slot.",
+    "uses": [
+      "card",
+      "detail"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8192",
+    "kind": "process",
+    "alt": "Finished-looking sketchbook collage on a lap board, with a pasted text block, loose clippings at the left and \"ALL OR NOTHING\" at the right",
+    "description": "The same stage as dscf8191 from a slightly lower, squarer angle, with the finished floor collage showing as a dark band along the top. The sketchbook sits in the centre, the clippings and orange SLEEK at the left, the love-and-WI-FI card and ALL OR NOTHING at the right. Direct flash, dark corners; pick this or dscf8191, not both.",
+    "words": [
+      "Treatments done now can completely change skin's aging trajectory, experts say. It's called prejuvenation, and it puts the power in your hands. You can start here.",
+      "Hungry Women",
+      "HIGH CLAIM ITEM",
+      "ABBANA",
+      "All I need is love and WI-FI",
+      "ALL OR NOTHING",
+      "SLEEK &",
+      "JOIN THE SHAPE INNER CIRCLE"
+    ],
+    "focal": [
+      46,
+      50
+    ],
+    "colors": [
+      "white",
+      "brown",
+      "black",
+      "gold",
+      "orange"
+    ],
+    "mood": "nearly finished, late-night",
+    "quality": "ok",
+    "qualityNote": "Direct flash with dark corners; a near-duplicate of dscf8191.",
+    "uses": [
+      "card"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8193",
+    "kind": "process",
+    "alt": "Close view of a wide collage: a diner sign for hot dogs and burgers, people at a counter, classical painted figures and a cracked gold skull",
+    "description": "A close look at the long collage that stands on the floor in the other shots; it is a finished piece but not one of the 25 shop originals and has no title in the files. A diner sign runs across the top, people sit at a counter at the left, a waitress holds a green glass in the middle, and the bottom mixes orange dancing silhouettes on a green grid, figures from an old painting and a cracked gold skull, with a parking ticket and a headline at the right. The frame is full edge to edge and cuts the collage off at the left; the flash leaves a pale glare patch top centre and the left edge is soft.",
+    "words": [
+      "Hot Dogs",
+      "Burgers",
+      "Pastrami",
+      "Steak Sandwiches",
+      "IRV'S",
+      "Does Humanity Have a Future beyond Earth?",
+      "EXPERIENCES",
+      "Recorded and mixed at",
+      "Garage 1"
+    ],
+    "focal": [
+      50,
+      55
+    ],
+    "colors": [
+      "dark red",
+      "brown",
+      "black",
+      "orange",
+      "green"
+    ],
+    "mood": "dense, nostalgic, warm",
+    "quality": "ok",
+    "qualityNote": "Flash glare at top centre, slightly tilted, and the collage is cropped at the left.",
+    "uses": [
+      "card",
+      "detail"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8194",
+    "kind": "process",
+    "alt": "Typewritten quote pasted on a book page, \"Color is the keyboard, the shapes are the notes...\", signed Wassily Kandinsky, above a painting",
+    "description": "Close-up of a quote in typewriter lettering under a thin blue rule, pasted onto a white art-book page: \"Color is the keyboard, the shapes are the notes, and the artist is the hand that plays, creating vibrations in the soul.\" The top of a pale abstract painting of circles runs along the bottom and a column of small book text with a blue drop capital sits at the right; the upper part of the page is blank white. Bright and paper-white, sharp on the quote, with a little flash shine on the painting at the bottom; the words are another artist's, so treat it as a picture, not as site copy.",
+    "words": [
+      "\"Color is the keyboard, the shapes are the notes, and the artist is the hand that plays, creating vibrations in the soul.\"",
+      "WASSILY KANDINSKY"
+    ],
+    "focal": [
+      43,
+      44
+    ],
+    "colors": [
+      "white",
+      "grey",
+      "black",
+      "pale blue"
+    ],
+    "mood": "quiet, bookish, an inspiration note",
+    "quality": "good",
+    "qualityNote": "",
+    "uses": [
+      "card",
+      "detail",
+      "background"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8195",
+    "kind": "process",
+    "alt": "Typewritten quote about colour and the artist's hand, signed Wassily Kandinsky, pasted on an art-book page above an abstract painting",
+    "description": "The same pasted quote as dscf8194 from slightly further back, with more blank page above it and a dark corner of another book at the top left. A touch softer and dimmer than dscf8194, with darker corners. Use dscf8194 unless the extra margin is needed.",
+    "words": [
+      "\"Color is the keyboard, the shapes are the notes, and the artist is the hand that plays, creating vibrations in the soul.\"",
+      "WASSILY KANDINSKY"
+    ],
+    "focal": [
+      46,
+      50
+    ],
+    "colors": [
+      "white",
+      "grey",
+      "black",
+      "pale blue"
+    ],
+    "mood": "quiet, bookish",
+    "quality": "ok",
+    "qualityNote": "Softer than dscf8194 with darker corners; a near-duplicate.",
+    "uses": [
+      "card",
+      "background"
+    ],
+    "shows": null
+  },
+  {
+    "id": "about/process/dscf8196",
+    "kind": "process",
+    "alt": "Lap board with a collage in progress reading \"THE WORLD IS YOUR OYSTER\", an abstract painting print, grey scissors and a glue stick",
+    "description": "Top-down on the lap board with the tools in view: at the left a collage in progress (a vertical strip reading THE WORLD IS YOUR OYSTER, a RELAX with ART sign, a space capsule inside an oval mirror, silver fabric, a pink scrap); in the centre a sketchbook page with a bright abstract painting reproduction cut in a stepped shape; at the right a glue stick, grey-handled scissors and crayon doodles of a sun and a cloud. Finished collages are fanned out top right and blank sheets fill the right edge. Direct flash, bright in the middle and falling to black at the top and the corners.",
+    "words": [
+      "THE WORLD IS YOUR OYSTER",
+      "and finding hope amid chaos",
+      "RELAX with ART",
+      "C:C"
+    ],
+    "focal": [
+      42,
+      55
+    ],
+    "colors": [
+      "white",
+      "dark brown",
+      "orange",
+      "blue",
+      "black"
+    ],
+    "mood": "tools out, mid-idea, playful",
+    "quality": "ok",
+    "qualityNote": "Direct flash with a dark top edge and corners; fine as a card or medium slot.",
+    "uses": [
+      "card",
+      "detail"
+    ],
+    "shows": null
+  },
+  {
+    "id": "brand/banner",
+    "kind": "brand",
+    "alt": "Camila's hands, in silver rings, cutting a face out of a magazine with a craft knife on a green cutting mat, open magazines on both sides",
+    "description": "Her brand banner: a very wide top-down strip of Camila's hands at work, the right hand holding a craft knife and the left steadying a magazine face on a green cutting mat with a yellow grid, cut-out eyes and lips scattered around the blade. Open magazines frame both ends, columns of text at the left and peach-toned pages at the right, so there is no truly empty area; text would need a scrim, best over the left quarter. Warm, even light and sharp throughout, but it is a 4:1 strip only 840 px tall at source, so it works full-width and short, not cropped into a tall hero.",
+    "words": [],
+    "focal": [
+      54,
+      52
+    ],
+    "colors": [
+      "green",
+      "tan",
+      "peach",
+      "cream",
+      "black"
+    ],
+    "mood": "warm, hands-on, intimate",
+    "quality": "good",
+    "qualityNote": "",
+    "uses": [
+      "hero",
+      "wide-banner",
+      "background"
+    ],
+    "shows": null
+  }
+]

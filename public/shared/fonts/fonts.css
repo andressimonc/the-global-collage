@@ -1,0 +1,9 @@
+/* The Global Collage brand typefaces.
+   Neco: Indian Type Foundry / Fontshare, free for commercial use.
+   TT Interphases Pro: TypeType TRIAL files — fine for a preview, license before launch. */
+@font-face { font-family: "Neco"; src: url("Neco-Variable.woff2") format("woff2"); font-weight: 400 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Neco"; src: url("Neco-VariableItalic.woff2") format("woff2"); font-weight: 400 900; font-style: italic; font-display: swap; }
+/* axes: weight 100-900, width 75-100 (font-stretch), slant 0-11 (font-style: oblique) */
+@font-face { font-family: "TT Interphases"; src: url("TTInterphasesProTrial-Variable.ttf") format("truetype"); font-weight: 100 900; font-stretch: 75% 100%; font-style: oblique 0deg 11deg; font-display: swap; }
+@font-face { font-family: "TT Interphases Mono"; src: url("TTInterphasesProMonoTrial-Variable.ttf") format("truetype"); font-weight: 400 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "TT Interphases Mono"; src: url("TTInterphasesProMonoTrial-VariableItalic.ttf") format("truetype"); font-weight: 400 700; font-style: italic; font-display: swap; }

@@ -1,0 +1,56 @@
+{
+  "intro": [
+    "Hi! Here are nine options for your website. Use the arrows to go through them. Each one is a real page you can scroll and click.",
+    "For now each option is its home page only. The other pages get built once you choose.",
+    "For each one, tell me here what you like and what you don't. Short notes are perfect.",
+    "Tap Favorite on the one you like best.",
+    "At the end, either pick one and go with it, or pick the things you like from several, and leave me a note on how to move forward."
+  ],
+  "options": [
+    {
+      "n": 1,
+      "name": "The Cutting Mat",
+      "line": "Your work table seen from above: everything is cut paper on the green mat."
+    },
+    {
+      "n": 2,
+      "name": "The Gallery Wall",
+      "line": "Calm and collector-first: the piece assembles from fragments as the page opens."
+    },
+    {
+      "n": 3,
+      "name": "Sticker Pop",
+      "line": "Loud and playful: your cut-outs are stickers you can drag around."
+    },
+    {
+      "n": 4,
+      "name": "The Poster",
+      "line": "A living poster: one giant word per screen with your cut-outs in front of it."
+    },
+    {
+      "n": 5,
+      "name": "The Archive",
+      "line": "Your things on a dark table: objects you can move, pieces as captioned prints."
+    },
+    {
+      "n": 6,
+      "name": "Inside the Piece",
+      "line": "Your art fills the screen and a clean page floats inside it."
+    },
+    {
+      "n": 7,
+      "name": "The Cover",
+      "line": "Every screen is a magazine cover: a huge word behind a figure on flat colour."
+    },
+    {
+      "n": 8,
+      "name": "The Floor",
+      "line": "A floor covered in your prints that you drag across, with a small map."
+    },
+    {
+      "n": 9,
+      "name": "The Orbit",
+      "line": "Your pieces circle the headline on a ring, like the planet in your logo."
+    }
+  ]
+}

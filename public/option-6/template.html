@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SEO TITLE OF THIS PAGE, FROM docs/COPY.md</title>
+<meta name="description" content="SEO META OF THIS PAGE, FROM docs/COPY.md">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../shared/brand/favicon.png">
+<link rel="preload" as="font" type="font/woff2" href="../shared/fonts/Neco-Variable.woff2" crossorigin>
+<link rel="stylesheet" href="../shared/fonts/fonts.css">
+<link rel="stylesheet" href="../shared/motion.css">
+<link rel="stylesheet" href="css/site.css">
+<!-- product.html only: the motion kit's pieceHero() block goes here, before site.js (see shared/motion.js) -->
+<script type="module" blocking="render" src="js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- SHARED: logo and tab (same on every page) -->
+<header class="mast">
+  <a class="mast__logo" href="index.html"><img src="../shared/brand/logo-white-v1-400.webp" alt="The Global Collage" width="400" height="298"></a>
+</header>
+<nav class="tab" aria-label="Site">
+  <a class="tab__menu" href="#foot-nav" data-menu-open><img src="../shared/brand/icon-white-400.webp" alt="" width="400" height="228"><span>Menu</span></a>
+  <button class="tab__cart" type="button" data-cart-open aria-haspopup="dialog" aria-label="Cart"><span>Cart</span><span class="count" data-cart-count>0</span></button>
+</nav>
+<!-- /SHARED -->
+
+<main id="main">
+
+  <!-- OPENING. Every inner page starts with this scene: a short band of its world, then the first leaf with the h1.
+       Change the world picture, --avg (the picture's average colour) and --pos (which part shows). Worlds per page: docs/option-6/DESIGN.md.
+       data-shatter = this world arrives in five fragments on a first visit. Add <body data-shop> on pages that show prices. -->
+  <section class="scene opening" data-scroll style="--avg:#856446">
+    <div class="scene__world" data-shatter><img class="world" style="--pos:50% 50%" src="../shared/img/collage-photos/bw-94-1600.webp" srcset="../shared/img/collage-photos/bw-94-960.webp 960w, ../shared/img/collage-photos/bw-94-1600.webp 1600w" sizes="(max-aspect-ratio: 3/4) 170vh, 115vw" width="1600" height="1067" alt="" fetchpriority="high" decoding="async"></div>
+    <div class="page">
+      <div class="window opening__window"><!-- a .cut figure may stand here, on the leaf's top edge --></div>
+      <div class="leaf opening__leaf">
+        <h1 class="display display--page" data-words>Page title</h1>
+        <p class="voice">The page's lead line from docs/COPY.md.</p>
+        <!-- <p class="actions"><a class="btn" href="shop.html">Button</a> <a class="link" href="about.html">Link</a></p> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- A FOLLOWING SCENE. Its own world shows beside the page and in any .window. A leaf that starts a scene continues the leaf above it. -->
+  <section class="scene" data-scroll style="--avg:#7D684E">
+    <div class="scene__world"><img class="world" style="--pos:50% 55%" src="../shared/img/collage-photos/bw-119-1600.webp" srcset="../shared/img/collage-photos/bw-119-960.webp 960w, ../shared/img/collage-photos/bw-119-1600.webp 1600w" sizes="(max-aspect-ratio: 3/4) 170vw, 100vw" width="1600" height="2400" alt="" loading="lazy" decoding="async"></div>
+    <div class="page">
+      <div class="leaf">
+        <p class="needs-content">This page's sections go here. Components and plans: docs/option-6/DESIGN.md.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- SHARED: footer (same on every page) -->
+<footer class="scene scene--foot" data-scroll style="--avg:#836548">
+  <div class="scene__world"><img class="world" style="--pos:50% 50%" src="../shared/img/collage-photos/bw-100-1600.webp" srcset="../shared/img/collage-photos/bw-100-960.webp 960w, ../shared/img/collage-photos/bw-100-1600.webp 1600w" sizes="(max-aspect-ratio: 3/4) 170vh, 115vw" width="1600" height="1067" alt="" loading="lazy" decoding="async"></div>
+  <div class="page">
+    <div class="leaf leaf--ink foot">
+      <div class="foot__brand">
+        <a class="foot__logo" href="index.html"><img src="../shared/brand/logo-white-v1-400.webp" alt="The Global Collage" width="400" height="298" loading="lazy"></a>
+        <p>Based in Miami, available in the US</p>
+      </div>
+      <nav class="foot__nav" id="foot-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li class="is-soon">Services<span class="soon">soon</span></li>
+          <li class="is-soon">Exhibition<span class="soon">soon</span></li>
+          <li class="is-soon">Commissions<span class="soon">soon</span></li>
+          <li class="is-soon">Contact<span class="soon">soon</span></li>
+        </ul>
+      </nav>
+      <div class="foot__reach">
+        <ul>
+          <li><a href="mailto:theglobalcollage@gmail.com">theglobalcollage@gmail.com</a></li>
+          <li><a href="tel:+13053353506">+1 (305) 335-3506</a></li>
+          <li><a href="https://www.instagram.com/theglobalcollage/">@theglobalcollage</a></li>
+        </ul>
+        <form class="join join--dark" data-newsletter>
+          <label for="foot-email">Newsletter</label>
+          <input id="foot-email" name="email" type="email" autocomplete="email" placeholder="Email" required>
+          <button class="btn btn--paper" type="submit">Join</button>
+        </form>
+      </div>
+      <div class="foot__base">
+        <ul>
+          <li class="is-soon">Shipping &amp; Returns<span class="soon">soon</span></li>
+          <li class="is-soon">Privacy<span class="soon">soon</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /SHARED -->
+
+<!-- SHARED: the menu (a second page that slides over from the side). Per page: move aria-current="page", and put class="is-on" on the picture with that page's data-world. -->
+<dialog class="sheet menu" id="menu" aria-label="Menu">
+  <div class="menu__world" aria-hidden="true">
+    <img class="menu__scene is-on" data-world="home" src="../shared/img/shop/originals/senor-tigre-960.webp" width="960" height="1292" alt="" loading="lazy">
+    <img class="menu__scene" data-world="about" src="../shared/img/collage-photos/bw-94-960.webp" width="960" height="640" alt="" loading="lazy">
+    <img class="menu__scene" data-world="shop" src="../shared/img/shop/originals/lucky-pleasures-960.webp" width="960" height="1324" alt="" loading="lazy">
+    <img class="menu__scene" data-world="services" src="../shared/img/shop/originals/i-am-the-bad-guy-960.webp" width="960" height="1206" alt="" loading="lazy">
+    <img class="menu__scene" data-world="exhibition" src="../shared/img/exhibition/local-collage/dscf7924-960.webp" width="960" height="540" alt="" loading="lazy">
+    <img class="menu__scene" data-world="commissions" src="../shared/img/commissions/finished/feet-on-the-ground-960.webp" width="960" height="1196" alt="" loading="lazy">
+    <img class="menu__scene" data-world="contact" src="../shared/img/shop/originals/the-art-of-art-960.webp" width="960" height="1320" alt="" loading="lazy">
+  </div>
+  <div class="sheet__page">
+    <button class="sheet__close" type="button" data-close>Close</button>
+    <a class="menu__logo" href="index.html"><img src="../shared/brand/logo-black-v1-400.webp" alt="The Global Collage" width="400" height="298"></a>
+    <nav class="menu__nav" aria-label="Pages">
+      <ol class="menu__list">
+        <li style="--i:0"><a href="index.html" data-world="home">Home</a></li>
+        <li style="--i:1"><a href="about.html" data-world="about">About</a></li>
+        <li style="--i:2"><a href="shop.html" data-world="shop">Shop</a></li>
+        <li style="--i:3"><span class="menu__wait" data-world="services">Services<span class="soon">soon</span></span></li>
+        <li style="--i:4"><span class="menu__wait" data-world="exhibition">Exhibition<span class="soon">soon</span></span></li>
+        <li style="--i:5"><span class="menu__wait" data-world="commissions">Commissions<span class="soon">soon</span></span></li>
+        <li style="--i:6"><span class="menu__wait" data-world="contact">Contact<span class="soon">soon</span></span></li>
+      </ol>
+    </nav>
+    <p class="menu__foot"><a href="mailto:theglobalcollage@gmail.com">theglobalcollage@gmail.com</a> <a href="https://www.instagram.com/theglobalcollage/">@theglobalcollage</a></p>
+  </div>
+</dialog>
+
+<!-- SHARED: the cart (site.js fills it from the shop layer) -->
+<dialog class="sheet cart" id="cart" aria-labelledby="cart-h">
+  <div class="sheet__page">
+    <button class="sheet__close" type="button" data-close>Close</button>
+    <h2 class="h2" id="cart-h">Cart</h2>
+    <ul class="cart__lines" data-cart-lines></ul>
+    <div class="cart__empty" data-cart-empty>
+      <p class="voice">Your cart is empty.</p>
+      <a class="link" href="shop.html">Explore the collection</a>
+    </div>
+    <div class="cart__foot" data-cart-foot hidden>
+      <p class="cart__sum"><span>Subtotal</span><span data-cart-subtotal></span></p>
+      <p class="cart__ship">Ships from Miami, insured, US only.</p>
+      <button class="btn btn--full" type="button" data-cart-checkout>Checkout</button>
+      <p class="form-status" data-cart-status aria-live="polite"></p>
+    </div>
+  </div>
+</dialog>
+<!-- /SHARED -->
+</body>
+</html>

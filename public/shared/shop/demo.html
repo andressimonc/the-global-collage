@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Shop and forms kit: test page</title>
+<!-- Not a design. A bare page for driving shop.js and forms.js in real Chrome:
+     node tools/shot.mjs /shared/shop/demo.html _shots/kit --click ".add"                        adds the first piece
+     node tools/shot.mjs /shared/shop/demo.html _shots/kit --click ".checkout"                   the preview checkout notice
+     node tools/shot.mjs /shared/shop/demo.html _shots/kit --click "#commission button"          an empty form: the first bad field
+     node tools/shot.mjs "/shared/shop/demo.html?fill&reason=services" _shots/kit --click "#contact button"   a filled form: the thank-you
+     node tools/shot.mjs /shared/shop/demo.html _shots/kit --no-walk --steps "click:#newsletter button; wait:300; shot:row"   a one-row form keeps its row
+     node tools/shot.mjs "/shared/shop/demo.html?sold=curiosity" _shots/kit --click ".add"         Curiosity shown as sold (sample mode only)
+     node tools/shot.mjs "/shared/shop/demo.html?modal" _shots/kit --no-walk --steps "click:.add; click:.checkout; wait:300; shot:modal; click:.tgc-checkout-note button"
+                                                                                                 the cart as a modal dialog: the notice shows inside it and can be dismissed -->
+<style>
+  img { width: 80px; height: auto; vertical-align: middle; }
+  [aria-invalid] { outline: 2px solid; }
+  /* the two rules forms.js asks every site for, on a one-row form */
+  #newsletter { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .form-error, .form-status { display: block; order: 1; flex-basis: 100%; grid-column: 1 / -1; margin: 0; }
+  .form-status:empty { display: none; }
+</style>
+</head>
+<body>
+<main>
+<h1>Shop and forms kit</h1>
+<p id="mode"></p>
+
+<section id="cart">
+<h2>Cart (<span id="count">0</span>)</h2>
+<ul id="lines"></ul>
+<p>Subtotal: <span id="subtotal"></span></p>
+<p><button class="checkout" type="button">Checkout</button></p>
+<p id="problem" role="alert"></p>
+</section>
+
+<h2>Forms</h2>
+<form id="contact">
+  <h3>Contact</h3>
+  <div><label>Name <input name="name" autocomplete="name" required></label></div>
+  <div><label>Email <input name="email" type="email" autocomplete="email" required></label></div>
+  <div><label>Reason <select name="reason" required>
+    <option value="collecting">Collecting</option>
+    <option value="commission">Commission</option>
+    <option value="services">Services</option>
+    <option value="press-exhibition">Press or Exhibition</option>
+    <option value="other">Other</option>
+  </select></label></div>
+  <div><label>Message <textarea name="message" required></textarea></label></div>
+  <button type="submit">Send</button>
+</form>
+
+<form id="commission">
+  <h3>Commission</h3>
+  <div><label>Name <input name="name" autocomplete="name" required></label></div>
+  <div><label>Email <input name="email" type="email" autocomplete="email" required></label></div>
+  <div><label>Size preference <input name="size" required></label></div>
+  <div><label>Budget range <input name="budget" required></label></div>
+  <div><label>Description of the feeling or concept <textarea name="concept" required></textarea></label></div>
+  <div><label>Timeline <input name="timeline" required></label></div>
+  <div><label>Optional: where it will live (room, gift, space) <input name="place"></label></div>
+  <button type="submit">Send</button>
+</form>
+
+<h3>Newsletter</h3>
+<form id="newsletter">
+  <label for="newsletter-email">Email</label>
+  <input id="newsletter-email" name="email" type="email" autocomplete="email" required>
+  <button type="submit">Join</button>
+</form>
+
+<h2>Products</h2>
+<ul id="products"></ul>
+</main>
+
+<script type="module">
+import { getProducts, cart, formatPrice, imageAttrs, isSample, mountSampleNote } from './shop.js';
+import { wireForm, prefillFromQuery } from '../forms.js';
+
+const $ = (selector) => document.querySelector(selector);
+const el = (tag, props, ...children) => { const node = Object.assign(document.createElement(tag), props); node.append(...children); return node; };
+const report = (err) => { $('#problem').textContent = err.message; };
+
+$('#mode').textContent = isSample ? 'Sample mode: no Shopify token in shared/config.js.' : 'Live mode: talking to Shopify.';
+mountSampleNote();
+
+function paint(c) {
+  $('#count').textContent = c.count;
+  $('#subtotal').textContent = formatPrice(c.subtotal) ?? 'nothing yet';
+  $('#lines').replaceChildren(...c.lines.map((line) => el('li', {},
+    `${line.title} × ${line.quantity}, ${formatPrice(line.price)} `,
+    el('button', { type: 'button', className: 'remove', textContent: 'Remove', onclick: () => cart.remove(line.id).catch(report) }),
+  )));
+}
+cart.subscribe(paint);
+cart.get().then(paint, report);
+// demo.html?modal puts the cart in a modal <dialog>, the way a site's cart drawer might be built
+const params = new URLSearchParams(location.search);
+if (params.has('modal')) {
+  const drawer = el('dialog', {}, $('#cart'), el('ul', { id: 'drawer-products' }));
+  document.body.append(drawer);
+  drawer.showModal();
+}
+$('.checkout').addEventListener('click', () => cart.checkout().catch(report));
+
+getProducts().then((products) => {
+  ($('#drawer-products') ?? $('#products')).replaceChildren(...products.map((product) => el('li', {},
+    el('img', { loading: 'lazy', decoding: 'async', ...imageAttrs(product.images[0], '80px') }),
+    ` ${product.title}, ${product.year ?? 'no year'}, ${formatPrice(product.price) ?? 'no price'} `,
+    product.available
+      ? el('button', { type: 'button', className: 'add', textContent: 'Add', onclick: () => cart.add(product).catch(report) })
+      : 'Sold',
+  )));
+}, report);
+
+// demo.html?fill puts test values in every field, so one click on a submit button shows the thank-you
+if (params.has('fill')) {
+  for (const field of document.querySelectorAll('form input, form textarea')) field.value = field.type === 'email' ? 'ada@example.test' : 'Test';
+}
+prefillFromQuery($('#contact'));
+for (const kind of ['contact', 'commission', 'newsletter']) wireForm($('#' + kind), { kind });
+</script>
+</body>
+</html>

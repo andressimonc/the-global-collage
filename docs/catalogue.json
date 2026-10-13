@@ -1,0 +1,4517 @@
+[
+ {
+  "id": "about/portrait/cami-754",
+  "kind": "portrait",
+  "alt": "Camila in a white button-up shirt and a thin gold necklace, head tilted, half-smiling, against a dark charcoal backdrop",
+  "description": "Studio portrait of Camila from the hips up, shoulder-length brown hair, loose white shirt, looking at the camera with her head tilted and a small smile. She stands a little right of centre on a plain dark charcoal backdrop, so the left third and the strip above her head are empty and will take text in a light colour. Soft, even studio light with no hard shadows; the picture is nearly square and the source is only about 1900 px wide.",
+  "words": [],
+  "focal": [
+   48,
+   29
+  ],
+  "colors": [
+   "charcoal",
+   "white",
+   "brown",
+   "gold"
+  ],
+  "mood": "warm, direct, a little playful",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "card"
+  ],
+  "shows": null,
+  "section": "about/portrait",
+  "sizes": {
+   "480": "shared/img/about/portrait/cami-754-480.webp",
+   "960": "shared/img/about/portrait/cami-754-960.webp",
+   "1600": "shared/img/about/portrait/cami-754-1600.webp"
+  },
+  "width": 1901,
+  "height": 1832,
+  "ratio": 1.0377,
+  "avg": "#585358",
+  "palette": [
+   "#2A272A",
+   "#1D1A1C",
+   "#D9D4E1",
+   "#C4B7C1",
+   "#474044"
+  ]
+ },
+ {
+  "id": "about/process/dscf5885-1",
+  "kind": "process",
+  "alt": "Work table with a sketchbook collage reading \"This is Art, TAKE, harder look, HONEY\", red scissors, a wine glass and a pink blade case",
+  "description": "Camila's work table seen from a seat: in the middle a spiral sketchbook holds a blue-sky collage in progress (cut-out words, a feather, a butterfly on a yellow flower, a blue reclining figure over a patterned hill), which matches the shop piece The Art of Art before it was finished. Around it are red-handled scissors on a car advert at the left, a glass of rose and a coral bag at the top, a pink case of craft-knife blades at the right, all on a worn dark blue table. Natural indoor light, no flash, busy edge to edge with no empty space; a car maker's logo is plainly visible bottom left, so crop the left quarter if it goes large.",
+  "words": [
+   "This is Art",
+   "TAKE",
+   "harder look",
+   "HONEY",
+   "NISSAN",
+   "NV PASSEN"
+  ],
+  "focal": [
+   51,
+   58
+  ],
+  "colors": [
+   "blue",
+   "navy",
+   "red",
+   "pink",
+   "coral"
+  ],
+  "mood": "lived-in, mid-session, colourful",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card"
+  ],
+  "shows": "the-art-of-art",
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf5885-1-480.webp",
+   "960": "shared/img/about/process/dscf5885-1-960.webp",
+   "1600": "shared/img/about/process/dscf5885-1-1600.webp"
+  },
+  "width": 4240,
+  "height": 2832,
+  "ratio": 1.4972,
+  "avg": "#635859",
+  "palette": [
+   "#121217",
+   "#492F30",
+   "#776560",
+   "#A7A6AA",
+   "#CECDCE"
+  ]
+ },
+ {
+  "id": "about/process/dscf5889",
+  "kind": "process",
+  "alt": "Close view of a sky-blue sketchbook collage: cut-out words \"This is Art, TAKE, harder look, HONEY\", a butterfly and a blue figure",
+  "description": "The same collage as dscf5885-1, shot low and close so the sketchbook page fills the frame: white clouds on blue sky, the cut-out words in the centre, a butterfly on a yellow flower at the left, a blue reclining figure on a patterned hill at the right. It matches the shop piece The Art of Art while still in progress. Sharp through the middle with the near edge and the table behind it softly out of focus; natural light, no flash, the top strip (coral bag, blade case) is blurred and can be cropped away.",
+  "words": [
+   "This is Art",
+   "TAKE",
+   "harder look",
+   "HONEY",
+   "NV PASSEN"
+  ],
+  "focal": [
+   52,
+   50
+  ],
+  "colors": [
+   "sky blue",
+   "white",
+   "navy",
+   "yellow",
+   "coral"
+  ],
+  "mood": "bright, intimate, in progress",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card",
+   "detail"
+  ],
+  "shows": "the-art-of-art",
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf5889-480.webp",
+   "960": "shared/img/about/process/dscf5889-960.webp",
+   "1600": "shared/img/about/process/dscf5889-1600.webp"
+  },
+  "width": 4240,
+  "height": 2832,
+  "ratio": 1.4972,
+  "avg": "#6A5E5F",
+  "palette": [
+   "#543633",
+   "#1B1920",
+   "#82716B",
+   "#A5AAB0",
+   "#C9C8CB"
+  ]
+ },
+ {
+  "id": "about/process/dscf8176",
+  "kind": "process",
+  "alt": "Open sketchbook with a magazine photo of a figure in a cowboy hat, beside a collage of fashion clippings reading \"ALL OR NOTHING\"",
+  "description": "Top-down on a white lap board: at the left a sketchbook page carries one stepped-cut magazine photo (a blonde figure in a cowboy hat and white fur jacket lying on gravel, legs up against a white wall, hills behind); at the right a dense collage of lips, leopard print, manga panels, a yellow price sticker and the words ALL OR NOTHING. The bottom quarter is a dark brown out-of-focus blur and the corners fall off to black. Direct on-camera flash at night, slightly tilted.",
+  "words": [
+   "Hungry Women",
+   "HIGH CLAIM ITEM",
+   "ABBANA",
+   "ALL OR NOTHING"
+  ],
+  "focal": [
+   50,
+   44
+  ],
+  "colors": [
+   "white",
+   "dark brown",
+   "black",
+   "grey",
+   "yellow"
+  ],
+  "mood": "late-night, scrappy, candid",
+  "quality": "ok",
+  "qualityNote": "Direct flash, dark corners, and the bottom quarter is a dark blur; keep it card size.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8176-480.webp",
+   "960": "shared/img/about/process/dscf8176-960.webp",
+   "1600": "shared/img/about/process/dscf8176-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#60554D",
+  "palette": [
+   "#1D110D",
+   "#736A5C",
+   "#4A3329",
+   "#938E87",
+   "#BCBDB9"
+  ]
+ },
+ {
+  "id": "about/process/dscf8179",
+  "kind": "process",
+  "alt": "Spiral sketchbook page with one cut magazine photo, on a lap board beside a collage of fashion clippings and the words \"ALL OR NOTHING\"",
+  "description": "The same set-up as dscf8176, pulled back so the whole sketchbook and its spiral binding show: the stepped-cut photo of the figure in a cowboy hat sits on a mostly blank white page, with the ALL OR NOTHING collage on the board at the right and loose black clippings at the left. The white page gives a calm area in the upper left of the sketchbook; finished collages are just visible, out of focus, along the top edge. Direct flash, warm brown surroundings, dark corners.",
+  "words": [
+   "Hungry Women",
+   "HIGH CLAIM ITEM",
+   "ABBANA",
+   "ALL OR NOTHING"
+  ],
+  "focal": [
+   50,
+   47
+  ],
+  "colors": [
+   "white",
+   "brown",
+   "black",
+   "grey",
+   "yellow"
+  ],
+  "mood": "early stage, quiet, candid",
+  "quality": "ok",
+  "qualityNote": "Direct flash with dark corners and a slight tilt; fine as a card, not for a large slot.",
+  "uses": [
+   "card"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8179-480.webp",
+   "960": "shared/img/about/process/dscf8179-960.webp",
+   "1600": "shared/img/about/process/dscf8179-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#6D6055",
+  "palette": [
+   "#877B6B",
+   "#BEBBB5",
+   "#1D120C",
+   "#432415",
+   "#604A3B"
+  ]
+ },
+ {
+  "id": "about/process/dscf8180",
+  "kind": "process",
+  "alt": "Collages spread on a wood-look floor: a wide finished collage propped upright, an open sketchbook on a lap board and a fan of pieces",
+  "description": "A wide look at the whole floor session: a long finished collage stands propped against navy polka-dot fabric at the top, the sketchbook and lap board sit bottom left, and a fan of finished collages lies at the right with blank sheets below it. A lot of plain wood-look floor fills the middle and upper right. Underexposed, with the flash falling off hard towards every edge.",
+  "words": [
+   "EVERYTHING HAS CHANGED. YOUR LIFE IS DIFFERENT.",
+   "EXPERIENCES",
+   "Hot Dogs",
+   "Burgers",
+   "Pastrami",
+   "Steak Sandwiches",
+   "IRV'S",
+   "Hungry Women",
+   "HIGH CLAIM ITEM",
+   "ALL OR NOTHING",
+   "SLEEK &"
+  ],
+  "focal": [
+   42,
+   30
+  ],
+  "colors": [
+   "dark brown",
+   "black",
+   "white",
+   "navy",
+   "orange"
+  ],
+  "mood": "after-hours, spread out, messy",
+  "quality": "ok",
+  "qualityNote": "Dark and underexposed with heavy flash falloff; each collage is small in the frame. Small sizes only.",
+  "uses": [
+   "card"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8180-480.webp",
+   "960": "shared/img/about/process/dscf8180-960.webp",
+   "1600": "shared/img/about/process/dscf8180-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#4E3F34",
+  "palette": [
+   "#574131",
+   "#989086",
+   "#2D190D",
+   "#130B09",
+   "#3E2210"
+  ]
+ },
+ {
+  "id": "about/process/dscf8181",
+  "kind": "process",
+  "alt": "Fan of finished collages on the floor; the front one pairs a wavy white tower and blue sky with a woman stretching and a blue cut-out shape",
+  "description": "Low, close view of four collages fanned out on the floor. The front one fills the right two-thirds: a cream tower of wavy balconies against blue, a flat blue cut-out blob, a crowd photo cut into a shape, a woman in sportswear lunging across the bottom, and a small letter B. Behind it are a yellow-bordered piece with a painted skull and the red C:C mark (it looks like Artstract) and a purple piece with a green car. Flash, but the colour is vivid and the middle is sharp; the far left and the corners go soft and dark.",
+  "words": [
+   "B",
+   "C:C",
+   "Driver",
+   "Bravely"
+  ],
+  "focal": [
+   62,
+   50
+  ],
+  "colors": [
+   "blue",
+   "cream",
+   "yellow",
+   "purple",
+   "green"
+  ],
+  "mood": "vivid, layered, energetic",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "wide-banner",
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8181-480.webp",
+   "960": "shared/img/about/process/dscf8181-960.webp",
+   "1600": "shared/img/about/process/dscf8181-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#5D5F5B",
+  "palette": [
+   "#647374",
+   "#1F2026",
+   "#5C493D",
+   "#BDAB86",
+   "#6E96A4"
+  ]
+ },
+ {
+  "id": "about/process/dscf8182",
+  "kind": "studio",
+  "alt": "Top-down view of a cardboard box of paints, glue and brushes on the floor beside loose magazine pages and a pair of silver platform heels",
+  "description": "Looking straight down at the floor beside a shelf: an open cardboard box crammed with acrylic paint bottles, glue, brushes, a roll of black tape and instruction sheets sits lower centre; a stack of blank sheets and torn magazine pages lies at the left; a pair of silver platform heels and a pink notebook are top right. It reads as real studio clutter, with no empty space. Direct flash, warm cast, dark at the bottom corners.",
+  "words": [
+   "VALUE PACK",
+   "B"
+  ],
+  "focal": [
+   55,
+   62
+  ],
+  "colors": [
+   "tan",
+   "white",
+   "silver",
+   "navy",
+   "pink"
+  ],
+  "mood": "messy, honest, behind the scenes",
+  "quality": "ok",
+  "qualityNote": "Direct flash and a cluttered frame with no clear subject; works small, not large.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8182-480.webp",
+   "960": "shared/img/about/process/dscf8182-960.webp",
+   "1600": "shared/img/about/process/dscf8182-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#685950",
+  "palette": [
+   "#221D1E",
+   "#563627",
+   "#776552",
+   "#C9C6C1",
+   "#9D968E"
+  ]
+ },
+ {
+  "id": "about/process/dscf8185",
+  "kind": "studio",
+  "alt": "Close-up of a silver metallic platform sandal standing on an open magazine page with a dark blue photograph",
+  "description": "A tight close-up of one silver platform sandal with a block heel, resting on a magazine spread whose dark blue photo fills the lower left. The shoe is sharp at the toe and the rest falls quickly out of focus; nothing here shows a collage. Direct flash throws a bright glare patch on the glossy page under the shoe.",
+  "words": [
+   "LYNCHBURG, TENNESSEE"
+  ],
+  "focal": [
+   52,
+   38
+  ],
+  "colors": [
+   "silver",
+   "navy",
+   "tan",
+   "black"
+  ],
+  "mood": "glam, odd, playful",
+  "quality": "ok",
+  "qualityNote": "Flash glare on the page and very shallow focus; a quirky detail only.",
+  "uses": [
+   "detail"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8185-480.webp",
+   "960": "shared/img/about/process/dscf8185-960.webp",
+   "1600": "shared/img/about/process/dscf8185-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#4C4A4C",
+  "palette": [
+   "#545152",
+   "#131822",
+   "#989A9C",
+   "#262122",
+   "#3A2A20"
+  ]
+ },
+ {
+  "id": "about/process/dscf8186",
+  "kind": "studio",
+  "alt": "Out-of-focus photo of a pair of silver platform heels on magazines beside a shelf of notebooks",
+  "description": "The same silver heels as dscf8185 from further back, with a shelf of spiral notebooks at the right and a white storage bin behind. The whole frame is out of focus; nothing in it is sharp. Do not use it.",
+  "words": [],
+  "focal": [
+   55,
+   50
+  ],
+  "colors": [
+   "silver",
+   "brown",
+   "navy",
+   "white"
+  ],
+  "mood": "blurred, accidental",
+  "quality": "poor",
+  "qualityNote": "Completely out of focus.",
+  "uses": [
+   "avoid"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8186-480.webp",
+   "960": "shared/img/about/process/dscf8186-960.webp",
+   "1600": "shared/img/about/process/dscf8186-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#5B524E",
+  "palette": [
+   "#171922",
+   "#453127",
+   "#685D57",
+   "#8D847B",
+   "#BFBCB6"
+  ]
+ },
+ {
+  "id": "about/process/dscf8188",
+  "kind": "process",
+  "alt": "Sketchbook page with one cut magazine photo on a lap board, loose black clippings at the left and a finished collage on the floor behind",
+  "description": "The sketchbook stands in the centre of the lap board with the stepped-cut photo of the figure in a cowboy hat on an otherwise blank page. Loose clippings wait at the left (a black strip of upside-down headlines, a striped advert, an orange SLEEK), the ALL OR NOTHING collage is at the right, and a finished collage lies dark and out of focus across the top. Direct flash, with the top third and the corners very dark.",
+  "words": [
+   "Hungry Women",
+   "HIGH CLAIM ITEM",
+   "ABBANA",
+   "ALL OR NOTHING",
+   "SLEEK &",
+   "JOIN THE SHAPE INNER CIRCLE",
+   "10 New Sneakers That Are Worth the Hype"
+  ],
+  "focal": [
+   47,
+   55
+  ],
+  "colors": [
+   "white",
+   "dark brown",
+   "black",
+   "grey",
+   "orange"
+  ],
+  "mood": "early stage, late-night",
+  "quality": "ok",
+  "qualityNote": "Direct flash; the top third is dark floor. Card size only.",
+  "uses": [
+   "card"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8188-480.webp",
+   "960": "shared/img/about/process/dscf8188-960.webp",
+   "1600": "shared/img/about/process/dscf8188-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#58483D",
+  "palette": [
+   "#ABA69E",
+   "#645242",
+   "#180C07",
+   "#2D160B",
+   "#431F0D"
+  ]
+ },
+ {
+  "id": "about/process/dscf8189",
+  "kind": "process",
+  "alt": "Collage in progress in a sketchbook: a blonde woman and a small terrier pasted over a desert photo, a glue stick lying beside it",
+  "description": "The sketchbook page a step further on: a cut-out blonde woman in a white blouse and a small terrier are now pasted over the top-left corner of the photo, breaking out of its black border. A glue stick lies on the collage at the right, next to a gold glitter square, an \"All I need is love and WI-FI\" card and ALL OR NOTHING. Tight framing with the page well lit by flash and the corners dark.",
+  "words": [
+   "Hungry Women",
+   "HIGH CLAIM ITEM",
+   "ABBANA",
+   "Scotch Glue Stick",
+   "All I need is love and WI-FI",
+   "ALL OR NOTHING",
+   "SLEEK &",
+   "JOIN THE SHAPE INNER CIRCLE"
+  ],
+  "focal": [
+   42,
+   50
+  ],
+  "colors": [
+   "white",
+   "brown",
+   "black",
+   "gold",
+   "red"
+  ],
+  "mood": "hands-on, mid-glue, playful",
+  "quality": "ok",
+  "qualityNote": "Direct flash with dark corners; sharp enough for a card or a medium slot, not a hero.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8189-480.webp",
+   "960": "shared/img/about/process/dscf8189-960.webp",
+   "1600": "shared/img/about/process/dscf8189-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#675549",
+  "palette": [
+   "#B3ACA3",
+   "#7A6957",
+   "#1F1009",
+   "#613F2C",
+   "#3A2314"
+  ]
+ },
+ {
+  "id": "about/process/dscf8190",
+  "kind": "process",
+  "alt": "Sketchbook collage in progress with a blonde woman and a terrier pasted over a desert photo, a glue stick and \"ALL OR NOTHING\" beside it",
+  "description": "Almost the same frame as dscf8189, taken a little wider and from slightly further left, so more of the black clippings and the orange SLEEK at the left edge are in view. The glue stick still lies on the right-hand collage. Direct flash, dark corners; pick this or dscf8189, not both.",
+  "words": [
+   "Hungry Women",
+   "HIGH CLAIM ITEM",
+   "ABBANA",
+   "Scotch Glue Stick",
+   "All I need is love and WI-FI",
+   "ALL OR NOTHING",
+   "SLEEK &",
+   "JOIN THE SHAPE INNER CIRCLE"
+  ],
+  "focal": [
+   42,
+   50
+  ],
+  "colors": [
+   "white",
+   "brown",
+   "black",
+   "gold",
+   "orange"
+  ],
+  "mood": "hands-on, mid-glue",
+  "quality": "ok",
+  "qualityNote": "Direct flash with dark corners; a near-duplicate of dscf8189.",
+  "uses": [
+   "card"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8190-480.webp",
+   "960": "shared/img/about/process/dscf8190-960.webp",
+   "1600": "shared/img/about/process/dscf8190-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#645447",
+  "palette": [
+   "#796856",
+   "#B3ACA3",
+   "#1C1009",
+   "#361D0E",
+   "#5D3926"
+  ]
+ },
+ {
+  "id": "about/process/dscf8191",
+  "kind": "process",
+  "alt": "Sketchbook collage nearly done: a blonde woman, a terrier, a figure in a cowboy hat and a pasted block of magazine text, clippings around",
+  "description": "The latest stage of the sketchbook page: a small torn block of magazine text is now pasted at its bottom-right corner and the glue stick is gone. The whole lap board is in view, with the spiral binding at the top, the black clippings at the left, the ALL OR NOTHING collage at the right and the board's black ledge along the bottom. It is the sharpest frame of this series; direct flash, dark top edge and corners.",
+  "words": [
+   "Treatments done now can completely change skin's aging trajectory, experts say. It's called prejuvenation, and it puts the power in your hands. You can start here.",
+   "Hungry Women",
+   "HIGH CLAIM ITEM",
+   "ABBANA",
+   "All I need is love and WI-FI",
+   "ALL OR NOTHING",
+   "SLEEK &",
+   "JOIN THE SHAPE INNER CIRCLE"
+  ],
+  "focal": [
+   45,
+   48
+  ],
+  "colors": [
+   "white",
+   "brown",
+   "black",
+   "gold",
+   "orange"
+  ],
+  "mood": "nearly finished, focused",
+  "quality": "ok",
+  "qualityNote": "Direct flash with dark corners; the best of the sketchbook series but still a card or medium slot.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8191-480.webp",
+   "960": "shared/img/about/process/dscf8191-960.webp",
+   "1600": "shared/img/about/process/dscf8191-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#665549",
+  "palette": [
+   "#BAB2A8",
+   "#7B6957",
+   "#1B100A",
+   "#39180A",
+   "#533A2B"
+  ]
+ },
+ {
+  "id": "about/process/dscf8192",
+  "kind": "process",
+  "alt": "Finished-looking sketchbook collage on a lap board, with a pasted text block, loose clippings at the left and \"ALL OR NOTHING\" at the right",
+  "description": "The same stage as dscf8191 from a slightly lower, squarer angle, with the finished floor collage showing as a dark band along the top. The sketchbook sits in the centre, the clippings and orange SLEEK at the left, the love-and-WI-FI card and ALL OR NOTHING at the right. Direct flash, dark corners; pick this or dscf8191, not both.",
+  "words": [
+   "Treatments done now can completely change skin's aging trajectory, experts say. It's called prejuvenation, and it puts the power in your hands. You can start here.",
+   "Hungry Women",
+   "HIGH CLAIM ITEM",
+   "ABBANA",
+   "All I need is love and WI-FI",
+   "ALL OR NOTHING",
+   "SLEEK &",
+   "JOIN THE SHAPE INNER CIRCLE"
+  ],
+  "focal": [
+   46,
+   50
+  ],
+  "colors": [
+   "white",
+   "brown",
+   "black",
+   "gold",
+   "orange"
+  ],
+  "mood": "nearly finished, late-night",
+  "quality": "ok",
+  "qualityNote": "Direct flash with dark corners; a near-duplicate of dscf8191.",
+  "uses": [
+   "card"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8192-480.webp",
+   "960": "shared/img/about/process/dscf8192-960.webp",
+   "1600": "shared/img/about/process/dscf8192-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#5F4F44",
+  "palette": [
+   "#746251",
+   "#B3ACA3",
+   "#180D08",
+   "#341406",
+   "#473023"
+  ]
+ },
+ {
+  "id": "about/process/dscf8193",
+  "kind": "process",
+  "alt": "Close view of a wide collage: a diner sign for hot dogs and burgers, people at a counter, classical painted figures and a cracked gold skull",
+  "description": "A close look at the long collage that stands on the floor in the other shots; it is a finished piece but not one of the 25 shop originals and has no title in the files. A diner sign runs across the top, people sit at a counter at the left, a waitress holds a green glass in the middle, and the bottom mixes orange dancing silhouettes on a green grid, figures from an old painting and a cracked gold skull, with a parking ticket and a headline at the right. The frame is full edge to edge and cuts the collage off at the left; the flash leaves a pale glare patch top centre and the left edge is soft.",
+  "words": [
+   "Hot Dogs",
+   "Burgers",
+   "Pastrami",
+   "Steak Sandwiches",
+   "IRV'S",
+   "Does Humanity Have a Future beyond Earth?",
+   "EXPERIENCES",
+   "Recorded and mixed at",
+   "Garage 1"
+  ],
+  "focal": [
+   50,
+   55
+  ],
+  "colors": [
+   "dark red",
+   "brown",
+   "black",
+   "orange",
+   "green"
+  ],
+  "mood": "dense, nostalgic, warm",
+  "quality": "ok",
+  "qualityNote": "Flash glare at top centre, slightly tilted, and the collage is cropped at the left.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8193-480.webp",
+   "960": "shared/img/about/process/dscf8193-960.webp",
+   "1600": "shared/img/about/process/dscf8193-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#695141",
+  "palette": [
+   "#BBAA99",
+   "#1B100B",
+   "#835E45",
+   "#362317",
+   "#5B2F1C"
+  ]
+ },
+ {
+  "id": "about/process/dscf8194",
+  "kind": "process",
+  "alt": "Typewritten quote pasted on a book page, \"Color is the keyboard, the shapes are the notes...\", signed Wassily Kandinsky, above a painting",
+  "description": "Close-up of a quote in typewriter lettering under a thin blue rule, pasted onto a white art-book page: \"Color is the keyboard, the shapes are the notes, and the artist is the hand that plays, creating vibrations in the soul.\" The top of a pale abstract painting of circles runs along the bottom and a column of small book text with a blue drop capital sits at the right; the upper part of the page is blank white. Bright and paper-white, sharp on the quote, with a little flash shine on the painting at the bottom; the words are another artist's, so treat it as a picture, not as site copy.",
+  "words": [
+   "\"Color is the keyboard, the shapes are the notes, and the artist is the hand that plays, creating vibrations in the soul.\"",
+   "WASSILY KANDINSKY"
+  ],
+  "focal": [
+   43,
+   44
+  ],
+  "colors": [
+   "white",
+   "grey",
+   "black",
+   "pale blue"
+  ],
+  "mood": "quiet, bookish, an inspiration note",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "card",
+   "detail",
+   "background"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8194-480.webp",
+   "960": "shared/img/about/process/dscf8194-960.webp",
+   "1600": "shared/img/about/process/dscf8194-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#98948D",
+  "palette": [
+   "#878279",
+   "#5E5850",
+   "#AEABA5",
+   "#C6C4BF",
+   "#D1D0CC"
+  ]
+ },
+ {
+  "id": "about/process/dscf8195",
+  "kind": "process",
+  "alt": "Typewritten quote about colour and the artist's hand, signed Wassily Kandinsky, pasted on an art-book page above an abstract painting",
+  "description": "The same pasted quote as dscf8194 from slightly further back, with more blank page above it and a dark corner of another book at the top left. A touch softer and dimmer than dscf8194, with darker corners. Use dscf8194 unless the extra margin is needed.",
+  "words": [
+   "\"Color is the keyboard, the shapes are the notes, and the artist is the hand that plays, creating vibrations in the soul.\"",
+   "WASSILY KANDINSKY"
+  ],
+  "focal": [
+   46,
+   50
+  ],
+  "colors": [
+   "white",
+   "grey",
+   "black",
+   "pale blue"
+  ],
+  "mood": "quiet, bookish",
+  "quality": "ok",
+  "qualityNote": "Softer than dscf8194 with darker corners; a near-duplicate.",
+  "uses": [
+   "card",
+   "background"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8195-480.webp",
+   "960": "shared/img/about/process/dscf8195-960.webp",
+   "1600": "shared/img/about/process/dscf8195-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#91887E",
+  "palette": [
+   "#C3BEB7",
+   "#AAA298",
+   "#56493E",
+   "#756D62",
+   "#8C8071"
+  ]
+ },
+ {
+  "id": "about/process/dscf8196",
+  "kind": "process",
+  "alt": "Lap board with a collage in progress reading \"THE WORLD IS YOUR OYSTER\", an abstract painting print, grey scissors and a glue stick",
+  "description": "Top-down on the lap board with the tools in view: at the left a collage in progress (a vertical strip reading THE WORLD IS YOUR OYSTER, a RELAX with ART sign, a space capsule inside an oval mirror, silver fabric, a pink scrap); in the centre a sketchbook page with a bright abstract painting reproduction cut in a stepped shape; at the right a glue stick, grey-handled scissors and crayon doodles of a sun and a cloud. Finished collages are fanned out top right and blank sheets fill the right edge. Direct flash, bright in the middle and falling to black at the top and the corners.",
+  "words": [
+   "THE WORLD IS YOUR OYSTER",
+   "and finding hope amid chaos",
+   "RELAX with ART",
+   "C:C"
+  ],
+  "focal": [
+   42,
+   55
+  ],
+  "colors": [
+   "white",
+   "dark brown",
+   "orange",
+   "blue",
+   "black"
+  ],
+  "mood": "tools out, mid-idea, playful",
+  "quality": "ok",
+  "qualityNote": "Direct flash with a dark top edge and corners; fine as a card or medium slot.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "about/process",
+  "sizes": {
+   "480": "shared/img/about/process/dscf8196-480.webp",
+   "960": "shared/img/about/process/dscf8196-960.webp",
+   "1600": "shared/img/about/process/dscf8196-1600.webp"
+  },
+  "width": 3008,
+  "height": 2000,
+  "ratio": 1.504,
+  "avg": "#655045",
+  "palette": [
+   "#1C100C",
+   "#7A6153",
+   "#4E2E1F",
+   "#A2917F",
+   "#BDB4AA"
+  ]
+ },
+ {
+  "id": "brand/banner",
+  "kind": "brand",
+  "alt": "Camila's hands, in silver rings, cutting a face out of a magazine with a craft knife on a green cutting mat, open magazines on both sides",
+  "description": "Her brand banner: a very wide top-down strip of Camila's hands at work, the right hand holding a craft knife and the left steadying a magazine face on a green cutting mat with a yellow grid, cut-out eyes and lips scattered around the blade. Open magazines frame both ends, columns of text at the left and peach-toned pages at the right, so there is no truly empty area; text would need a scrim, best over the left quarter. Warm, even light and sharp throughout, but it is a 4:1 strip only 840 px tall at source, so it works full-width and short, not cropped into a tall hero.",
+  "words": [],
+  "focal": [
+   54,
+   52
+  ],
+  "colors": [
+   "green",
+   "tan",
+   "peach",
+   "cream",
+   "black"
+  ],
+  "mood": "warm, hands-on, intimate",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "background"
+  ],
+  "shows": null,
+  "section": "brand",
+  "sizes": {
+   "480": "shared/img/brand/banner-480.webp",
+   "960": "shared/img/brand/banner-960.webp",
+   "1600": "shared/img/brand/banner-1600.webp"
+  },
+  "width": 3360,
+  "height": 840,
+  "ratio": 4.0,
+  "avg": "#9A7751",
+  "palette": [
+   "#3F4B33",
+   "#B88657",
+   "#8F5835",
+   "#DBA776",
+   "#E9C396"
+  ]
+ },
+ {
+  "id": "collage-photos/bw-100",
+  "kind": "process",
+  "alt": "Top-down view of Camila's ringed hands arranging sliced magazine faces beside a green cutting mat scattered with cut-out eyes and lips.",
+  "description": "Colour photo (the file name says bw, it is not black and white). Seen from above, Camila sits cross-legged in an orange patterned outfit at the top of the frame, both hands on an open magazine where a model's face has been sliced into three stacked strips; the green cutting mat with cut-out eyes, lips and a craft knife sits to the left. The whole floor is covered edge to edge with magazine pages, so there is no empty space: the calmest patch is the grey-green page at middle right. Warm, soft indoor light with an orange cast. Near-twin of bw-97; do not place the two side by side.",
+  "words": [
+   "Omnigrid Mat",
+   "La Medusa Bag",
+   "la medusa",
+   "The Spirit of Travel",
+   "January 2022",
+   "Amer… (cut off)",
+   "MA… (upside-down, cut off)"
+  ],
+  "focal": [
+   48,
+   47
+  ],
+  "colors": [
+   "orange",
+   "green",
+   "beige",
+   "black",
+   "blue"
+  ],
+  "mood": "busy, warm, hands-on, playful",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "collage-photos",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-100-480.webp",
+   "960": "shared/img/collage-photos/bw-100-960.webp",
+   "1600": "shared/img/collage-photos/bw-100-1600.webp"
+  },
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "avg": "#836548",
+  "palette": [
+   "#303126",
+   "#724D37",
+   "#BF9165",
+   "#A77A53",
+   "#C9A780"
+  ]
+ },
+ {
+  "id": "collage-photos/bw-107",
+  "kind": "process",
+  "alt": "Close-up of Camila's hands on a green cutting mat: one holds a craft knife, the other pins a strip of a magazine face among cut-out eyes.",
+  "description": "The tightest and cleanest of the set. The green gridded mat fills the frame on a slight tilt; one hand with a craft knife comes in at top left, the other, with a large silver ring and painted nails, presses down a strip of a face at right, with three cut-out eyes and torn black strips between them. Focus is sharp on the mat and falls off softly at the edges: a blurred black-and-white magazine face at far left and a dark band along the bottom are the quiet areas. Warm low light.",
+  "words": [
+   "Omnigrid (upside-down, partly hidden)",
+   "FANTAS… (on the knife, cut off)"
+  ],
+  "focal": [
+   46,
+   47
+  ],
+  "colors": [
+   "green",
+   "beige",
+   "black",
+   "yellow",
+   "red"
+  ],
+  "mood": "intimate, precise, focused",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "collage-photos",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-107-480.webp",
+   "960": "shared/img/collage-photos/bw-107-960.webp",
+   "1600": "shared/img/collage-photos/bw-107-1600.webp"
+  },
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "avg": "#68573F",
+  "palette": [
+   "#B88A64",
+   "#676647",
+   "#262D23",
+   "#3E3527",
+   "#754832"
+  ]
+ },
+ {
+  "id": "collage-photos/bw-110",
+  "kind": "process",
+  "alt": "From above, Camila bends over a green cutting mat, long brown hair hiding her face, cutting a strip of a magazine face with a craft knife.",
+  "description": "Top-down. Camila leans in from the top of the frame with her hair falling forward so no face is seen; her hands meet at the centre of the tilted green mat, one cutting with a pen-style knife, the other (large dark ring) holding the paper still. An open magazine with a black text column fills the left third, loose pages surround the mat and a box of pens sits at bottom right. No empty space; the hair is a large dark-brown mass across the top centre. Warm indoor light.",
+  "words": [],
+  "focal": [
+   57,
+   52
+  ],
+  "colors": [
+   "green",
+   "brown",
+   "beige",
+   "blue",
+   "orange"
+  ],
+  "mood": "absorbed, concentrated, candid",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "wide-banner",
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "collage-photos",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-110-480.webp",
+   "960": "shared/img/collage-photos/bw-110-960.webp",
+   "1600": "shared/img/collage-photos/bw-110-1600.webp"
+  },
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "avg": "#725943",
+  "palette": [
+   "#60402D",
+   "#2B211A",
+   "#B38C6B",
+   "#7F6749",
+   "#CBAD8D"
+  ]
+ },
+ {
+  "id": "collage-photos/bw-115",
+  "kind": "process",
+  "alt": "Low side view of Camila in a white T-shirt leaning over her cutting mat, hair falling forward, ringed hands at work, foreground blurred.",
+  "description": "Tall frame shot from table height. Camila leans in from the upper left, her face cropped just above the mouth, long brown hair filling the left and centre; her hands with rings and a beaded bracelet work in the middle of the frame while the green mat and its cut-out eyes and lips are a blur in the bottom third. Dark and warm, with an orange wall glowing behind. Almost nothing is crisp, so it works as atmosphere rather than as a picture to study.",
+  "words": [],
+  "focal": [
+   40,
+   58
+  ],
+  "colors": [
+   "brown",
+   "black",
+   "green",
+   "white",
+   "orange"
+  ],
+  "mood": "moody, close, quiet",
+  "quality": "ok",
+  "qualityNote": "Dark, with very shallow focus: the hands and the mat are soft and nothing is truly sharp. Fine small or as a dimmed background, not large as a feature.",
+  "uses": [
+   "background",
+   "card"
+  ],
+  "shows": null,
+  "section": "collage-photos",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-115-480.webp",
+   "960": "shared/img/collage-photos/bw-115-960.webp",
+   "1600": "shared/img/collage-photos/bw-115-1600.webp"
+  },
+  "width": 2449,
+  "height": 3674,
+  "ratio": 0.6666,
+  "avg": "#503827",
+  "palette": [
+   "#3E2315",
+   "#1F120C",
+   "#603F2D",
+   "#635A3D",
+   "#9F7E5E"
+  ]
+ },
+ {
+  "id": "collage-photos/bw-119",
+  "kind": "process",
+  "alt": "Flat lay of a green cutting mat holding a face pieced together from mismatched magazine eyes, lips and hair, ringed by magazine pages.",
+  "description": "Tall top-down still life with no hands. The green mat sits just below centre with a collage in progress on it: a face built from two different eyes, oversized lips, a block of hair and torn black strips. Around it are layered magazine pages (an older person with blond hair and tinted glasses, a hand-drawn eye, a make-up advert, denim, a blue page with a stone building) and an open magazine across the bottom; the only plain patches are small orange corners at bottom left and right. Even, warm light and sharp throughout. Much of the printed text is upside-down or sideways.",
+  "words": [
+   "Omnigrid Mat",
+   "DOUBLE SIDED USAGE",
+   "MADE IN TAIWAN",
+   "ULTA",
+   "MAYBELLINE",
+   "GIGI HADID",
+   "…ETTER PALETTE",
+   "LIMITED EDITION",
+   "University of Alcalá de Henares",
+   "Unesco World Heritage",
+   "38 / APRIL 2022",
+   "Camera Spotlight | Blackmagic Pocket Cinema Camera 6K"
+  ],
+  "focal": [
+   60,
+   53
+  ],
+  "colors": [
+   "green",
+   "beige",
+   "black",
+   "orange",
+   "blue"
+  ],
+  "mood": "layered, curious, editorial",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "card",
+   "detail",
+   "background"
+  ],
+  "shows": null,
+  "section": "collage-photos",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-119-480.webp",
+   "960": "shared/img/collage-photos/bw-119-960.webp",
+   "1600": "shared/img/collage-photos/bw-119-1600.webp"
+  },
+  "width": 2449,
+  "height": 3674,
+  "ratio": 0.6666,
+  "avg": "#7D684E",
+  "palette": [
+   "#2F3629",
+   "#704F3A",
+   "#BF9771",
+   "#8E7656",
+   "#CFB08C"
+  ]
+ },
+ {
+  "id": "collage-photos/bw-120",
+  "kind": "process",
+  "alt": "Green cutting mat with a face assembled from cut-out magazine eyes, lips and hair, beside a blank spiral sketchbook and open magazines.",
+  "description": "Angled view of the work surface with no hands. The mat lies centre-right on a diagonal carrying the collage in progress: two single eyes, a strip of a face with eyes and red lips, a second pair of lips, hair and torn black strips. A blank spiral-bound sketchbook fills the top left and is the one real empty area in this whole set (roughly the left half of the top third); an open magazine runs down the left edge and a magazine photo of an older person in tinted glasses sits top right. Warm even light, sharp on the mat.",
+  "words": [
+   "Omnigrid Mat",
+   "DOUBLE SIDED USAGE",
+   "ULTA",
+   "PALETTE"
+  ],
+  "focal": [
+   57,
+   62
+  ],
+  "colors": [
+   "green",
+   "beige",
+   "white",
+   "black",
+   "blue"
+  ],
+  "mood": "calm, ordered, work in progress",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card",
+   "detail",
+   "background"
+  ],
+  "shows": null,
+  "section": "collage-photos",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-120-480.webp",
+   "960": "shared/img/collage-photos/bw-120-960.webp",
+   "1600": "shared/img/collage-photos/bw-120-1600.webp"
+  },
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "avg": "#867258",
+  "palette": [
+   "#5C5D41",
+   "#A98564",
+   "#412F24",
+   "#CAAB89",
+   "#DCC0A2"
+  ]
+ },
+ {
+  "id": "collage-photos/bw-92",
+  "kind": "process",
+  "alt": "From above, Camila's hands place a cut-out eye and a pair of lips on a mostly empty green cutting mat, orange patterned clothing behind.",
+  "description": "Top-down, early in the process. Camila sits cross-legged in orange patterned fabric across the top; one hand pins a cut-out eye to the mat with a fingertip, the other (big dark ring) holds a cut-out pair of lips, and a second eye lies between them. The lower half of the mat is clear green grid, the most open area of the frame. Torn make-up adverts in peach and red fill the left side and a grey photo of boots the right. Warm soft light, sharp on the hands.",
+  "words": [
+   "Omnigrid Mat",
+   "la medusa",
+   "WEST COAST GLOW",
+   "ULTA",
+   "GIGI HADID (upside-down)"
+  ],
+  "focal": [
+   47,
+   42
+  ],
+  "colors": [
+   "green",
+   "orange",
+   "beige",
+   "peach",
+   "blue"
+  ],
+  "mood": "deliberate, bright, simple",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card",
+   "detail",
+   "background"
+  ],
+  "shows": null,
+  "section": "collage-photos",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-92-480.webp",
+   "960": "shared/img/collage-photos/bw-92-960.webp",
+   "1600": "shared/img/collage-photos/bw-92-1600.webp"
+  },
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "avg": "#7F6345",
+  "palette": [
+   "#303D2B",
+   "#BB8C60",
+   "#9E734E",
+   "#6D4832",
+   "#C7A177"
+  ]
+ },
+ {
+  "id": "collage-photos/bw-94",
+  "kind": "process",
+  "alt": "Top-down view of Camila's hands setting cut-out eyes, lips and torn black strips on a green cutting mat, scissors and magazines around.",
+  "description": "Top-down. One hand with a beaded bracelet and silver rings reaches down the middle of the tilted mat to place a cut-out eye, the other, with a large engraved silver ring, steadies a torn black strip at lower right; an eye and a pair of lips lie between them. Orange clothing and a little hair fill the top right, floral-handled scissors and torn make-up adverts the left. No empty space apart from patches of green grid. Warm light; the mat is sharp, the edges of the frame slightly soft.",
+  "words": [
+   "la medusa",
+   "La Medusa Bag",
+   "GIGI HADID (upside-down)"
+  ],
+  "focal": [
+   52,
+   55
+  ],
+  "colors": [
+   "green",
+   "orange",
+   "beige",
+   "red",
+   "black"
+  ],
+  "mood": "hands-on, warm, in motion",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "wide-banner",
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "collage-photos",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-94-480.webp",
+   "960": "shared/img/collage-photos/bw-94-960.webp",
+   "1600": "shared/img/collage-photos/bw-94-1600.webp"
+  },
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "avg": "#856446",
+  "palette": [
+   "#343A29",
+   "#A3744F",
+   "#BE8C61",
+   "#784A33",
+   "#CAA47E"
+  ]
+ },
+ {
+  "id": "collage-photos/bw-96",
+  "kind": "process",
+  "alt": "From above, Camila leans over an open magazine laying a cut strip of one face across another, her cutting mat of eyes and lips to the left.",
+  "description": "Top-down. Camila bends in from the top with auburn-brown hair falling across the upper centre and her arms forming a V, face unseen. Her right hand, wearing a watch ring, rests on an upside-down magazine portrait that has a strip of a different face laid across it; her left hand rests on the green mat at the left, which holds a cut-out eye, lips, another eye and a black strip. Orange fabric fills the top right. No empty space. Warm light, sharp on the magazine face.",
+  "words": [
+   "…BELLINE (upside-down, partly hidden)"
+  ],
+  "focal": [
+   50,
+   62
+  ],
+  "colors": [
+   "orange",
+   "brown",
+   "green",
+   "peach",
+   "black"
+  ],
+  "mood": "absorbed, surreal, tactile",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "wide-banner",
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "collage-photos",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-96-480.webp",
+   "960": "shared/img/collage-photos/bw-96-960.webp",
+   "1600": "shared/img/collage-photos/bw-96-1600.webp"
+  },
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "avg": "#76573B",
+  "palette": [
+   "#322216",
+   "#B1845C",
+   "#683D24",
+   "#816947",
+   "#C2A079"
+  ]
+ },
+ {
+  "id": "collage-photos/bw-97",
+  "kind": "process",
+  "alt": "Camila sits cross-legged among magazines, lifting a cut piece from a model's face on an open page, cutting mat of eyes and lips beside her.",
+  "description": "The widest view of the whole scene, from above. Camila in an orange patterned outfit fills the top right; both hands are on an open magazine at the centre, lifting a cut section off an upside-down face, while the green mat at the left carries three cut-out eyes, lips, torn strips and a craft knife. Magazine pages cover every bit of floor, with a text page at far left, fashion pages along the bottom and a stack of magazine spines at bottom right, so there is no empty space. Warm soft light, sharp throughout. Near-twin of bw-100, a moment earlier; do not place the two side by side.",
+  "words": [
+   "Omnigrid Mat",
+   "La Medusa Bag",
+   "la medusa",
+   "MAYBELLINE (upside-down)",
+   "GIGI HADID (upside-down, partly hidden)",
+   "The Spirit of Travel",
+   "January 2022",
+   "Amer… (cut off)"
+  ],
+  "focal": [
+   50,
+   50
+  ],
+  "colors": [
+   "orange",
+   "green",
+   "beige",
+   "black",
+   "blue"
+  ],
+  "mood": "immersed, colourful, abundant",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card"
+  ],
+  "shows": null,
+  "section": "collage-photos",
+  "sizes": {
+   "480": "shared/img/collage-photos/bw-97-480.webp",
+   "960": "shared/img/collage-photos/bw-97-960.webp",
+   "1600": "shared/img/collage-photos/bw-97-1600.webp"
+  },
+  "width": 3674,
+  "height": 2449,
+  "ratio": 1.5002,
+  "avg": "#816347",
+  "palette": [
+   "#2F3025",
+   "#6F4A33",
+   "#BB8F65",
+   "#A37851",
+   "#C9A781"
+  ]
+ },
+ {
+  "id": "commissions/finished/feet-on-the-ground",
+  "kind": "artwork",
+  "alt": "Feet on the Ground, collage: two bare legs in white daisy sandals stand on grass among giraffe hide, a blackbird and a green chair.",
+  "description": "Flat scan of the finished commission, portrait format. Two tanned legs drop in from the top edge and fill the centre, ending in white daisy-trimmed sandals on grass at the bottom, with giraffe-hide pieces behind them; a blackbird flies over grey storm cloud top left, a sculpted green chair and old books sit bottom left, garden grasses run down the right, and a tiny face in white sunglasses peeks out of the hedge bottom right. Edge to edge with no empty space, even light, very sharp; the focal point given is the feet.",
+  "words": [],
+  "focal": [
+   52,
+   78
+  ],
+  "colors": [
+   "tan",
+   "green",
+   "brown",
+   "grey",
+   "white"
+  ],
+  "mood": "surreal, playful, grounded",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "commissions/finished",
+  "sizes": {
+   "480": "shared/img/commissions/finished/feet-on-the-ground-480.webp",
+   "960": "shared/img/commissions/finished/feet-on-the-ground-960.webp",
+   "1600": "shared/img/commissions/finished/feet-on-the-ground-1600.webp",
+   "2400": "shared/img/commissions/finished/feet-on-the-ground-2400.webp"
+  },
+  "width": 5046,
+  "height": 6288,
+  "ratio": 0.8025,
+  "avg": "#8A7156",
+  "palette": [
+   "#AB835A",
+   "#CEBAAA",
+   "#3A2D1C",
+   "#5A5737",
+   "#915F38"
+  ],
+  "title": "Feet on the Ground",
+  "dimensions": "12 x 16 in",
+  "medium": "Collage on paper"
+ },
+ {
+  "id": "exhibition/local-collage/dscf7903",
+  "kind": "framed",
+  "alt": "Wide collage in a carved black frame on a pale block wall, packed with magazine cut-outs: zebras, a tiger in a suit, a lighthouse, bathers.",
+  "description": "One landscape-format Local Collage piece in a carved black frame, shot straight on and filling most of the picture, on a pale concrete-block wall. It is dense with magazine cut-outs: two zebras in a yellow circle, a leopard, a tiger's head on a houndstooth suit, a lighthouse, swimmers, a white mansion and headline scraps (one reads 'YOUR F#%King EX', bottom left). Only narrow strips of bare wall left and right; soft even light, sharp.",
+  "words": [
+   "SUMMER",
+   "CUBA in my POCKET",
+   "Perspectives",
+   "LAST NIGHT IN",
+   "Bella",
+   "THE SUIT",
+   "PARIS",
+   "YOUR",
+   "F#%K",
+   "EX",
+   "A classic is back",
+   "We Are",
+   "Luxury"
+  ],
+  "focal": [
+   48,
+   51
+  ],
+  "colors": [
+   "black",
+   "blue",
+   "yellow",
+   "grey",
+   "orange"
+  ],
+  "mood": "busy, pop, summery",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "wide-banner",
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "exhibition/local-collage",
+  "sizes": {
+   "480": "shared/img/exhibition/local-collage/dscf7903-480.webp",
+   "960": "shared/img/exhibition/local-collage/dscf7903-960.webp",
+   "1600": "shared/img/exhibition/local-collage/dscf7903-1600.webp"
+  },
+  "width": 4240,
+  "height": 2384,
+  "ratio": 1.7785,
+  "avg": "#6F6865",
+  "palette": [
+   "#221C1D",
+   "#8E8886",
+   "#6A5D58",
+   "#9B9592",
+   "#A6A59F"
+  ]
+ },
+ {
+  "id": "exhibition/local-collage/dscf7921",
+  "kind": "framed",
+  "alt": "Close-up of a framed collage corner: cut-out letters spell THE GLOBAL CANVAS over blue sky and clouds, beside clipped magazine text.",
+  "description": "Tall close-up of the top-left corner of the larger framed Local Collage piece. Ransom-note letters spell 'THE GLOBaL CANVAS' over a blue and grey cloud photo, with two clipped strips of magazine text; the carved black frame fills the top quarter and is nearly black. Slightly soft and dim, and note the wording is 'Canvas', not the brand name.",
+  "words": [
+   "Working with multiple elements, including collage, performance, and activism.",
+   "THE",
+   "GLOBaL",
+   "CANVAS",
+   "array of shapes, textures and details.",
+   "VIV"
+  ],
+  "focal": [
+   42,
+   55
+  ],
+  "colors": [
+   "blue",
+   "black",
+   "grey",
+   "white",
+   "green"
+  ],
+  "mood": "handmade, close, moody",
+  "quality": "ok",
+  "qualityNote": "Soft focus and dim; the top quarter is near-black frame. Fine as a small detail, not large.",
+  "uses": [
+   "detail",
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/local-collage",
+  "sizes": {
+   "480": "shared/img/exhibition/local-collage/dscf7921-480.webp",
+   "960": "shared/img/exhibition/local-collage/dscf7921-960.webp",
+   "1600": "shared/img/exhibition/local-collage/dscf7921-1600.webp"
+  },
+  "width": 2384,
+  "height": 4240,
+  "ratio": 0.5623,
+  "avg": "#464446",
+  "palette": [
+   "#0A090C",
+   "#2A2A31",
+   "#575150",
+   "#7F7B7B",
+   "#A09B98"
+  ]
+ },
+ {
+  "id": "exhibition/local-collage/dscf7924",
+  "kind": "installation",
+  "alt": "Two collages in carved black frames on a pale block wall: a tall one on the left and a smaller wide one on the right.",
+  "description": "Wide shot of two Local Collage pieces hung side by side on a pale concrete-block wall, taken slightly from the left so the tall left frame looms larger. The left piece is a dense portrait-format collage built around a face with cut-out eyes under a crown-like shape; the right is the landscape piece with the zebras and 'THE SUIT PARIS'. Bare wall fills the lower right quarter, with an orange strip in the bottom-right corner; even light, sharp.",
+  "words": [
+   "ALL ABOUT",
+   "VIVA",
+   "SUMMER",
+   "THE SUIT",
+   "PARIS",
+   "A classic is back"
+  ],
+  "focal": [
+   47,
+   45
+  ],
+  "colors": [
+   "black",
+   "grey",
+   "blue",
+   "red",
+   "yellow"
+  ],
+  "mood": "gallery wall, bold, crowded",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "wide-banner",
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/local-collage",
+  "sizes": {
+   "480": "shared/img/exhibition/local-collage/dscf7924-480.webp",
+   "960": "shared/img/exhibition/local-collage/dscf7924-960.webp",
+   "1600": "shared/img/exhibition/local-collage/dscf7924-1600.webp"
+  },
+  "width": 4240,
+  "height": 2384,
+  "ratio": 1.7785,
+  "avg": "#696261",
+  "palette": [
+   "#211A1D",
+   "#625552",
+   "#86807D",
+   "#979493",
+   "#A19F9D"
+  ]
+ },
+ {
+  "id": "exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect",
+  "kind": "framed",
+  "alt": "The Local Collage #3: The Butterfly Effect, collage on canvas in a deep black frame on a paint-splashed easel, outdoors on green turf.",
+  "description": "A photo of the square piece in its deep black frame, not a flat scan: it stands on a paint-spattered easel on artificial grass, with fig leaves and a fence above and a grey container wall behind. The collage is a bright patchwork: a sun in sunglasses, penguins, a parrot, a woman in a pink dress, a dinosaur, big orange lettering, flowers, hand-drawn doodles and her logo sticker bottom right. The frame fills the middle, leaves take the top eighth and easel and turf the bottom fifth; open-shade daylight, sharp.",
+  "words": [
+   "THESE TIMES",
+   "Makes Me Fear",
+   "TIME",
+   "DO IT",
+   "ICON",
+   "Hidden In Plain Sight",
+   "KEEP MOVING!",
+   "WHILE THE ART WORLD",
+   "the global collage"
+  ],
+  "focal": [
+   50,
+   47
+  ],
+  "colors": [
+   "black",
+   "green",
+   "blue",
+   "orange",
+   "pink"
+  ],
+  "mood": "bright, outdoor, joyful",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "exhibition/local-collage",
+  "sizes": {
+   "480": "shared/img/exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect-480.webp",
+   "960": "shared/img/exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect-960.webp",
+   "1600": "shared/img/exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect-1600.webp",
+   "2400": "shared/img/exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect-2400.webp"
+  },
+  "width": 3685,
+  "height": 4914,
+  "ratio": 0.7499,
+  "avg": "#7E7567",
+  "palette": [
+   "#6F6455",
+   "#3B3835",
+   "#AEA392",
+   "#918371",
+   "#CBC4B4"
+  ],
+  "title": "The Local Collage #3: The Butterfly Effect",
+  "dimensions": "30 x 30 in",
+  "medium": "Collage on canvas"
+ },
+ {
+  "id": "exhibition/tripping-animals-2024/img-5709",
+  "kind": "installation",
+  "alt": "Green neon sign reading THE GARDEN above six white-framed collages on a grey block wall, lit by a small barn lamp at night.",
+  "description": "Portrait phone shot of the 2024 Tripping Animals wall at night, no flash. A big green neon 'THE GARDEN' sign runs across the upper third; below it six collages in white frames hang in two rows of three on a grey concrete-block wall, a gooseneck lamp glowing over the right-hand column (Lucky Pleasures, Reflections of Me and Let Out are among them). Dark ceiling above, and bare shadowy wall down the left third and along the bottom; moody and sharp.",
+  "words": [
+   "THE GARDEN",
+   "Let Out"
+  ],
+  "focal": [
+   57,
+   52
+  ],
+  "colors": [
+   "green",
+   "grey",
+   "black",
+   "white",
+   "red"
+  ],
+  "mood": "night out, neon, gritty",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "card",
+   "background"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2024",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2024/img-5709-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2024/img-5709-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2024/img-5709-1600.webp"
+  },
+  "width": 3024,
+  "height": 4032,
+  "ratio": 0.75,
+  "avg": "#5F664A",
+  "palette": [
+   "#7F7E6D",
+   "#1D1E05",
+   "#B0A99E",
+   "#4F522E",
+   "#6BAB6E"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2024/img-5929",
+  "kind": "installation",
+  "alt": "Six collages in white frames on a rough block wall, seen at an angle from the left, with orange spray paint between the nearest two.",
+  "description": "Portrait phone shot taken close and at a steep angle along the 2024 Tripping Animals wall. The nearest frame, top left, holds Lucky Pleasures (a red collage of a figure in a bra with lips pasted over the eyes); below it is a black, white and red piece with a camera, and Let Out and Reflections of Me sit further along. Warm lamp light and strong texture in the blocks, with bulb reflections on the glass and dark pipes in the top right corner.",
+  "words": [
+   "Let Out"
+  ],
+  "focal": [
+   38,
+   45
+  ],
+  "colors": [
+   "grey",
+   "white",
+   "red",
+   "black",
+   "orange"
+  ],
+  "mood": "intimate, gritty, warm",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2024",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2024/img-5929-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2024/img-5929-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2024/img-5929-1600.webp"
+  },
+  "width": 3024,
+  "height": 4032,
+  "ratio": 0.75,
+  "avg": "#756452",
+  "palette": [
+   "#5A4732",
+   "#2B190F",
+   "#8D7D65",
+   "#B6A790",
+   "#CCC2AF"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8888",
+  "kind": "installation",
+  "alt": "Framed collages on two black picture ledges against a block wall, lit by flash; conduit and a fire alarm on the bare right side.",
+  "description": "Flash photo of part of the right-hand group at the 2025 Tripping Animals show: collages in red, white and black frames leaning on two black ledges. Frames are cut off at the left edge and the right third is bare wall with conduit and red fire-alarm boxes. In view: Senor Tigre, Zenda Beach, Society, Small World, I Am the Bad Guy, Let Out and Blues.",
+  "words": [
+   "TAKE",
+   "KEEP YOUR EYES TO THE SKY",
+   "FIRE"
+  ],
+  "focal": [
+   42,
+   55
+  ],
+  "colors": [
+   "grey",
+   "white",
+   "red",
+   "black",
+   "blue"
+  ],
+  "mood": "documentary, flash-lit, raw",
+  "quality": "ok",
+  "qualityNote": "Direct flash with glare on the glass; frames cut off at the left edge; fire-alarm hardware in view. Small sizes only.",
+  "uses": [
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8888-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8888-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8888-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#59534E",
+  "palette": [
+   "#4A423B",
+   "#645F57",
+   "#231B16",
+   "#7D7875",
+   "#A7A5A7"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8889",
+  "kind": "installation",
+  "alt": "Framed collages on two black ledges against a block wall, flash-lit, with orange 420 graffiti between the rows.",
+  "description": "Flash photo of the right-hand group at the 2025 Tripping Animals show, two black ledges of collages in red, white and black frames. Both rows are cut off at the left edge and fire-alarm boxes sit at the far right; orange '420' spray paint shows on the wall between the rows. In view: The Art of Art, Senor Tigre, Zenda Beach, Society, Curiosity, Small World, I Am the Bad Guy, Let Out and Blues.",
+  "words": [
+   "This is Art",
+   "TAKE",
+   "harder look",
+   "KEEP YOUR EYES TO THE SKY",
+   "Let Out",
+   "420",
+   "FIRE"
+  ],
+  "focal": [
+   47,
+   54
+  ],
+  "colors": [
+   "grey",
+   "white",
+   "red",
+   "black",
+   "blue"
+  ],
+  "mood": "documentary, flash-lit, raw",
+  "quality": "ok",
+  "qualityNote": "Direct flash with glare spots on most of the glass; frames cut off at the left edge. Small sizes only.",
+  "uses": [
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8889-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8889-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8889-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#605854",
+  "palette": [
+   "#524139",
+   "#2B2722",
+   "#69645E",
+   "#888484",
+   "#A9A6A7"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8890",
+  "kind": "installation",
+  "alt": "Two black ledges of collages in red, white and black frames on a block wall, flash-lit, with two clamp lamps above.",
+  "description": "The fullest straight-on view of the right-hand group at the 2025 Tripping Animals show: five frames on the top ledge and six on the bottom, the last one on each row clipped by the right edge. Orange '420' spray paint shows between the rows and small wall labels sit above each frame. In view: Royal Love Story, The Art of Art, Senor Tigre, Zenda Beach, Society, Artstract, Curiosity, Small World, I Am the Bad Guy, Let Out and Blues.",
+  "words": [
+   "This is Art",
+   "TAKE",
+   "harder look",
+   "KEEP YOUR EYES TO THE SKY",
+   "Let Out",
+   "ART",
+   "420"
+  ],
+  "focal": [
+   50,
+   54
+  ],
+  "colors": [
+   "grey",
+   "white",
+   "red",
+   "blue",
+   "black"
+  ],
+  "mood": "documentary, colourful, flash-lit",
+  "quality": "ok",
+  "qualityNote": "Direct flash with glare spots on the glass; right-hand frames clipped. Good as a card or at half width, not full-bleed.",
+  "uses": [
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8890-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8890-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8890-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#6C635E",
+  "palette": [
+   "#5C4F46",
+   "#382824",
+   "#77706A",
+   "#92908F",
+   "#B6B7BB"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8891",
+  "kind": "installation",
+  "alt": "Two black ledges of framed collages on a block wall, flash-lit, orange 420 graffiti between the rows and clamp lamps above.",
+  "description": "Near-duplicate of img-8890, a touch tighter and darker: the right-hand group at the 2025 Tripping Animals show on two black ledges, with the last frame on each row clipped by the right edge. In view: Royal Love Story, The Art of Art, Senor Tigre, Zenda Beach, Society, Artstract, Curiosity, Small World, I Am the Bad Guy, Let Out and Blues. Use one or the other, not both.",
+  "words": [
+   "This is Art",
+   "TAKE",
+   "harder look",
+   "KEEP YOUR EYES TO THE SKY",
+   "Let Out",
+   "ART",
+   "420"
+  ],
+  "focal": [
+   50,
+   53
+  ],
+  "colors": [
+   "grey",
+   "white",
+   "red",
+   "blue",
+   "black"
+  ],
+  "mood": "documentary, colourful, flash-lit",
+  "quality": "ok",
+  "qualityNote": "Direct flash with glare spots on the glass; right-hand frames clipped; slightly darker than img-8890.",
+  "uses": [
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8891-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8891-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8891-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#615954",
+  "palette": [
+   "#53473F",
+   "#68625A",
+   "#352521",
+   "#837F7E",
+   "#AAA8AB"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8892",
+  "kind": "installation",
+  "alt": "Framed collages on two black ledges, flash-lit, with bare block wall and metal conduit down the left side.",
+  "description": "The left end of the right-hand group at the 2025 Tripping Animals show, with a strip of bare wall and conduit down the left fifth and the rows running off the right edge. In view: Royal Love Story, The Art of Art, Senor Tigre and a clipped Zenda Beach above; Artstract, Curiosity, Small World, I Am the Bad Guy and a clipped Let Out below. Flash glare all but wipes out Curiosity in its white frame.",
+  "words": [
+   "This is Art",
+   "TAKE",
+   "harder look",
+   "KEEP YOUR EYES TO THE SKY",
+   "ART",
+   "420"
+  ],
+  "focal": [
+   60,
+   52
+  ],
+  "colors": [
+   "grey",
+   "white",
+   "red",
+   "black",
+   "blue"
+  ],
+  "mood": "documentary, flash-lit, raw",
+  "quality": "ok",
+  "qualityNote": "Direct flash; glare washes out the white-framed piece on the bottom row; right-hand frames clipped. Small sizes only.",
+  "uses": [
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8892-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8892-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8892-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#695F5B",
+  "palette": [
+   "#584C44",
+   "#726963",
+   "#3A2A24",
+   "#8C8784",
+   "#B4B5B8"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8893",
+  "kind": "installation",
+  "alt": "Bare block wall with a dark red steel column on the left; framed collages on two black ledges enter from the right.",
+  "description": "The left half is empty concrete-block wall with a dark red steel column and conduit; the ledges start mid-frame and run off the right edge. Royal Love Story and The Art of Art show above, Artstract, Curiosity and a clipped Small World below. Flash-lit and flat, but the empty left half could sit under text.",
+  "words": [
+   "This is Art",
+   "TAKE",
+   "KEEP YOUR EYES TO THE",
+   "ART",
+   "420"
+  ],
+  "focal": [
+   75,
+   55
+  ],
+  "colors": [
+   "grey",
+   "red",
+   "white",
+   "black",
+   "yellow"
+  ],
+  "mood": "industrial, quiet, flash-lit",
+  "quality": "ok",
+  "qualityNote": "Direct flash, flat and a little dull; frames clipped at the right edge.",
+  "uses": [
+   "background",
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8893-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8893-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8893-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#695F5C",
+  "palette": [
+   "#63534E",
+   "#2F211E",
+   "#8B8884",
+   "#797571",
+   "#A19C9D"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8894",
+  "kind": "installation",
+  "alt": "Dark red steel column down the middle of a block wall, with framed collages on black ledges cut off at both sides.",
+  "description": "The steel column between the two groups of work takes the centre of the picture. Frames from the left group (Reflections of Me, Stuck, parts of Candy and Female Cactus) and the right group (Royal Love Story, Artstract) are clipped at the edges. Soft and flash-lit, with no clear subject.",
+  "words": [],
+  "focal": [
+   50,
+   50
+  ],
+  "colors": [
+   "grey",
+   "dark red",
+   "white",
+   "black"
+  ],
+  "mood": "in-between, industrial",
+  "quality": "poor",
+  "qualityNote": "Blurry and flash-lit; the column is the main thing in the picture and the artworks are clipped at both edges.",
+  "uses": [
+   "avoid"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8894-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8894-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8894-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#655C59",
+  "palette": [
+   "#5C4C49",
+   "#372D29",
+   "#726C69",
+   "#84817E",
+   "#959493"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8895",
+  "kind": "installation",
+  "alt": "Framed collages on two black ledges at the left, a dark red steel column and bare block wall filling the right.",
+  "description": "The left half shows the right end of the left-hand group: Gaga's Offering, Candy and Reflections of Me above, Day # 25, Female Cactus and Stuck below, with two more frames clipped at the left edge. The right half is bare block wall with a dark red steel column. Visibly out of focus, with flash glare on the lower right frame.",
+  "words": [],
+  "focal": [
+   27,
+   55
+  ],
+  "colors": [
+   "grey",
+   "pink",
+   "dark red",
+   "white",
+   "black"
+  ],
+  "mood": "documentary, dim",
+  "quality": "poor",
+  "qualityNote": "Out of focus and flash-lit; the same frames are sharper in img-8896 and img-8897.",
+  "uses": [
+   "avoid"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8895-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8895-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8895-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#574C49",
+  "palette": [
+   "#4E3D38",
+   "#5E5650",
+   "#291D19",
+   "#746F6C",
+   "#9A9697"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8896",
+  "kind": "installation",
+  "alt": "Eight framed collages on two black ledges against a block wall, flash-lit, two clamp lamps above and a steel column at the right edge.",
+  "description": "The whole left-hand group at the 2025 Tripping Animals show: Lucky Pleasures, Gaga's Offering, Candy and Reflections of Me on the top ledge, Be You, Day # 25, Female Cactus and Stuck below. The frames sit left of centre with dim wall around them, and an info sheet is half cut off at the left edge. Darker than img-8897, with flash glare on the bottom row.",
+  "words": [],
+  "focal": [
+   42,
+   57
+  ],
+  "colors": [
+   "grey",
+   "pink",
+   "red",
+   "white",
+   "black"
+  ],
+  "mood": "documentary, dim, flash-lit",
+  "quality": "ok",
+  "qualityNote": "Direct flash, underexposed, glare on the bottom-row glass. Small sizes only; img-8897 is the better take.",
+  "uses": [
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8896-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8896-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8896-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#584E4A",
+  "palette": [
+   "#4F3E39",
+   "#615753",
+   "#261F1C",
+   "#756D6A",
+   "#9E999C"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8897",
+  "kind": "installation",
+  "alt": "Eight framed collages on two black ledges on a block wall, with an artist info sheet and QR code taped up at the left.",
+  "description": "The best straight-on view of the left-hand group at the 2025 Tripping Animals show, all eight frames complete: Lucky Pleasures, Gaga's Offering, Candy and Reflections of Me above, Be You, Day # 25, Female Cactus and Stuck below. An artist info sheet with a small photo and QR code hangs at the left; at full size it shows the handle @theglobalcanvas, which is not the one on the site, so crop it out or keep it small. Evenly bright and sharp, with flash glare on two frames.",
+  "words": [
+   "CASTILLO",
+   "@theglobalcanvas"
+  ],
+  "focal": [
+   58,
+   55
+  ],
+  "colors": [
+   "grey",
+   "pink",
+   "red",
+   "white",
+   "black"
+  ],
+  "mood": "documentary, colourful, flash-lit",
+  "quality": "ok",
+  "qualityNote": "Direct flash with glare on two frames (Day # 25 and Reflections of Me). Good as a card or at half width, not full-bleed.",
+  "uses": [
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8897-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8897-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8897-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#665D5A",
+  "palette": [
+   "#6C645E",
+   "#9C9698",
+   "#38322D",
+   "#58443D",
+   "#5B514A"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8898",
+  "kind": "installation",
+  "alt": "Wide view of a block wall with two groups of framed collages on black ledges, a green neon THE GARDEN sign with an arrow, a pendant lamp.",
+  "description": "Establishing shot of the whole 2025 Tripping Animals display: eight frames left of a dark red steel column, eleven on the right under a green neon 'THE GARDEN' sign with its full arrow. The top third is ceiling panels, a speaker, a pendant lamp and an orange mural arc top left; a green bar table cuts in bottom right and a wooden table bottom left. The frames are small in the picture, so it reads as a venue shot rather than a look at the art.",
+  "words": [
+   "THE GARDEN",
+   "420"
+  ],
+  "focal": [
+   50,
+   62
+  ],
+  "colors": [
+   "grey",
+   "green",
+   "dark red",
+   "orange",
+   "white"
+  ],
+  "mood": "venue, neon, industrial",
+  "quality": "ok",
+  "qualityNote": "Flash-lit and a little flat; the top third is ceiling, speaker and lamp, so crop to the lower two thirds.",
+  "uses": [
+   "wide-banner",
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8898-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8898-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8898-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#625D58",
+  "palette": [
+   "#54504D",
+   "#6F6B68",
+   "#392620",
+   "#83817D",
+   "#96A69A"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8899",
+  "kind": "installation",
+  "alt": "Brewery wall with two groups of framed collages on black ledges, a green neon THE GARDEN sign, metal stools and a green table in front.",
+  "description": "The most complete establishing shot of the 2025 Tripping Animals display, taken from further back: both groups of frames either side of a dark red steel column, the green neon sign upper right, concrete floor, three metal stools and a green-topped bar table lower right, a wooden table lower left. The frames sit in a band across the middle; the bottom third is floor and furniture and an orange mural arc fills the top-left corner. Flash-lit but level and sharp; the art itself is small.",
+  "words": [
+   "THE GARDEN",
+   "420"
+  ],
+  "focal": [
+   50,
+   48
+  ],
+  "colors": [
+   "grey",
+   "green",
+   "dark red",
+   "orange",
+   "white"
+  ],
+  "mood": "venue, neon, industrial",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "wide-banner",
+   "hero",
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8899-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8899-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8899-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#67635D",
+  "palette": [
+   "#58544F",
+   "#382720",
+   "#787471",
+   "#8D8B89",
+   "#9EACA2"
+  ]
+ },
+ {
+  "id": "exhibition/tripping-animals-2025/img-8900",
+  "kind": "installation",
+  "alt": "Block wall with two groups of framed collages on black ledges either side of a steel column, a green neon THE GARDEN sign above.",
+  "description": "The same view as img-8899 from a step closer: eight frames left of the dark red column, eleven on the right, the neon sign above with its arrow cut off by the right edge. A stool and the green bar table sit along the bottom right, a wooden table bottom left, an orange mural arc top left. Flash-lit and slightly softer than img-8899.",
+  "words": [
+   "THE GARDEN",
+   "420"
+  ],
+  "focal": [
+   50,
+   52
+  ],
+  "colors": [
+   "grey",
+   "green",
+   "dark red",
+   "orange",
+   "white"
+  ],
+  "mood": "venue, neon, industrial",
+  "quality": "ok",
+  "qualityNote": "Slightly soft and flash-lit; the neon arrow is cut off at the right edge. Prefer img-8899.",
+  "uses": [
+   "wide-banner",
+   "card"
+  ],
+  "shows": null,
+  "section": "exhibition/tripping-animals-2025",
+  "sizes": {
+   "480": "shared/img/exhibition/tripping-animals-2025/img-8900-480.webp",
+   "960": "shared/img/exhibition/tripping-animals-2025/img-8900-960.webp",
+   "1600": "shared/img/exhibition/tripping-animals-2025/img-8900-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#6A6560",
+  "palette": [
+   "#5D5955",
+   "#3E2E26",
+   "#797471",
+   "#8C8A86",
+   "#9EACA1"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8808",
+  "kind": "framed",
+  "alt": "Royal Love Story in a red frame with a white mat, lying on a black surface: a couple's faces, a diamond perfume bottle and a red heart.",
+  "description": "A red frame with a wide white mat lies flat on black cloth, shot from above its bottom edge so it tapers toward the top. Inside, the collage shows a man and a woman cheek to cheek, a jewelled bottle over his eyes, a gilded theatre and an anatomical heart. The frame sits low and centre; the top fifth is dark clutter with a thin red and black stick across it, and the sides are empty black. The original only exists as a small file, so this is the only other view of the piece.",
+  "words": [
+   "ROYAL LOVE STORY",
+   "Possess and Rule"
+  ],
+  "focal": [
+   47,
+   57
+  ],
+  "colors": [
+   "black",
+   "red",
+   "white",
+   "gold",
+   "tan"
+  ],
+  "mood": "dramatic, glamorous, night-time",
+  "quality": "ok",
+  "qualityNote": "Direct flash and shot at an angle, so the frame is a trapezoid. The frame is only about 750 px wide in the 1600 file. Crop off the cluttered strip along the top.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "royal-love-story",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8808-480.webp",
+   "960": "shared/img/shop/framed/img-8808-960.webp",
+   "1600": "shared/img/shop/framed/img-8808-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#3E2725",
+  "palette": [
+   "#0E0A09",
+   "#B97771",
+   "#140B0A",
+   "#0A0706",
+   "#1E1111"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8810",
+  "kind": "framed",
+  "alt": "The Art of Art in a white frame on a black surface: blue sky and clouds, a butterfly on a yellow flower, cut-out words and a black feather.",
+  "description": "A deep white frame lies on black cloth, seen at an angle from its lower edge. The collage inside is mostly bright blue sky with white clouds, a red and black butterfly on a yellow flower at the lower left, a black feather, and cut-out lettering in the middle. Empty black fills both sides; a stick crosses the top and a white ball peeks in at the right edge.",
+  "words": [
+   "This is Art",
+   "TAKE",
+   "a harder look",
+   "HONEY"
+  ],
+  "focal": [
+   45,
+   57
+  ],
+  "colors": [
+   "black",
+   "white",
+   "sky blue",
+   "yellow",
+   "brown"
+  ],
+  "mood": "bright, witty, airy",
+  "quality": "ok",
+  "qualityNote": "Flash, angled view, and a small glare spot on the glass at the lower right. A white ball at the right edge and a stick along the top need cropping out. Frame about 750 px wide in the 1600 file.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "the-art-of-art",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8810-480.webp",
+   "960": "shared/img/shop/framed/img-8810-960.webp",
+   "1600": "shared/img/shop/framed/img-8810-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#3D3736",
+  "palette": [
+   "#120B09",
+   "#090706",
+   "#161312",
+   "#F0E2E1",
+   "#8A8280"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8811",
+  "kind": "framed",
+  "alt": "Senor Tigre in a thin black frame on a black surface: a woman reading in a garden room with tigers beside her and along the bottom.",
+  "description": "A thin black frame with a white mat lies on black cloth, so the frame almost disappears and the white mat reads as a glowing rectangle. The collage inside is small: a woman in a lounge chair in a glass garden room, a tiger leaning over her, and a row of tigers along the bottom. The top of the picture shows red stool legs and a warm wooden floor behind the surface; the rest is empty black.",
+  "words": [],
+  "focal": [
+   52,
+   54
+  ],
+  "colors": [
+   "black",
+   "white",
+   "orange",
+   "green"
+  ],
+  "mood": "moody, lush, quiet",
+  "quality": "ok",
+  "qualityNote": "The black frame merges into the black surface. The artwork is small in the picture (about 370 px wide in the 1600 file). Flash, angled view, and background clutter along the top.",
+  "uses": [
+   "card"
+  ],
+  "shows": "senor-tigre",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8811-480.webp",
+   "960": "shared/img/shop/framed/img-8811-960.webp",
+   "1600": "shared/img/shop/framed/img-8811-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#2F2623",
+  "palette": [
+   "#161110",
+   "#150A09",
+   "#0A0706",
+   "#CAB3A7",
+   "#271F1D"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8821",
+  "kind": "framed",
+  "alt": "Zenda Beach in a red frame with a white mat on black: a figure in yellow striding over a crowded beach, blue denim shorts in the foreground.",
+  "description": "A red frame with a white mat lies on plain black, seen at a slight angle and filling about half the width of the picture. The collage shows a pale beach dotted with sunbathers, an oversized figure in a yellow coat stepping across the horizon, and a close-up of denim shorts across the bottom. Clean black all round with no stray objects; the lettering on the denim is not legible.",
+  "words": [],
+  "focal": [
+   47,
+   52
+  ],
+  "colors": [
+   "black",
+   "red",
+   "white",
+   "light blue",
+   "sand"
+  ],
+  "mood": "sunny, playful, bold",
+  "quality": "good",
+  "qualityNote": "Clean and sharp, but flash-lit and angled (the frame tapers toward the top). Frame about 830 px wide in the 1600 file, so keep it to a card or a half-width slot.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "zenda-beach",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8821-480.webp",
+   "960": "shared/img/shop/framed/img-8821-960.webp",
+   "1600": "shared/img/shop/framed/img-8821-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#503D3D",
+  "palette": [
+   "#100B0A",
+   "#090807",
+   "#EEDFE0",
+   "#B6979C",
+   "#441717"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8823",
+  "kind": "framed",
+  "alt": "Blues in a thin black frame on black: a white sports car in blue water, a figure standing in its roof, pale blue squares scattered above.",
+  "description": "A thin black frame with a white mat lies on black cloth, left of centre, so the mat is what you see first. The collage is all blues and teals: a white sports car half in the sea with a woman standing up through the roof, another figure hanging at the top left, and a field of paper squares behind. The right third and the bottom are empty black. The original only exists as a small file, so this is the only other view of the piece.",
+  "words": [],
+  "focal": [
+   44,
+   47
+  ],
+  "colors": [
+   "black",
+   "white",
+   "teal",
+   "blue",
+   "light blue"
+  ],
+  "mood": "cool, dreamy, retro",
+  "quality": "ok",
+  "qualityNote": "The black frame is hard to tell from the black surface, and there is a pink cast across the top of the mat. Flash, angled view. Frame about 800 px wide in the 1600 file.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "blues",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8823-480.webp",
+   "960": "shared/img/shop/framed/img-8823-960.webp",
+   "1600": "shared/img/shop/framed/img-8823-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#363334",
+  "palette": [
+   "#171515",
+   "#100B0B",
+   "#A3A2A7",
+   "#090807",
+   "#0D0A09"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8832",
+  "kind": "framed",
+  "alt": "I Am the Bad Guy in a red frame on black: a figure with long blue hair seen from behind on a street, with men, boys and a roadside sign.",
+  "description": "A red frame with a white mat lies on black cloth, shot at an angle and centred slightly left. The collage is busy and sharp: a figure with long blue hair and a varsity jacket seen from behind, a group of men and boys at the right, a small-town street with a soda sign, and fish under water in the top left corner. Black space on both sides; a thin stick runs along the very top edge.",
+  "words": [
+   "Coca-Cola",
+   "Hombres"
+  ],
+  "focal": [
+   47,
+   49
+  ],
+  "colors": [
+   "black",
+   "red",
+   "white",
+   "blue",
+   "green"
+  ],
+  "mood": "street, edgy, colourful",
+  "quality": "good",
+  "qualityNote": "Sharp. Flash-lit and angled; crop off the stick along the top edge. Frame about 800 px wide in the 1600 file.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "i-am-the-bad-guy",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8832-480.webp",
+   "960": "shared/img/shop/framed/img-8832-960.webp",
+   "1600": "shared/img/shop/framed/img-8832-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#443130",
+  "palette": [
+   "#140C0B",
+   "#090807",
+   "#A05B57",
+   "#E4D1CF",
+   "#2A1615"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8833",
+  "kind": "framed",
+  "alt": "Small World in a thin black frame on black: two black-and-white fashion figures with hand-painted blue words, Keep your eyes to the sky.",
+  "description": "A thin black frame with a white mat lies on black cloth, centred, with the white mat doing the framing. The collage is black and white with bright blue paint: one figure in a white suit raising an arm, another in a dark jacket on a cobbled street, blue stripes and hand-lettered words across the top. A thin stick runs across the top of the picture; the sides are empty black. The original only exists as a small file, so this is the only other view of the piece.",
+  "words": [
+   "KEEP YOUR EYES TO THE SKY",
+   "Still Leaning"
+  ],
+  "focal": [
+   51,
+   52
+  ],
+  "colors": [
+   "black",
+   "white",
+   "blue",
+   "grey"
+  ],
+  "mood": "graphic, hopeful, editorial",
+  "quality": "ok",
+  "qualityNote": "The art is sharp, but the black frame is barely visible against the black surface. Flash, angled view, pink cast at the top of the mat. Frame about 800 px wide in the 1600 file.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "small-world",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8833-480.webp",
+   "960": "shared/img/shop/framed/img-8833-960.webp",
+   "1600": "shared/img/shop/framed/img-8833-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#383435",
+  "palette": [
+   "#151212",
+   "#AAA1A5",
+   "#0C0A0A",
+   "#080706",
+   "#110A0A"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8837",
+  "kind": "framed",
+  "alt": "Curiosity in a deep white frame, set at an angle on a black surface: people seen from behind looking up at an old map with a red bag on it.",
+  "description": "A deep white frame with a very wide white mat sits to the right of centre, turned so its right side runs off at an angle. The small collage inside shows four figures from behind looking up at an antique map, a wooden board with a red handbag and a small sign, and a feathered hat at the right. The left third of the picture is empty black, and a worn black stick with chipped paint lies across the bottom.",
+  "words": [
+   "RADICAL INTIMACY"
+  ],
+  "focal": [
+   59,
+   44
+  ],
+  "colors": [
+   "black",
+   "white",
+   "tan",
+   "brown",
+   "dark red"
+  ],
+  "mood": "quiet, warm, curious",
+  "quality": "ok",
+  "qualityNote": "Off-centre and skewed, slightly soft, with a chipped stick across the bottom. The artwork is only about 380 px wide in the 1600 file. img-8838 is the better picture of the same framed piece.",
+  "uses": [
+   "card"
+  ],
+  "shows": "curiosity",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8837-480.webp",
+   "960": "shared/img/shop/framed/img-8837-960.webp",
+   "1600": "shared/img/shop/framed/img-8837-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#3D3735",
+  "palette": [
+   "#C3B3AE",
+   "#171515",
+   "#080605",
+   "#100C0B",
+   "#0B0B0A"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8838",
+  "kind": "framed",
+  "alt": "Curiosity in a deep white frame with a wide mat on black: figures from behind looking up at an antique map, a red handbag hanging above.",
+  "description": "The same white-framed piece as img-8837, here centred and seen more squarely from its bottom edge. A wide white mat surrounds a small warm-toned collage: four people from behind studying an old map, a red handbag on a wooden board, a feathered hat and a painted figure at the right. Black on both sides; a worn black stick with chipped paint crosses the bottom of the picture.",
+  "words": [
+   "RADICAL INTIMACY"
+  ],
+  "focal": [
+   49,
+   43
+  ],
+  "colors": [
+   "black",
+   "white",
+   "tan",
+   "brown",
+   "dark red"
+  ],
+  "mood": "quiet, warm, gallery-like",
+  "quality": "ok",
+  "qualityNote": "Flash and angled view. The artwork is small inside the mat (about 390 px wide in the 1600 file). Crop off the chipped stick along the bottom.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "curiosity",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8838-480.webp",
+   "960": "shared/img/shop/framed/img-8838-960.webp",
+   "1600": "shared/img/shop/framed/img-8838-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#463E3C",
+  "palette": [
+   "#0E0C0C",
+   "#090706",
+   "#191516",
+   "#F4E7EA",
+   "#B9988D"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8841",
+  "kind": "framed",
+  "alt": "Artstract in a red frame on black: a blonde woman in a kitchen overtaken by playful orange, white and black shapes on a yellow ground.",
+  "description": "A red frame with a white mat lies on black cloth, left of centre, tapering toward the top. Inside, the collage has a hand-painted yellow border; a blonde woman in a kitchen at the top dissolves into orange, white, green and black abstract creatures on yellow. The right third of the picture is empty black, and a chipped black stick lies along the bottom edge.",
+  "words": [
+   "APPLAUSE",
+   "C:C",
+   "ART"
+  ],
+  "focal": [
+   44,
+   50
+  ],
+  "colors": [
+   "black",
+   "red",
+   "yellow",
+   "white",
+   "orange"
+  ],
+  "mood": "playful, loud, painterly",
+  "quality": "good",
+  "qualityNote": "Sharp and bright. Flash-lit and angled; crop off the stick at the bottom edge. Frame about 730 px wide in the 1600 file.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "artstract",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8841-480.webp",
+   "960": "shared/img/shop/framed/img-8841-960.webp",
+   "1600": "shared/img/shop/framed/img-8841-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#49342E",
+  "palette": [
+   "#120C0C",
+   "#DBA68F",
+   "#090806",
+   "#0D0B0A",
+   "#2B1514"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8848",
+  "kind": "framed",
+  "alt": "Stuck in a thin black frame on black: a dancer and fireworks above a wall of speakers, a man sitting cross-legged on sheet music below.",
+  "description": "A thin black frame with a white mat lies on black cloth, and the frame is nearly lost in the dark. The collage inside is small and narrow: a dancer by a railing with fireworks at the top, a handwritten paper strip, grey speakers, and a man in a cap sitting cross-legged on sheet music. A stick and dark clutter run across the top; most of the picture is black.",
+  "words": [],
+  "focal": [
+   50,
+   55
+  ],
+  "colors": [
+   "black",
+   "white",
+   "grey blue",
+   "tan"
+  ],
+  "mood": "dark, still, musical",
+  "quality": "poor",
+  "qualityNote": "Soft focus on the artwork (the handwritten line cannot be read), dark overall, and the artwork is only about 320 px wide in the 1600 file. Use the original instead.",
+  "uses": [
+   "avoid"
+  ],
+  "shows": "stuck",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8848-480.webp",
+   "960": "shared/img/shop/framed/img-8848-960.webp",
+   "1600": "shared/img/shop/framed/img-8848-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#2F2826",
+  "palette": [
+   "#110E0D",
+   "#0D0807",
+   "#070604",
+   "#E1CBC5",
+   "#332826"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8851",
+  "kind": "framed",
+  "alt": "Female Cactus in a deep white frame on black: a tall green cactus with pink flowers rising from grey rock, with the words Wildlife sees it.",
+  "description": "A deep white frame with a wide white mat lies on black, turned a few degrees clockwise and filling half the width. The collage is simple and graphic: one tall green cactus with pink blooms and spines on a white ground, grey rock along the bottom, two words at the top left. The brightest picture of the set, with clean black on both sides; a sliver of a chipped stick shows at the very bottom edge.",
+  "words": [
+   "WILDLIFE SEES IT"
+  ],
+  "focal": [
+   53,
+   47
+  ],
+  "colors": [
+   "black",
+   "white",
+   "green",
+   "grey",
+   "pink"
+  ],
+  "mood": "clean, cheeky, bright",
+  "quality": "good",
+  "qualityNote": "Sharp and reads well small. Flash-lit, angled and slightly rotated; trim the bottom edge to lose the stick. Frame about 800 px wide in the 1600 file.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "female-cactus",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8851-480.webp",
+   "960": "shared/img/shop/framed/img-8851-960.webp",
+   "1600": "shared/img/shop/framed/img-8851-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#554E4C",
+  "palette": [
+   "#120F0F",
+   "#F0E1DE",
+   "#090908",
+   "#0F0A0A",
+   "#443E38"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8853",
+  "kind": "framed",
+  "alt": "Day # 25 in a red frame on black: an illustrated blonde face with red lips on bright pink textured paper scattered with pale stars.",
+  "description": "A red frame with a white mat lies on plain black, shot at an angle with its near corner toward the camera. The piece inside is almost all hot pink: textured pink paper with pale cut-out stars and three pink clouds, and a drawn blonde face with red lips in the lower middle. Clean black all round and nothing else in shot. The original only exists as a small file, so this is the only other view of the piece.",
+  "words": [],
+  "focal": [
+   47,
+   48
+  ],
+  "colors": [
+   "black",
+   "red",
+   "pink",
+   "white",
+   "yellow"
+  ],
+  "mood": "sweet, pop, girlish",
+  "quality": "good",
+  "qualityNote": "Clean. Flash-lit and angled (the frame tapers toward the top). Frame about 800 px wide in the 1600 file.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "day-no-25",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8853-480.webp",
+   "960": "shared/img/shop/framed/img-8853-960.webp",
+   "1600": "shared/img/shop/framed/img-8853-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#523437",
+  "palette": [
+   "#130909",
+   "#080705",
+   "#F2CBCF",
+   "#EF748A",
+   "#240F0F"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8856",
+  "kind": "framed",
+  "alt": "Be You in a thin black frame on black: a woman in a pink satin dress covering her face, a rainbow flag, flowers and the words Be You.",
+  "description": "A thin black frame with a white mat lies on black cloth, left of centre, so the white mat is what stands out. The collage is sharp and crowded: a woman in a pink satin dress with a hand over her face, a photographer above a rainbow flag at the left, two seated girls with pink hair at the right, flowers along the bottom. The right third is empty black, and a chipped stick shows along the very bottom edge.",
+  "words": [
+   "BE YOU"
+  ],
+  "focal": [
+   42,
+   47
+  ],
+  "colors": [
+   "black",
+   "white",
+   "pink",
+   "green",
+   "yellow"
+  ],
+  "mood": "proud, glamorous, busy",
+  "quality": "ok",
+  "qualityNote": "The art is sharp, but the black frame merges into the black surface and the frame sits left of centre. Flash, angled view; trim the bottom edge. Frame about 830 px wide in the 1600 file.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "be-you",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8856-480.webp",
+   "960": "shared/img/shop/framed/img-8856-960.webp",
+   "1600": "shared/img/shop/framed/img-8856-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#433A39",
+  "palette": [
+   "#13100F",
+   "#CDB2B1",
+   "#0B0908",
+   "#211B1B",
+   "#0E0E0D"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8859",
+  "kind": "framed",
+  "alt": "Gaga's Offering in a thin black frame on black: a figure in a red horned headpiece under purple stars, mirrored by a red figure below.",
+  "description": "A thin black frame with a white mat lies on black cloth, left of centre and hard to see against the dark. The collage is red, purple and deep blue: a pale figure in a red horned headpiece under glitter stars, an upside-down red figure below, a sunset sky at the left. The right 40 percent of the picture is empty black, with sticks along the top and bottom edges.",
+  "words": [],
+  "focal": [
+   41,
+   50
+  ],
+  "colors": [
+   "black",
+   "red",
+   "white",
+   "purple",
+   "blue"
+  ],
+  "mood": "theatrical, dark, intense",
+  "quality": "poor",
+  "qualityNote": "The artwork is soft, the picture is dark, and there is a flash glare streak on the glass at the lower right. Use the original instead.",
+  "uses": [
+   "avoid"
+  ],
+  "shows": "gagas-offering",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8859-480.webp",
+   "960": "shared/img/shop/framed/img-8859-960.webp",
+   "1600": "shared/img/shop/framed/img-8859-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#2F2222",
+  "palette": [
+   "#120F0E",
+   "#0B0908",
+   "#100909",
+   "#8E696B",
+   "#080605"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8865",
+  "kind": "framed",
+  "alt": "Lucky Pleasures in a deep white frame on black: a figure in a tan bikini with red lips over the eyes, on hot pink, with a cigarette pack.",
+  "description": "A deep white frame with a wide white mat lies on black cloth, centred and filling half the width. The collage shows a torso in a tan bikini with a pair of red lips placed over the eyes, hands reaching in from the right, a hot pink painted ground and a cigarette pack at the lower right. The mat hides the bottom strip of the piece, so the lettering along the bottom of the original is not visible here. A thin stick runs along the top edge.",
+  "words": [
+   "LUCKY"
+  ],
+  "focal": [
+   49,
+   47
+  ],
+  "colors": [
+   "black",
+   "white",
+   "pink",
+   "red",
+   "tan"
+  ],
+  "mood": "sultry, hot, pop",
+  "quality": "ok",
+  "qualityNote": "The artwork is out of focus (the frame edges are sharper than the art), so keep it small. The mat crops the bottom of the piece. Flash, angled view.",
+  "uses": [
+   "card"
+  ],
+  "shows": "lucky-pleasures",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8865-480.webp",
+   "960": "shared/img/shop/framed/img-8865-960.webp",
+   "1600": "shared/img/shop/framed/img-8865-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#534746",
+  "palette": [
+   "#150F0F",
+   "#F0D9D7",
+   "#0B0A09",
+   "#100E0D",
+   "#3C282A"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8871",
+  "kind": "framed",
+  "alt": "Reflections of Me in a deep white frame on black: a woman from behind in a black dress with a white snake, echoed by cut-out silhouettes.",
+  "description": "A deep white frame with a wide white mat lies on plain black, turned a few degrees clockwise and filling half the width. The collage shows a woman from behind in a black dress with a white snake on it, fanned out on both sides by silhouettes cut from other photos, over a ground of tiny old portraits; a small blonde face sits in a pale blue arch at the bottom. Clean black around it and nothing else in shot.",
+  "words": [],
+  "focal": [
+   53,
+   48
+  ],
+  "colors": [
+   "black",
+   "white",
+   "light blue",
+   "pink",
+   "brown"
+  ],
+  "mood": "calm, layered, introspective",
+  "quality": "good",
+  "qualityNote": "Sharp. The flash slightly burns out the white frame, and the frame is a little rotated and angled. Frame about 840 px wide in the 1600 file.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "reflections-of-me",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8871-480.webp",
+   "960": "shared/img/shop/framed/img-8871-960.webp",
+   "1600": "shared/img/shop/framed/img-8871-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#585455",
+  "palette": [
+   "#121010",
+   "#0B0909",
+   "#ECE3E4",
+   "#F5F5F8",
+   "#4F4849"
+  ]
+ },
+ {
+  "id": "shop/framed/img-8880",
+  "kind": "framed",
+  "alt": "Candy in a red frame on black: a face with an orange bob and a psychedelic mouth sticker, pink blazer, a hand holding sweets.",
+  "description": "A red frame with a white mat lies on plain black, centred and seen at a slight angle. The collage is the loudest of the set: a woman with a bright orange bob, a swirling sticker with red lips over her mouth, a pink blazer, round stickers on her neck, and a hand with red nails holding sweets, on a magazine cover with paint strokes. Clean black all round and nothing else in shot. The original only exists as a small file, so this is the only other view of the piece.",
+  "words": [
+   "SATURDAY DELIVERY",
+   "TESTED",
+   "RETURN TO VENDOR",
+   "C:C"
+  ],
+  "focal": [
+   49,
+   51
+  ],
+  "colors": [
+   "black",
+   "red",
+   "orange",
+   "pink",
+   "white"
+  ],
+  "mood": "loud, pop, mischievous",
+  "quality": "good",
+  "qualityNote": "Sharp and clean. Flash-lit and angled (the frame tapers toward the top). Frame about 780 px wide in the 1600 file.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "candy",
+  "section": "shop/framed",
+  "sizes": {
+   "480": "shared/img/shop/framed/img-8880-480.webp",
+   "960": "shared/img/shop/framed/img-8880-960.webp",
+   "1600": "shared/img/shop/framed/img-8880-1600.webp"
+  },
+  "width": 6000,
+  "height": 4000,
+  "ratio": 1.5,
+  "avg": "#583C3A",
+  "palette": [
+   "#120C0C",
+   "#0A0907",
+   "#E38B86",
+   "#F2E0E0",
+   "#511E1C"
+  ]
+ },
+ {
+  "id": "shop/originals/artstract",
+  "kind": "artwork",
+  "alt": "Artstract, collage: a blonde woman's head on a white surrealist body with a red face disc and an orange guitar shape, on mustard yellow.",
+  "description": "A magazine photo of an elegant room (decanter cabinet, lamp, cake dome, handbag) is taken over by painted surrealist shapes: a white body with a red face disc, an orange guitar form, a green field and small creatures on a mustard floor, with a blonde woman's head on top. The piece sits inside the white border of a magazine page, on a hand-painted yellow-orange ground that shows on all four sides. The calmest area is the mustard floor at lower left; the scan is flat, bright and sharp.",
+  "words": [
+   "APPLAUSE",
+   "ART",
+   "SCHOLASTIC",
+   "7",
+   "C:C (signature, red paint, bottom left)"
+  ],
+  "focal": [
+   52,
+   36
+  ],
+  "colors": [
+   "mustard yellow",
+   "white",
+   "dark green",
+   "orange",
+   "red"
+  ],
+  "mood": "playful, surreal, art-history wink",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "card",
+   "detail"
+  ],
+  "shows": "artstract",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/artstract-480.webp",
+   "960": "shared/img/shop/originals/artstract-960.webp",
+   "1600": "shared/img/shop/originals/artstract-1600.webp",
+   "2400": "shared/img/shop/originals/artstract-2400.webp"
+  },
+  "width": 2549,
+  "height": 3473,
+  "ratio": 0.7339,
+  "avg": "#A38764",
+  "palette": [
+   "#ECE8DC",
+   "#DBA760",
+   "#302719",
+   "#705F41",
+   "#BB7339"
+  ],
+  "title": "Artstract",
+  "year": 2025
+ },
+ {
+  "id": "shop/originals/be-you",
+  "kind": "artwork",
+  "alt": "Be You, collage: a woman in pink satin hides her face behind a ringed hand, with a photographer on a rainbow flag and the letters BE YOU.",
+  "description": "A large central figure in a hot-pink satin dress covers her face with a jewelled hand with black nails; at left a person in a black hat photographs the viewer from a rainbow flag, at right a woman with a dark bob in profile and a mirrored pair of pink-haired figures on a white sofa. Cut-out letters spell BE YOU on a dark interior at top right, and flowers fill the bottom left corner. It is packed edge to edge with no empty space; colour is saturated and the scan is sharp, with visible magazine print texture.",
+  "words": [
+   "BE",
+   "YOU"
+  ],
+  "focal": [
+   54,
+   24
+  ],
+  "colors": [
+   "hot pink",
+   "black",
+   "yellow",
+   "lilac",
+   "cream"
+  ],
+  "mood": "bold, proud, glamorous",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "card",
+   "detail"
+  ],
+  "shows": "be-you",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/be-you-480.webp",
+   "960": "shared/img/shop/originals/be-you-960.webp",
+   "1600": "shared/img/shop/originals/be-you-1600.webp",
+   "2400": "shared/img/shop/originals/be-you-2400.webp"
+  },
+  "width": 2507,
+  "height": 2884,
+  "ratio": 0.8693,
+  "avg": "#7D524B",
+  "palette": [
+   "#221B19",
+   "#8D6457",
+   "#892F35",
+   "#AE8A7C",
+   "#C6A790"
+  ],
+  "title": "Be You",
+  "year": 2024
+ },
+ {
+  "id": "shop/originals/blues",
+  "kind": "artwork",
+  "alt": "Blues, collage: a woman in a black swimsuit stands behind a white sports car on dark blue sea, under a patchwork of blue paper squares.",
+  "description": "A white 1980s-style sports car faces the viewer, floating on deep blue water with tiny sailboats, and a woman in a black cut-out swimsuit stands behind it with her hands behind her head. The upper half is a grid of blue, teal and white paper squares, with a second small swimsuit figure hanging from a trapeze at top left. Symmetrical and centred; the open water at the bottom is the quiet area.",
+  "words": [],
+  "focal": [
+   50,
+   57
+  ],
+  "colors": [
+   "deep blue",
+   "teal",
+   "sky blue",
+   "white",
+   "black"
+  ],
+  "mood": "cool, dreamy, retro glamour",
+  "quality": "poor",
+  "qualityNote": "Low resolution (source 556 px wide, only a 480 px file) and soft with compression blur; small card only, never large.",
+  "uses": [
+   "card"
+  ],
+  "shows": "blues",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/blues-480.webp"
+  },
+  "width": 556,
+  "height": 640,
+  "ratio": 0.8688,
+  "avg": "#4E7484",
+  "palette": [
+   "#10273C",
+   "#2C586D",
+   "#4F828C",
+   "#88BACD",
+   "#D2E5EA"
+  ],
+  "lowres": true,
+  "title": "Blues",
+  "year": 2025
+ },
+ {
+  "id": "shop/originals/candy",
+  "kind": "artwork",
+  "alt": "Candy, collage: a face with an orange bob, its mouth replaced by a psychedelic sticker of red lips, above a pink blazer and a hand of candy.",
+  "description": "A magazine-cover face with a sharp orange bob fills the frame; from the nose down it is covered by a scalloped, psychedelic sticker of an open red mouth with a patterned tongue. Below are a black choker, a pink blazer with round price stickers on the chest, and at lower right a hand with red nails holding blue and red sweets. The background is loose pink, blue and red brushstrokes; there is no empty space.",
+  "words": [
+   "Harper's",
+   "ZAAR (masthead, partly hidden)",
+   "TESTED",
+   "RETURN TO VENDOR",
+   "SATURDAY DELIVERY",
+   "C:C (signature, on the chest)"
+  ],
+  "focal": [
+   50,
+   46
+  ],
+  "colors": [
+   "pink",
+   "orange",
+   "red",
+   "blue",
+   "yellow"
+  ],
+  "mood": "pop, cheeky, loud",
+  "quality": "ok",
+  "qualityNote": "Low resolution (source 849 px wide, only a 480 px file); crisp enough for a card, cannot go large.",
+  "uses": [
+   "card"
+  ],
+  "shows": "candy",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/candy-480.webp"
+  },
+  "width": 849,
+  "height": 1026,
+  "ratio": 0.8275,
+  "avg": "#C58273",
+  "palette": [
+   "#E0CFC3",
+   "#CA8D6D",
+   "#DB534F",
+   "#DE6E65",
+   "#8E4A44"
+  ],
+  "lowres": true,
+  "title": "Candy",
+  "year": 2024
+ },
+ {
+  "id": "shop/originals/curiosity",
+  "kind": "artwork",
+  "alt": "Curiosity, collage: a man and two children seen from behind study an antique wall map, below a wooden wall with a sign, Radical Intimacy.",
+  "description": "A man holding a small girl's hand and an older child pointing stand with their backs to us at the bottom left, looking up at a huge sepia fresco map framed by a painted arch with classical figures and cherubs at right. A panel of weathered grey wood at top left carries a burgundy rose-shaped handbag and a chalk sign; a pale pink feathered hat, two small fashion figures and a pair of yellow boots are tucked around the edges. The middle band of the map is open and calm, the light is warm and even, and the scan is sharp.",
+  "words": [
+   "RADICAL INTIMACY",
+   "MARE OCEANO ORIENTALI (faint map lettering)"
+  ],
+  "focal": [
+   34,
+   76
+  ],
+  "colors": [
+   "ochre",
+   "sepia brown",
+   "weathered grey",
+   "burgundy",
+   "cream"
+  ],
+  "mood": "warm, wondering, old-world",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card",
+   "detail",
+   "background"
+  ],
+  "shows": "curiosity",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/curiosity-480.webp",
+   "960": "shared/img/shop/originals/curiosity-960.webp",
+   "1600": "shared/img/shop/originals/curiosity-1600.webp",
+   "2400": "shared/img/shop/originals/curiosity-2400.webp"
+  },
+  "width": 2544,
+  "height": 3067,
+  "ratio": 0.8295,
+  "avg": "#91785F",
+  "palette": [
+   "#896D54",
+   "#A68B6D",
+   "#4D382A",
+   "#BAA081",
+   "#D4BEA3"
+  ],
+  "title": "Curiosity",
+  "year": 2023
+ },
+ {
+  "id": "shop/originals/day-no-25",
+  "kind": "artwork",
+  "alt": "Day # 25, drawing and collage: a drawn blonde woman's face with red lips on a pink crayon ground scattered with white paper stars.",
+  "description": "A hand-drawn fashion-style face with long blonde hair, green eyes and dark red lips is cut out as a tall arch and pasted low in the centre. The ground is pink crayon scribbled with a few darker pink clouds and covered in cut-out white starbursts. Simple and centred, with the upper third free of anything but stars and clouds.",
+  "words": [
+   "C:C (signature, top right, small)"
+  ],
+  "focal": [
+   48,
+   65
+  ],
+  "colors": [
+   "pink",
+   "cream white",
+   "blonde yellow",
+   "dark red",
+   "black"
+  ],
+  "mood": "sweet, dreamy, girlish",
+  "quality": "poor",
+  "qualityNote": "Low resolution (source 523 px wide, only a 480 px file) and soft; small card only.",
+  "uses": [
+   "card"
+  ],
+  "shows": "day-no-25",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/day-no-25-480.webp"
+  },
+  "width": 523,
+  "height": 640,
+  "ratio": 0.8172,
+  "avg": "#EE9DC8",
+  "palette": [
+   "#F2A4D4",
+   "#F693D3",
+   "#EEC6CF",
+   "#E776B3",
+   "#EA93C2"
+  ],
+  "lowres": true,
+  "title": "Day # 25",
+  "year": null
+ },
+ {
+  "id": "shop/originals/female-cactus",
+  "kind": "artwork",
+  "alt": "Female Cactus, collage: a green cactus cut from ruched fabric, with paper thorns and pink flowers, rising from sandy rock on white paper.",
+  "description": "One big rounded cactus, cut from a photo of bright green ruched fabric, stands just right of centre with pale paper thorns and hot-pink flower balls, planted in torn strips of sand-coloured rock across the bottom. The words WILDLIFE SEES IT are pasted in black at top left. The ground is pure white paper with generous empty space on the left and top right; on an off-white page the white sheet will read as a rectangle. Very sharp, very high resolution.",
+  "words": [
+   "WILDLIFE",
+   "SEES IT"
+  ],
+  "focal": [
+   59,
+   42
+  ],
+  "colors": [
+   "white",
+   "bright green",
+   "sand",
+   "hot pink",
+   "black"
+  ],
+  "mood": "witty, bold, clean",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "card",
+   "detail"
+  ],
+  "shows": "female-cactus",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/female-cactus-480.webp",
+   "960": "shared/img/shop/originals/female-cactus-960.webp",
+   "1600": "shared/img/shop/originals/female-cactus-1600.webp",
+   "2400": "shared/img/shop/originals/female-cactus-2400.webp"
+  },
+  "width": 4866,
+  "height": 5706,
+  "ratio": 0.8528,
+  "avg": "#ABAC92",
+  "palette": [
+   "#7F894F",
+   "#554E34",
+   "#FFFFFF",
+   "#FEFEFE",
+   "#C1C19D"
+  ],
+  "title": "Female Cactus",
+  "year": null
+ },
+ {
+  "id": "shop/originals/gagas-offering",
+  "kind": "artwork",
+  "alt": "Gaga's Offering, collage: a pink-haired woman in a red horned headpiece holds an upside-down red figure, under purple glitter stars.",
+  "description": "A woman with sculpted pink hair, a tall red horned headpiece and long gold claw nails stares straight out from the right of centre, hands on hips over an upside-down figure dressed in red stripes. Purple glitter starbursts fill the pale pink sky at the top; the left third is a dusk beach with a pelican, a campfire and a red sunset. Dense and high-contrast, with the darker beach at left as the only quieter area; sharp scan.",
+  "words": [
+   "ESTA NOCHE FIESTA A LA PLAYA (faint, left middle)",
+   "198 (page number, upside down, top right)"
+  ],
+  "focal": [
+   61,
+   36
+  ],
+  "colors": [
+   "magenta",
+   "red",
+   "indigo blue",
+   "pale pink",
+   "black"
+  ],
+  "mood": "theatrical, fierce, ceremonial",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "card",
+   "detail"
+  ],
+  "shows": "gagas-offering",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/gagas-offering-480.webp",
+   "960": "shared/img/shop/originals/gagas-offering-960.webp",
+   "1600": "shared/img/shop/originals/gagas-offering-1600.webp",
+   "2400": "shared/img/shop/originals/gagas-offering-2400.webp"
+  },
+  "width": 2550,
+  "height": 3498,
+  "ratio": 0.729,
+  "avg": "#82515E",
+  "palette": [
+   "#1F1926",
+   "#872038",
+   "#C3A6AA",
+   "#975965",
+   "#D4C3C5"
+  ],
+  "title": "Gaga's Offering",
+  "year": 2025
+ },
+ {
+  "id": "shop/originals/home",
+  "kind": "artwork",
+  "alt": "Home, collage: two young people play-fight in a field below a highway overpass, above a cut-paper garden with a small red barn.",
+  "description": "A magazine photograph of two young people mid kick in a grassy field under a concrete overpass takes the top half, in soft overcast light. The bottom half is a garden built from cut-out leaves, cabbages, purple flowers and a tiny red barn, with a tall leafy cut-out tree at the right edge. The pale sky at the top is the empty space; a printed magazine caption is still visible in the top left corner.",
+  "words": [
+   "YOUNG AND RESTLESS",
+   "a smaller printed photo-credit line under it, too soft to read reliably"
+  ],
+  "focal": [
+   59,
+   45
+  ],
+  "colors": [
+   "green",
+   "olive",
+   "pale sky white",
+   "violet blue",
+   "red"
+  ],
+  "mood": "gentle, nostalgic, pastoral",
+  "quality": "ok",
+  "qualityNote": "Low resolution (source 840 px wide, only a 480 px file), soft, with a white scan margin on the left and bottom edges; card only.",
+  "uses": [
+   "card"
+  ],
+  "shows": "home",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/home-480.webp"
+  },
+  "width": 840,
+  "height": 1016,
+  "ratio": 0.8268,
+  "avg": "#838A6C",
+  "palette": [
+   "#606A45",
+   "#8D955F",
+   "#373B26",
+   "#F5F9FB",
+   "#D6DBC8"
+  ],
+  "lowres": true,
+  "title": "Home",
+  "year": 2023
+ },
+ {
+  "id": "shop/originals/i-am-the-bad-guy",
+  "kind": "artwork",
+  "alt": "I Am the Bad Guy, collage: a person with long blue hair seen from behind, skateboarders, a man in a skull T-shirt and a Bad Hombres sign.",
+  "description": "A figure with long electric-blue hair and a varsity jacket stands with their back to us at lower centre, next to a cluster of skateboarders on yellow flames and a man in a green skull T-shirt at right. The top band runs from underwater fish at left, through a small-town street under a Coca-Cola and Bad Hombres roadside sign, to a pale green cinder-block building with graffiti. The dark asphalt wedge at lower left is the calm area; daylight colours, very sharp and very high resolution.",
+  "words": [
+   "Enjoy Coca-Cola",
+   "BAD Hombres",
+   "\"They're kind of expensive\"",
+   "PEACOCK",
+   "PRIMITIVE",
+   "90 (road sign)",
+   "BBQ (partial sign)",
+   "graffiti lettering, not legible"
+  ],
+  "focal": [
+   41,
+   66
+  ],
+  "colors": [
+   "electric blue",
+   "concrete grey",
+   "acid green",
+   "red",
+   "black"
+  ],
+  "mood": "street, defiant, sunlit",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card",
+   "detail"
+  ],
+  "shows": "i-am-the-bad-guy",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/i-am-the-bad-guy-480.webp",
+   "960": "shared/img/shop/originals/i-am-the-bad-guy-960.webp",
+   "1600": "shared/img/shop/originals/i-am-the-bad-guy-1600.webp",
+   "2400": "shared/img/shop/originals/i-am-the-bad-guy-2400.webp"
+  },
+  "width": 4968,
+  "height": 6240,
+  "ratio": 0.7962,
+  "avg": "#6D6E67",
+  "palette": [
+   "#7F8477",
+   "#24272B",
+   "#625047",
+   "#91B0AC",
+   "#CAC6B8"
+  ],
+  "title": "I Am the Bad Guy",
+  "year": 2025
+ },
+ {
+  "id": "shop/originals/let-out",
+  "kind": "artwork",
+  "alt": "Let Out, collage: a red profile shouting inside a jagged burst, a black-and-white face with closed eyes, banknotes and red letters Let Out.",
+  "description": "At left a black-and-white face with closed eyes sits above a red-orange profile shouting with its mouth wide open, cut into a jagged lightning-burst shape. The right side is a black-and-white photo of hundred-dollar bills with big red letters LET OUT. and IT across the top; a woman in a white tank and jeans lies across the bottom right with a white cut-out edge, and book spines run sideways at bottom left. A small paragraph of white magazine text from a bank advert (it names the bank) is legible at right when shown large. Hard contrast, very sharp, almost no empty space.",
+  "words": [
+   "Let Out.",
+   "It",
+   "THE TAKEAWAY",
+   "100",
+   "THE SUBTLE ART OF NOT GIVING A",
+   "SHOE DOG",
+   "WE MEET",
+   "VACATION",
+   "EMILY",
+   "Romancing Mr Bridgerton",
+   "GENERATION",
+   "a short paragraph of small bank-advert text (names Amerant)"
+  ],
+  "focal": [
+   30,
+   50
+  ],
+  "colors": [
+   "black",
+   "grey",
+   "red orange",
+   "white",
+   "denim blue"
+  ],
+  "mood": "raw, loud, cathartic",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "card",
+   "detail"
+  ],
+  "shows": "let-out",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/let-out-480.webp",
+   "960": "shared/img/shop/originals/let-out-960.webp",
+   "1600": "shared/img/shop/originals/let-out-1600.webp",
+   "2400": "shared/img/shop/originals/let-out-2400.webp"
+  },
+  "width": 2550,
+  "height": 3197,
+  "ratio": 0.7976,
+  "avg": "#846A5C",
+  "palette": [
+   "#20221E",
+   "#8E8271",
+   "#9F4031",
+   "#B4B8A2",
+   "#D1CFC0"
+  ],
+  "title": "Let Out",
+  "year": null
+ },
+ {
+  "id": "shop/originals/looking",
+  "kind": "artwork",
+  "alt": "Looking, collage: a small crowd seen from behind watches a launch site with a rocket and a tall tower, under squares of sky-coloured paper.",
+  "description": "A row of spectators and photographers, backs to us, lines the bottom edge and looks toward a distant runway, with a rocket shape glowing orange at left and a tall cylindrical tower on a launch stand at right. The sky between them is a patchwork of pale blue, white and beige paper rectangles with the word Look pasted in the middle and a cut-out cloud breaking the top edge. Airy and light, with torn white paper margins around the sheet.",
+  "words": [
+   "Look"
+  ],
+  "focal": [
+   50,
+   60
+  ],
+  "colors": [
+   "sky blue",
+   "beige",
+   "rust brown",
+   "white",
+   "dark grey"
+  ],
+  "mood": "quiet, expectant, airy",
+  "quality": "ok",
+  "qualityNote": "Low resolution (source 819 px wide, only a 480 px file) and slightly soft; uneven white margins from the scan; card only.",
+  "uses": [
+   "card"
+  ],
+  "shows": "looking",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/looking-480.webp"
+  },
+  "width": 819,
+  "height": 1098,
+  "ratio": 0.7459,
+  "avg": "#A29C98",
+  "palette": [
+   "#BFBEB6",
+   "#513A35",
+   "#E8EAE7",
+   "#718798",
+   "#B09889"
+  ],
+  "lowres": true,
+  "title": "Looking",
+  "year": 2023
+ },
+ {
+  "id": "shop/originals/lucky-pleasures",
+  "kind": "artwork",
+  "alt": "Lucky Pleasures, collage: a woman in a tan bra with red lips pasted over her eyes, reaching hands and a Lucky Strike pack on red-pink paint.",
+  "description": "A torso in a tan bra with arms raised, cut as a tall curved strip with a torn top edge, stands left of centre with a pair of red lips pasted over the eyes; three separate arms reach in to touch it. A close-up mouth biting a finger fills the top right and a Lucky Strike cigarette pack sits at bottom right, all on a ground of swirling red and hot-pink paint. Sharp, hot and saturated; note the lingerie and the tobacco brand before placing it somewhere prominent.",
+  "words": [
+   "Luckies",
+   "LUCKY STRIKE",
+   "FILTERS",
+   "RED",
+   "IU MIU (cropped fashion lettering, bottom)",
+   "C:C (signature, top left, faint red on red)"
+  ],
+  "focal": [
+   32,
+   42
+  ],
+  "colors": [
+   "red",
+   "hot pink",
+   "tan",
+   "dark brown",
+   "white"
+  ],
+  "mood": "sensual, provocative, hot",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "lucky-pleasures",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/lucky-pleasures-480.webp",
+   "960": "shared/img/shop/originals/lucky-pleasures-960.webp",
+   "1600": "shared/img/shop/originals/lucky-pleasures-1600.webp",
+   "2400": "shared/img/shop/originals/lucky-pleasures-2400.webp"
+  },
+  "width": 2539,
+  "height": 3502,
+  "ratio": 0.725,
+  "avg": "#AB4D51",
+  "palette": [
+   "#39292D",
+   "#EB263D",
+   "#B4785D",
+   "#C34F5A",
+   "#D4B49D"
+  ],
+  "title": "Lucky Pleasures",
+  "year": null
+ },
+ {
+  "id": "shop/originals/modern-love",
+  "kind": "artwork",
+  "alt": "Modern Love, collage: long dark hair over a black sweatshirt lettered LOVE, with cut-out headlines, a red label and small photos.",
+  "description": "Almost all black: the back of a head of long dark-brown hair falls over a black sweatshirt printed with white gothic lettering, LOVE, at lower right. Down the left side are a black-and-white photo of a couple kissing in a tiled shower with its printed caption, a red shipping label, two cut-out headlines, a black-and-white photo of two men raising their middle fingers, an eye-in-triangle emblem and a black hand on torn paper; two instant-photo close-ups of underwear sit in the top-right and bottom-right corners. The quiet area is the black between them on the right; mind the middle fingers, the underwear and the fashion brand name before showing it large or cropping a detail.",
+  "words": [
+   "Calvin Klein",
+   "Klaas Zwijnenburg: Detail from Zomer 96, 1996, photograph, 23½ inches square; at MK Expositieruimte.",
+   "INSPECT FOR DAMAGE BEFORE ACCEPTING",
+   "Creative Control",
+   "on top of",
+   "LOVE",
+   "x Papke"
+  ],
+  "focal": [
+   60,
+   55
+  ],
+  "colors": [
+   "black",
+   "dark brown",
+   "white",
+   "red",
+   "tan"
+  ],
+  "mood": "dark, sensual, defiant, streetwise",
+  "quality": "good",
+  "qualityNote": "Sharp scan, fine to 2400. A thin pale-blue strip shows along the bottom-left edge of the sheet.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "modern-love",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/modern-love-480.webp",
+   "960": "shared/img/shop/originals/modern-love-960.webp",
+   "1600": "shared/img/shop/originals/modern-love-1600.webp",
+   "2400": "shared/img/shop/originals/modern-love-2400.webp"
+  },
+  "width": 5054,
+  "height": 6436,
+  "ratio": 0.7853,
+  "avg": "#484441",
+  "palette": [
+   "#C2BDB5",
+   "#131111",
+   "#0A0A0A",
+   "#433633",
+   "#0E0E0E"
+  ],
+  "title": "Modern Love",
+  "year": 2024
+ },
+ {
+  "id": "shop/originals/reflections-of-me",
+  "kind": "artwork",
+  "alt": "Reflections of Me, collage: a woman seen from behind in a black dress with a white snake, flanked by wavy paper silhouettes.",
+  "description": "A woman seen from behind, in a black sleeveless dress with a white beaded snake down the back and gold cuffs, stands at centre top; her outline repeats to left and right as wavy silhouettes cut from pink satin, grass, grey sea, a beach and dark paper. Below her a pale mint arch holds a second woman with long blonde hair looking straight out, cut off by the bottom edge. The border all round is a wall of small pinned sepia portrait photos; the piece is full-bleed with no blank margin, and the calmest area is the mint arch.",
+  "words": [
+   "B E",
+   "ERG",
+   "ABLE",
+   "luxury"
+  ],
+  "focal": [
+   48,
+   34
+  ],
+  "colors": [
+   "black",
+   "sepia brown",
+   "mint green",
+   "pink",
+   "grass green"
+  ],
+  "mood": "layered, nostalgic, self-searching, elegant",
+  "quality": "good",
+  "qualityNote": "",
+  "uses": [
+   "hero",
+   "card",
+   "detail",
+   "background"
+  ],
+  "shows": "reflections-of-me",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/reflections-of-me-480.webp",
+   "960": "shared/img/shop/originals/reflections-of-me-960.webp",
+   "1600": "shared/img/shop/originals/reflections-of-me-1600.webp",
+   "2400": "shared/img/shop/originals/reflections-of-me-2400.webp"
+  },
+  "width": 2543,
+  "height": 2969,
+  "ratio": 0.8565,
+  "avg": "#837967",
+  "palette": [
+   "#6E503E",
+   "#1C1513",
+   "#A39471",
+   "#E0F5E7",
+   "#DCE0C8"
+  ],
+  "title": "Reflections of Me",
+  "year": 2024
+ },
+ {
+  "id": "shop/originals/royal-love-story",
+  "kind": "artwork",
+  "alt": "Royal Love Story, collage: a man and a woman cheek to cheek under a giant diamond bottle, a gilded opera house and a red heart.",
+  "description": "A man and a woman in black pose cheek to cheek at lower right; a huge cut-diamond perfume bottle with a gold crown covers the man's eyes. Behind them are a gilded opera house with a chandelier, a torn black strip of gold script, an anatomical red heart in the top-left corner, red marbling down the left side and a tiny figure in a red uniform at bottom left. Busy from edge to edge with no empty space, in warm dim light.",
+  "words": [
+   "ROYAL LOVE STORY",
+   "Possess and Rule"
+  ],
+  "focal": [
+   58,
+   58
+  ],
+  "colors": [
+   "black",
+   "gold",
+   "red",
+   "skin tone",
+   "cream"
+  ],
+  "mood": "opulent, romantic, dramatic",
+  "quality": "poor",
+  "qualityNote": "Low resolution: only exists 459 px wide, soft, with visible compression. Never show it wider than 459 px; shop card and product page only.",
+  "uses": [
+   "card"
+  ],
+  "shows": "royal-love-story",
+  "section": "shop/originals",
+  "sizes": {
+   "459": "shared/img/shop/originals/royal-love-story-459.webp"
+  },
+  "width": 459,
+  "height": 640,
+  "ratio": 0.7172,
+  "avg": "#78574C",
+  "palette": [
+   "#100A0A",
+   "#9F6F5E",
+   "#5D3028",
+   "#C9A38E",
+   "#D9C1AB"
+  ],
+  "lowres": true,
+  "title": "Royal Love Story",
+  "year": 2025
+ },
+ {
+  "id": "shop/originals/senor-tigre",
+  "kind": "artwork",
+  "alt": "Senor Tigre, collage: a laughing woman in a white swimsuit on a jungle veranda pets a tiger; more tigers prowl along the bottom.",
+  "description": "A laughing woman in a white swimsuit sits in a woven chair on a green-framed veranda above a jungle valley, her hand on a large tiger that sniffs an open notebook on a tree-stump table. A straw hat and a striped towel hang on the post at left, and a row of cut-out tigers on black strips prowls across the bottom, with two more at lower left. Sunny, warm afternoon light; the open space is the sky and treetops through the windows in the top half, and the right edge is a torn white paper edge.",
+  "words": [
+   "E"
+  ],
+  "focal": [
+   57,
+   55
+  ],
+  "colors": [
+   "green",
+   "orange",
+   "tan",
+   "sky blue",
+   "black"
+  ],
+  "mood": "sunny, playful, tropical, surreal",
+  "quality": "good",
+  "qualityNote": "Sharp scan, fine to 2400. The white torn edge down the right side is part of the sheet.",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card",
+   "detail"
+  ],
+  "shows": "senor-tigre",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/senor-tigre-480.webp",
+   "960": "shared/img/shop/originals/senor-tigre-960.webp",
+   "1600": "shared/img/shop/originals/senor-tigre-1600.webp",
+   "2400": "shared/img/shop/originals/senor-tigre-2400.webp"
+  },
+  "width": 4784,
+  "height": 6438,
+  "ratio": 0.7431,
+  "avg": "#6E624B",
+  "palette": [
+   "#5E4129",
+   "#27271A",
+   "#766947",
+   "#A3946E",
+   "#D1D8D0"
+  ],
+  "title": "Senor Tigre",
+  "year": 2025
+ },
+ {
+  "id": "shop/originals/small-world",
+  "kind": "artwork",
+  "alt": "Small World, collage: black-and-white women, one shouldering a rake, beside hand-painted blue words KEEP YOUR EYES TO THE SKY.",
+  "description": "Mostly black, white and blue. A black-and-white woman in a white shirt-dress and boots carries a rake over her shoulder at left; at lower right a black-and-white woman in a dark jacket holds a hat on a cobbled street. Hand-painted cobalt-blue capitals fill the upper right, with pale-blue paper strips above and a fan of them below, and scraps of magazine text at top left; the white paper at upper left is the only empty area.",
+  "words": [
+   "KEEP YOUR EYES TO THE SKY",
+   "Still Leaning",
+   "GOD OF RE",
+   "Looks like the Le",
+   "London",
+   "bell tower"
+  ],
+  "focal": [
+   42,
+   40
+  ],
+  "colors": [
+   "white",
+   "cobalt blue",
+   "black",
+   "pale blue",
+   "grey"
+  ],
+  "mood": "graphic, hopeful, punchy",
+  "quality": "ok",
+  "qualityNote": "Low resolution: only exists 480 px wide (source 846 px) and slightly soft. Card size only, never wider than 480 px.",
+  "uses": [
+   "card"
+  ],
+  "shows": "small-world",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/small-world-480.webp"
+  },
+  "width": 846,
+  "height": 1126,
+  "ratio": 0.7513,
+  "avg": "#A5AEB5",
+  "palette": [
+   "#9CA7B1",
+   "#C8D8E0",
+   "#353B47",
+   "#FFFFFF",
+   "#F6F7F6"
+  ],
+  "lowres": true,
+  "title": "Small World",
+  "year": 2023
+ },
+ {
+  "id": "shop/originals/society",
+  "kind": "artwork",
+  "alt": "Society, collage: wave-cut bands of snowy mountains, a city skyline and a snow-covered town, dotted with small cut-out people.",
+  "description": "Wave-cut bands stack from top to bottom: clear blue sky, mountains with a castle, a mountain biker and a mansion, a snowy forested slope, a warm-toned city skyline with a man lounging in an armchair, then a snow-covered town and rooftops. Small groups of cut-out people line the lower third: a long-haired group at left, riders in cowboy hats, three people behind a hand-lettered sign, a family holding hands. Bright cold daylight; the empty space is the sky across the top, and a strip of white torn paper runs down the upper right edge.",
+  "words": [
+   "ELBI"
+  ],
+  "focal": [
+   35,
+   50
+  ],
+  "colors": [
+   "white",
+   "blue",
+   "grey-blue",
+   "copper",
+   "green"
+  ],
+  "mood": "wintry, busy, wry, panoramic",
+  "quality": "good",
+  "qualityNote": "Sharp scan, fine to 2400. The horizontal bands survive a wide crop well.",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card",
+   "detail",
+   "background"
+  ],
+  "shows": "society",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/society-480.webp",
+   "960": "shared/img/shop/originals/society-960.webp",
+   "1600": "shared/img/shop/originals/society-1600.webp",
+   "2400": "shared/img/shop/originals/society-2400.webp"
+  },
+  "width": 5066,
+  "height": 5634,
+  "ratio": 0.8992,
+  "avg": "#7D8D92",
+  "palette": [
+   "#6C787B",
+   "#8EA1A7",
+   "#423F3E",
+   "#9DD4EE",
+   "#D3E2E3"
+  ],
+  "title": "Society",
+  "year": 2025
+ },
+ {
+  "id": "shop/originals/stuck",
+  "kind": "artwork",
+  "alt": "Stuck, collage: a woman at a night festival, fireworks, grey loudspeakers and a man meditating on sheet music, on white paper.",
+  "description": "On white paper with a clear margin all round. At top left a woman in sunglasses and a chain top poses against a railing at night, with fireworks on black at top right; a strip of handwriting crosses the middle. Below it grey-blue loudspeakers stand behind a man in a cap and brown shirt who sits cross-legged with his eyes closed on strips of aged sheet music; the white margin is widest in the bottom corners either side of him.",
+  "words": [
+   "you are the song stuck in my mind ...",
+   "sempre ff"
+  ],
+  "focal": [
+   52,
+   72
+  ],
+  "colors": [
+   "white",
+   "black",
+   "grey-blue",
+   "tan",
+   "brown"
+  ],
+  "mood": "musical, wistful, loud against calm",
+  "quality": "good",
+  "qualityNote": "Sharp scan, fine to 2400. The white paper margin is part of the file and will show against an off-white page.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "stuck",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/stuck-480.webp",
+   "960": "shared/img/shop/originals/stuck-960.webp",
+   "1600": "shared/img/shop/originals/stuck-1600.webp",
+   "2400": "shared/img/shop/originals/stuck-2400.webp"
+  },
+  "width": 4946,
+  "height": 6918,
+  "ratio": 0.7149,
+  "avg": "#8F8A88",
+  "palette": [
+   "#1A1518",
+   "#BBB7AF",
+   "#FFFFFF",
+   "#695E5B",
+   "#FEFEF7"
+  ],
+  "title": "Stuck",
+  "year": 2025
+ },
+ {
+  "id": "shop/originals/tears-water-the-soul-green",
+  "kind": "artwork",
+  "alt": "Tears Water The Soul - Green, collage: a woman's face under a green embroidered mask and headdress, with iridescent paper tears.",
+  "description": "Square. A woman in a tweed jacket with a heavy jewelled necklace and earrings faces the viewer; her upper face is covered by a mask and tall headdress built from green embroidery, a leafy tree, deep-blue brushwork and gold star and moon brooches, with her eyes showing through. Iridescent pink-and-blue paper teardrops fall from the eyes and spray out to both sides. White ground with empty space in both top corners and at mid left and right; a signature in green marker sits bottom left and a small stray brown strip top right.",
+  "words": [
+   "C:C"
+  ],
+  "focal": [
+   53,
+   48
+  ],
+  "colors": [
+   "green",
+   "white",
+   "deep blue",
+   "grey-brown",
+   "pale pink"
+  ],
+  "mood": "ornate, tearful, regal, tender",
+  "quality": "ok",
+  "qualityNote": "Largest file is 1600 px and a little soft at full size; a thin grey line shows along the bottom edge. Best kept to about 1000 px wide or less.",
+  "uses": [
+   "card",
+   "detail"
+  ],
+  "shows": "tears-water-the-soul-green",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/tears-water-the-soul-green-480.webp",
+   "960": "shared/img/shop/originals/tears-water-the-soul-green-960.webp",
+   "1600": "shared/img/shop/originals/tears-water-the-soul-green-1600.webp"
+  },
+  "width": 2372,
+  "height": 2376,
+  "ratio": 0.9983,
+  "avg": "#918D86",
+  "palette": [
+   "#FEFFFF",
+   "#4E4F45",
+   "#302A2A",
+   "#685D4E",
+   "#B9B3A4"
+  ],
+  "title": "Tears Water The Soul - Green",
+  "year": 2025
+ },
+ {
+  "id": "shop/originals/tears-water-the-soul-pink",
+  "kind": "artwork",
+  "alt": "Tears Water The Soul - Pink, collage: a woman in a pink dress under a headdress of flowers and pink jewels, gem tears on her cheeks.",
+  "description": "A red-haired woman in an off-the-shoulder pink dress raises one hand to her face; her eyes look out through a mask of pink petals, and gemstone tears in red and purple hang on her cheeks. A tall headdress of mixed flowers, a large pink faceted gem, a pink jewelled brooch and a small bird fills the top half. Plain white ground with empty space down both sides of the figure, in soft bright light.",
+  "words": [],
+  "focal": [
+   56,
+   46
+  ],
+  "colors": [
+   "pink",
+   "white",
+   "orange",
+   "green",
+   "magenta"
+  ],
+  "mood": "lush, sweet, glamorous, melancholy",
+  "quality": "ok",
+  "qualityNote": "Low resolution (source 988 px wide) and soft, like a photo of a print. Largest file is 960; keep it at card size, about 600 px wide or less.",
+  "uses": [
+   "card"
+  ],
+  "shows": "tears-water-the-soul-pink",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/tears-water-the-soul-pink-480.webp",
+   "960": "shared/img/shop/originals/tears-water-the-soul-pink-960.webp"
+  },
+  "width": 988,
+  "height": 1167,
+  "ratio": 0.8466,
+  "avg": "#E1C6C5",
+  "palette": [
+   "#FEFEFE",
+   "#B1727A",
+   "#DDB5B0",
+   "#F8EEEA",
+   "#FEFEFC"
+  ],
+  "lowres": true,
+  "title": "Tears Water The Soul - Pink",
+  "year": null
+ },
+ {
+  "id": "shop/originals/tears-water-the-soul-silver",
+  "kind": "artwork",
+  "alt": "Tears Water The Soul - Silver, collage: a bare-shouldered woman under a silver crown piled with watches, gold coins, rings and cars.",
+  "description": "A dark-haired, bare-shouldered woman faces the viewer head-on wearing a jewelled pendant; a chrome crown of metal flowers and diamond brooches sits low over her brow so only her eyes show, with one small grey diamond-shaped paper tear on her cheek. Piled on the crown are two wristwatches, two gold coins, a stack of rose-gold rings, diamonds and two sports cars. Symmetrical and centred on a clean white ground, with empty space on both sides of her head and shoulders and even studio light.",
+  "words": [
+   "ROLEX",
+   "OYSTER PERPETUAL",
+   "DATEJUST",
+   "28",
+   "UNITED STATES OF AMERICA",
+   "IN GOD WE TRUST",
+   "LIBERTY",
+   "ANNIVERSARY"
+  ],
+  "focal": [
+   50,
+   52
+  ],
+  "colors": [
+   "white",
+   "silver",
+   "gold",
+   "skin tone",
+   "rose gold"
+  ],
+  "mood": "glossy, ironic, luxurious, composed",
+  "quality": "good",
+  "qualityNote": "A photo rather than a flat scan: clean up to about 1600 px, fine detail looks smoothed in the 2400 zoom view. Watch brand names are readable.",
+  "uses": [
+   "hero",
+   "card",
+   "detail"
+  ],
+  "shows": "tears-water-the-soul-silver",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/tears-water-the-soul-silver-480.webp",
+   "960": "shared/img/shop/originals/tears-water-the-soul-silver-960.webp",
+   "1600": "shared/img/shop/originals/tears-water-the-soul-silver-1600.webp",
+   "2400": "shared/img/shop/originals/tears-water-the-soul-silver-2400.webp"
+  },
+  "width": 3203,
+  "height": 3952,
+  "ratio": 0.8105,
+  "avg": "#DCC5B7",
+  "palette": [
+   "#DDB08F",
+   "#FCFDFD",
+   "#9E7560",
+   "#FBFCFB",
+   "#F4F1EE"
+  ],
+  "title": "Tears Water The Soul - Silver",
+  "year": null
+ },
+ {
+  "id": "shop/originals/the-art-of-art",
+  "kind": "artwork",
+  "alt": "The Art of Art, collage: a blue cloudy sky with cut-out words This is Art, TAKE a harder look HONEY, a butterfly and a quill.",
+  "description": "A bright blue sky full of white clouds fills the sheet, with cut-out magazine words stacked in the centre. A red-and-black butterfly sits on a yellow flower at lower left, a black quill pen points in from the right, and along the bottom are dry hills, a stepped sandstone rock and a dark teal reclining form; a stack of white book edges and a strip of blue-gridded board with a blade are torn in across the top right. Open sky around the words, at top left and mid right, leaves room; even daylight.",
+  "words": [
+   "This is Art",
+   "TAKE",
+   "a harder look",
+   "HONEY"
+  ],
+  "focal": [
+   50,
+   49
+  ],
+  "colors": [
+   "sky blue",
+   "white",
+   "black",
+   "yellow",
+   "orange"
+  ],
+  "mood": "airy, witty, direct, optimistic",
+  "quality": "good",
+  "qualityNote": "Sharp scan, fine to 2400.",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card",
+   "detail",
+   "background"
+  ],
+  "shows": "the-art-of-art",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/the-art-of-art-480.webp",
+   "960": "shared/img/shop/originals/the-art-of-art-960.webp",
+   "1600": "shared/img/shop/originals/the-art-of-art-1600.webp",
+   "2400": "shared/img/shop/originals/the-art-of-art-2400.webp"
+  },
+  "width": 2549,
+  "height": 3505,
+  "ratio": 0.7272,
+  "avg": "#81999C",
+  "palette": [
+   "#2F2E29",
+   "#608892",
+   "#96C8D5",
+   "#E5F1F0",
+   "#D7DBD2"
+  ],
+  "title": "The Art of Art",
+  "year": 2025
+ },
+ {
+  "id": "shop/originals/zenda-beach",
+  "kind": "artwork",
+  "alt": "Zenda Beach, collage: a giant woman in a yellow coat strides along the horizon above a crowded beach; blue shorts fill the foreground.",
+  "description": "A giant cut-out woman in a yellow coat and lace-up sandals strides along the horizon at top left, above a busy beach of small sunbathers, a striped parasol and shallow blue water. The bottom third is a huge close-up of a person from behind in blue satin shorts, patched with torn pieces of blue fabric, with a flat-lay of blue toys and clothes down the right edge. Bright hazy seaside light; the open space is the pale sky at top right and the sand through the middle.",
+  "words": [
+   "HOU",
+   "BAYOU",
+   "GAL",
+   "POOH",
+   "TEN APPLES UP ON TOP"
+  ],
+  "focal": [
+   33,
+   17
+  ],
+  "colors": [
+   "sand",
+   "blue",
+   "yellow",
+   "pale blue",
+   "navy"
+  ],
+  "mood": "sunny, cheeky, oversized, holiday",
+  "quality": "good",
+  "qualityNote": "Sharp scan, fine to 2400. The top half alone crops to a clean wide beach scene.",
+  "uses": [
+   "hero",
+   "wide-banner",
+   "card",
+   "detail"
+  ],
+  "shows": "zenda-beach",
+  "section": "shop/originals",
+  "sizes": {
+   "480": "shared/img/shop/originals/zenda-beach-480.webp",
+   "960": "shared/img/shop/originals/zenda-beach-960.webp",
+   "1600": "shared/img/shop/originals/zenda-beach-1600.webp",
+   "2400": "shared/img/shop/originals/zenda-beach-2400.webp"
+  },
+  "width": 2527,
+  "height": 3136,
+  "ratio": 0.8058,
+  "avg": "#95A0A3",
+  "palette": [
+   "#262D3F",
+   "#E8F6F2",
+   "#898785",
+   "#BCDCE2",
+   "#E5E8D9"
+  ],
+  "title": "Zenda Beach",
+  "year": 2023
+ },
+ {
+  "id": "video/tripping-animals-2024",
+  "kind": "installation",
+  "alt": "Two white-framed collages hung one above the other on a concrete block wall marked with orange spray paint, a small label beside them.",
+  "description": "Still frame from the exhibition clip, tall phone format (720 x 1280). Two white-matted, white-framed collages hang one above the other on a raw concrete block wall with a band of orange spray paint between them. The upper piece, cut off at the top of the frame and carrying reflections on its glass, is Lucky Pleasures (hot pink ground, a cigarette pack at lower right); the lower piece, shown whole, is a black-and-white and red collage with an old camera, newspaper clippings and three faces, and it is not in the shop catalogue. A small purple-bordered wall label sits to the right of the lower frame; it is soft, appears to read \"The Camera (2023)\", and its price line cannot be read, so do not quote it as fact. Empty space: the concrete wall down the right edge.",
+  "words": [
+   "LUCKY",
+   "MONKEES GET MOB WELCOME (partly cut off)",
+   "HOW!",
+   "BETWEEN THE WORLD AND ME",
+   "The Camera (2023)",
+   "Recycled magazine collage on paper",
+   "12x16\"",
+   "@theglobalcollage",
+   "See bartenders for details"
+  ],
+  "focal": [
+   39,
+   68
+  ],
+  "colors": [
+   "grey",
+   "white",
+   "red",
+   "pink",
+   "orange"
+  ],
+  "mood": "raw, informal, bar-wall show",
+  "quality": "ok",
+  "qualityNote": "A 720 x 1280 video frame: soft, with light reflections on the upper frame's glass, the upper work cut off at the top and the picture slightly tilted. Fine as the poster for the clip or a small card; do not show wider than 720 px.",
+  "uses": [
+   "card"
+  ],
+  "shows": "lucky-pleasures"
+ }
+]

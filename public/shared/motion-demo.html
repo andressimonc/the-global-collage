@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Motion kit demo</title>
+<link rel="stylesheet" href="motion.css">
+<style>
+  /* A bare test page for shared/motion.js. Not a design. */
+  * { box-sizing: border-box; }
+  html { background: #EFEDEA; color: #231F20; font: 16px/1.45 system-ui, sans-serif; }
+  body { margin: 0; overflow-x: clip; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 20px 96px; }
+  h1 { font-size: clamp(34px, 6vw, 72px); line-height: .95; margin: 0 0 12px; color: #122FAB; }
+  h2 { font-size: 22px; margin: 0 0 8px; }
+  section { padding: 20px 0; border-top: 1px solid #231F2033; }
+  code, .out { font: 14px/1.4 ui-monospace, Menlo, monospace; }
+  .out { display: block; background: #fff; padding: 6px 10px; margin: 8px 0; overflow-wrap: anywhere; }
+  #status { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; margin: 0; background: #231F20; color: #EFEDEA; }
+  .row { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+
+  /* pointerVars: the box leans with --mx / --my (0 = resting) */
+  .lean { width: 120px; height: 80px; background: #122FAB; translate: calc(var(--mx, 0) * 30px) calc(var(--my, 0) * 20px); }
+  /* magnetic: the button keeps its own transform; the kit moves it with `translate` */
+  #magnet { font: inherit; padding: 14px 26px; border: 0; border-radius: 99px; background: #231F20; color: #fff; transform: rotate(-2deg); }
+  #near-magnet { width: 28px; height: 28px; margin-left: 12px; border: 1px dashed #231F20; }
+
+  /* draggable: the kit writes --dx / --dy, this line applies them together with a rotation */
+  #stage { position: relative; height: 240px; background: #028B71; isolation: isolate; }
+  #square { position: absolute; left: 16px; top: 16px; width: 104px; height: 104px; display: grid; place-items: center; background: #FF5630; cursor: grab; transform: translate(var(--dx, 0px), var(--dy, 0px)) rotate(-4deg); }
+  #square.is-dragging { cursor: grabbing; outline: 3px solid #fff; }
+  #square a { color: #231F20; background: #fff; padding: 4px 8px; }
+
+  .cards { display: flex; gap: 20px; flex-wrap: wrap; }
+  .cards a { display: block; width: 150px; color: inherit; }
+  .cards img { display: block; width: 100%; height: auto; }
+
+  /* scrollVars: the section carries --p / --v, its children move */
+  #tall { height: 170vh; background: #5D7EB433; }
+  #tall .pin { position: sticky; top: 28vh; padding: 16px; }
+  #tall .bar { height: 14px; background: #122FAB; transform-origin: left; transform: scaleX(var(--p, 1)); }
+  #tall .dot { width: 44px; height: 44px; margin: 16px auto 0; border-radius: 50%; background: #FF5630; translate: calc(var(--v, 0) * 30vw) 0; }
+
+  .block { height: 150px; margin: 22px 0; padding: 14px; background: #122FAB; color: #fff; display: grid; align-content: center; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .pair .block { background: #496843; }
+  .below { font-size: clamp(28px, 5vw, 56px); line-height: 1; margin: 40px 0 0; color: #122FAB; }
+</style>
+<script>
+  // demo only: note what the browser did when this page was shown (in the pieceTransition readout)
+  window.vtLog = {};
+  addEventListener('pagereveal', (e) => {
+    vtLog.pagerevealHadTransition = !!e.viewTransition;
+    e.viewTransition?.ready.then(() => { vtLog.groupsAnimated = [...new Set(document.getAnimations().map((a) => a.effect?.pseudoElement).filter(Boolean))].join(' '); }).catch(() => {});
+  });
+</script>
+<script type="module" blocking="render">
+  import { init } from './motion.js';
+  init();
+</script>
+</head>
+<body>
+<main>
+  <h1 data-words>Motion kit demo: every helper, with its numbers</h1>
+  <p>A bare page that exercises <code>shared/motion.js</code>. With JavaScript off, or reduced motion, everything below is simply visible and the numbers stay at "not set".</p>
+  <p class="out" id="status">waiting for JavaScript</p>
+
+  <section>
+    <h2>splitWords</h2>
+    <p class="out" id="out-words">not split (needs JavaScript)</p>
+  </section>
+
+  <section>
+    <h2>pointerVars and magnetic</h2>
+    <div class="row">
+      <div class="lean" id="lean"></div>
+      <button type="button" id="magnet">Magnetic button</button>
+      <div id="near-magnet" title="hover here: 26 px from the button"></div>
+    </div>
+    <p class="out" id="out-pointer">--mx not set · --my not set</p>
+    <p class="out" id="out-magnet">button translate: none</p>
+  </section>
+
+  <section>
+    <h2>draggable</h2>
+    <div id="stage"><div id="square"><a href="#link-clicked" id="square-link">link</a></div></div>
+    <p class="out" id="out-drag">--dx not set · --dy not set</p>
+  </section>
+
+  <section>
+    <h2>pieceTransition</h2>
+    <div class="cards">
+      <a data-piece id="piece-1" href="motion-demo-2.html?handle=curiosity"><img src="img/shop/originals/curiosity-480.webp" width="480" height="579" alt="Curiosity"> Curiosity</a>
+      <a data-piece id="piece-2" href="motion-demo-2.html?handle=artstract"><img src="img/shop/originals/artstract-480.webp" width="480" height="654" alt="Artstract"> Artstract</a>
+    </div>
+    <p class="out" id="out-piece">view transition log: needs JavaScript</p>
+  </section>
+
+  <section id="tall" data-scroll>
+    <div class="pin">
+      <h2>scrollVars (this block is 170vh tall)</h2>
+      <p class="out" id="out-scroll">--p not set · --v not set</p>
+      <div class="bar"></div>
+      <div class="dot"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>reveal: six blocks</h2>
+    <p class="out" id="out-reveal">armed 0 · in 0</p>
+    <div class="block" data-reveal>1 · data-reveal (rises)</div>
+    <div class="block" data-reveal="left">2 · data-reveal="left"</div>
+    <div class="block" data-reveal="right" data-reveal-delay="200">3 · data-reveal="right" data-reveal-delay="200"</div>
+    <div class="block" data-reveal="clip">4 · data-reveal="clip"</div>
+    <div class="pair" data-stagger="120">
+      <div class="block" data-reveal>5 · inside data-stagger="120"</div>
+      <div class="block" data-reveal>6 · inside data-stagger="120"</div>
+    </div>
+    <h2 class="below" data-words data-reveal>A headline below the fold waits, then arrives word by word</h2>
+  </section>
+</main>
+
+<script type="module">
+  import { reduced, magnetic, draggable } from './motion.js';
+  const $ = (id) => document.getElementById(id);
+  const html = document.documentElement;
+  const read = (el, prop) => getComputedStyle(el).getPropertyValue(prop).trim() || 'not set';
+  let drops = 0;
+  // demo only: registered after the kit's own listener, so it sees what the kit named before the old page is photographed
+  addEventListener('pageswap', (e) => {
+    const named = [...document.querySelectorAll('a[data-piece] img')].filter((img) => img.style.viewTransitionName === 'piece').map((img) => img.alt).join(',') || 'none';
+    try { sessionStorage.setItem('demo-swap', JSON.stringify({ pageswapHadTransition: !!e.viewTransition, cardNamedPieceAtSwap: named })); } catch {}
+  });
+  magnetic('#magnet');
+  draggable($('square'), { onDrop: () => { drops++; } });
+  setInterval(() => {
+    $('status').textContent = `reduced ${reduced} · --scroll-y ${read(html, '--scroll-y')} · --scroll-dir ${read(html, '--scroll-dir')} · --mx ${read(html, '--mx')} · --my ${read(html, '--my')}`;
+    const h1 = document.querySelector('h1');
+    $('out-words').textContent = `h1: ${h1.querySelectorAll('.wi').length} word spans · aria-label "${h1.getAttribute('aria-label') ?? 'none'}" · last --i ${[...h1.querySelectorAll('.wi')].pop()?.style.getPropertyValue('--i') ?? 'none'}`;
+    $('out-pointer').textContent = `--mx ${read(html, '--mx')} · --my ${read(html, '--my')}`;
+    $('out-magnet').textContent = `button translate: ${getComputedStyle($('magnet')).translate}`;
+    $('out-drag').textContent = `--dx ${read($('square'), '--dx')} · --dy ${read($('square'), '--dy')} · drops ${drops} · z-index ${$('square').style.zIndex || 'none'} · link clicked: ${location.hash === '#link-clicked' ? 'yes' : 'no'}`;
+    $('out-scroll').textContent = `--p ${read($('tall'), '--p')} · --v ${read($('tall'), '--v')}`;
+    $('out-reveal').textContent = `armed ${document.querySelectorAll('[data-armed]').length} · in ${document.querySelectorAll('.is-in').length}`;
+    $('out-piece').textContent = `this page: ${JSON.stringify(window.vtLog)} · saved piece: ${sessionStorage.getItem('tgc-piece') ?? 'none'}`;
+  }, 100);
+</script>
+</body>
+</html>

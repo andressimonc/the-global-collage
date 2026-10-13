@@ -1,0 +1,9 @@
+_source/
+_shots/
+_notes/
+.vercel/
+.DS_Store
+node_modules/
+tools/bin/
+.review-key
+.claude/

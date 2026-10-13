@@ -1,0 +1,521 @@
+[
+ {
+  "id": "cutouts/camila",
+  "source": "about/portrait/cami-754",
+  "instance": "all",
+  "crop": null,
+  "fromArtwork": false,
+  "width": 960,
+  "height": 1412,
+  "sizes": {
+   "480": "shared/img/cutouts/camila-480.webp",
+   "960": "shared/img/cutouts/camila-960.webp"
+  },
+  "description": "Camila herself, waist up in a white shirt, smiling at the camera.",
+  "edge": "clean",
+  "suggest": "The human anchor: stand her on the bottom edge of a hero or the About opener and layer scraps around her."
+ },
+ {
+  "id": "cutouts/hands-cutting",
+  "source": "collage-photos/bw-110",
+  "instance": "all",
+  "crop": null,
+  "fromArtwork": false,
+  "width": 960,
+  "height": 1117,
+  "sizes": {
+   "480": "shared/img/cutouts/hands-cutting-480.webp",
+   "960": "shared/img/cutouts/hands-cutting-960.webp"
+  },
+  "description": "Top-down view of Camila bent over the green cutting mat, craft knife in hand, slicing magazine faces; her hair fills the top and is cut flat by the photo edge.",
+  "edge": "good",
+  "suggest": "The signature \"at work\" piece: hang it from the top edge of a section so the hair bleeds off the page."
+ },
+ {
+  "id": "cutouts/hands-placing",
+  "source": "collage-photos/bw-92",
+  "instance": "all",
+  "crop": [
+   0.2,
+   0.05,
+   0.74,
+   1.0
+  ],
+  "fromArtwork": false,
+  "width": 960,
+  "height": 941,
+  "sizes": {
+   "480": "shared/img/cutouts/hands-placing-480.webp",
+   "960": "shared/img/cutouts/hands-placing-960.webp"
+  },
+  "description": "Both of her hands, rings and bead bracelets on, placing eye and lip scraps on the cutting mat; the forearms are cut flat at the top.",
+  "edge": "good",
+  "suggest": "A process moment for Commissions or Services; let the arms come in from the top edge."
+ },
+ {
+  "id": "cutouts/hand-rings",
+  "source": "collage-photos/bw-107",
+  "instance": "all",
+  "crop": [
+   0.56,
+   0.0,
+   1.0,
+   0.68
+  ],
+  "fromArtwork": false,
+  "width": 960,
+  "height": 1047,
+  "sizes": {
+   "480": "shared/img/cutouts/hand-rings-480.webp",
+   "960": "shared/img/cutouts/hand-rings-960.webp"
+  },
+  "description": "Her left hand alone, big silver ring and painted nails, reaching down from the upper right; the wrist is cut straight.",
+  "edge": "good",
+  "suggest": "A hand that reaches into a layout from a corner to \"hold\" a card, a heading or a scrap."
+ },
+ {
+  "id": "cutouts/mat-with-eyes",
+  "source": "collage-photos/bw-119",
+  "instance": "all",
+  "crop": null,
+  "fromArtwork": false,
+  "width": 960,
+  "height": 839,
+  "sizes": {
+   "480": "shared/img/cutouts/mat-with-eyes-480.webp",
+   "960": "shared/img/cutouts/mat-with-eyes-960.webp"
+  },
+  "description": "The whole green cutting mat seen from above with magazine eyes, lips and torn strips laid out on it.",
+  "edge": "clean",
+  "suggest": "A ready-made collage table: use it as a hero object or as the \"surface\" behind a heading."
+ },
+ {
+  "id": "cutouts/mat-angled",
+  "source": "collage-photos/bw-120",
+  "instance": "all",
+  "crop": null,
+  "fromArtwork": false,
+  "width": 960,
+  "height": 885,
+  "sizes": {
+   "480": "shared/img/cutouts/mat-angled-480.webp",
+   "960": "shared/img/cutouts/mat-angled-960.webp"
+  },
+  "description": "The same cutting mat photographed at an angle, fragments arranged on it, one corner running off the frame.",
+  "edge": "good",
+  "suggest": "A tilted mat for a corner of a section where the straight-on one feels too flat."
+ },
+ {
+  "id": "cutouts/scissors",
+  "source": "about/process/dscf8196",
+  "instance": "all",
+  "crop": [
+   0.63,
+   0.42,
+   0.82,
+   0.94
+  ],
+  "fromArtwork": false,
+  "width": 367,
+  "height": 919,
+  "sizes": {
+   "367": "shared/img/cutouts/scissors-367.webp"
+  },
+  "description": "Her black-handled scissors, closed, with see-through finger holes.",
+  "edge": "clean",
+  "suggest": "A small tool accent beside a \"cut here\" line, a divider or a button; rotates well."
+ },
+ {
+  "id": "cutouts/scrap-eye",
+  "source": "collage-photos/bw-119",
+  "instance": "all",
+  "crop": [
+   0.28,
+   0.54,
+   0.48,
+   0.7
+  ],
+  "fromArtwork": false,
+  "width": 410,
+  "height": 510,
+  "sizes": {
+   "410": "shared/img/cutouts/scrap-eye-410.webp"
+  },
+  "description": "One loose magazine scrap: a grey eye and brow on a tilted four-sided cut.",
+  "edge": "clean",
+  "suggest": "Scatter piece: an eye that watches the visitor from a margin, a card corner or the cart."
+ },
+ {
+  "id": "cutouts/scrap-eye-2",
+  "source": "collage-photos/bw-100",
+  "instance": "1",
+  "crop": [
+   0.13,
+   0.35,
+   0.36,
+   0.66
+  ],
+  "fromArtwork": false,
+  "width": 298,
+  "height": 280,
+  "sizes": {
+   "298": "shared/img/cutouts/scrap-eye-2-298.webp"
+  },
+  "description": "A second loose eye scrap, smaller and squarer than the first.",
+  "edge": "clean",
+  "suggest": "Pair it with scrap-eye and scrap-lips to build a face out of pieces."
+ },
+ {
+  "id": "cutouts/scrap-lips",
+  "source": "collage-photos/bw-100",
+  "instance": "3",
+  "crop": [
+   0.13,
+   0.35,
+   0.36,
+   0.66
+  ],
+  "fromArtwork": false,
+  "width": 238,
+  "height": 164,
+  "sizes": {
+   "238": "shared/img/cutouts/scrap-lips-238.webp"
+  },
+  "description": "A loose magazine scrap of nude-pink lips cut to a leaf shape (small file).",
+  "edge": "clean",
+  "suggest": "Tiny scatter accent; completes the scrap face with the two eyes."
+ },
+ {
+  "id": "cutouts/framed-red",
+  "source": "shop/framed/img-8880",
+  "instance": "all",
+  "crop": null,
+  "fromArtwork": false,
+  "width": 960,
+  "height": 1012,
+  "sizes": {
+   "480": "shared/img/cutouts/framed-red-480.webp",
+   "960": "shared/img/cutouts/framed-red-960.webp"
+  },
+  "description": "A framed original lying at an angle: the orange-haired collage \"Candy\" in a red frame with a white mount.",
+  "edge": "clean",
+  "suggest": "Shows what a buyer receives; good on Shop or Home next to the shipping line. It shows a whole piece, so caption it."
+ },
+ {
+  "id": "cutouts/framed-local-collage",
+  "source": "exhibition/local-collage/dscf7903",
+  "instance": "all",
+  "crop": null,
+  "fromArtwork": false,
+  "width": 960,
+  "height": 688,
+  "sizes": {
+   "480": "shared/img/cutouts/framed-local-collage-480.webp",
+   "960": "shared/img/cutouts/framed-local-collage-960.webp"
+  },
+  "description": "A dense Local Collage piece in its ornate black frame, photographed at the exhibition.",
+  "edge": "clean",
+  "suggest": "The object for The Local Collage section on Exhibition and the Home teaser."
+ },
+ {
+  "id": "cutouts/cactus",
+  "source": "shop/originals/female-cactus",
+  "instance": "all",
+  "crop": null,
+  "fromArtwork": true,
+  "width": 960,
+  "height": 1150,
+  "sizes": {
+   "480": "shared/img/cutouts/cactus-480.webp",
+   "960": "shared/img/cutouts/cactus-960.webp"
+  },
+  "description": "The green knitted cactus with pink blossoms and paper thorns, lifted from \"Female Cactus\".",
+  "edge": "clean",
+  "suggest": "A bold standalone object: grows up from a bottom edge, pops on orange, cobalt and paper alike."
+ },
+ {
+  "id": "cutouts/flower-head",
+  "source": "shop/originals/tears-water-the-soul-pink",
+  "instance": "all",
+  "crop": null,
+  "fromArtwork": true,
+  "width": 917,
+  "height": 1167,
+  "sizes": {
+   "480": "shared/img/cutouts/flower-head-480.webp",
+   "917": "shared/img/cutouts/flower-head-917.webp"
+  },
+  "description": "The woman whose head blooms into flowers and pink jewels, from \"Tears Water The Soul - Pink\".",
+  "edge": "clean",
+  "suggest": "A portrait-scale figure for a hero or a section opener; the source file is small, so do not show it wider than its real width."
+ },
+ {
+  "id": "cutouts/treasure-head",
+  "source": "shop/originals/tears-water-the-soul-silver",
+  "instance": "all",
+  "crop": null,
+  "fromArtwork": true,
+  "width": 960,
+  "height": 1196,
+  "sizes": {
+   "480": "shared/img/cutouts/treasure-head-480.webp",
+   "960": "shared/img/cutouts/treasure-head-960.webp"
+  },
+  "description": "The woman crowned with watches, gold coins, cars and silver flowers, from \"Tears Water The Soul - Silver\".",
+  "edge": "clean",
+  "suggest": "A second head-and-shoulders figure; sits well on a bottom edge beside a headline."
+ },
+ {
+  "id": "cutouts/garden-head",
+  "source": "shop/originals/tears-water-the-soul-green",
+  "instance": "all",
+  "crop": null,
+  "fromArtwork": true,
+  "width": 960,
+  "height": 1088,
+  "sizes": {
+   "480": "shared/img/cutouts/garden-head-480.webp",
+   "960": "shared/img/cutouts/garden-head-960.webp"
+  },
+  "description": "The woman masked in green brocade, moss and midnight blue with paper teardrops falling, from \"Tears Water The Soul - Green\".",
+  "edge": "good",
+  "suggest": "The richest of the three heads; large enough for a hero. A few pale teardrops the lift had left see-through were put back from the original picture."
+ },
+ {
+  "id": "cutouts/butterfly",
+  "source": "shop/originals/the-art-of-art",
+  "instance": "1",
+  "crop": null,
+  "fromArtwork": true,
+  "width": 960,
+  "height": 1289,
+  "sizes": {
+   "480": "shared/img/cutouts/butterfly-480.webp",
+   "960": "shared/img/cutouts/butterfly-960.webp"
+  },
+  "description": "A red admiral butterfly resting on a yellow flower with its long stem, from \"The Art of Art\".",
+  "edge": "clean",
+  "suggest": "Grows up from a bottom edge or peeks over the top of a card; the stem makes a natural divider."
+ },
+ {
+  "id": "cutouts/feather",
+  "source": "shop/originals/the-art-of-art",
+  "instance": "all",
+  "crop": [
+   0.68,
+   0.27,
+   0.97,
+   0.61
+  ],
+  "fromArtwork": true,
+  "width": 562,
+  "height": 960,
+  "sizes": {
+   "480": "shared/img/cutouts/feather-480.webp",
+   "562": "shared/img/cutouts/feather-562.webp"
+  },
+  "description": "A black quill pen with a silver nib, still wearing its pale blue hand-cut paper edge, from \"The Art of Art\".",
+  "edge": "clean",
+  "suggest": "A light diagonal accent next to the artist statement, a signature line or the contact form."
+ },
+ {
+  "id": "cutouts/tiger-woman",
+  "source": "shop/originals/senor-tigre",
+  "instance": "all",
+  "crop": [
+   0.33,
+   0.36,
+   1.0,
+   0.78
+  ],
+  "fromArtwork": true,
+  "width": 960,
+  "height": 899,
+  "sizes": {
+   "480": "shared/img/cutouts/tiger-woman-480.webp",
+   "960": "shared/img/cutouts/tiger-woman-960.webp"
+  },
+  "description": "A laughing woman on a wicker stool with a tiger leaning across her lap, from \"Senor Tigre\".",
+  "edge": "good",
+  "suggest": "A scene in one piece: big, warm and funny beside a headline or as the surprise in an empty state."
+ },
+ {
+  "id": "cutouts/tiger-walking",
+  "source": "shop/originals/senor-tigre",
+  "instance": "all",
+  "crop": [
+   0.2,
+   0.83,
+   0.63,
+   1.0
+  ],
+  "fromArtwork": true,
+  "width": 960,
+  "height": 444,
+  "sizes": {
+   "480": "shared/img/cutouts/tiger-walking-480.webp",
+   "960": "shared/img/cutouts/tiger-walking-960.webp"
+  },
+  "description": "A tiger walking to the right, cut as the magazine strip it is: flat along the back and at the legs, from \"Senor Tigre\".",
+  "edge": "good",
+  "suggest": "Walks along the bottom edge of a section or the top of the footer; hide the flat leg cut on that edge."
+ },
+ {
+  "id": "cutouts/tiger-face",
+  "source": "shop/originals/senor-tigre",
+  "instance": "all",
+  "crop": [
+   0.0,
+   0.68,
+   0.155,
+   0.86
+  ],
+  "fromArtwork": true,
+  "width": 731,
+  "height": 864,
+  "sizes": {
+   "480": "shared/img/cutouts/tiger-face-480.webp",
+   "731": "shared/img/cutouts/tiger-face-731.webp"
+  },
+  "description": "A tiger coming straight at you, head and shoulders, with visible magazine print dots; cut flat on the right and at the bottom, from \"Senor Tigre\".",
+  "edge": "good",
+  "suggest": "Peeks in from a left or bottom edge; keep the flat sides against the edge of the page or a card."
+ },
+ {
+  "id": "cutouts/lips",
+  "source": "shop/originals/lucky-pleasures",
+  "instance": "all",
+  "crop": [
+   0.46,
+   0.0,
+   0.955,
+   0.3
+  ],
+  "fromArtwork": true,
+  "width": 960,
+  "height": 835,
+  "sizes": {
+   "480": "shared/img/cutouts/lips-480.webp",
+   "960": "shared/img/cutouts/lips-960.webp"
+  },
+  "description": "Dark red lips biting a finger, with the whole hand and red nails, from \"Lucky Pleasures\".",
+  "edge": "clean",
+  "suggest": "The loudest piece in the set: a hero accent, a 404, or the mark beside \"add to cart\"."
+ },
+ {
+  "id": "cutouts/blue-hair",
+  "source": "shop/originals/i-am-the-bad-guy",
+  "instance": "all",
+  "crop": [
+   0.2,
+   0.45,
+   0.64,
+   1.0
+  ],
+  "fromArtwork": true,
+  "width": 960,
+  "height": 1648,
+  "sizes": {
+   "480": "shared/img/cutouts/blue-hair-480.webp",
+   "960": "shared/img/cutouts/blue-hair-960.webp"
+  },
+  "description": "A figure seen from behind with long blue hair and a varsity jacket with a grinning monster on the back, from \"I Am The Bad Guy\".",
+  "edge": "clean",
+  "suggest": "A visitor looking at the art: stand it at the bottom of a gallery or shop grid, facing the work."
+ },
+ {
+  "id": "cutouts/onlookers",
+  "source": "shop/originals/curiosity",
+  "instance": "all",
+  "crop": [
+   0.08,
+   0.55,
+   0.56,
+   1.0
+  ],
+  "fromArtwork": true,
+  "width": 960,
+  "height": 1146,
+  "sizes": {
+   "480": "shared/img/cutouts/onlookers-480.webp",
+   "960": "shared/img/cutouts/onlookers-960.webp"
+  },
+  "description": "Three people seen from behind, a child pointing up, a man shading his eyes and a little girl, from \"Curiosity\".",
+  "edge": "clean",
+  "suggest": "Small viewers at the foot of a big picture; they give any artwork above them the feeling of a gallery wall."
+ },
+ {
+  "id": "cutouts/ink-hand",
+  "source": "shop/originals/modern-love",
+  "instance": "all",
+  "crop": [
+   0.28,
+   0.8,
+   0.56,
+   1.0
+  ],
+  "fromArtwork": true,
+  "width": 960,
+  "height": 939,
+  "sizes": {
+   "480": "shared/img/cutouts/ink-hand-480.webp",
+   "960": "shared/img/cutouts/ink-hand-960.webp"
+  },
+  "description": "A black-and-white graphic hand with spread fingers and a torn white paper edge, from \"Modern Love\".",
+  "edge": "clean",
+  "suggest": "Reaches up from the bottom edge of a section or a footer; strong on orange and cobalt."
+ },
+ {
+  "id": "cutouts/snake-dress",
+  "source": "shop/originals/reflections-of-me",
+  "instance": "all",
+  "crop": [
+   0.3,
+   0.0,
+   0.75,
+   0.6
+  ],
+  "fromArtwork": true,
+  "width": 960,
+  "height": 1734,
+  "sizes": {
+   "480": "shared/img/cutouts/snake-dress-480.webp",
+   "960": "shared/img/cutouts/snake-dress-960.webp"
+  },
+  "description": "A woman from behind in a black dress with a white snake down the back, with her pale paper silhouette beside her, from \"Reflections of Me\".",
+  "edge": "clean",
+  "suggest": "A tall, calm figure for a narrow column: beside the artist statement or a product story."
+ },
+ {
+  "id": "cutouts/face-scream",
+  "source": "shop/originals/let-out",
+  "instance": "1",
+  "crop": null,
+  "fromArtwork": true,
+  "width": 960,
+  "height": 2385,
+  "sizes": {
+   "480": "shared/img/cutouts/face-scream-480.webp",
+   "960": "shared/img/cutouts/face-scream-960.webp"
+  },
+  "description": "A face in two strips, calm closed eyes in black and white above, a red-orange shouting mouth below, from \"Let Out\".",
+  "edge": "clean",
+  "suggest": "A tall shout for a left edge (its left side is straight). It is orange itself, so put it on cobalt or paper."
+ },
+ {
+  "id": "cutouts/meditator",
+  "source": "shop/originals/stuck",
+  "instance": "2",
+  "crop": null,
+  "fromArtwork": true,
+  "width": 960,
+  "height": 1544,
+  "sizes": {
+   "480": "shared/img/cutouts/meditator-480.webp",
+   "960": "shared/img/cutouts/meditator-960.webp"
+  },
+  "description": "A man sitting cross-legged with his eyes closed and a loudspeaker for a halo, from \"Stuck\".",
+  "edge": "good",
+  "suggest": "A quiet, funny figure for an empty cart, a \"sent\" message or a waiting state."
+ }
+]
