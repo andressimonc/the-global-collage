@@ -81,11 +81,16 @@ async function store() {
       },
     };
   }
-  const token = process.env.GITHUB_NOTES_TOKEN, repo = process.env.GITHUB_NOTES_REPO ?? '';
-  if (token && /^[\w.-]+\/[\w.-]+$/.test(repo)) {
+  // A store on the open internet is only used behind the review key: without one, anyone with the address could write to it.
+  if (!process.env.REVIEW_KEY) return null;
+  const token = (process.env.GITHUB_NOTES_TOKEN ?? '').trim(), repo = (process.env.GITHUB_NOTES_REPO ?? '').trim();
+  if (token) {
+    // fixed messages: a bad value must never be echoed into a log
+    if (!/^\w+$/.test(token)) throw new Error('GITHUB_NOTES_TOKEN is not a GitHub token');
+    if (!/^[\w.-]+\/[\w.-]+$/.test(repo)) throw new Error('GITHUB_NOTES_REPO must be owner/repo');
     const branch = process.env.GITHUB_NOTES_BRANCH || 'notes';
     const github = (path, init = {}) => fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
-      ...init, cache: 'no-store',
+      ...init, cache: 'no-store', signal: AbortSignal.timeout(8000),
       headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'User-Agent': 'the-global-collage-review' },
     });
     // One reviewer's file as GitHub has it now: { sha, doc }, or null when there is none. who is already checked against WHO.
@@ -100,7 +105,9 @@ async function store() {
       // Each save is one commit. A save that lost a race with another (GitHub answers 409 or 422) reads the new sha and tries once more.
       save: async (who, doc) => {
         for (let attempt = 0; ; attempt++) {
-          const sha = (await file(who))?.sha;
+          const now = await file(who);
+          if (attempt && now?.doc?.savedAt > doc.savedAt) return; // a newer save got there first: leave it
+          const sha = now?.sha;
           const put = await github(`notes/${who}.json`, { method: 'PUT', body: JSON.stringify({ message: `Review notes: ${who}`, branch, sha, content: Buffer.from(JSON.stringify(doc, null, 2)).toString('base64') }) });
           if (put.ok) return;
           if ((put.status === 409 || put.status === 422) && attempt === 0) continue;
@@ -110,7 +117,10 @@ async function store() {
       load: async (who) => (await file(who))?.doc ?? null,
       list: async () => {
         const got = await github(`notes?ref=${encodeURIComponent(branch)}`);
-        if (got.status === 404) return [];
+        if (got.status === 404) { // no notes folder yet, or the branch or repository is not reachable: tell those apart
+          if (!(await github(`?ref=${encodeURIComponent(branch)}`)).ok) throw new Error('github: repository or branch not reachable');
+          return [];
+        }
         if (!got.ok) throw new Error(`github list: ${got.status}`);
         const names = (await got.json()).map((entry) => entry.name).filter((name) => name.endsWith('.json') && WHO.test(name.slice(0, -5))).sort();
         return Promise.all(names.map(async (name) => (await file(name.slice(0, -5)))?.doc ?? null));

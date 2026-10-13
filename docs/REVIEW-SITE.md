@@ -25,8 +25,10 @@ key opens `notes.html`, so anyone holding her link could read the notes too.
 
 - In her browser at once (`localStorage`, key `tgc-review:<who>`), so a reload or a closed tab loses nothing.
 - On the site two seconds after the last change and on Send: one JSON file per reviewer,
-  `notes/<who>.json` in Vercel Blob (`{ who, notes, done, savedAt }`; `done` is true once she pressed Send).
+  `notes/<who>.json` on the `notes` branch of the GitHub repository (`{ who, notes, done, savedAt }`; `done` is true once she pressed Send).
 - A new device or browser loads her notes back from the site. Last save wins.
+- Text typed in the note box but not sent stays in that browser only, as a draft on its option. Pressing
+  "Send my notes to Dre" turns every such draft into a note, so nothing she typed is left behind.
 - If the site cannot save (no storage, wrong key, offline) the page says "Saved on this device", keeps
   trying, and Wrap-up shows "Copy all my notes" to paste into a message. Nothing is lost.
 
@@ -35,15 +37,20 @@ key opens `notes.html`, so anyone holding her link could read the notes too.
 `npm run dev`, then `http://localhost:4180/?who=dre`. No key is needed. Notes land in `_notes/<who>.json`
 (not in git); read them there or at `http://localhost:4180/review/notes.html`.
 
-## Putting it online (only when Dre says so; not done yet)
+## Online (set up 2026-10-13)
 
-1. Check: `npm test`, and all nine `public/option-N/index.html` exist (a missing one shows "not ready yet").
-2. Create or link the Vercel project with this folder as its root. No build step: `public/` is the site, `api/` the functions.
-3. Vercel dashboard → Storage → create a Blob store (public access) → connect it to the project.
-   That adds `BLOB_READ_WRITE_TOKEN`. Vercel installs `@vercel/blob` from `package.json` at deploy.
-4. Project → Settings → Environment Variables: add `REVIEW_KEY`, a long random string, for Production.
-   Without it anyone with the address could read and write notes.
-5. Deploy to production.
-6. Open `https://<site>/?who=dre&k=<key>`: write a note, wait for "Saved", press Send in Wrap-up, then
-   open `notes.html?k=<key>` and see it. Try it once on an iPhone (the Notes sheet with the keyboard up).
-7. Give Dre her link, `https://<site>/?who=camila&k=<key>`. He sends it; nothing goes out without his yes.
+- Site: https://the-global-collage.vercel.app (Vercel project `the-global-collage`, team `dres-projects-6e4b1739`).
+  It is published from this folder with `vercel deploy --prod` (Dre runs it; a chat cannot). The GitHub
+  repository is not connected to Vercel, so a push does not publish and a saved note does not rebuild the site.
+- Code: GitHub `andressimonc/the-global-collage` (private), branch `main`.
+- **Notes are saved into the same repository, on the branch `notes`**, as `notes/<who>.json`, one commit per
+  save. Read them with `git fetch origin notes && git show origin/notes:notes/camila.json`, on GitHub, or at
+  `/review/notes.html?k=<key>`.
+- Vercel settings (Production): `REVIEW_KEY` (the key in the links; a local copy is in `.review-key`, not in
+  git), `GITHUB_NOTES_REPO` = `andressimonc/the-global-collage`, `GITHUB_NOTES_TOKEN` = a fine-grained GitHub
+  token for that one repository with Contents: Read and write (Dre made it; when it expires every save fails
+  and the page falls back to "Saved on this device").
+- Without `REVIEW_KEY` the site refuses to store notes at all. Vercel Blob is still supported as a fallback
+  store (`BLOB_READ_WRITE_TOKEN`) but is not used.
+- To clear a reviewer and start clean: delete `notes/<who>.json` on the `notes` branch.
+- Before sending a link: one real save as `?who=dre`, then look for the commit "Review notes: dre" on `notes`.

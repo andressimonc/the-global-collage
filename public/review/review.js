@@ -262,6 +262,11 @@ $('composer').addEventListener('submit', (event) => {
 $('plan').addEventListener('change', (event) => { record.notes.plan = event.target.value; changed(); });
 $('overall').addEventListener('input', () => { record.notes.overall = $('overall').value; changed(); });
 $('send').addEventListener('click', async () => {
+  // a note she typed on an option but never pressed Send on goes too: nothing she wrote stays behind on this device
+  for (const [n, text] of Object.entries(record.drafts)) if (text.trim()) thread(n).messages.push({ text: text.trim(), at: Date.now() });
+  record.drafts = {};
+  drawDots();
+  drawWrap();
   record.sent = true;
   version++;
   record.dirty = true;

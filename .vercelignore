@@ -7,3 +7,4 @@ dev
 .claude
 .review-key
 *.md
+.env*

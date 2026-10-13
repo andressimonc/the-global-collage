@@ -33,9 +33,9 @@ const notes = {
   },
   favorite: 4, plan: 'mix', overall: 'The poster, with the shop from the archive.',
 };
-const post = (body) => POST(new Request('http://local/api/notes', { method: 'POST', body: typeof body === 'string' ? body : JSON.stringify(body) }));
-const get = (query) => GET(new Request(`http://local/api/notes?${query}`));
-const status = async (body) => (await post(body)).status;
+let post = (body) => POST(new Request('http://local/api/notes', { method: 'POST', body: typeof body === 'string' ? body : JSON.stringify(body) }));
+let get = (query) => GET(new Request(`http://local/api/notes?${query}`));
+const status = async (body) => (await post(body)).status; // reads post each time, so the hosted sections can add the key
 const good = { who: 'camila', notes, done: false };
 
 // nothing configured: the page is told to keep the notes on the device
@@ -137,6 +137,11 @@ assert.equal((await get('who=camila&k=anything')).status, 200, 'no REVIEW_KEY: t
 // Vercel Blob, when there is no folder
 delete process.env.NOTES_DIR;
 process.env.BLOB_READ_WRITE_TOKEN = 'test-token';
+assert.equal((await get('who=camila')).status, 501, 'a hosted store is never used without a review key');
+process.env.REVIEW_KEY = 'paper-scissors';
+const hostedPost = post, hostedGet = get;
+post = (body) => hostedPost(typeof body === 'string' ? body : { k: 'paper-scissors', ...body });
+get = (query) => hostedGet(`${query}&k=paper-scissors`);
 assert.equal((await get('who=camila')).status, 404);
 assert.equal(await status({ who: 'cam', notes: { overall: 'A shorter name must not be mistaken for camila.' } }), 200);
 assert.equal(await status(good), 200);
@@ -161,22 +166,35 @@ assert.deepEqual(blob.calls, [['list', { prefix: 'notes/' }]]);
   globalThis.fetch = async (url, init = {}) => {
     const { pathname, searchParams } = new URL(url);
     assert.ok(pathname.startsWith('/repos/dre/tgc/contents/'), `unexpected request ${url}`);
-    assert.equal(init.headers.Authorization, 'Bearer gh-test-token');
+    assert.equal(init.headers.Authorization, 'Bearer gh_test_token');
     const path = pathname.replace('/repos/dre/tgc/contents/', '');
     calls.push([init.method ?? 'GET', path, searchParams.get('ref'), init.body ? JSON.parse(init.body) : null]);
+    const branches = ['notes', 'review']; // the branches this pretend repository has
     if (init.method === 'PUT') {
-      if (failNextPut) return new Response('{}', { status: failNextPut, statusText: String(failNextPut = 0) });
+      if (!branches.includes(JSON.parse(init.body).branch)) return new Response('{}', { status: 404 });
+      if (failNextPut) { // a lost race means the file changed under us: give it a new sha, as GitHub would
+        const code = failNextPut; failNextPut = 0;
+        if (code === 409 && repoFiles.has(path)) repoFiles.set(path, { ...repoFiles.get(path), sha: `sha-${++sha}` });
+        return new Response('{}', { status: code });
+      }
       const body = JSON.parse(init.body);
       if ((repoFiles.get(path)?.sha ?? undefined) !== body.sha) return new Response('{}', { status: 409 });
       repoFiles.set(path, { sha: `sha-${++sha}`, content: body.content });
       return Response.json({ content: { path } }, { status: 201 });
     }
-    if (path === 'notes') return Response.json([...repoFiles.keys()].map((p) => ({ name: p.replace('notes/', ''), path: p })).concat({ name: 'README.md' }));
+    if (!branches.includes(searchParams.get('ref'))) return new Response('{}', { status: 404 });
+    if (path === '') return Response.json([]);
+    if (path === 'notes') return repoFiles.size === 0 ? new Response('{}', { status: 404 }) : Response.json([...repoFiles.keys()].map((p) => ({ name: p.replace('notes/', ''), path: p })).concat({ name: 'README.md' }));
     return repoFiles.has(path) ? Response.json(repoFiles.get(path)) : new Response('{}', { status: 404 });
   };
-  process.env.GITHUB_NOTES_TOKEN = 'gh-test-token';
+  process.env.GITHUB_NOTES_TOKEN = 'gh_test_token';
   process.env.GITHUB_NOTES_REPO = 'dre/tgc';
   assert.equal((await get('who=camila')).status, 404, 'GitHub is asked, not Blob');
+  assert.deepEqual((await (await get('all=1')).json()).reviewers, [], 'an empty branch lists nobody');
+  calls.length = 0;
+  assert.equal((await hostedPost({ ...good, k: 'wrong' })).status, 401);
+  assert.equal((await hostedGet('all=1&k=wrong')).status, 401);
+  assert.equal(calls.length, 0, 'without the key nothing is asked of GitHub');
   assert.equal(await status(good), 200);
   const firstPut = calls.find(([method]) => method === 'PUT');
   assert.equal(firstPut[1], 'notes/camila.json');
@@ -192,22 +210,38 @@ assert.deepEqual(blob.calls, [['list', { prefix: 'notes/' }]]);
   assert.deepEqual(fromGitHub.notes, fromBlob.notes, 'load reads back what save wrote');
   failNextPut = 409; calls.length = 0;
   assert.equal(await status(good), 200, 'a save that lost a race tries once more');
+  const puts = calls.filter(([method]) => method === 'PUT');
+  assert.equal(puts.length, 2);
+  assert.notEqual(puts[1][3].sha, puts[0][3].sha, 'the second try carries the new sha');
+  failNextPut = 422; calls.length = 0;
+  assert.equal(await status(good), 200, 'a missing sha on an existing file is retried the same way');
   assert.equal(calls.filter(([method]) => method === 'PUT').length, 2);
   assert.equal(await status({ who: 'dre', notes: { overall: 'Second reviewer.' } }), 200);
   assert.deepEqual((await (await get('all=1')).json()).reviewers.map((doc) => doc.who), ['camila', 'dre']);
   process.env.GITHUB_NOTES_BRANCH = 'review';
   assert.equal(await status({ who: 'other', notes: {} }), 200);
   assert.equal(calls.findLast(([method]) => method === 'PUT')[3].branch, 'review');
+  assert.equal((await get('who=other')).status, 200, 'reads follow the branch setting too');
+  process.env.GITHUB_NOTES_BRANCH = 'no-such-branch';
+  assert.equal(await status(good), 502, 'a branch that does not exist is a failure, not a silent success');
+  assert.equal((await get('all=1')).status, 502, 'and an unreachable branch is not read as "no notes"');
   delete process.env.GITHUB_NOTES_BRANCH;
   failNextPut = 401;
   assert.equal(await status(good), 502, 'a refused token is a storage failure the page can see');
-  assert.equal(logged.length, 1); logged.length = 0;
-  globalThis.fetch = blobFetch;
+  process.env.GITHUB_NOTES_REPO = 'dre/tgc\n';
+  assert.equal(await status(good), 200, 'a pasted repository name with a line break still works');
   process.env.GITHUB_NOTES_REPO = 'not a repo';
   blob.calls.length = 0;
-  assert.equal((await get('who=camila')).status, 200, 'a repository name that is not owner/repo is ignored and Blob answers');
-  assert.deepEqual(blob.calls, [['list', { prefix: 'notes/camila.json' }]]);
+  assert.equal((await get('who=camila')).status, 502, 'a repository name that is not owner/repo fails loudly instead of quietly using Blob');
+  assert.equal(blob.calls.length, 0);
+  process.env.GITHUB_NOTES_REPO = 'dre/tgc';
+  process.env.GITHUB_NOTES_TOKEN = 'gh_test_token\nwith a break';
+  assert.equal(await status(good), 502);
+  assert.ok(logged.length >= 4, 'each storage failure is logged');
+  assert.ok(logged.every((line) => !line.includes('gh_test_token')), 'the token never reaches a log line');
+  logged.length = 0;
   delete process.env.GITHUB_NOTES_TOKEN; delete process.env.GITHUB_NOTES_REPO;
+  globalThis.fetch = blobFetch;
   blob.calls.length = 0;
 }
 

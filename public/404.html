@@ -13,6 +13,8 @@
   h1 { max-width: 30ch; margin: 0 0 20px; font-size: 18px; font-weight: 500; }
   button { padding: 10px 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--page); color: inherit; font: inherit; font-weight: 600; cursor: pointer; }
   button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+  /* The options glide between pages (shared/motion.css). Opting in here too lets their glide finish instead of logging an aborted transition. */
+  @media screen and (prefers-reduced-motion: no-preference) { @view-transition { navigation: auto; } }
 </style>
 </head>
 <body>
