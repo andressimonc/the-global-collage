@@ -45,6 +45,14 @@ node tools/shot.mjs /option-1/index.html _shots/x --mobile
 - Navigation, footer and cart markup are repeated in each page of an option.
 - Pictures come in fixed widths (`name-480.webp` … `-2400.webp`), made by `tools/prepare-assets.py`.
 
-## Not done here
+## Where it stands (2026-10-13)
 
-Nothing is deployed. Previews are local only until Dre says otherwise.
+- **Live for review** at https://the-global-collage.vercel.app (unlisted, noindex). Published with
+  `vercel deploy --prod --yes --scope dres-projects-6e4b1739` from this folder; **Dre runs it** (a chat's
+  auto mode refuses production deploys). GitHub `andressimonc/the-global-collage` (private) is not
+  connected to Vercel, so a push does not publish.
+- Camila reviews at `/?who=camila&k=<key>`; her notes are committed to the `notes` branch as
+  `notes/camila.json`. The key is in `.review-key` (not in git). Details: `docs/REVIEW-SITE.md`.
+- Every option is its Home page only. Next: read her notes, then build the other pages of what she picks.
+- This folder was moved here from a scratch workspace on 2026-10-13; `.git`, `.claude/launch.json` and
+  `tools/bin/cutout` were rebuilt after the move (`swiftc -O tools/cutout.swift -o tools/bin/cutout`).
