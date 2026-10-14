@@ -1,0 +1,478 @@
+/* The Global Collage — Site A "Saturn on the Mat".
+   Option 9's orbit turning over option 1's green cutting mat. The page ground is the mat (body); paper and orange
+   sections are sheets lying on it; her cut-outs lie on it as cut paper. Words never sit straight on the green unless
+   they are large display type (white Neco, 3.6:1, large-text AA); everything smaller sits on paper (.slip, .card).
+   Everything that orbits is placed by js/site.js (transform, opacity and --dim only); with no script each ring falls
+   back to the plain list written under its "no script" comment.
+
+   1 tokens  2 base  3 the mat, sheets, paper  4 buttons and links  5 the orbit  6 logo  7 hero  8 names  9 about
+   10 the work  11 services  12 stay in touch  13 the deeper why  14 footer  15 the planet control  16 menu  17 cart
+   18 the shop layer's notices  19 motion  20 phone */
+
+/* ---------- 1. tokens ---------- */
+:root {
+  --cobalt: #122FAB; --paper: #EFEDEA; --ink: #231F20; --orange: #FF5630;
+  --mat: #028B71; --mat-line: rgba(247, 240, 180, .30);
+  --serif: "Neco", Georgia, serif;
+  --sans: "TT Interphases", system-ui, sans-serif;
+  --mono: "TT Interphases Mono", ui-monospace, monospace;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --gutter: clamp(1.25rem, 4.2vw, 3.75rem);
+  --pad: clamp(3.75rem, 8.5vw, 7.5rem);
+  --edge: clamp(8px, 2.6vw, 38px);   /* the strip of mat left bare beside a sheet */
+  --u: 64px;                         /* one square of the mat */
+  --ctl: 4rem;                       /* the planet control */
+  --shadow-rest: 0 1px 1px rgba(0, 20, 14, .34), 0 9px 16px -7px rgba(0, 20, 14, .45);
+  --drop-flat: drop-shadow(0 1px 1px rgba(0, 20, 14, .34)) drop-shadow(0 3px 4px rgba(0, 20, 14, .16));
+  --drop-scrap: drop-shadow(0 1px 1px rgba(0, 20, 14, .45)) drop-shadow(0 3px 3px rgba(0, 20, 14, .2));
+  --vt-out-dur: .5s; --vt-in-dur: 1.1s;
+}
+@media (max-width: 1099px) { :root { --u: 56px; } }
+@media (max-width: 699px) { :root { --u: 44px; } }
+/* each section names its ground; components read these, never a colour.
+   --chip / --chip-fg: a solid control on this ground (a button, a disc); --bg is also the colour far pieces are veiled in */
+[data-tone="mat"] { --bg: var(--mat); --fg: var(--paper); --chip: var(--paper); --chip-fg: var(--cobalt); }
+[data-tone="paper"] { --bg: var(--paper); --fg: var(--cobalt); --chip: var(--cobalt); --chip-fg: var(--paper); }
+[data-tone="orange"] { --bg: var(--orange); --fg: var(--ink); --chip: var(--ink); --chip-fg: var(--paper); }
+[data-tone="ink"] { --bg: var(--ink); --fg: var(--paper); --chip: var(--paper); --chip-fg: var(--ink); }
+[data-tone] { color: var(--fg); }
+
+/* ---------- 2. base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--mat); -webkit-text-size-adjust: 100%; }
+html.is-locked { overflow: hidden; }
+/* the mat: one pale line every --u, measured from the middle of the page; a soft light from the top left */
+body {
+  margin: 0; overflow-x: clip; color: var(--paper); font: 400 1.0625rem/1.5 var(--sans); -webkit-font-smoothing: antialiased;
+  background-color: var(--mat);
+  background-image:
+    linear-gradient(to right, var(--mat-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--mat-line) 1px, transparent 1px),
+    radial-gradient(ellipse 90% 70% at 28% 0, rgba(255, 255, 255, .13), transparent 72%);
+  background-size: var(--u) var(--u), var(--u) var(--u), 100% 1300px;
+  background-position: calc(50% + var(--u) / 2) 0, 0 0, 0 0;
+  background-repeat: repeat, repeat, no-repeat;
+}
+h1, h2, h3, p, ul, figure { margin: 0; }
+ul { padding: 0; list-style: none; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+[hidden] { display: none !important; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip { position: fixed; z-index: 200; left: 12px; top: 12px; padding: .75rem 1rem; background: var(--paper); color: var(--cobalt); font-weight: 600; transform: translateY(-300%); }
+.skip:focus { transform: none; }
+main { overflow-x: clip; }   /* turned paper and things sliding in from the side never make the page scroll sideways (on body this clip would pass to the page and stop working) */
+main > section { position: relative; z-index: 1; }
+.cut-bw { filter: grayscale(1) contrast(1.18); }   /* her photo cut-outs only, never an artwork */
+
+.h2 { font: 500 clamp(2.6rem, 6.2vw, 5.5rem)/.94 var(--serif); letter-spacing: -.022em; }
+.h3 { font: 500 clamp(1.6rem, 3vw, 2.5rem)/1 var(--serif); letter-spacing: -.015em; }
+.lead { font: 400 clamp(1.3rem, 2.15vw, 2rem)/1.3 var(--serif); letter-spacing: -.005em; }
+.soon { margin-left: .5em; font: 500 .6875rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; vertical-align: .9em; }
+
+/* ---------- 3. the mat, sheets, paper ---------- */
+/* a sheet: a whole section of paper (or orange paper) laid on the mat, inset so a strip of mat shows each side.
+   The paper is the ::before, turned a fraction of a degree; the words on it stay level. */
+.sheet { margin-inline: var(--edge); isolation: isolate; }
+.sheet::before { content: ""; position: absolute; z-index: -1; inset: 0 -3px; background: var(--bg); box-shadow: var(--shadow-rest); transform: rotate(var(--sheet-r, -.28deg)); pointer-events: none; }
+.sheet[data-tone="paper"]::before { background: linear-gradient(178deg, #F5F3F0, var(--paper) 34%, #E9E6E1); }
+/* a slip: a small cut piece of paper that carries words lying on the mat (captions, hints, the subhead, a link) */
+.slip { position: relative; isolation: isolate; color: var(--cobalt); --bg: var(--paper); --fg: var(--cobalt); --chip: var(--cobalt); --chip-fg: var(--paper); filter: var(--drop-flat); }
+.slip::before { content: ""; position: absolute; z-index: -1; inset: 0; background: var(--paper); clip-path: polygon(0 6%, 99.3% 0, 100% 92%, .8% 100%); }
+/* a card: a bigger cut piece of paper for running text and a form */
+.card { position: relative; isolation: isolate; color: var(--cobalt); --bg: var(--paper); --fg: var(--cobalt); --chip: var(--cobalt); --chip-fg: var(--paper); padding: clamp(1.5rem, 3.4vw, 3rem); filter: var(--drop-flat); }
+.card::before { content: ""; position: absolute; z-index: -1; inset: 0; background: var(--paper); clip-path: polygon(0 1.4%, 99.5% 0, 100% 98.8%, .7% 100%); }
+/* a scrap: one of her real cut-outs (an eye, lips, a torn strip) lying on the mat. Never a sticker: no border, no peel.
+   Its resting turn is --r; it drifts with the scroll (--v from the section, by --dx / --dy / --dr) and shifts away from
+   the pointer (--sx / --sy / --sr, js). */
+.scrap {
+  position: absolute; z-index: 0; left: var(--x); top: var(--y); width: var(--w); height: auto; pointer-events: none; user-select: none;
+  transform: translate(calc(var(--sx, 0px) + var(--v, 0) * var(--dx, 0px)), calc(var(--sy, 0px) + var(--v, 0) * var(--dy, 0px))) rotate(calc(var(--r, 0deg) + var(--sr, 0deg) + var(--v, 0) * var(--dr, 0deg)));
+  filter: var(--drop-scrap);
+  transition: transform .9s var(--ease), rotate 1.4s var(--ease) var(--reveal-delay, 0s);
+}
+[data-armed]:not(.is-in).scrap { rotate: var(--ar, 9deg); }   /* below the first screen it slides in turned, and settles */
+.scraps { position: absolute; z-index: 0; inset: 0; pointer-events: none; }
+
+/* ---------- 4. buttons and links ---------- */
+/* a label with a disc at its end: the disc is the ground's colour, so it reads as a hole punched through to the mat */
+.btn { display: inline-flex; align-items: center; gap: 1rem; min-height: 3.5rem; padding: .375rem .375rem .375rem 1.6rem; border: 0; border-radius: 99px; background: var(--chip); color: var(--chip-fg); font: 600 1rem/1.1 var(--sans); text-decoration: none; cursor: pointer; box-shadow: 0 1px 1px rgba(0, 20, 14, .22), 0 6px 12px -6px rgba(0, 20, 14, .4); }
+.btn:focus-visible { outline-color: var(--fg); }
+.btn__disc { flex: none; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--bg); color: var(--fg); transition: transform .5s var(--ease); }
+.btn__disc svg, .link svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.btn:hover .btn__disc { transform: rotate(-45deg) scale(1.06); }
+.link { position: relative; display: inline-flex; align-items: center; gap: .55rem; padding: .9rem 0; font: 600 1rem/1.1 var(--sans); text-decoration: none; }
+.link::after { content: ""; position: absolute; left: 0; right: 0; bottom: .6rem; height: 1.5px; background: currentColor; transform-origin: 100% 50%; }
+.link.slip { padding: .85rem 1.1rem; }
+.link.slip::after { left: 1.1rem; right: 1.1rem; bottom: .62rem; }
+.link svg { transition: transform .5s var(--ease); }
+.link:hover svg { transform: translateX(5px); }
+
+/* ---------- 5. the orbit (shared by every ring) ---------- */
+.orbit__ring { margin: 0; padding: 0; list-style: none; }
+.orbit__bar { display: none; }
+.is-orbit .orbit__item { position: absolute; left: 0; top: 0; will-change: transform; }
+.orbit__path { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; fill: none; stroke: currentColor; stroke-width: 1.5; }
+.orbit__path--front { z-index: 45; }
+.is-orbit .orbit__bar { position: absolute; z-index: 90; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: .9rem; white-space: nowrap; pointer-events: auto; }
+/* the arrows: discs of paper on the mat */
+.orbit__turn { flex: none; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; border: 0; border-radius: 50%; background: var(--chip); color: var(--chip-fg); box-shadow: 0 1px 1px rgba(0, 20, 14, .3), 0 4px 8px -3px rgba(0, 20, 14, .35); cursor: pointer; transition: transform .5s var(--ease); }
+.orbit__turn svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.orbit__turn:hover { transform: scale(1.12); }
+.orbit__turn:focus-visible { outline-color: var(--fg); }
+.orbit__hint { display: block; font: 500 .75rem/1.3 var(--sans); }
+.orbit__hint.slip { padding: .45rem .8rem; font-size: .8125rem; }
+
+/* ---------- 6. the logo: alone in the top-left corner, nothing behind it ---------- */
+/* white over the mat (the default, the hero is mat), black over paper and orange, gone over the footer (it has its own) */
+.logo { position: fixed; z-index: 60; top: clamp(.9rem, 2.2vw, 1.75rem); left: clamp(.9rem, 2.2vw, 1.75rem); width: clamp(5.5rem, 8.2vw, 7.5rem); transform-origin: 0 0; transition: scale .6s var(--ease), opacity .3s linear; }
+.logo img { width: 100%; transition: opacity .35s linear; }
+.logo__dark { position: absolute; inset: 0; opacity: 0; }
+html[data-logo="dark"] .logo__dark { opacity: 1; }
+html[data-logo="dark"] .logo__light { opacity: 0; }
+html[data-logo="none"] .logo { opacity: 0; pointer-events: none; }
+html.is-scrolled .logo { scale: .58; }
+
+/* ---------- 7. hero: her pieces on a ring around the headline, over the mat ---------- */
+/* The hero is one screen when the screen is at least --floor tall. On a shorter screen it is 8.5rem taller than the screen
+   instead, so the ring keeps its size and its arrows start just below the planet, which stays fixed to the screen's foot. */
+.hero { z-index: 0; isolation: isolate; overflow: clip; display: flex; flex-direction: column; align-items: center; --floor: 42rem; min-height: max(var(--floor), 100svh + clamp(0px, (var(--floor) - 100svh) * 9999, 8.5rem)); padding: clamp(5.5rem, 11.5svh, 7.75rem) var(--gutter) 0; text-align: center; }
+main > .hero { z-index: 0; }
+.hero__text { position: relative; z-index: 40; max-width: 100%; }
+.hero h1 { font: 500 clamp(3.25rem, min(8.1vw, 13.4svh), 8.4rem)/.92 var(--serif); letter-spacing: -.026em; --words-delay: .15s; }
+.hero h1 .l { display: block; }
+/* the subhead is a strip of paper cut to fit the words */
+.hero__sub { width: fit-content; max-width: min(44rem, 100%); margin: clamp(1rem, 2.3svh, 1.5rem) auto 0; padding: .6em 1.05em .65em; font: 400 clamp(1rem, 1.3vw, 1.1875rem)/1.45 var(--sans); text-wrap: balance; }
+.hero__sub::before { clip-path: polygon(0 4%, 99.6% 0, 100% 95%, .4% 100%); }
+.hero__act { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .6rem 1.4rem; margin-top: clamp(1rem, 2.6svh, 1.6rem); }
+
+/* the scraps lying on the mat around the ring (positions are % of the hero; --a* is where each slides in from) */
+.hero .scrap--eye   { --x: 83%; --y: 6%;  --w: clamp(4.5rem, 7.6vw, 7.75rem); --r: 13deg;  --dx: 40px;  --dy: -190px; --dr: 16deg;  --ax: 70px;  --ay: -50px; --ar: 18deg; }
+.hero .scrap--ell   { --x: 3%;  --y: 76%; --w: clamp(6.5rem, 11vw, 10.5rem);  --r: 9deg;   --dx: -70px; --dy: -120px; --dr: 10deg;  --ax: -80px; --ay: 30px;  --ar: -14deg; }
+.hero .scrap--lips  { --x: 27%; --y: 77%; --w: clamp(3.2rem, 4.4vw, 4.4rem);  --r: 64deg;  --dx: -24px; --dy: -230px; --dr: -14deg; --ax: 0px;   --ay: 70px;  --ar: 20deg; }
+.hero .scrap--strip { --x: 71%; --y: 81%; --w: clamp(7rem, 12.5vw, 12rem);   --r: -9deg;  --dx: 80px;  --dy: -110px; --dr: -10deg; --ax: 90px;  --ay: 20px;  --ar: 12deg; }
+
+/* no script: the pieces are a tidy row under the words */
+.orbit--hero .orbit__ring { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin: 2.5rem 0 3rem; }
+.print { position: relative; display: block; height: var(--ph, clamp(6rem, 13vw, 10rem)); aspect-ratio: var(--r, .8); background: var(--avg, var(--mat)); box-shadow: var(--shadow-rest); }
+.print img { width: 100%; height: 100%; transition: transform .6s var(--ease); }
+.print::after { content: ""; position: absolute; inset: 0; background: var(--bg); opacity: var(--dim, 0); pointer-events: none; }   /* further round = more of the mat's colour */
+
+/* script on: the ring */
+.orbit--hero.is-orbit { position: absolute; inset: 0; pointer-events: none; }
+.orbit--hero.is-orbit .orbit__ring { display: block; margin: 0; }
+.orbit--hero.is-orbit .orbit__item { pointer-events: auto; }
+.orbit--hero .orbit__path { stroke-opacity: .55; }
+.orbit--hero .orbit__bar { top: var(--bar-y, auto); }
+.orbit__cap { min-width: 11.5rem; padding: .45rem .9rem .5rem; font: 500 .9375rem/1.3 var(--sans); text-align: center; }
+.orbit__cap a { margin-left: .35em; font-weight: 700; text-underline-offset: .2em; }
+.orbit__cap .orbit__hint { opacity: .8; }
+.hero.is-turnable { touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
+.hero.is-turnable .print { cursor: grab; }
+.hero.is-turnable .is-front .print { cursor: pointer; }
+.is-front .print:hover img { transform: scale(1.035); }
+.is-turning, .is-turning * { cursor: grabbing !important; }
+
+/* ---------- 8. social proof: the names ride a ring around the label, on a sheet of paper ---------- */
+.proof { padding: clamp(1.75rem, 3vw, 2.5rem) var(--gutter) clamp(2.75rem, 4.5vw, 3.75rem); text-align: center; }
+.proof__label { max-width: 12em; margin-inline: auto; font: 500 clamp(1.5rem, 2.6vw, 2.2rem)/1.08 var(--serif); letter-spacing: -.012em; text-wrap: balance; }
+.proof__names { display: grid; gap: .5rem; margin-top: 1.4rem; font: 500 clamp(1.15rem, 2.2vw, 2.05rem)/1.1 var(--serif); letter-spacing: -.012em; }
+.proof .is-orbit { position: relative; height: clamp(18rem, 24vw, 21.5rem); }
+.proof .is-orbit .proof__label { position: absolute; z-index: 40; left: 50%; top: var(--cy, 47%); width: max-content; max-width: 11em; translate: -50% -50%; }
+.proof .is-orbit .proof__names { display: block; margin: 0; }
+.proof .is-orbit .orbit__item { width: max-content; max-width: 13em; padding: .28em .5em; text-wrap: balance; }   /* each sits just outside the line */
+.orbit__dot { display: none; }
+.is-orbit .orbit__dot { position: absolute; left: 0; top: 0; display: block; width: .3em; height: .3em; margin: -.15em 0 0 -.15em; border-radius: 50%; background: currentColor; }
+.bead { display: block; opacity: calc(1 - var(--dim, 0)); }
+
+/* ---------- 9. about teaser: option 4's orange poster, about two thirds its size, as a sheet of orange paper ---------- */
+/* her name huge in off-white, her portrait cut out in black and white standing on the paper's foot in front of it */
+.about { --sheet-r: .34deg; margin-top: -.9rem; z-index: 2; }
+.about__in { --mega: min(14.6vw, 13.5rem); position: relative; width: min(100% - 2 * var(--gutter), 66rem); margin-inline: auto; padding-top: clamp(1.75rem, 3vw, 2.75rem); }
+.mega { font: 900 var(--mega, 14vw)/.78 var(--sans); font-stretch: 75%; letter-spacing: -.02em; text-transform: uppercase; white-space: nowrap; color: var(--paper); }
+.mega__line { display: block; translate: calc(var(--v, 0) * var(--drift, -3.4vw)) 0; }
+.mega__line:nth-child(even) { --drift: 3.4vw; }
+.about__name { position: relative; z-index: 1; margin-left: -.04em; }
+.about__cut { position: absolute; z-index: 2; left: calc(var(--mega) * 3.3); bottom: 0; width: min(26vw, 24rem); --reveal-dist: 9vw; --reveal-dur: 1.5s; }   /* in front of the end of CASTILLO at any width */
+.about__copy { position: relative; z-index: 3; width: min(46%, 33rem); margin-top: clamp(1.25rem, 2.2vw, 2rem); padding-bottom: clamp(2.5rem, 4.2vw, 3.75rem); }
+.about__copy .lead { font: 500 clamp(1.05rem, .82rem + .62vw, 1.4rem)/1.32 var(--serif); }
+.about__copy .btn { margin-top: clamp(1.1rem, 1.8vw, 1.6rem); }
+.about .btn:focus-visible, .about :focus-visible { outline-color: var(--ink); }
+
+/* ---------- 10. the work: six on a flatter ring over the mat, then three discs ---------- */
+.work { padding: var(--pad) 0 calc(var(--pad) * .6); overflow: clip; }
+.work__head { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1rem; padding: 0 var(--gutter); margin-bottom: clamp(1.25rem, 3vw, 2.25rem); }
+.work .scrap--square { --x: 37%; --y: calc(var(--pad) * .45); --w: clamp(5.5rem, 10vw, 9.5rem); --r: 11deg; --dx: 30px; --dy: -120px; --dr: 8deg; --ar: 16deg; }
+/* no script: a plain grid */
+.orbit--work .orbit__ring { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); align-items: end; gap: 2.5rem var(--gutter); padding: 0 var(--gutter); }
+.orbit--work.is-orbit { position: relative; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; }
+.orbit--work.is-orbit .orbit__ring { display: block; padding: 0; }
+.orbit--work.is-orbit .piece { width: calc(var(--ph) * var(--r)); }
+.orbit--work .orbit__bar { bottom: 0; }
+.orbit--work .orbit__hint { min-width: 7rem; text-align: center; }
+
+/* the card: the whole piece lying on the mat, then a slip of paper with its facts and a disc that adds it */
+.piece { position: relative; display: block; --r: .8; }
+.piece__link { display: block; color: inherit; text-decoration: none; }
+.piece__art { position: relative; display: block; aspect-ratio: var(--r); background: var(--avg, transparent); box-shadow: var(--shadow-rest); }
+.piece__art img { width: 100%; height: 100%; object-fit: contain; }
+.piece__art::after { content: ""; position: absolute; inset: 0; background: var(--bg); opacity: var(--dim, 0); pointer-events: none; }
+.piece__info { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: .2rem 1rem; min-height: 3.9rem; margin-top: .7rem; padding: .7rem 4rem .7rem .9rem; color: var(--cobalt); filter: var(--drop-flat); transition: opacity .5s var(--ease); }
+.piece__info::before { content: ""; position: absolute; z-index: -1; inset: 0; background: var(--paper); clip-path: polygon(0 5%, 99.4% 0, 100% 94%, .6% 100%); }
+.piece__title { font: 500 1.3rem/1.1 var(--serif); letter-spacing: -.01em; }
+.piece__price { font: 600 1.0625rem/1.1 var(--sans); }
+.piece__meta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0 1.1em; font: 500 .6875rem/1.45 var(--mono); letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; }
+.piece__year:empty { display: none; }
+.piece__add { position: absolute; right: .55rem; bottom: .62rem; width: 2.85rem; height: 2.85rem; padding: 0; border: 0; border-radius: 50%; background: var(--cobalt); color: var(--paper); cursor: pointer; transition: transform .5s var(--ease), opacity .5s var(--ease); }
+.piece__add::before, .piece__add::after { content: ""; position: absolute; left: 50%; top: 50%; width: 1rem; height: 2px; margin: -1px 0 0 -.5rem; background: currentColor; }
+.piece__add::after { transform: rotate(90deg); }
+.piece__add:hover { transform: rotate(90deg) scale(1.1); }
+.piece__add:disabled { opacity: .5; }
+.piece__add:focus-visible { outline-color: var(--paper); }
+.piece__sold { position: absolute; left: .6rem; top: .6rem; padding: .35rem .6rem; background: var(--paper); color: var(--cobalt); font: 600 .6875rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.is-sold .piece__art img { opacity: .55; }
+/* on the ring only the piece at the front carries its facts and its add control */
+.is-orbit .orbit__item:not(.is-front) .piece__info, .is-orbit .orbit__item:not(.is-front) .piece__add { opacity: 0; pointer-events: none; }
+.is-orbit .orbit__item:not(.is-front) .piece__link { cursor: grab; }
+
+.work__ways { margin: clamp(3rem, 7vw, 5.5rem) 0 clamp(1.5rem, 3vw, 2.5rem); padding: 0 var(--gutter); text-align: center; }
+.doors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 4vw, 4rem); max-width: 74rem; margin: 0 auto; padding: 0 var(--gutter); }
+.door { display: grid; justify-items: center; gap: 1.1rem; text-align: center; text-decoration: none; }
+.door__disc { position: relative; width: min(100%, 17rem); aspect-ratio: 1; margin: 6% 0; }
+.door__pic { position: absolute; z-index: 1; inset: 0; overflow: hidden; border-radius: 50%; box-shadow: var(--shadow-rest); }
+.door__pic img { width: 100%; height: 100%; object-fit: cover; object-position: var(--at, 50% 50%); transition: transform .9s var(--ease); }
+/* the disc's own ring: a circle squashed flat, the far half behind the disc and the near half in front */
+.door__disc::before, .door__disc::after { content: ""; position: absolute; inset: -11%; border: 5px solid var(--paper); border-radius: 50%; transform: rotate(var(--tilt, -12deg)) scaleY(.27); transition: transform .9s var(--ease); pointer-events: none; }
+.door__disc::before { z-index: 0; }
+.door__disc::after { z-index: 2; clip-path: inset(50% 0 0 0); }
+.door:hover .door__pic img, .door:focus-visible .door__pic img { transform: scale(1.07); }
+.door:hover .door__disc::before, .door:hover .door__disc::after, .door:focus-visible .door__disc::before, .door:focus-visible .door__disc::after { transform: rotate(calc(var(--tilt, -12deg) * -1)) scaleY(.36); }
+.door__slip { display: block; padding: .7rem 1.1rem .8rem; rotate: var(--slip-r, -1deg); }
+.doors li:nth-child(2) .door__slip { --slip-r: 1.2deg; }
+.doors li:nth-child(3) .door__slip { --slip-r: -.6deg; }
+.door__name { display: block; font: 500 clamp(1.5rem, 2.5vw, 2.15rem)/1 var(--serif); letter-spacing: -.015em; }
+.door__note { display: block; margin-top: .45rem; font-size: 1rem; line-height: 1.35; }
+.work__all { margin-top: clamp(2.25rem, 5vw, 3.75rem); text-align: center; }
+
+/* ---------- 11. services: each service is a line with one moon going round it, on a sheet of paper ---------- */
+.services { --sheet-r: .22deg; z-index: 2; overflow-x: clip; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; gap: clamp(2rem, 6vw, 6rem); padding: calc(var(--pad) * .75) var(--gutter); }   /* a ring may run off the paper's side, never onto the mat */
+.services__text .lead { max-width: 22em; }
+.services__text p + p { margin-top: clamp(1.5rem, 3vw, 2.25rem); }
+.svcs { display: grid; justify-items: start; gap: clamp(3.4rem, 6.4vw, 5.6rem); padding: 1.75rem 0; }
+.svc { position: relative; }
+.svc:nth-child(2) { margin-left: 9%; }
+.svc:nth-child(3) { margin-left: 3%; }
+.svc__name { position: relative; z-index: 40; display: block; font: 500 clamp(1.75rem, 3.5vw, 3.2rem)/1.02 var(--serif); letter-spacing: -.018em; }
+.svc .orbit__ring { display: none; }
+.svc.is-orbit .orbit__ring { display: block; }
+.svc .orbit__path { stroke-width: 1.25; stroke-opacity: .55; }
+.moon { width: clamp(.9rem, 1.4vw, 1.3rem); aspect-ratio: 1; border-radius: 50%; background: var(--fg); }
+
+/* ---------- 12. stay in touch: her hands at work on the mat, the words on a card ---------- */
+.stay { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: center; gap: clamp(1.5rem, 5vw, 5rem); padding: 0 var(--gutter) var(--pad); }
+.stay__table { position: relative; align-self: start; }
+/* her hands come in from under the sheet above, the hair hidden by it */
+.stay__hands { position: relative; z-index: 1; width: min(100%, 34rem); margin: calc(min(100%, 34rem) * -.3) 0 0 clamp(0rem, 3vw, 3rem); filter: drop-shadow(0 3px 3px rgba(0, 24, 16, .5)) drop-shadow(0 22px 22px rgba(0, 24, 16, .34)); }
+.stay .scrap--eye2 { --x: 62%; --y: 64%; --w: clamp(4.5rem, 8vw, 7.5rem); --r: -14deg; --dx: -30px; --dy: -70px; --dr: -8deg; --ar: -18deg; z-index: 2; }
+.stay .scrap--scissors { --x: 6%; --y: 60%; --w: clamp(3.4rem, 5.6vw, 5.4rem); --r: -58deg; --dx: 20px; --dy: -50px; --dr: 6deg; --ar: -24deg; z-index: 2; }
+.stay__card { margin-top: var(--pad); rotate: .6deg; }
+.stay__body { max-width: 31em; margin-top: clamp(1rem, 2vw, 1.5rem); font: 400 clamp(1.15rem, 1.55vw, 1.45rem)/1.4 var(--serif); }
+.stay .join { margin-top: clamp(1.5rem, 2.6vw, 2.25rem); }
+.join { position: relative; display: flex; flex-wrap: wrap; align-items: center; }
+.join input { flex: 1 1 10rem; min-width: 0; height: 4.25rem; padding: 0 5rem 0 1.6rem; border: 1.5px solid currentColor; border-radius: 99px; background: transparent; color: inherit; font: 500 1.0625rem var(--sans); }
+.join input::placeholder { color: inherit; opacity: .62; }
+.join input:focus-visible { outline-offset: 4px; }
+.join__btn { flex: none; width: 4.25rem; height: 4.25rem; margin-left: -4.25rem; padding: 0; border: 0; border-radius: 50%; background: var(--fg); color: var(--bg); font: 600 .9375rem var(--sans); cursor: pointer; transition: transform .5s var(--ease); }
+.join__btn:hover { transform: scale(1.08); }
+.join__btn:focus-visible { outline-color: var(--fg); outline-offset: 4px; }
+.form-error, .form-status { display: block; order: 1; flex-basis: 100%; margin: 0; padding: .65rem 0 0 1.6rem; font-size: .9375rem; line-height: 1.35; }
+.form-status:empty { display: none; }
+[aria-invalid="true"] { border-style: dashed !important; }
+
+/* ---------- 13. the deeper why: The Local Collage with a ring through it, on a sheet of paper ---------- */
+.why { --sheet-r: -.2deg; padding: var(--pad) var(--gutter) calc(var(--pad) + 1.5rem); }
+.why__stage { position: relative; max-width: 60rem; margin: clamp(1.75rem, 4vw, 3rem) auto 0; }
+.why__pic { position: relative; z-index: 40; margin: 0 6%; }
+.why__pic img { width: 100%; box-shadow: var(--shadow-rest); }
+.why .orbit__ring { display: flex; justify-content: center; margin-top: 1.5rem; }   /* no script: the button under the picture */
+.why .is-orbit .orbit__ring { display: block; margin: 0; }
+.why .orbit__path { stroke-opacity: .8; }
+.why__go { display: grid; place-content: center; justify-items: center; gap: .5rem; width: clamp(8.75rem, 13vw, 11rem); aspect-ratio: 1; border-radius: 50%; background: var(--chip); color: var(--chip-fg); font: 500 clamp(1.15rem, 1.7vw, 1.4rem)/1.02 var(--serif); letter-spacing: -.01em; text-align: center; text-decoration: none; transition: transform .6s var(--ease); }
+.why__go span { max-width: 5.2em; }
+.why__go svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.why__go:hover { transform: scale(1.07); }
+
+/* ---------- 14. footer: the dark underside of the mat ---------- */
+.footer { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .8fr) minmax(0, 1.3fr) minmax(0, 1.5fr); gap: 2.5rem clamp(1.5rem, 4vw, 4rem); margin-top: clamp(2rem, 4vw, 3.5rem); padding: clamp(3rem, 6vw, 5rem) var(--gutter) 7.5rem; font-size: 1rem;
+  background-color: var(--ink);
+  background-image: linear-gradient(to right, rgba(239, 237, 234, .07) 1px, transparent 1px), linear-gradient(to bottom, rgba(239, 237, 234, .07) 1px, transparent 1px);
+  background-size: var(--u) var(--u); background-position: calc(50% + var(--u) / 2) 0, 0 0; }
+.footer__logo { width: clamp(7rem, 12vw, 10.5rem); }
+.footer > * { align-self: start; }
+.footer__nav ul, .footer__reach { display: grid; align-content: start; gap: .55rem; }
+.footer a { text-decoration: none; }
+.footer a:hover { text-decoration: underline; text-underline-offset: .22em; }
+.footer__wait { opacity: .62; }
+.footer .join input { height: 3.5rem; }
+.footer .join__btn { width: 3.5rem; height: 3.5rem; margin-left: -3.5rem; font-size: .8125rem; }
+.footer__base { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(239 237 234 / .28); font-size: .875rem; }
+.footer__legal { display: flex; gap: 1.5rem; }
+
+/* ---------- 15. the planet control: Menu, with the cart count as its moon ---------- */
+.planet { position: fixed; z-index: 120; left: 50%; bottom: max(1.125rem, env(safe-area-inset-bottom)); width: var(--ctl); height: var(--ctl); margin-left: calc(var(--ctl) / -2); color: var(--paper); transition: transform .7s var(--ease); }
+.planet[data-on="paper"] { color: var(--cobalt); }
+.planet[data-on="orange"] { color: var(--ink); }
+.planet[data-state="cart"] { transform: translateY(190%); }
+.planet.is-aside:not([data-state="menu"], :has(:focus-visible)) { transform: translateY(190%); }   /* it steps below the screen edge rather than sit on a headline, a button, a price or a field (js) */
+.planet__menu { position: absolute; z-index: 1; inset: 0; display: grid; place-items: center; padding: 0; border: 2.5px solid var(--paper); border-radius: 50%; background: var(--cobalt); box-shadow: 0 2px 3px rgba(0, 20, 14, .25), 0 10px 18px -8px rgba(0, 20, 14, .45); cursor: pointer; }
+.planet__menu img { width: 72%; pointer-events: none; }
+.planet__cart { position: absolute; z-index: 2; left: calc(100% - .75rem); top: calc(50% - 1.0625rem); display: grid; place-items: center; width: 2.125rem; height: 2.125rem; padding: 0; border: 2px solid var(--cobalt); border-radius: 50%; background: var(--paper); cursor: pointer; }
+.planet__cart::before { content: ""; position: absolute; inset: -.5rem; border-radius: 50%; }   /* a thumb-sized target */
+.planet__count { color: var(--cobalt); font: 700 .8125rem/1 var(--sans); font-variant-numeric: tabular-nums; }
+/* the two words are slips of paper: invisible on a paper sheet, readable over the mat and the orange */
+.planet__label { position: absolute; top: 50%; padding: .4rem .6rem; border-radius: 99px; background: var(--paper); color: var(--cobalt); white-space: nowrap; font: 600 .875rem/1 var(--sans); translate: 0 -50%; transition: opacity .4s var(--ease), transform .5s var(--ease); }
+.planet__menu .planet__label { right: calc(100% + .35rem); }
+.planet__cart .planet__label { left: calc(100% + .2rem); }
+.planet__menu:focus-visible, .planet__cart:focus-visible { outline-offset: 4px; }
+.is-scrolled .planet:not([data-state="menu"]) .planet__label { opacity: 0; }
+.is-scrolled .planet:not([data-state="menu"]) .planet__menu .planet__label { transform: translateX(.9rem); }
+.is-scrolled .planet:not([data-state="menu"]) .planet__cart .planet__label { transform: translateX(-.9rem); }
+.is-scrolled .planet:has(:focus-visible) .planet__label { opacity: 1; transform: none; }
+@media (hover: hover) { .is-scrolled .planet:hover .planet__label { opacity: 1; transform: none; } }
+
+/* ---------- 16. menu: the seven pages on a ring (a plain large list when the screen is small) ---------- */
+.menu { position: fixed; z-index: 105; inset: 0; overflow: hidden auto; overscroll-behavior: contain; background: var(--paper); color: var(--cobalt); clip-path: circle(0 at 50% calc(100% - 3.1rem)); visibility: hidden; transition: clip-path .7s var(--ease), visibility 0s .7s; }
+.menu.is-open { clip-path: circle(150vmax at 50% calc(100% - 3.1rem)); visibility: visible; transition: clip-path 1.2s var(--ease), visibility 0s; }
+.menu:focus { outline: 0; }
+.menu__stage { position: relative; display: flex; flex-direction: column; min-height: 100%; }   /* small screens: the list sits low, by the thumb */
+.menu__planet { width: 5rem; margin: 1.25rem var(--gutter) auto; }
+.menu__list { display: grid; justify-items: start; gap: .1rem; padding: 2.5rem var(--gutter) 7.5rem; font: 500 clamp(2.5rem, 11.5vw, 3.6rem)/1.1 var(--serif); letter-spacing: -.022em; }
+.menu__list a { display: inline-block; padding: .1em 0; text-decoration: none; }
+.menu__wait { display: inline-block; padding: .1em 0; --base: .55; }
+.menu__list a, .menu__wait { opacity: calc(var(--base, 1) * (1 - var(--dim, 0))); }
+.menu__list a[aria-current] { text-decoration: underline; text-decoration-thickness: .045em; text-underline-offset: .14em; }
+/* the ring */
+.menu__stage.is-orbit { position: absolute; inset: 0; display: block; transform: perspective(1400px) rotateX(calc(var(--my, 0) * -3deg)) rotateY(calc(var(--mx, 0) * 4deg)); touch-action: pan-y; }
+.is-orbit .menu__planet { position: absolute; z-index: 40; left: 50%; top: var(--cy, 46%); width: clamp(8rem, 12.5vw, 11.5rem); margin: 0; translate: -50% -50%; pointer-events: none; }
+.is-orbit .menu__list { display: block; padding: 0; font-size: clamp(2.6rem, 4.7vw, 4.4rem); line-height: 1; }
+.is-orbit .menu__list .orbit__item { width: max-content; padding: .1em .3em .16em; }
+.is-orbit .menu__list .orbit__dot { width: .17em; height: .17em; margin: -.085em 0 0 -.085em; }
+.is-orbit .menu__list .soon { font-size: .2em; vertical-align: 2.4em; }
+.is-orbit .menu__list a { transition: transform .5s var(--ease); }
+.is-orbit .menu__list a:hover { transform: scale(1.06); }
+
+/* ---------- 17. cart: a panel from the right (a sheet from below on a phone) over the dimmed table ---------- */
+.scrim { position: fixed; z-index: 100; inset: 0; background: rgb(0 25 18); opacity: 0; visibility: hidden; transition: opacity .5s, visibility 0s .5s; }
+.scrim.is-on { opacity: .55; visibility: visible; transition: opacity .5s, visibility 0s; }
+.cart { position: fixed; z-index: 110; top: 0; right: 0; bottom: 0; display: flex; flex-direction: column; width: min(27.5rem, 100%); border-radius: 2rem 0 0 2rem; background: var(--paper); color: var(--cobalt); --bg: var(--paper); --fg: var(--cobalt); --chip: var(--cobalt); --chip-fg: var(--paper); transform: translateX(104%); visibility: hidden; transition: transform .7s var(--ease), visibility 0s .7s; }
+.cart.is-open { transform: none; visibility: visible; transition: transform .9s var(--ease), visibility 0s; }
+.cart:focus { outline: 0; }
+.cart__head { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 1.75rem 1rem; }
+.cart__head h2 { font: 500 2.5rem/1 var(--serif); letter-spacing: -.02em; }
+.cart__close { min-height: 2.75rem; padding: 0 1.1rem; border: 1.5px solid currentColor; border-radius: 99px; background: none; font: 600 .875rem var(--sans); cursor: pointer; }
+.cart__lines { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; padding: 0 1.75rem; }
+.cart__lines:empty { display: none; }
+.cart__line { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) auto; align-items: start; gap: .2rem 1rem; padding: 1rem 0; border-top: 1.5px solid currentColor; }
+.cart__thumb { grid-row: 1 / span 3; }
+.cart__thumb img { width: 100%; }
+.cart__name { font: 500 1.25rem/1.1 var(--serif); text-decoration: none; }
+.cart__price { font-weight: 600; }
+.cart__mark { grid-column: 2 / -1; font: 500 .6875rem/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.cart__remove { grid-column: 2 / -1; justify-self: start; min-height: 2.25rem; padding: 0; border: 0; background: none; font: 600 .875rem var(--sans); text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+.cart__empty { display: grid; justify-items: start; gap: 1.25rem; padding: 1rem 1.75rem 2rem; font: 400 1.4rem/1.2 var(--serif); }
+.cart__empty[hidden], .cart__foot[hidden] { display: none; }
+.cart__foot { display: grid; gap: .6rem; padding: 1.25rem 1.75rem 1.75rem; border-top: 1.5px solid currentColor; }
+.cart__sum { display: flex; justify-content: space-between; font: 500 1.5rem/1 var(--serif); }
+.cart__ship { font-size: .875rem; }
+.cart__checkout { justify-content: space-between; width: 100%; margin-top: .4rem; }
+.cart__status { font-size: .9375rem; }
+.cart__status:empty { display: none; }
+
+/* ---------- 18. the shop layer's two notices ---------- */
+.tgc-sample-note, .tgc-checkout-note { gap: .6rem; padding: .4rem .4rem .4rem .85rem; border: 1.5px solid var(--cobalt); border-radius: .9rem; background: var(--paper); color: var(--cobalt); font: 500 .75rem/1.3 var(--sans); }
+.tgc-sample-note { top: .875rem; right: .875rem; bottom: auto; left: auto; max-width: min(18.5rem, 100% - 9rem); }
+.cart-open .tgc-sample-note { top: auto; right: auto; bottom: .875rem; left: .875rem; }   /* out of the cart's way */
+.work__head > .tgc-sample-note { position: static; max-width: 100%; }   /* Home: in the page, beside "The work" (js), so it never floats over a headline or a button */
+.tgc-checkout-note { top: .875rem; left: .875rem; right: auto; margin: 0; max-width: 20rem; font-weight: 600; }
+.tgc-sample-note button, .tgc-checkout-note button { flex: none; width: 1.75rem; height: 1.75rem; padding: 0; border: 0; border-radius: 50%; background: var(--cobalt); color: var(--paper); font: 700 1rem/1 var(--sans); cursor: pointer; }
+
+/* ---------- 19. motion (only when the script is running and motion is welcome) ---------- */
+@media screen and (prefers-reduced-motion: no-preference) {
+  .is-live .logo, .is-live .hero__sub, .is-live .hero__act, .is-live .orbit--hero .orbit__bar, .is-live .planet { animation: rise 1.2s var(--ease) .5s backwards; }
+  .is-live .logo { animation: fade .8s linear .2s backwards; }
+  .is-live .hero__act { animation-delay: .62s; }
+  .is-live .orbit--hero .orbit__bar { animation-delay: 1.1s; }
+  .is-live .planet { animation-delay: .9s; }
+  @keyframes rise { from { opacity: 0; translate: 0 28px; } 60% { opacity: 1; } }
+  @keyframes fade { from { opacity: 0; } }
+  /* the hero's scraps slide onto the mat from their nearest edge, turned, and settle; the fade ends before the glide */
+  .is-live .hero .scrap { animation: scrap-in 1.4s var(--ease) calc(.75s + var(--i, 0) * .08s) backwards; }
+  @keyframes scrap-in { from { opacity: 0; translate: var(--ax, 0px) var(--ay, 40px); rotate: var(--ar, 9deg); } 45% { opacity: 1; } }
+  .link:hover::after { animation: redraw .7s var(--ease); }
+  @keyframes redraw { 0% { transform: scaleX(1); transform-origin: 100% 50%; } 45% { transform: scaleX(0); transform-origin: 100% 50%; } 46% { transform: scaleX(0); transform-origin: 0 50%; } 100% { transform: scaleX(1); transform-origin: 0 50%; } }
+  /* Join rolls along the field to its place */
+  .stay__card[data-armed]:not(.is-in) .join__btn { transform: translateX(-9rem) rotate(-200deg); opacity: 0; }
+  .stay__card[data-armed] .join__btn { transition: transform 1.3s var(--ease) .35s, opacity .4s linear .35s; }
+  .stay__card[data-armed].is-in .join__btn:hover { transition: transform .5s var(--ease); }
+  /* the discs grow from their centres */
+  .door[data-armed]:not(.is-in) .door__pic { transform: scale(.6); }
+  .door__pic { transition: transform 1.3s var(--ease) var(--reveal-delay, 0s); }
+  /* page to page: the next page opens out of the planet */
+  @keyframes vt-out { to { opacity: .4; transform: scale(.97); } }
+  @keyframes vt-in { from { clip-path: circle(0 at 50% calc(100% - 3.1rem)); } to { clip-path: circle(150vmax at 50% calc(100% - 3.1rem)); } }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+/* ---------- 20. phone and narrow panes ---------- */
+@media (max-width: 899px) {
+  .footer { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .footer__news { grid-column: 1 / -1; }
+}
+@media (max-width: 699px) {
+  .hero { --floor: 46rem; padding-top: 5.75rem; }
+  .hero h1 { font-size: clamp(2.6rem, 13.4vw, 4.4rem); line-height: .94; }
+  .hero h1 .l2 { display: block; }
+  .hero__sub { font-size: .9375rem; line-height: 1.4; padding: .55em .9em .6em; }
+  .hero__act { gap: .5rem .9rem; }
+  .btn { min-height: 3.25rem; padding-left: 1.3rem; gap: .75rem; }
+  .btn__disc { width: 2.5rem; height: 2.5rem; }
+  .link.slip { padding: .8rem .9rem; }
+  .link.slip::after { left: .9rem; right: .9rem; }
+  .orbit__cap { min-width: 9.5rem; font-size: .875rem; }
+  .hero .scrap--eye   { --x: 76%; --y: 1.5%; --w: 4.4rem; }
+  .hero .scrap--ell   { --x: -6%; --y: 82%; --w: 6.5rem; }
+  .hero .scrap--lips  { display: none; }
+  .hero .scrap--strip { --x: 74%; --y: 86%; --w: 6.75rem; }
+
+  .services, .stay { grid-template-columns: minmax(0, 1fr); }
+  .about__in { padding-top: 1.5rem; }
+  .about__in { --mega: 16.4vw; }
+  .about__cut { position: relative; left: auto; display: block; width: 52vw; margin: -12vw -1vw 0 auto; }
+  .about__copy { width: auto; margin: 0; padding: 1.25rem 0 2.5rem; border-top: 2px solid var(--ink); }
+  .work .scrap--square { --x: 70%; --y: 1.75rem; --w: 4.75rem; }
+  .work__ways { text-align: left; }
+  .doors { grid-template-columns: minmax(0, 1fr); gap: .25rem; }
+  .door { grid-template-columns: 5.25rem minmax(0, 1fr); align-items: center; justify-items: start; gap: 1.4rem; padding: .35rem 0; text-align: left; }
+  .door__disc { margin: 12% 0; }
+  .door__disc::before, .door__disc::after { border-width: 3.5px; }
+  .door__slip { padding: .55rem .9rem .65rem; }
+  .work__all { padding: 0 var(--gutter); text-align: left; }
+  .svcs { gap: 3.6rem; padding: 2.75rem 0 2rem; }
+  .svc:nth-child(2) { margin-left: 0; }
+  .svc:nth-child(3) { margin-left: 0; }
+  .stay { gap: 0; padding-top: 0; }
+  .stay__hands { width: 100%; margin: -16vw 0 0; }
+  .stay .scrap--eye2 { --x: 70%; --y: 58%; --w: 4.6rem; }
+  .stay .scrap--scissors { --x: 2%; --y: 62%; --w: 3.2rem; }
+  .stay__card { margin-top: -1.5rem; z-index: 3; }
+  .why { padding-bottom: calc(var(--pad) * .5); }
+  .why__stage { padding-bottom: 5rem; }
+  .why__pic { margin: 0 1%; }
+  .footer { grid-template-columns: minmax(0, 1fr); gap: 2rem; padding-bottom: 8rem; }
+
+  .cart { top: auto; left: 0; width: 100%; max-height: calc(100svh - 9.5rem); border-radius: 1.75rem 1.75rem 0 0; transform: translateY(104%); }
+  .tgc-sample-note, .cart-open .tgc-sample-note { top: .75rem; right: .75rem; bottom: auto; left: auto; max-width: calc(100% - 8rem); font-size: .6875rem; }
+  .tgc-checkout-note { top: 5rem; left: .75rem; right: .75rem; max-width: none; }
+}

@@ -1,6 +1,6 @@
 // The review page: each option in a frame, a notes thread for each, a wrap-up, and saving.
 //   Link:  ?who=<name>&k=<review key>&option=<number | wrap-up>
-//   Notes are kept in this browser at once (localStorage "tgc-review:<who>") and on the site two seconds
+//   Notes are kept in this browser at once (localStorage "tgc-review-r3:<who>") and on the site two seconds
 //   after the last change (POST api/notes). When the site cannot save, nothing is lost: the page says
 //   "Saved on this device" and the wrap-up offers "Copy all my notes".
 // Everything a person typed is put on the page with textContent, never as HTML.
@@ -15,7 +15,7 @@ const asked = (query.get('who') ?? '').toLowerCase();
 const who = /^[a-z0-9-]{1,40}$/.test(asked) ? asked : 'guest';
 const key = query.get('k') ?? '';
 const api = new URL('../api/notes', import.meta.url);
-const storeKey = `tgc-review:${who}`;
+const storeKey = `tgc-review-r3:${who}`; // one key per review round, so a phone never brings back the last round's notes
 const narrow = matchMedia('(max-width: 899px)');
 const touch = matchMedia('(pointer: coarse)');
 
@@ -97,7 +97,7 @@ const markOf = (n) => (record.notes.favorite === n ? 'favorite' : read(n).mark);
 const markName = (mark) => (mark === 'favorite' ? 'Favorite' : MARKS[mark]);
 const count = (n) => read(n).messages.length;
 const notesWord = (n) => (count(n) === 1 ? '1 note' : `${count(n)} notes`);
-const pageOf = (option) => new URL(`../option-${Number(option.n)}/index.html`, import.meta.url);
+const pageOf = (option) => new URL(`../${option.path ?? `option-${Number(option.n)}`}/index.html`, import.meta.url);
 
 function drawDots() {
   [...$('dots').children].forEach((dot, i) => {

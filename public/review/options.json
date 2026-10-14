@@ -1,56 +1,22 @@
 {
   "intro": [
-    "Hi! Here are nine options for your website. Use the arrows to go through them. Each one is a real page you can scroll and click.",
-    "For now each option is its home page only. The other pages get built once you choose.",
-    "For each one, tell me here what you like and what you don't. Short notes are perfect.",
-    "Tap Favorite on the one you like best.",
-    "At the end, either pick one and go with it, or pick the things you like from several, and leave me a note on how to move forward."
+    "Hi! I took your notes and your voice notes and turned the nine options into two.",
+    "Both mix what you loved: the green cutting mat with your cut-outs on it, the Saturn ring for your art, your logo alone in the corner, and the orange section with your photo.",
+    "Use the arrows to go between them. Each one is a real page you can scroll and click. For now it's the home page only.",
+    "Tell me here what you like and what you don't, tap Favorite on the one you like best, and press Send at the end."
   ],
   "options": [
     {
       "n": 1,
-      "name": "The Cutting Mat",
-      "line": "Your work table seen from above: everything is cut paper on the green mat."
+      "path": "site-a",
+      "name": "Saturn on the Mat",
+      "line": "Your pieces circle the headline like Saturn's ring, on your green cutting mat."
     },
     {
       "n": 2,
-      "name": "The Gallery Wall",
-      "line": "Calm and collector-first: the piece assembles from fragments as the page opens."
-    },
-    {
-      "n": 3,
-      "name": "Sticker Pop",
-      "line": "Loud and playful: your cut-outs are stickers you can drag around."
-    },
-    {
-      "n": 4,
-      "name": "The Poster",
-      "line": "A living poster: one giant word per screen with your cut-outs in front of it."
-    },
-    {
-      "n": 5,
-      "name": "The Archive",
-      "line": "Your things on a dark table: objects you can move, pieces as captioned prints."
-    },
-    {
-      "n": 6,
-      "name": "Inside the Piece",
-      "line": "Your art fills the screen and a clean page floats inside it."
-    },
-    {
-      "n": 7,
-      "name": "The Cover",
-      "line": "Every screen is a magazine cover: a huge word behind a figure on flat colour."
-    },
-    {
-      "n": 8,
-      "name": "The Floor",
-      "line": "A floor covered in your prints that you drag across, with a small map."
-    },
-    {
-      "n": 9,
-      "name": "The Orbit",
-      "line": "Your pieces circle the headline on a ring, like the planet in your logo."
+      "path": "site-b",
+      "name": "The Work Table",
+      "line": "Your work table seen from above, with your art turning on a ring further down."
     }
   ]
 }

@@ -23,7 +23,7 @@ key opens `notes.html`, so anyone holding her link could read the notes too.
 
 ## How notes are kept
 
-- In her browser at once (`localStorage`, key `tgc-review:<who>`), so a reload or a closed tab loses nothing.
+- In her browser at once (`localStorage`, key `tgc-review-r3:<who>`, one key per round), so a reload or a closed tab loses nothing.
 - On the site two seconds after the last change and on Send: one JSON file per reviewer,
   `notes/<who>.json` on the `notes` branch of the GitHub repository (`{ who, notes, done, savedAt }`; `done` is true once she pressed Send).
 - A new device or browser loads her notes back from the site. Last save wins.
@@ -54,3 +54,13 @@ key opens `notes.html`, so anyone holding her link could read the notes too.
   store (`BLOB_READ_WRITE_TOKEN`) but is not used.
 - To clear a reviewer and start clean: delete `notes/<who>.json` on the `notes` branch.
 - Before sending a link: one real save as `?who=dre`, then look for the commit "Review notes: dre" on `notes`.
+
+## Rounds
+
+- **Round 2** (2026-10-13): nine options, `public/option-1` … `option-9`. Camila's notes are kept on the
+  `notes` branch as `notes/round-2/camila.json` (the notes page lists only the current round).
+- **Round 3** (2026-10-14): two sites, `public/site-a` and `public/site-b`, from her notes (`docs/ROUND-3.md`).
+  `options.json` gives each option a `path` (its folder); without one the folder is `option-<n>`.
+  Same links as before. Starting a round: move every `notes/<who>.json` into `notes/round-<n>/`, change
+  the round in `storeKey` in `review.js`, then publish.
+
