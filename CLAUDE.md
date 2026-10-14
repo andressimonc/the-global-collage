@@ -56,6 +56,8 @@ node tools/shot.mjs /option-1/index.html _shots/x --mobile
 - Camila reviews at `/?who=camila&k=<key>`; her notes are committed to the `notes` branch as
   `notes/camila.json`. The key is in `.review-key` (not in git). Details: `docs/REVIEW-SITE.md`.
 - Every option is its Home page only. Round 3 (2026-10-14): the review shows only `site-a` and `site-b`;
-  her round-2 notes are kept as `notes/round-2/camila.json`. Next: her round-3 notes, then the other pages of what she picks.
+  her round-2 notes are kept as `notes/round-2/camila.json`. **She chose `site-b`, The Work Table** (Dre, 2026-10-14).
+  Her one note on it: "make all headlines with the same font as the first hero quote". Paused until she sends
+  the Shopify Storefront token; then the headline note, site B's other pages, and the token (`TO-CONFIRM.md`).
 - This folder was moved here from a scratch workspace on 2026-10-13; `.git`, `.claude/launch.json` and
   `tools/bin/cutout` were rebuilt after the move (`swiftc -O tools/cutout.swift -o tools/bin/cutout`).
