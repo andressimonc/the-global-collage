@@ -11,8 +11,9 @@ const status = async (body) => (await post(body)).status;
 const sent = [];
 const logged = [];
 console.error = (...args) => logged.push(args.join(' '));
-globalThis.fetch = async (url, init) => { sent.push({ url, auth: init.headers.Authorization, ...JSON.parse(init.body) }); return Response.json({ id: 'test' }); };
-Object.assign(process.env, { RESEND_API_KEY: 'k', CONTACT_TO: 'camila@example.test', CONTACT_FROM: 'site@example.test' });
+const ok = () => Response.json({ success: 'true', message: 'The form was submitted successfully.' });
+globalThis.fetch = async (url, init) => { sent.push({ url, referer: init.headers.Referer, ...JSON.parse(init.body) }); return ok(); };
+delete process.env.CONTACT_TO;
 
 // bad bodies: nothing may be sent
 assert.equal(await status('not json'), 400);
@@ -44,46 +45,42 @@ assert.equal(sent.length, 0);
 // contact, with an attempt to smuggle a header in through the name
 assert.equal(await status({ ...contact, name: 'Ada\r\nBcc: x@y.z', page: '/option-1/contact.html\nX: y' }), 200);
 assert.equal(sent.length, 1);
-assert.equal(sent[0].url, 'https://api.resend.com/emails');
-assert.equal(sent[0].auth, 'Bearer k');
-assert.equal(sent[0].to, 'camila@example.test');
-assert.equal(sent[0].from, 'site@example.test');
-assert.equal(sent[0].reply_to, 'ada@example.test');
-assert.equal(sent[0].subject, 'Website message from Ada Bcc: x@y.z (Press or Exhibition)', 'line breaks are stripped from the subject');
-assert.equal(sent[0].text, 'Name: Ada Bcc: x@y.z\nEmail: ada@example.test\nReason: Press or Exhibition\nMessage:\nHello\nthere\nSent from: /option-1/contact.html X: y');
-for (const header of ['from', 'to', 'reply_to', 'subject']) assert.doesNotMatch(sent[0][header], /[\r\n]/);
+assert.equal(sent[0].url, 'https://formsubmit.co/ajax/theglobalcollage@gmail.com', 'her public address by default');
+assert.equal(sent[0].referer, 'http://local/', 'FormSubmit knows the site by its address');
+assert.equal(sent[0]._replyto, 'ada@example.test');
+assert.equal(sent[0]._subject, 'Website message from Ada Bcc: x@y.z (Press or Exhibition)', 'line breaks are stripped from the subject');
+assert.equal(sent[0].message, 'Name: Ada Bcc: x@y.z\nEmail: ada@example.test\nReason: Press or Exhibition\nMessage:\nHello\nthere\nSent from: /option-1/contact.html X: y');
+for (const header of ['_replyto', '_subject']) assert.doesNotMatch(sent[0][header], /[\r\n]/);
 
 // commission, without and with the optional field
 assert.equal(await status(commission), 200);
-assert.equal(sent[1].subject, 'Commission inquiry from Ada Lovelace');
-assert.equal(sent[1].text, 'Name: Ada Lovelace\nEmail: ada@example.test\nSize: 12x16\nBudget: not sure yet\nConcept:\nHomesick,\nbut glad.\nTimeline: By spring');
+assert.equal(sent[1]._subject, 'Commission inquiry from Ada Lovelace');
+assert.equal(sent[1].message, 'Name: Ada Lovelace\nEmail: ada@example.test\nSize: 12x16\nBudget: not sure yet\nConcept:\nHomesick,\nbut glad.\nTimeline: By spring');
 assert.equal(await status({ ...commission, place: 'Above the\npiano' }), 200);
-assert.match(sent[2].text, /\nPlace: Above the piano$/);
+assert.match(sent[2].message, /\nPlace: Above the piano$/);
 
 // newsletter
 assert.equal(await status({ ...newsletter, email: '  ada@example.test ' }), 200);
-assert.equal(sent[3].subject, 'Newsletter sign-up: ada@example.test');
-assert.equal(sent[3].reply_to, 'ada@example.test');
-assert.equal(sent[3].text, 'Email: ada@example.test');
+assert.equal(sent[3]._subject, 'Newsletter sign-up: ada@example.test');
+assert.equal(sent[3]._replyto, 'ada@example.test');
+assert.equal(sent[3].message, 'Email: ada@example.test');
 assert.equal(sent.length, 4);
 
-// missing settings fail loudly, each one
-for (const name of ['RESEND_API_KEY', 'CONTACT_TO', 'CONTACT_FROM']) {
-  const kept = process.env[name];
-  delete process.env[name];
-  const res = await post(contact);
-  assert.equal(res.status, 500, `fails loudly without ${name}`);
-  assert.deepEqual(await res.json(), { error: 'Not set up' });
-  process.env[name] = kept;
-}
-assert.equal(sent.length, 4);
+// CONTACT_TO on the host sends it elsewhere
+process.env.CONTACT_TO = 'camila@example.test';
+assert.equal(await status(newsletter), 200);
+assert.equal(sent[4].url, 'https://formsubmit.co/ajax/camila@example.test');
+delete process.env.CONTACT_TO;
+assert.equal(sent.length, 5);
 
 // a failing mail service: it answers with an error, or it cannot be reached at all
 globalThis.fetch = async () => new Response('down', { status: 503 });
 assert.equal(await status(contact), 502);
 globalThis.fetch = async () => { throw new TypeError('fetch failed'); };
 assert.equal(await status(newsletter), 502);
-assert.equal(logged.length, 5, 'every failure on our side is logged for the host');
+globalThis.fetch = async () => Response.json({ success: 'false', message: 'This form needs Activation.' });
+assert.equal(await status(contact), 502, 'before she activates, nothing arrives, so it is not a success');
+assert.equal(logged.length, 3, 'every failure on our side is logged for the host');
 
 // The browser side (public/shared/forms.js): wiring the same form twice, say from a site-wide script and
 // again from a page script, must leave ONE submit handler, or every message would be sent twice.

@@ -267,15 +267,27 @@ function toProduct(node) {
   };
 }
 
+// Her Shopify products have no pictures yet (2026-10-16). Until they do, a piece borrows this site's own web
+// files of it, and the year from her file names. Three pieces carry a different name in Shopify.
+const LOCAL_NAMES = { 'let-it-out': 'let-out', 'gaga-ate': 'gagas-offering', 'dibujo-libre': 'day-no-25' };
+const localImages = new Map(); // Shopify handle -> borrowed images, for cart lines too
+
 async function liveProducts() {
+  const [data, local] = await Promise.all([gql(PRODUCTS_QUERY), sampleProducts().catch(() => [])]);
+  const own = new Map(local.map((p) => [p.handle, p]));
   // a product with no picture is left out, so images[0] is there for every piece a site is handed
-  return (await gql(PRODUCTS_QUERY)).products.nodes.map(toProduct).filter((p) => p.images.length);
+  return data.products.nodes.map(toProduct).map((p) => {
+    const mine = own.get(LOCAL_NAMES[p.handle] ?? p.handle);
+    if (p.images.length || !mine) return p;
+    localImages.set(p.handle, mine.images);
+    return { ...p, images: mine.images, year: p.year ?? mine.year };
+  }).filter((p) => p.images.length);
 }
 
 function toCart(c) {
   const lines = c.lines.nodes.map(({ id, quantity, merchandise: m }) => ({
     id, handle: m.product.handle, title: m.product.title, type: typeOf(m.product), quantity,
-    price: money(m.price), image: m.image ? toImage(m.image, m.product.title) : null, url: productUrl(m.product.handle),
+    price: money(m.price), image: m.image ? toImage(m.image, m.product.title) : localImages.get(m.product.handle)?.[0] ?? null, url: productUrl(m.product.handle),
   }));
   return { lines, count: c.totalQuantity, subtotal: lines.length ? money(c.cost.subtotalAmount) : null, checkoutUrl: c.checkoutUrl, sample: false };
 }

@@ -21,7 +21,10 @@ const saved = (key) => JSON.parse(stored.get(key));
 // ================= SAMPLE MODE =================
 // The catalogue file belongs to the lead and changes (alt text, photos, prices), so what is expected
 // here is read from the file, never typed in. One alt is blanked on the way in to check the fallback.
-assert.equal(SITE.shopify.storefrontToken, '', 'the checked-in config is in sample mode');
+// The checked-in key must be Shopify's public Storefront token, never an Admin token (shpat_...), which would
+// hand anyone the store. Sample mode is then checked first with no key at all.
+assert.match(SITE.shopify.storefrontToken, /^(|[0-9a-f]{32})$/, 'config.js holds only the public Storefront token, or none');
+SITE.shopify.storefrontToken = '';
 const raw = JSON.parse(readFileSync(new URL('../public/shared/shop/products.sample.json', import.meta.url))).products;
 const fetched = [];
 globalThis.fetch = async (url) => {

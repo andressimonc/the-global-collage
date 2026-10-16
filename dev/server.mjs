@@ -18,10 +18,10 @@ const types = {
 // The form function is optional until it exists; preview messages never leave this Mac.
 async function formFunction() {
   try {
-    Object.assign(process.env, { RESEND_API_KEY: 'dev', CONTACT_TO: 'dev@example.test', CONTACT_FROM: 'dev@example.test' });
+    process.env.CONTACT_TO = 'dev@example.test';
     const realFetch = globalThis.fetch;
-    globalThis.fetch = (url, init) => String(url).startsWith('https://api.resend.com/')
-      ? (console.log('preview only, not sent:', init?.body), Promise.resolve(Response.json({ id: 'dev' })))
+    globalThis.fetch = (url, init) => String(url).startsWith('https://formsubmit.co/')
+      ? (console.log('preview only, not sent:', init?.body), Promise.resolve(Response.json({ success: 'true' })))
       : realFetch(url, init);
     return (await import('../api/contact.js')).POST;
   } catch { return null; }

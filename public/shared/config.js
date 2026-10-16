@@ -9,12 +9,12 @@ export const SITE = {
     domain: '2pssuy-7e.myshopify.com',
     // Shopify's PUBLIC Storefront API token. Safe in a browser. Never an Admin token ("shpat_...").
     // Empty = sample mode: the sample catalogue, a cart kept in this browser, no checkout.
-    storefrontToken: '',
+    storefrontToken: '225cba767d6a2c791d67c013d1bcb504',
     // Storefront API version. Shopify retires versions after about a year; bump it then.
     apiVersion: '2026-07',
   },
   // false = forms validate and say "thank you" but send NOTHING. true = they post to formsEndpoint.
-  formsLive: false,
+  formsLive: true,
   // The function that emails a form (api/contact.js on Vercel).
   formsEndpoint: '/api/contact',
 };

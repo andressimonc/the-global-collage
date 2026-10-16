@@ -1,12 +1,10 @@
-// POST /api/contact — emails a form from the site to Camila through Resend. JSON in, JSON out.
+// POST /api/contact — emails a form from the site to Camila through FormSubmit. JSON in, JSON out.
 // The body names its kind; every field is a string and must fit its limit:
 //   contact     { kind, name, email, reason, message }      reason: collecting | commission | services | press-exhibition | other
 //   commission  { kind, name, email, size, budget, concept, timeline, place? }
 //   newsletter  { kind, email }
 // Optional on all three: page (where the form was), company (the bot trap: filled = dropped quietly).
-// Answers 200 { ok: true }, 400 { error: 'Check the … field' | 'Bad request' }, 500 { error: 'Not set up' },
-// 502 { error: 'Send failed' }.
-// The host must set RESEND_API_KEY, CONTACT_TO and CONTACT_FROM.
+// Answers 200 { ok: true }, 400 { error: 'Check the … field' | 'Bad request' }, 502 { error: 'Send failed' }.
 // ponytail: no rate limit; add a host firewall rule or a captcha if spam shows up.
 // ponytail: a newsletter sign-up is only an email to CONTACT_TO; send it to a list provider when one is chosen.
 const LIMITS = {
@@ -43,31 +41,31 @@ export async function POST(request) {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) return reply(400, { error: 'Check the email field' });
   if ('reason' in f && !Object.hasOwn(REASONS, f.reason)) return reply(400, { error: 'Check the reason field' });
 
-  const { RESEND_API_KEY, CONTACT_TO, CONTACT_FROM } = process.env;
-  if (!RESEND_API_KEY || !CONTACT_TO || !CONTACT_FROM) {
-    console.error('contact: mail settings are missing');
-    return reply(500, { error: 'Not set up' });
-  }
-
   const lines = Object.entries(f).filter(([, value]) => value).map(([name, value]) => {
     if (LONG.includes(name)) return `${label(name)}:\n${value}`;
     return `${label(name)}: ${name === 'reason' ? REASONS[value] : value}`;
   });
   if (typeof data.page === 'string' && data.page.trim()) lines.push(`Sent from: ${oneLine(data.page.trim()).slice(0, 200)}`);
 
-  let sent;
+  // FormSubmit sends it to her inbox: free, no account, no key. Nothing arrives until she clicks "Activate" in
+  // the one email FormSubmit sends her after the first message from the live site. FormSubmit knows the site by
+  // its address (the Referer). CONTACT_TO on the host overrides her address.
+  const to = process.env.CONTACT_TO || 'theglobalcollage@gmail.com'; // her public address, printed in every footer
+  let sent, answer;
   try {
-    sent = await fetch('https://api.resend.com/emails', {
+    sent = await fetch(`https://formsubmit.co/ajax/${to}`, {
       method: 'POST',
-      headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ from: CONTACT_FROM, to: CONTACT_TO, reply_to: f.email, subject: SUBJECT[data.kind](f), text: lines.join('\n') }),
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json', Referer: new URL(request.url).origin + '/' },
+      body: JSON.stringify({ _subject: SUBJECT[data.kind](f), _replyto: f.email, _template: 'box', message: lines.join('\n') }),
     });
+    answer = await sent.json().catch(() => null);
   } catch (err) {
     console.error('contact: mail service unreachable', err);
     return reply(502, { error: 'Send failed' });
   }
-  if (!sent.ok) {
-    console.error('contact: send failed', sent.status, await sent.text());
+  // its answer is { success: "true" | "false", message }; "false" before she has activated the form
+  if (!sent.ok || String(answer?.success) !== 'true') {
+    console.error('contact: send failed', sent.status, answer?.message ?? '');
     return reply(502, { error: 'Send failed' });
   }
   return reply(200, { ok: true });
