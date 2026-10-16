@@ -55,5 +55,5 @@ node tools/shot.mjs /shop.html _shots/x --mobile
 - Vercel project `the-global-collage`, team `dres-projects-6e4b1739`; live preview
   https://the-global-collage.vercel.app. GitHub `andressimonc/the-global-collage` (private) is not connected to
   Vercel, so a push does not publish.
-- The body typeface (TT Interphases) is a trial; Dre chose to swap it for a free one (2026-10-16, pick pending).
+- Type: Neco for headlines, Archivo for text and buttons, IBM Plex Mono for small labels, all free. Archivo replaced the TT Interphases trial (Dre, 2026-10-16: "closest to the one she likes").
 - Open content from Camila: `TO-CONFIRM.md`.

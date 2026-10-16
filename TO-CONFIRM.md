@@ -36,8 +36,6 @@ site's own choices are in `docs/site-b/DECISIONS.md`. Going live: `docs/LAUNCH.m
 
 - **Figures cut out of her artworks are used as decoration** only on the old options; the finished site
   uses cut-outs from her studio photos, never from an artwork.
-- **The body typeface**: TT Interphases is a trial copy. Dre chose a free replacement (2026-10-16); the
-  pick between Geist, Archivo and Bricolage Grotesque is pending.
 - **The brand board's printed colour codes do not match its swatches.** The site uses the swatches as
   measured: blue `#122FAB`, off-white `#EFEDEA`, black `#231F20`, orange `#FF5630`, green `#496843`. The cutting mat is `#028B71`.
 - **The board names "Giaza" as the display typeface; her folder holds "Neco".** Built with Neco.

@@ -19,8 +19,8 @@
   --tape: rgba(234, 222, 184, .88);
 
   --font-display: "Neco", Georgia, "Times New Roman", serif;
-  --font-body: "TT Interphases", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "TT Interphases Mono", ui-monospace, Menlo, monospace;
+  --font-body: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 
   --u: 64px;                              /* one square of the mat */
   --gutter: clamp(16px, 4vw, 56px);
