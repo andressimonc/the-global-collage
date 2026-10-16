@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" data-logo="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#028B71">
+<title>Shipping &amp; Returns | The Global Collage</title>
+<link rel="icon" href="../shared/brand/favicon.png">
+<link rel="preload" href="../shared/fonts/Neco-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../shared/fonts/fonts.css">
+<link rel="stylesheet" href="../shared/motion.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/pages-shop.css">
+<script type="module" blocking="render" src="js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- THE LOGO: alone in the corner, nothing behind it. White over the mat, black over paper and orange (js/site.js). -->
+<a class="logo" href="index.html">
+  <img class="logo__dark" src="../shared/brand/logo-black-v1-400.webp" width="400" height="298" alt="The Global Collage">
+  <img class="logo__light" src="../shared/brand/logo-white-v1-400.webp" width="400" height="298" alt="">
+</a>
+
+<main id="main">
+
+  <!-- SHIPPING & RETURNS: the heading strip on the mat, then one sheet. Only what the copy states; the rest is pending. -->
+  <section class="on-mat page-top legal-top" data-tone="mat">
+    <div class="wrap">
+      <h1 class="strips legal-title"><span class="strip" data-arrive="left">Shipping</span> <span class="strip strip--cobalt" data-arrive="right" style="--i:1">&amp; Returns</span></h1>
+    </div>
+  </section>
+
+  <section class="sheet legal" data-tone="paper" aria-label="Shipping &amp; Returns">
+    <div class="wrap legal-body">
+      <div class="legal-part">
+        <h2 class="strips legal-head"><span class="strip" data-arrive="left">Shipping</span></h2>
+        <div class="card torn legal-facts" data-arrive style="--i:1">
+          <ul>
+            <li>Ships from Miami, insured, US only.</li>
+            <li>United States only, for now.</li>
+          </ul>
+        </div>
+        <p class="needs-content" data-arrive style="--i:2">Pending: shipping costs and delivery times, coming from Camila.</p>
+      </div>
+      <div class="legal-part">
+        <h2 class="strips legal-head"><span class="strip" data-arrive="left">Returns</span></h2>
+        <p class="needs-content" data-arrive style="--i:1">Pending: the returns policy, coming from Camila.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-tone="ink">
+  <div class="wrap">
+    <div class="footer-grid">
+      <a class="footer-logo" href="index.html"><img src="../shared/brand/logo-white-v1-400.webp" width="400" height="298" loading="lazy" alt="The Global Collage"></a>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="exhibition.html">Exhibition</a></li>
+          <li><a href="commissions.html">Commissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <a href="mailto:theglobalcollage@gmail.com">theglobalcollage@gmail.com</a>
+        <a href="tel:+13053353506">+1 (305) 335-3506</a>
+        <a href="https://www.instagram.com/theglobalcollage/" rel="noopener">@theglobalcollage</a>
+      </div>
+      <form data-form="newsletter" novalidate>
+        <p class="mono-label footer-head">Stay in touch</p>
+        <div class="join-row">
+          <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+          <button class="label label--plain" type="submit">Join</button>
+        </div>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="footer-base">
+      <p>Based in Miami, available in the US</p>
+      <ul class="footer-legal">
+        <li><a href="shipping.html" aria-current="page">Shipping &amp; Returns</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- MENU: the seven pages ride a ring around her planet, on the mat (a plain list of strips on a small screen) -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" tabindex="-1" hidden>
+  <div class="orbit menu__stage" data-orbit="menu">
+    <img class="menu__planet" src="../shared/brand/icon-white-400.webp" width="400" height="228" alt="">
+    <nav aria-label="Main">
+      <ul class="orbit__ring menu__list">
+        <li class="orbit__item" style="--r:-1.6deg"><a class="strip" href="index.html">Home</a></li>
+        <li class="orbit__item" style="--r:1.3deg"><a class="strip" href="about.html">About</a></li>
+        <li class="orbit__item" style="--r:-.8deg"><a class="strip" href="shop.html">Shop</a></li>
+        <li class="orbit__item" style="--r:1.8deg"><a class="strip" href="services.html">Services</a></li>
+        <li class="orbit__item" style="--r:-1.2deg"><a class="strip" href="exhibition.html">Exhibition</a></li>
+        <li class="orbit__item" style="--r:.9deg"><a class="strip" href="commissions.html">Commissions</a></li>
+        <li class="orbit__item" style="--r:-1.9deg"><a class="strip" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- CART: a paper receipt that slides in from the right. js/site.js fills it from the shared shop layer. -->
+<dialog class="cart" aria-labelledby="cart-h">
+  <div class="cart-head">
+    <h2 class="cart-title" id="cart-h">Cart</h2>
+    <button class="tag" type="button" data-cart-close>Close</button>
+  </div>
+  <ul class="cart-lines" data-cart-lines></ul>
+  <p class="cart-empty" data-cart-empty>Your cart is empty.</p>
+  <div class="cart-foot" data-cart-foot hidden>
+    <p class="cart-sum"><span>Subtotal</span><span data-cart-subtotal></span></p>
+    <p class="cart-ship">Ships from Miami, insured, US only.</p>
+    <button class="label label--plain" type="button" data-cart-checkout>Checkout</button>
+    <p class="form-status" data-cart-status aria-live="polite"></p>
+  </div>
+</dialog>
+
+<!-- THE PLANET: her planet is Menu; the cart count rides it as its moon -->
+<nav class="planet" aria-label="Site" hidden>
+  <button class="planet__menu" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu"><img src="../shared/brand/icon-white-400.webp" width="400" height="228" alt=""><span class="planet__label" data-label>Menu</span></button>
+  <button class="planet__cart" type="button" data-cart-open aria-haspopup="dialog" aria-label="Cart, 0 items"><span class="planet__count" data-cart-count>0</span><span class="planet__label">Cart</span></button>
+</nav>
+
+</body>
+</html>

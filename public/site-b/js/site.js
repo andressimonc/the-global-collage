@@ -80,7 +80,7 @@ function loop(now) {
 }
 const settle = (t) => 1 - (1 - t) ** 4;
 
-function orbit(root, o = {}) {
+export function orbit(root, o = {}) {
   const ringEl = $('.orbit__ring', root), items = [...ringEl.children], n = items.length, step = TAU / n;
   const stage = o.stage ?? root, lean = !reduced && fine ? o.lean ?? 0 : 0;
   const S = { angle: o.start ?? 0, target: o.start ?? 0, turn: 0, lx: 0, ly: 0, tx: 0, ty: 0, intro: o.intro && !reduced ? 0 : 1, held: !!o.intro, seen: false, geo: null, dirty: true, front: -1, drag: null, swallow: -1e9 };
@@ -347,10 +347,10 @@ if (menuStage) {
 // resting place sends it below the screen edge, and it comes back once the spot is clear. Never while the menu is
 // open; keyboard focus brings it back (CSS).
 // ponytail: measures every guarded thing (about 50) on scrolled frames and three times a second; cache the list if a page grows long.
-const GUARDED = 'main :is(h1, h2, h3, .strip, .label, .tag, button, input, .slip, .doorway-name, .doorway-note, .proof-names li, .is-front .print):not(.visually-hidden), .site-footer :is(a, button, input)';
+const GUARDED = 'main :is(h1, h2, h3, .strip, .label, .tag, button, input, select, textarea, .slip, .doorway-name, .doorway-note, .proof-names li, .is-front .print):not(.visually-hidden), .site-footer :is(a, button, input)';
 const textRange = document.createRange();
 function boxesOf(node) {   // a button or a field is its box; a headline is its words, line by line
-  if (node.matches('input, button, .label, .tag, .print')) return [node.getBoundingClientRect()];
+  if (node.matches('input, select, textarea, button, .label, .tag, .print')) return [node.getBoundingClientRect()];
   const boxes = [], walk = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
   while (walk.nextNode()) { textRange.selectNodeContents(walk.currentNode); boxes.push(...textRange.getClientRects()); }
   return boxes;
@@ -406,7 +406,7 @@ function openCart() {
   setMenu(false);
   say(); receipt.showModal(); mountSampleNote();   // the cart shows prices: the sample note comes with it
 }
-function addToCart(product) {
+export function addToCart(product) {
   say();
   return cart.add(product).then(openCart, (err) => { openCart(); say(err.message); });
 }

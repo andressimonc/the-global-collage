@@ -1,0 +1,153 @@
+/* The Global Collage — Site B, "The Work Table": Shop, Product, Shipping & Returns, Privacy.
+   Linked after css/site.css, which holds everything shared (tokens, strips, cards, slips, labels, tags, the orbit,
+   the planet, the cart). Order: shared bits · SHOP · PRODUCT · SHIPPING & RETURNS / PRIVACY. */
+
+/* ---------- shared by these pages ---------- */
+.page-top { padding-top: calc(var(--top) + clamp(.4rem, 1.6vw, 1.5rem)); }
+/* a price is a label stuck on the paper, not a button */
+.price-label { pointer-events: none; --r: -2.6deg; }
+/* the shop layer's sample-price line (sample mode only), laid on the page as a slip */
+.note-slot { display: flex; margin-top: 1.2rem; }
+.note-slot:empty { display: none; }
+.note-slot .tgc-sample-note { position: static; inset: auto; max-width: 30rem; margin: 0; padding: .4rem .4rem .4rem .8rem; border: 0; border-radius: 0; background: var(--white); color: var(--cobalt); box-shadow: var(--shadow-flat); font: 500 .78rem/1.4 var(--font-mono); rotate: .6deg; }
+.note-slot .tgc-sample-note button { flex: none; min-width: 36px; min-height: 36px; border: 0; background: none; color: inherit; font-size: 1.15rem; cursor: pointer; }
+
+/* ======================================================================================================
+   SHOP: the heading strip, the intro card, the filters as tags; then the pieces lying on the mat
+   ====================================================================================================== */
+.shop-top { padding-bottom: clamp(1rem, 2vw, 1.6rem); }
+.shop-head { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem clamp(1.6rem, 4vw, 3.6rem); }
+.shop-title { --strip-size: clamp(3rem, 1.1rem + 6.3vw, 6.5rem); font-weight: 800; }
+.shop-title .strip { --r: -2.2deg; }
+.shop-card { flex: 1 1 20rem; max-width: 33rem; --r: .7deg; }
+.shop-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-top: clamp(1.3rem, 2.6vw, 2.1rem); }
+.shop-filters ul { display: flex; flex-wrap: wrap; gap: .7rem 1.1rem; }
+.shop-filters li:nth-child(1) .tag { --r: -1.4deg; }
+.shop-filters li:nth-child(2) .tag { --r: 1.1deg; }
+.shop-filters li:nth-child(3) .tag { --r: -.5deg; }
+/* the section showing now: cobalt paper, white word */
+.shop-filters .tag[aria-current] { color: var(--white); }
+.shop-filters .tag[aria-current]::before { background: var(--cobalt); }
+.shop-ship { transform: rotate(1.2deg); font-weight: 600; }
+
+.shop-shelf { padding-block: clamp(1.8rem, 3.4vw, 3rem) clamp(1.8rem, 3.4vw, 3rem); }
+.shop-shelf-head { --strip-size: clamp(1.9rem, 1.2rem + 2.6vw, 3.2rem); margin-bottom: clamp(1.8rem, 3.4vw, 2.8rem); }
+.shop-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(3rem, 5.4vw, 4.8rem) clamp(1.6rem, 4.4vw, 4.4rem); align-items: start; }
+.shop-item { display: flex; flex-direction: column; align-items: flex-start; }
+.shop-item .piece { width: 100%; }
+.shop-item:nth-child(3n + 1) .piece { --r: -1.6deg; }
+.shop-item:nth-child(3n + 2) .piece { --r: 1.2deg; }
+.shop-item:nth-child(3n) .piece { --r: -.8deg; }
+.shop-item:nth-child(6n + 4) .piece { --r: 1.8deg; }
+.shop-caption { position: relative; z-index: 4; display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .9rem; margin: -1.1rem 0 0 -.5rem; }
+.shop-slip { transform: rotate(-1deg); }
+.shop-add { --r: 1.5deg; min-height: 46px; }
+.shop-sold { font-size: 1.1rem; }
+/* a section with nothing in it yet: an empty ring holding one plain line */
+.shop-grid.is-empty { display: block; }
+.shop-empty { position: relative; display: grid; place-items: center; min-height: clamp(13rem, 24vw, 19rem); }
+.shop-empty::before { content: ""; position: absolute; inset: 6% 3%; border: 1.5px solid var(--ring-line); border-radius: 50%; transform: rotate(-4deg); pointer-events: none; }
+.shop-empty .slip { position: relative; transform: rotate(-1deg); font-weight: 600; }
+@media (max-width: 699px) {
+  .shop-filters ul { gap: .55rem .7rem; }
+  .shop-filters .tag { min-height: 46px; padding: .6em .85em .62em 2.15em; font-size: .95rem; }
+  .shop-bar { gap: .8rem 1rem; }
+  .shop-bar .price-label { min-height: 46px; font-size: .95rem; }
+  .shop-ship { font-size: .9rem; }
+  .shop-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.6rem 1rem; }
+  .shop-item:nth-child(3n) { grid-column: 1 / -1; }
+  .shop-item:nth-child(3n) .piece { width: 82%; margin-inline: auto; }
+  .shop-item:nth-child(3n) .shop-caption { margin-left: 9%; }
+  .shop-caption { gap: .5rem; margin: -.8rem 0 0 -.3rem; }
+  .slip.shop-slip { padding: .38em .55em .42em; }
+  .shop-slip .slip-meta { font-size: .8rem; }
+  .shop-add { min-height: 44px; padding-right: .9em; font-size: .95rem; }
+  .shop-empty::before { inset: 12% 0; }
+}
+
+/* ======================================================================================================
+   PRODUCT: the piece whole at the front of a ring of its neighbours (left), the spec sheet card (right)
+   ====================================================================================================== */
+.product { padding-bottom: clamp(3rem, 6vw, 5rem); overflow-x: clip; }
+.product-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 4vw, 4rem); align-items: start; }
+
+/* the stage: the piece stands at its foot; the ring (js) rides around and behind it */
+.kin { --kin-h: clamp(26rem, 100svh - var(--top) - 3rem, 50rem); position: relative; isolation: isolate; display: flex; justify-content: center; padding: clamp(4.5rem, 9vw, 8rem) 0 .5rem; touch-action: pan-y; }   /* the top padding is room for the back of the ring */
+.kin-stand { position: relative; z-index: 90; }
+.kin-piece { display: block; width: auto; height: auto; max-width: min(36vw, 560px); max-height: calc(var(--kin-h) * .78); background: var(--avg, #8a8378); box-shadow: var(--shadow-rest); }
+.kin-look { position: absolute; inset: 0; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.kin-look:focus-visible { outline-color: var(--white); outline-offset: 6px; }
+.kin-ring { position: absolute; inset: 0; }
+.kin:not(.is-orbit) .kin-ring { display: none; }
+.kin .print { cursor: pointer; }
+.kin .print:hover { box-shadow: var(--shadow-lift); }
+.kin-slot { visibility: hidden; }
+
+/* the spec sheet: a white card, its title strips lying over the top edge */
+.product-side { padding-top: clamp(2rem, 6vh, 4.5rem); }
+.spec { --r: .5deg; padding: clamp(1.4rem, 1rem + 1.8vw, 2.4rem); }
+.spec::before { background: var(--white); }
+.spec-title { --strip-size: clamp(2rem, 1.1rem + 2.6vw, 3.4rem); margin: calc(clamp(1.4rem, 1rem + 1.8vw, 2.4rem) * -1 - 1.3rem) 0 1.3rem -.6rem; }
+.spec-title .strip { white-space: normal; }
+.spec-rows { margin: 0; }
+.spec-rows div { display: grid; grid-template-columns: 7.2rem minmax(0, 1fr); gap: .3rem 1rem; padding: .62rem 0 .66rem; border-bottom: 1.5px solid rgba(18, 47, 171, .32); }
+.spec-rows div:first-child { border-top: 1.5px solid rgba(18, 47, 171, .32); }
+.spec-rows dt { font-weight: 700; font-size: .92rem; }
+.spec-rows dd { margin: 0; font-size: .98rem; line-height: 1.4; }
+.spec-rows .needs-content { padding: .3rem .55rem; font-size: .82rem; }
+.spec-price { margin-top: 1.5rem; font-size: 1.3rem; }
+.spec-story { margin-top: 1.3rem; }
+.spec-story.needs-content { font-size: .9rem; }
+.spec-badge { margin-top: 1.2rem; transform: rotate(-1deg); font-weight: 700; }
+.spec-ship { margin-top: .9rem; font-weight: 600; font-size: .95rem; }
+.spec-buy { margin-top: 1.5rem; }
+.spec-buy:has(> [hidden] + [hidden]) { display: none; }
+.add-to-cart { --r: -1deg; }
+.spec-sold { font-size: 1.25rem; }
+.spec-photos { display: grid; gap: clamp(2rem, 4vw, 3rem); margin-top: clamp(2.4rem, 5vw, 3.6rem); }
+.spec-photos:empty { display: none; }
+.spec-photo { width: min(84%, 420px); --r: -2deg; }
+.spec-photo:nth-child(even) { margin-left: auto; --r: 2.4deg; --tape-r: 3deg; }
+
+@media (max-width: 899px) {
+  .product-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .kin { --kin-h: clamp(24rem, 100svh - var(--top) - 9rem, 40rem); padding-top: clamp(4.5rem, 16vw, 7rem); }
+  .kin-piece { max-width: 70vw; }
+  .product-side { padding-top: 3.4rem; }
+}
+
+/* the close look: the largest file at its own size on a dark ground; scroll moves around it */
+.look { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; overflow: auto; overscroll-behavior: contain; background: var(--ink); }
+.look[open] { display: flex; }
+.look::backdrop { background: var(--ink); }
+.look-img { flex: none; display: block; margin: auto; max-width: 250vw; height: auto; }
+.look-close { position: fixed; top: 1rem; right: 1.2rem; }
+@media screen and (prefers-reduced-motion: no-preference) {
+  .look[open] { animation: fade .5s linear; }
+}
+
+/* not found: the piece is not in the shop */
+.product-missing { min-height: 70svh; }
+.missing-title { --strip-size: clamp(2.6rem, 1.2rem + 5vw, 5.4rem); }
+.missing-title .strip:last-child { margin-left: .4em; }
+.missing-why { margin-top: 1.6rem; transform: rotate(-.8deg); font-weight: 600; }
+.product-missing .actions { margin-top: 1.8rem; }
+
+/* ======================================================================================================
+   SHIPPING & RETURNS / PRIVACY: the heading strip on the mat, then one sheet. Only what the copy states;
+   everything else is a pending placeholder.
+   ====================================================================================================== */
+.legal-top { padding-bottom: clamp(2.4rem, 5vw, 4rem); }
+.legal-title { --strip-size: clamp(2.6rem, 1.2rem + 5vw, 5.6rem); font-weight: 800; }
+.legal-title .strip:first-child { --r: -2deg; }
+.legal { margin-bottom: clamp(3rem, 6vw, 5rem); }
+.legal-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2.4rem, 5vw, 4.5rem); align-items: start; }
+.legal-part:only-child { grid-column: 1 / -1; max-width: 40rem; }
+.legal-head { --strip-size: clamp(1.7rem, 1.1rem + 2.2vw, 2.9rem); margin-bottom: 1.4rem; }
+.legal-facts { padding: 1.5rem clamp(1.2rem, 2.4vw, 1.9rem); --r: -.6deg; }
+.legal-facts::before { background: var(--white); }
+.legal-facts ul { display: grid; gap: .55rem; font: 600 clamp(1.08rem, .95rem + .45vw, 1.35rem)/1.32 var(--font-display); }
+.legal-facts li::before { content: "\00B7"; margin-right: .5em; color: var(--orange); font-weight: 900; }
+.legal .needs-content { margin-top: 1.3rem; }
+.legal-part:only-child .needs-content { margin-top: 0; }
+@media (max-width: 859px) { .legal-body { grid-template-columns: minmax(0, 1fr); } }
