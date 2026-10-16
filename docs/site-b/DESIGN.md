@@ -16,7 +16,7 @@ Files: `public/site-b/index.html`, `css/site.css` (sections 1–12 are shared by
 Pieces farther round the ring take on the mat's colour (`--dim`). No gradients, glass or glow.
 
 ## Type
-Neco 700–800 for strips and headings (H1 `clamp(3rem, 1.1rem + 6.3vw, 6.5rem)`, as in option 1). TT Interphases for body and buttons. In the About section her name is TT Interphases 900, `font-stretch: 75%`, capitals, at 15vw (option 4 used 22vw), and the copy line is Neco on orange. TT Interphases Mono is used only for small labels: the proof label, "soon" and the sample-price note.
+Neco 700–800 for strips and headings (H1 `clamp(3rem, 1.1rem + 6.3vw, 6.5rem)`, as in option 1). TT Interphases for body and buttons. In the About section her name is Neco 800 in capitals and lower case, at 15vw (option 4 used 22vw), and the copy line is Neco on orange. TT Interphases Mono is used only for small labels: the proof label, "soon" and the sample-price note.
 
 ## Moving around
 - **Logo**: fixed top-left with nothing behind it. It is white over the mat and black over paper, the proof strip and the orange sheet. Whichever toned ground is smallest under its middle wins. It shrinks to 62% once the page moves and steps away over the footer, which has its own logo.

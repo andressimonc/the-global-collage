@@ -2,6 +2,9 @@
 
 One line per choice that Dre or Camila may want to change. Home page only.
 
+## Her round-3 note (applied 2026-10-16)
+- "Make all headlines with the same font as the first hero quote." Her name in the About section was the only headline not in Neco (it was TT Interphases condensed capitals, from option 4). It is now Neco 800 in capitals and lower case, same size. The small capital strips ("out of", "The deeper why", "Sold") stay as they are, because the hero headline has one too.
+
 ## Where her notes left room
 - The ring holds "The work" (option 1's six originals), not the hero. The first screen stays option 1's hands-on-the-mat hero, as briefed.
 - There are six pieces on the ring, because COPY asks for 3 to 6: Be You, Society, Senor Tigre, Female Cactus, Gaga's Offering and Let Out (option 1's six, all high-resolution). Be You is at the front when the section sits in the middle of the screen.
