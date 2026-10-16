@@ -4,9 +4,9 @@
 // What it does: pieces arriving on the table, the hero's layers drifting apart as it leaves, scraps that shift
 // away from the pointer, the logo's colour, every ring (orbit(), ported from option 9), the planet with its
 // menu, the cart receipt on top of the shared shop layer, the newsletter fields, and the shared motion kit.
-import { init, reduced, pointerVars, magnetic } from '../../shared/motion.js';
-import { getProduct, cart, formatPrice, imageAttrs, mountSampleNote } from '../../shared/shop/shop.js';
-import { wireForm } from '../../shared/forms.js';
+import { init, reduced, pointerVars, magnetic } from '../shared/motion.js';
+import { getProduct, cart, formatPrice, imageAttrs, mountSampleNote } from '../shared/shop/shop.js';
+import { wireForm } from '../shared/forms.js';
 
 const html = document.documentElement;
 const $ = (sel, root = document) => root.querySelector(sel);

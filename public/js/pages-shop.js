@@ -4,8 +4,8 @@
 //   shop.html     ?type=originals|prints|goods shows that section only; no type shows all three.
 //   product.html  ?handle=<handle>; an unknown handle shows the "not here" state.
 import { orbit, addToCart } from './site.js';
-import { getProducts, getProduct, formatPrice, imageAttrs, zoomSrc, STORY_PLACEHOLDER, mountSampleNote } from '../../shared/shop/shop.js';
-import { reduced } from '../../shared/motion.js';
+import { getProducts, getProduct, formatPrice, imageAttrs, zoomSrc, STORY_PLACEHOLDER, mountSampleNote } from '../shared/shop/shop.js';
+import { reduced } from '../shared/motion.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];

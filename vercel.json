@@ -1,15 +1,5 @@
 {
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex"
-        }
-      ]
-    }
-  ],
+  "cleanUrls": true,
   "git": {
     "deploymentEnabled": {
       "notes": false

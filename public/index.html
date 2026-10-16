@@ -1,91 +1,251 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-logo="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex">
-<title>The Global Collage — choose your website</title>
+<meta name="theme-color" content="#028B71">
+<title>The Global Collage | Original Collage Art by Camila Castillo</title>
+<meta name="description" content="Original pop surrealist collage, handmade in Miami from recycled magazines. One-of-a-kind mixed media art by Camila Castillo. Shop originals and prints.">
 <link rel="icon" href="shared/brand/favicon.png">
-<link rel="stylesheet" href="review/review.css">
-<script type="module" src="review/review.js"></script>
+<link rel="preload" href="shared/fonts/Neco-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="shared/fonts/fonts.css">
+<link rel="stylesheet" href="shared/motion.css">
+<link rel="stylesheet" href="css/site.css">
+<script type="module" blocking="render" src="js/site.js"></script>
 </head>
-<!-- The review site: one link for the artist. Options and Dre's opening message live in review/options.json;
-     how it works and how to read the notes is in docs/REVIEW-SITE.md. -->
-<body class="review">
-<header class="bar">
-  <div class="nav">
-    <button type="button" class="arrow" id="prev" aria-label="Previous option"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
-    <div class="where" aria-live="polite">
-      <h1 id="title">The Global Collage</h1>
-      <p id="line">Loading the options…</p>
-    </div>
-    <button type="button" class="arrow" id="next" aria-label="Next option"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
-  </div>
-  <nav class="dots" id="dots" aria-label="Jump to an option"></nav>
-  <div class="tools">
-    <div class="switch" id="size" role="group" aria-label="Show the site as">
-      <button type="button" data-size="desktop" aria-pressed="true">Desktop</button>
-      <button type="button" data-size="phone" aria-pressed="false">Phone</button>
-    </div>
-    <a class="full" id="full" target="_blank" rel="noopener" aria-label="Open full screen, in a new tab"><span>Open full screen</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg></a>
-    <button type="button" class="primary notes-open" id="notes-open" aria-controls="panel">Notes</button>
-  </div>
-</header>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-<main>
-  <div class="stage" id="stage" data-size="desktop"></div>
+<!-- THE LOGO: alone in the corner, nothing behind it. White over the mat, black over paper and orange (js/site.js). -->
+<a class="logo" href="index.html">
+  <img class="logo__dark" src="shared/brand/logo-black-v1-400.webp" width="400" height="298" alt="The Global Collage">
+  <img class="logo__light" src="shared/brand/logo-white-v1-400.webp" width="400" height="298" alt="">
+</a>
 
-  <section class="wrap" id="wrap" hidden>
-    <div class="wrap-inner">
-      <p class="wrap-favorite" id="wrap-favorite"></p>
-      <ol class="picks" id="picks"></ol>
-      <fieldset class="plan" id="plan">
-        <legend>Choose one</legend>
-        <label><input type="radio" name="plan" value="favorite"> Go with my favorite</label>
-        <label><input type="radio" name="plan" value="mix"> Mix pieces from several</label>
-      </fieldset>
-      <label class="field" for="overall">How should we move forward?</label>
-      <textarea id="overall" rows="5" maxlength="4000"></textarea>
-      <div class="send-row">
-        <button type="button" class="primary" id="send">Send my notes to Dre</button>
-        <button type="button" class="plain" id="copy" hidden>Copy all my notes</button>
-        <span class="status" data-status></span>
+<main id="main">
+
+  <!-- HERO: the mat, her hands at work on it, the headline in cut strips. As you scroll away the fragments drift apart. -->
+  <section class="hero on-mat" data-tone="mat">
+    <div class="hero-shot">
+      <div class="hero-table">
+        <img class="scrap" data-scrap data-arrive="right" style="--l:44.67%;--t:71.81%;--w:14.56%;--i:7;--ox:22vw;--oy:-6vh;--or:18deg" src="img/scrap-eye.webp" width="262" height="285" alt="">
+        <img class="scrap" data-scrap data-arrive="right" style="--l:61.39%;--t:68.77%;--w:22.33%;--i:9;--ox:30vw;--oy:4vh;--or:-14deg" src="img/scrap-strip.webp" width="402" height="283" alt="">
+        <img class="scrap" data-scrap data-arrive style="--l:31.5%;--t:79.61%;--w:28.28%;--i:11;--ox:-10vw;--oy:14vh;--or:-22deg" src="img/scrap-ell.webp" width="420" height="338" alt="">
+        <img class="hero-hands" src="img/hero-hands-800.webp" srcset="img/hero-hands-800.webp 800w, img/hero-hands-1500.webp 1500w" sizes="(min-width: 900px) min(47vw, 650px), 132vw" width="1500" height="1676" fetchpriority="high" alt="From above, Camila bends over a green cutting mat, long brown hair hiding her face, cutting a strip of a magazine face with a craft knife.">
       </div>
-      <p class="after" id="after" role="status"></p>
-      <textarea id="copy-box" rows="8" readonly hidden aria-label="All your notes, to copy"></textarea>
+    </div>
+    <a class="piece hero-piece" href="product.html?handle=the-art-of-art" data-piece data-arrive="right" style="--i:10;--avg:#81999C">
+      <img src="shared/img/shop/originals/the-art-of-art-480.webp" srcset="shared/img/shop/originals/the-art-of-art-480.webp 480w, shared/img/shop/originals/the-art-of-art-960.webp 960w" sizes="272px" width="960" height="1320" alt="The Art of Art, collage: a blue cloudy sky with cut-out words This is Art, TAKE a harder look HONEY, a butterfly and a quill.">
+    </a>
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1 class="strips strips--stack hero-title" aria-label="I make worlds out of fragments."><span class="strip s-a" data-arrive="left" style="--i:0">I make</span> <span class="strip strip--cobalt s-b" data-arrive="right" style="--i:1">worlds</span> <span class="strip strip--ink strip--sans s-c" data-arrive="left" style="--i:2">out of</span> <span class="strip-row"><span class="strip s-d" data-arrive style="--i:3">frag</span><span class="strip s-e" data-arrive="right" style="--i:4">ments.</span></span></h1>
+        <div class="card hero-card" data-arrive style="--i:5">
+          <p class="body-md">Original pop surrealist collage, handmade mixed media art in Miami from recycled magazines. Each piece is born out of one unique emotion.</p>
+        </div>
+        <p class="actions">
+          <a class="label" href="shop.html" data-arrive style="--i:6">Explore the collection</a>
+          <a class="tag" href="services.html" data-arrive style="--i:7">Work with me</a>
+        </p>
+      </div>
     </div>
   </section>
-</main>
 
-<div class="scrim" id="scrim"></div>
-<aside class="panel" id="panel" aria-label="Your notes">
-  <header class="panel-head">
-    <h2>Notes for Dre</h2>
-    <span class="status" data-status role="status"></span>
-    <button type="button" class="plain panel-close" id="notes-close">Close</button>
-  </header>
-  <div class="thread" id="thread">
-    <div class="from-dre">
-      <span class="from">Dre</span>
-      <div id="intro"></div>
+  <!-- SOCIAL PROOF STRIP: a torn strip of paper lying across the join -->
+  <section class="proof" data-tone="paper" aria-label="Exhibitions">
+    <div class="card torn proof-strip" data-arrive="left">
+      <p class="mono-label">Exhibited across Miami and South Florida</p>
+      <ul class="proof-names">
+        <li>Studio 18 Art Complex</li>
+        <li>Tripping Animals Brewery (On The Wall Gallery)</li>
+        <li>Unsin Festival</li>
+        <li>Coconut Grove Arts Festival</li>
+      </ul>
     </div>
-    <div class="about">
-      <p id="about"></p>
-      <div class="marks" id="marks" role="group" aria-label="Your mark for this option">
-        <button type="button" data-mark="favorite" aria-pressed="false">★ Favorite</button>
-        <button type="button" data-mark="like" aria-pressed="false">I like it</button>
-        <button type="button" data-mark="no" aria-pressed="false">Not for me</button>
+  </section>
+
+  <!-- ABOUT TEASER: an orange sheet on the mat. Her name huge in off-white, her portrait cut out in black and white in front of it. -->
+  <section class="about on-mat" data-tone="mat" data-scroll aria-labelledby="about-h">
+    <div class="about-sheet" data-tone="orange">
+      <h2 class="mega about-name" id="about-h" aria-label="Camila Castillo"><span class="mega-line" data-arrive="left">Camila</span> <span class="mega-line" data-arrive="right" style="--i:1">Castillo</span></h2>
+      <div class="about-copy">
+        <p class="about-lead" data-arrive style="--i:2">I&rsquo;m Camila Castillo, a Venezuelan collage artist based in Miami. I was raised between languages and places, and I find collage serves perfectly to express the human experience because we are all assembled from fragments. My work lives where pop surrealism meets handmade, tactile collage, built to help us feel more and recognize each other across any border.</p>
+        <a class="tag" href="about.html" data-arrive style="--i:3">Read my story</a>
+      </div>
+      <img class="about-cut cut-bw" data-arrive style="--i:1" src="shared/img/cutouts/camila-960.webp" srcset="shared/img/cutouts/camila-480.webp 480w, shared/img/cutouts/camila-960.webp 960w" sizes="(min-width: 860px) 26vw, 60vw" width="960" height="1412" loading="lazy" decoding="async" alt="Camila in a white button-up shirt and a thin gold necklace, head tilted, half-smiling.">
+    </div>
+    <img class="scrap about-lips" data-scrap src="img/scrap-lips.webp" width="198" height="371" loading="lazy" alt="">
+    <img class="scrap about-eye" data-scrap src="img/scrap-eye.webp" width="262" height="285" loading="lazy" alt="">
+  </section>
+
+  <!-- THE WORK: six originals on a tilted ring around the heading, turning over the mat. Drag to spin; the front one can be opened or added. -->
+  <section class="on-mat work" data-tone="mat" data-scroll aria-labelledby="work-h">
+    <div class="orbit ring" data-orbit="work" role="group" aria-label="Featured originals">
+      <h2 class="strips strips--stack work-head" id="work-h"><span class="strip s-a" data-arrive="left">The</span> <span class="strip strip--cobalt s-b" data-arrive="right" style="--i:1">work</span></h2>
+      <ul class="orbit__ring">
+        <li class="orbit__item" data-handle="be-you"><a class="print" data-piece href="product.html?handle=be-you" data-title="Be You" data-year="2024" style="--ar:0.8696;--avg:#7D524B;--tilt:-2deg"><img src="shared/img/shop/originals/be-you-480.webp" srcset="shared/img/shop/originals/be-you-480.webp 480w, shared/img/shop/originals/be-you-960.webp 960w" sizes="(min-width: 860px) 26vw, 60vw" width="480" height="552" loading="lazy" decoding="async" draggable="false" alt="Be You, collage: a woman in pink satin hides her face behind a ringed hand, with a photographer on a rainbow flag and the letters BE YOU."></a></li>
+        <li class="orbit__item" data-handle="society"><a class="print" data-piece href="product.html?handle=society" data-title="Society" data-year="2025" style="--ar:0.8989;--avg:#7D8D92;--tilt:1.6deg"><img src="shared/img/shop/originals/society-480.webp" srcset="shared/img/shop/originals/society-480.webp 480w, shared/img/shop/originals/society-960.webp 960w" sizes="(min-width: 860px) 26vw, 60vw" width="480" height="534" loading="lazy" decoding="async" draggable="false" alt="Society, collage: wave-cut bands of snowy mountains, a city skyline and a snow-covered town, dotted with small cut-out people."></a></li>
+        <li class="orbit__item" data-handle="senor-tigre"><a class="print" data-piece href="product.html?handle=senor-tigre" data-title="Senor Tigre" data-year="2025" style="--ar:0.7430;--avg:#6E624B;--tilt:-1.2deg"><img src="shared/img/shop/originals/senor-tigre-480.webp" srcset="shared/img/shop/originals/senor-tigre-480.webp 480w, shared/img/shop/originals/senor-tigre-960.webp 960w" sizes="(min-width: 860px) 26vw, 60vw" width="480" height="646" loading="lazy" decoding="async" draggable="false" alt="Senor Tigre, collage: a laughing woman in a white swimsuit on a jungle veranda pets a tiger; more tigers prowl along the bottom."></a></li>
+        <li class="orbit__item" data-handle="female-cactus"><a class="print" data-piece href="product.html?handle=female-cactus" data-title="Female Cactus" style="--ar:0.8526;--avg:#ABAC92;--tilt:2.2deg"><img src="shared/img/shop/originals/female-cactus-480.webp" srcset="shared/img/shop/originals/female-cactus-480.webp 480w, shared/img/shop/originals/female-cactus-960.webp 960w" sizes="(min-width: 860px) 26vw, 60vw" width="480" height="563" loading="lazy" decoding="async" draggable="false" alt="Female Cactus, collage: a green cactus cut from ruched fabric, with paper thorns and pink flowers, rising from sandy rock on white paper."></a></li>
+        <li class="orbit__item" data-handle="gaga-ate"><a class="print" data-piece href="product.html?handle=gaga-ate" data-title="Gaga&#x27;s Offering" data-year="2025" style="--ar:0.7295;--avg:#82515E;--tilt:-1.8deg"><img src="shared/img/shop/originals/gagas-offering-480.webp" srcset="shared/img/shop/originals/gagas-offering-480.webp 480w, shared/img/shop/originals/gagas-offering-960.webp 960w" sizes="(min-width: 860px) 26vw, 60vw" width="480" height="658" loading="lazy" decoding="async" draggable="false" alt="Gaga's Offering, collage: a pink-haired woman in a red horned headpiece holds an upside-down red figure, under purple glitter stars."></a></li>
+        <li class="orbit__item" data-handle="let-it-out"><a class="print" data-piece href="product.html?handle=let-it-out" data-title="Let Out" style="--ar:0.7973;--avg:#846A5C;--tilt:1.4deg"><img src="shared/img/shop/originals/let-out-480.webp" srcset="shared/img/shop/originals/let-out-480.webp 480w, shared/img/shop/originals/let-out-960.webp 960w" sizes="(min-width: 860px) 26vw, 60vw" width="480" height="602" loading="lazy" decoding="async" draggable="false" alt="Let Out, collage: a red profile shouting inside a jagged burst, a black-and-white face with closed eyes, banknotes and red letters Let Out."></a></li>
+      </ul>
+      <div class="ring-bar">
+        <button class="ring-turn" type="button" data-turn="-1" aria-label="Previous piece"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M14 8H3M7 4L3 8l4 4"/></svg></button>
+        <p class="slip ring-cap"><a class="slip-title" data-cap-link href="product.html?handle=be-you">Be You</a><span class="slip-meta" data-cap-meta>2024 · Original, 1 of 1</span></p>
+        <button class="tag ring-add" type="button" data-cap-add hidden>Add to cart</button>
+        <span class="strip strip--ink strip--sans ring-sold" data-cap-sold hidden>Sold</span>
+        <button class="ring-turn" type="button" data-turn="1" aria-label="Next piece"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
       </div>
     </div>
-    <ol class="mine" id="mine" aria-label="Your notes for this option"></ol>
-  </div>
-  <form class="composer" id="composer">
-    <label class="sr" for="note">Your note for this option</label>
-    <textarea id="note" rows="2" maxlength="4000" placeholder="What do you like or not like here?"></textarea>
-    <button type="submit" class="primary">Send</button>
-  </form>
-</aside>
 
-<noscript><p class="noscript">This page needs JavaScript to show the options and keep your notes.</p></noscript>
+    <div class="wrap work-ways">
+      <img class="scrap" data-scrap src="img/scrap-eye-square.webp" width="420" height="301" loading="lazy" alt="">
+      <div class="ring-note" data-note-slot></div>
+      <h3 class="strips doorways-head"><span class="strip" data-arrive="left">Ways</span> <span class="strip strip--ink" data-arrive="right" style="--i:1">to own it</span></h3>
+      <ul class="doorways">
+        <li data-arrive="left" style="--dx:-3vw"><a class="tag doorway" href="shop.html?type=originals"><span class="doorway-name">Originals</span><span class="doorway-note">one of one, handmade</span><span class="sticker" aria-hidden="true">&rarr;</span></a></li>
+        <li data-arrive style="--i:1;--dx:2vw"><a class="tag doorway" href="shop.html?type=prints"><span class="doorway-name">Prints &amp; goods</span><span class="doorway-note">the work, made accessible</span><span class="sticker" aria-hidden="true">&rarr;</span></a></li>
+        <li data-arrive="right" style="--i:2;--dx:-1.5vw"><a class="tag doorway" href="commissions.html"><span class="doorway-name">Commissions</span><span class="doorway-note">a piece built around your story</span><span class="sticker" aria-hidden="true">&rarr;</span></a></li>
+      </ul>
+      <p class="actions"><a class="label" href="shop.html" data-arrive>See everything in the shop</a></p>
+    </div>
+  </section>
+
+  <!-- SERVICES ARM -->
+  <section class="sheet sheet--b services-arm" data-tone="paper" data-scroll aria-labelledby="services-h">
+    <div class="wrap">
+      <div>
+        <h2 class="visually-hidden" id="services-h">Services</h2>
+        <p class="body-lg" data-arrive>The Global Collage is also where I keep my work with producers, directors, and brands. When you need a real visual world built, this is the portfolio to point to.</p>
+        <a class="tag" href="services.html" data-arrive style="--i:2">See how we can work together</a>
+      </div>
+      <ul class="strips strips--stack services-list">
+        <li data-arrive="right"><span class="strip">Creative Direction</span></li>
+        <li data-arrive="right" style="--i:1"><span class="strip">Art Direction</span> <span class="strip">&amp; Set Dressing</span></li>
+        <li data-arrive="right" style="--i:2"><span class="strip">Content Creation</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- STAY IN TOUCH -->
+  <section class="on-mat ruled join" data-tone="mat" data-scroll aria-labelledby="join-h">
+    <div class="wrap">
+      <figure class="photo join-photo" data-arrive="left">
+        <img src="shared/img/collage-photos/bw-92-960.webp" srcset="shared/img/collage-photos/bw-92-480.webp 480w, shared/img/collage-photos/bw-92-960.webp 960w, shared/img/collage-photos/bw-92-1600.webp 1600w" sizes="(min-width: 860px) 40vw, 86vw" width="960" height="640" loading="lazy" decoding="async" alt="From above, Camila's hands place a cut-out eye and a pair of lips on a mostly empty green cutting mat, orange patterned clothing behind.">
+      </figure>
+      <div class="card join-card" data-arrive="right" style="--i:1">
+        <h2 class="strips" id="join-h"><span class="strip strip--cobalt">Stay</span> <span class="strip strip--ink">in touch</span></h2>
+        <p class="body-md">New originals are released in small batches and often find homes before they ever reach Instagram. Stay in touch for first access, the stories behind each piece, and the occasional look at work in progress.</p>
+        <form data-form="newsletter" novalidate>
+          <div class="join-row">
+            <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+            <button class="label label--plain" type="submit">Join</button>
+          </div>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE DEEPER WHY — THE LOCAL COLLAGE -->
+  <section class="sheet local" data-tone="paper" data-scroll aria-labelledby="local-h">
+    <div class="wrap">
+      <div>
+        <h2 class="strips strips--stack local-title" id="local-h"><span class="strip strip--ink strip--sans s-a" data-arrive="left">The deeper why</span> <span class="strip s-b" data-arrive="right" style="--i:1">The Local</span> <span class="strip strip--white s-c" data-arrive="left" style="--i:2">Collage</span></h2>
+        <p class="actions"><a class="label" href="exhibition.html#the-local-collage" data-arrive style="--i:3">The Local Collage</a></p>
+      </div>
+      <div class="local-prints">
+        <figure class="photo photo--main" data-arrive="right">
+          <img src="shared/img/exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect-960.webp" srcset="shared/img/exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect-480.webp 480w, shared/img/exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect-960.webp 960w, shared/img/exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect-1600.webp 1600w" sizes="(min-width: 860px) 36vw, 66vw" width="960" height="1280" loading="lazy" decoding="async" alt="The Local Collage #3: The Butterfly Effect, collage on canvas in a deep black frame on a paint-splashed easel, outdoors on green turf.">
+        </figure>
+        <figure class="photo photo--tucked taped" data-arrive="left" style="--i:2">
+          <img src="shared/img/exhibition/local-collage/dscf7924-960.webp" srcset="shared/img/exhibition/local-collage/dscf7924-480.webp 480w, shared/img/exhibition/local-collage/dscf7924-960.webp 960w" sizes="(min-width: 860px) 28vw, 50vw" width="960" height="540" loading="lazy" decoding="async" alt="Two collages in carved black frames on a pale block wall: a tall one on the left and a smaller wide one on the right.">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-tone="ink">
+  <div class="wrap">
+    <div class="footer-grid">
+      <a class="footer-logo" href="index.html"><img src="shared/brand/logo-white-v1-400.webp" width="400" height="298" loading="lazy" alt="The Global Collage"></a>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="exhibition.html">Exhibition</a></li>
+          <li><a href="commissions.html">Commissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <a href="mailto:theglobalcollage@gmail.com">theglobalcollage@gmail.com</a>
+        <a href="tel:+13053353506">+1 (305) 335-3506</a>
+        <a href="https://www.instagram.com/theglobalcollage/" rel="noopener">@theglobalcollage</a>
+      </div>
+      <form data-form="newsletter" novalidate>
+        <p class="mono-label footer-head">Stay in touch</p>
+        <div class="join-row">
+          <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+          <button class="label label--plain" type="submit">Join</button>
+        </div>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="footer-base">
+      <p>Based in Miami, available in the US</p>
+      <ul class="footer-legal">
+        <li><a href="shipping.html">Shipping &amp; Returns</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- MENU: the seven pages ride a ring around her planet, on the mat (a plain list of strips on a small screen) -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" tabindex="-1" hidden>
+  <div class="orbit menu__stage" data-orbit="menu">
+    <img class="menu__planet" src="shared/brand/icon-white-400.webp" width="400" height="228" alt="">
+    <nav aria-label="Main">
+      <ul class="orbit__ring menu__list">
+        <li class="orbit__item" style="--r:-1.6deg"><a class="strip strip--cobalt" href="index.html" aria-current="page">Home</a></li>
+        <li class="orbit__item" style="--r:1.3deg"><a class="strip" href="about.html">About</a></li>
+        <li class="orbit__item" style="--r:-.8deg"><a class="strip" href="shop.html">Shop</a></li>
+        <li class="orbit__item" style="--r:1.8deg"><a class="strip" href="services.html">Services</a></li>
+        <li class="orbit__item" style="--r:-1.2deg"><a class="strip" href="exhibition.html">Exhibition</a></li>
+        <li class="orbit__item" style="--r:.9deg"><a class="strip" href="commissions.html">Commissions</a></li>
+        <li class="orbit__item" style="--r:-1.9deg"><a class="strip" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- CART: a paper receipt that slides in from the right. js/site.js fills it from the shared shop layer. -->
+<dialog class="cart" aria-labelledby="cart-h">
+  <div class="cart-head">
+    <h2 class="cart-title" id="cart-h">Cart</h2>
+    <button class="tag" type="button" data-cart-close>Close</button>
+  </div>
+  <ul class="cart-lines" data-cart-lines></ul>
+  <p class="cart-empty" data-cart-empty>Your cart is empty.</p>
+  <div class="cart-foot" data-cart-foot hidden>
+    <p class="cart-sum"><span>Subtotal</span><span data-cart-subtotal></span></p>
+    <p class="cart-ship">Ships from Miami, insured, US only.</p>
+    <button class="label label--plain" type="button" data-cart-checkout>Checkout</button>
+    <p class="form-status" data-cart-status aria-live="polite"></p>
+  </div>
+</dialog>
+
+<!-- THE PLANET: her planet is Menu; the cart count rides it as its moon -->
+<nav class="planet" aria-label="Site" hidden>
+  <button class="planet__menu" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu"><img src="shared/brand/icon-white-400.webp" width="400" height="228" alt=""><span class="planet__label" data-label>Menu</span></button>
+  <button class="planet__cart" type="button" data-cart-open aria-haspopup="dialog" aria-label="Cart, 0 items"><span class="planet__count" data-cart-count>0</span><span class="planet__label">Cart</span></button>
+</nav>
+
 </body>
 </html>

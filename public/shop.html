@@ -3,18 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex">
 <meta name="theme-color" content="#028B71">
-<title>The Global Collage</title>
-<link rel="icon" href="../shared/brand/favicon.png">
-<link rel="preload" href="../shared/fonts/Neco-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../shared/fonts/fonts.css">
-<link rel="stylesheet" href="../shared/motion.css">
+<title>Shop Original Collage Art &amp; Prints | The Global Collage</title>
+<meta name="description" content="Shop original one-of-a-kind collage by Camila Castillo, plus prints and goods. Handmade mixed media from recycled magazines, shipped from Miami.">
+<link rel="icon" href="shared/brand/favicon.png">
+<link rel="preload" href="shared/fonts/Neco-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="shared/fonts/fonts.css">
+<link rel="stylesheet" href="shared/motion.css">
 <link rel="stylesheet" href="css/site.css">
 <link rel="stylesheet" href="css/pages-shop.css">
-<!-- the piece pressed on Home or in the shop flies here (shared motion kit: pieceHero) -->
-<link rel="expect" blocking="render" href="#piece-hero">
-<script type="module" blocking="render">import { pieceHero } from '../shared/motion.js'; pieceHero();</script>
 <script type="module" blocking="render" src="js/site.js"></script>
 <script type="module" blocking="render" src="js/pages-shop.js"></script>
 </head>
@@ -23,71 +20,68 @@
 
 <!-- THE LOGO: alone in the corner, nothing behind it. White over the mat, black over paper and orange (js/site.js). -->
 <a class="logo" href="index.html">
-  <img class="logo__dark" src="../shared/brand/logo-black-v1-400.webp" width="400" height="298" alt="The Global Collage">
-  <img class="logo__light" src="../shared/brand/logo-white-v1-400.webp" width="400" height="298" alt="">
+  <img class="logo__dark" src="shared/brand/logo-black-v1-400.webp" width="400" height="298" alt="The Global Collage">
+  <img class="logo__light" src="shared/brand/logo-white-v1-400.webp" width="400" height="298" alt="">
 </a>
 
 <main id="main">
 
-  <!-- THE PIECE: whole, standing at the front of a ring of its neighbours; beside it the spec sheet.
-       js/pages-shop.js fills both from the shared shop layer. -->
-  <section class="on-mat page-top product" data-tone="mat" data-product aria-busy="true">
-    <div class="wrap product-grid">
-      <div class="orbit kin" data-kin>
-        <div class="kin-stand">
-          <img id="piece-hero" class="kin-piece" alt="">
-          <button class="kin-look" type="button" data-look-open hidden></button>
+  <!-- SHOP: the heading strip, the intro on a card, the three filters as tags, the price cue and the shipping line -->
+  <section class="on-mat page-top shop-top" data-tone="mat">
+    <div class="wrap">
+      <div class="shop-head">
+        <h1 class="strips shop-title"><span class="strip" data-arrive="left">Shop</span></h1>
+        <div class="card shop-card" data-arrive="right" style="--i:1">
+          <p class="body-lg">Every piece began as a feeling. Find the one that speaks to you.</p>
         </div>
       </div>
-      <div class="product-side">
-        <article class="card spec" data-tone="paper" data-arrive="right" style="--i:1" aria-labelledby="spec-h">
-          <h1 class="strips spec-title" id="spec-h" data-title></h1>
-          <dl class="spec-rows">
-            <div><dt>Medium</dt><dd data-medium></dd></div>
-            <div><dt>Dimensions</dt><dd data-dimensions></dd></div>
-            <div><dt>Year</dt><dd data-year></dd></div>
-          </dl>
-          <p class="label label--plain price-label spec-price" data-price hidden></p>
-          <p class="body-md spec-story" data-story></p>
-          <p class="slip spec-badge" data-badge hidden></p>
-          <p class="spec-ship" data-shipping></p>
-          <p class="spec-buy">
-            <button class="label add-to-cart" type="button" data-add hidden>Add to cart</button>
-            <span class="strip strip--ink strip--sans spec-sold" data-sold hidden>Sold</span>
-          </p>
-          <div class="note-slot" data-note-slot></div>
-        </article>
-        <div class="spec-photos" data-photos></div>
+      <div class="shop-bar">
+        <nav class="shop-filters" aria-label="Filters">
+          <ul>
+            <li data-arrive style="--i:2"><a class="tag" href="shop.html?type=originals" data-filter="originals">Originals</a></li>
+            <li data-arrive style="--i:3"><a class="tag" href="shop.html?type=prints" data-filter="prints">Prints</a></li>
+            <li data-arrive style="--i:4"><a class="tag" href="shop.html?type=goods" data-filter="goods">Goods</a></li>
+          </ul>
+        </nav>
+        <p class="label label--plain price-label" data-arrive data-from style="--i:5">Originals from $111</p>
+        <p class="slip shop-ship" data-arrive style="--i:6">Ships from Miami, insured, US only.</p>
       </div>
+      <div class="note-slot" data-note-slot></div>
     </div>
   </section>
 
-  <!-- NOT FOUND: no piece with that name in the shop -->
-  <section class="on-mat page-top product-missing" data-tone="mat" data-missing hidden>
+  <!-- THE SECTIONS: Originals, Prints, Goods (only the one asked for with ?type=). js/pages-shop.js lays each one's
+       pieces on the mat, or an empty ring holding one plain line when it has none. -->
+  <section class="on-mat shop-shelf" data-tone="mat" data-shelf="original" aria-labelledby="originals-h">
     <div class="wrap">
-      <h1 class="strips strips--stack missing-title"><span class="strip">This piece</span> <span class="strip strip--cobalt">is not here.</span></h1>
-      <p class="slip missing-why" data-missing-why hidden></p>
-      <p class="actions"><a class="tag" href="shop.html">Explore the collection</a></p>
+      <h2 class="strips shop-shelf-head" id="originals-h"><span class="strip strip--cobalt" data-arrive="left">Originals</span></h2>
+      <ul class="shop-grid" data-grid></ul>
+    </div>
+  </section>
+  <section class="on-mat shop-shelf" data-tone="mat" data-shelf="print" aria-labelledby="prints-h">
+    <div class="wrap">
+      <h2 class="strips shop-shelf-head" id="prints-h"><span class="strip strip--cobalt" data-arrive="left">Prints</span></h2>
+      <ul class="shop-grid" data-grid></ul>
+    </div>
+  </section>
+  <section class="on-mat shop-shelf" data-tone="mat" data-shelf="good" aria-labelledby="goods-h">
+    <div class="wrap">
+      <h2 class="strips shop-shelf-head" id="goods-h"><span class="strip strip--cobalt" data-arrive="left">Goods</span></h2>
+      <ul class="shop-grid" data-grid></ul>
     </div>
   </section>
 
 </main>
 
-<!-- THE CLOSE LOOK: the largest file at its own size, on a dark ground; scroll to move around it -->
-<dialog class="look" data-look>
-  <img class="look-img" data-look-img alt="">
-  <button class="tag look-close" type="button" data-look-close>Close</button>
-</dialog>
-
 <footer class="site-footer" data-tone="ink">
   <div class="wrap">
     <div class="footer-grid">
-      <a class="footer-logo" href="index.html"><img src="../shared/brand/logo-white-v1-400.webp" width="400" height="298" loading="lazy" alt="The Global Collage"></a>
+      <a class="footer-logo" href="index.html"><img src="shared/brand/logo-white-v1-400.webp" width="400" height="298" loading="lazy" alt="The Global Collage"></a>
       <nav class="footer-nav" aria-label="Footer">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="shop.html">Shop</a></li>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="exhibition.html">Exhibition</a></li>
           <li><a href="commissions.html">Commissions</a></li>
@@ -121,12 +115,12 @@
 <!-- MENU: the seven pages ride a ring around her planet, on the mat (a plain list of strips on a small screen) -->
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" tabindex="-1" hidden>
   <div class="orbit menu__stage" data-orbit="menu">
-    <img class="menu__planet" src="../shared/brand/icon-white-400.webp" width="400" height="228" alt="">
+    <img class="menu__planet" src="shared/brand/icon-white-400.webp" width="400" height="228" alt="">
     <nav aria-label="Main">
       <ul class="orbit__ring menu__list">
         <li class="orbit__item" style="--r:-1.6deg"><a class="strip" href="index.html">Home</a></li>
         <li class="orbit__item" style="--r:1.3deg"><a class="strip" href="about.html">About</a></li>
-        <li class="orbit__item" style="--r:-.8deg"><a class="strip" href="shop.html">Shop</a></li>
+        <li class="orbit__item" style="--r:-.8deg"><a class="strip strip--cobalt" href="shop.html" aria-current="page">Shop</a></li>
         <li class="orbit__item" style="--r:1.8deg"><a class="strip" href="services.html">Services</a></li>
         <li class="orbit__item" style="--r:-1.2deg"><a class="strip" href="exhibition.html">Exhibition</a></li>
         <li class="orbit__item" style="--r:.9deg"><a class="strip" href="commissions.html">Commissions</a></li>
@@ -154,7 +148,7 @@
 
 <!-- THE PLANET: her planet is Menu; the cart count rides it as its moon -->
 <nav class="planet" aria-label="Site" hidden>
-  <button class="planet__menu" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu"><img src="../shared/brand/icon-white-400.webp" width="400" height="228" alt=""><span class="planet__label" data-label>Menu</span></button>
+  <button class="planet__menu" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu"><img src="shared/brand/icon-white-400.webp" width="400" height="228" alt=""><span class="planet__label" data-label>Menu</span></button>
   <button class="planet__cart" type="button" data-cart-open aria-haspopup="dialog" aria-label="Cart, 0 items"><span class="planet__count" data-cart-count>0</span><span class="planet__label">Cart</span></button>
 </nav>
 

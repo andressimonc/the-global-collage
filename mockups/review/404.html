@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Not built yet</title>
+<style>
+  /* What the review frame shows for a page that does not exist. No outside files: it must work from any address. */
+  :root { --page: #ffffff; --ink: #0d253d; --line: #e3e8ee; color-scheme: light dark; }
+  @media (prefers-color-scheme: dark) { :root { --page: #050507; --ink: #ffffff; --line: rgba(255, 255, 255, .12); } }
+  body { display: grid; place-items: center; min-height: 100vh; margin: 0; padding: 24px; box-sizing: border-box; background: var(--page); color: var(--ink); font: 16px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; text-align: center; }
+  h1 { max-width: 30ch; margin: 0 0 20px; font-size: 18px; font-weight: 500; }
+  button { padding: 10px 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--page); color: inherit; font: inherit; font-weight: 600; cursor: pointer; }
+  button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+  /* The options glide between pages (shared/motion.css). Opting in here too lets their glide finish instead of logging an aborted transition. */
+  @media screen and (prefers-reduced-motion: no-preference) { @view-transition { navigation: auto; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>This page is not built yet. These previews are each option's home page.</h1>
+  <button type="button" onclick="history.back()">Back</button>
+</main>
+</body>
+</html>
