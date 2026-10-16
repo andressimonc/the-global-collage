@@ -31,7 +31,7 @@ One line per choice that Dre or Camila may want to change. Home page only.
 - The footer's "Stay in touch" label reuses COPY's section name. The footer line is printed without its trailing comma.
 
 ## Pictures and cut-outs
-- Copied from option 1's `img/` into `public/site-b/img/`: `hero-hands` (from studio photo `collage-photos/bw-110`), `scrap-eye`, `scrap-strip`, `scrap-ell` (bw-110), `scrap-lips` (bw-119), `scrap-eye-square` (bw-107), and the drawn `ruler-x`, `ruler-y`, `torn-top` and `torn-bottom` files. None is cut from an artwork.
+- Copied from option 1's `img/` into `public/img/`: `hero-hands` (from studio photo `collage-photos/bw-110`), `scrap-eye`, `scrap-strip`, `scrap-ell` (bw-110), `scrap-lips` (bw-119), `scrap-eye-square` (bw-107), and the drawn `ruler-x`, `ruler-y`, `torn-top` and `torn-bottom` files. None is cut from an artwork.
 - About portrait: shared cut-out `cutouts/camila` (from `about/portrait/cami-754`), shown in black and white by a CSS filter (`cut-bw`, from option 4).
 - Ring: `shop/originals/` be-you, society, senor-tigre, female-cactus, gagas-offering and let-out (480/960 files), whole and uncropped. Hero piece: the-art-of-art.
 - Stay in touch: studio photo `collage-photos/bw-92`. The Local Collage: `exhibition/local-collage/the-local-collage-no-3-the-butterfly-effect` and `dscf7924`.

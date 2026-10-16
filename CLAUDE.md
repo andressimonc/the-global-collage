@@ -1,63 +1,59 @@
 # The Global Collage website
 
-Website for the collage artist Camila Castillo (brand: The Global Collage), shown inside one review
-site where she pages through the options and leaves notes. Round 2 (2026-10-13) was nine home pages;
-**round 3 (2026-10-14) is two**, `site-a` and `site-b`, built from her notes (`docs/ROUND-3.md`). Once
-she picks, the chosen site gets its other pages and the rest move to `mockups/`. Her shop stays on Shopify
-(store `2pssuy-7e.myshopify.com`, live at theglobalcollage.com on a stock theme).
+Website for the collage artist Camila Castillo (brand: The Global Collage). She chose **"The Work Table"**
+(site B) on 2026-10-14 after three review rounds; on 2026-10-16 it got all its pages and became the site at
+the root of `public/`. Her shop stays on Shopify (store `2pssuy-7e.myshopify.com`, admin handle
+`the-global-collage`; Dre is an admin): the site reads her products through the Storefront API and sends
+the cart to Shopify's checkout.
 
 Plain HTML, CSS and JavaScript modules. No framework, no build step. One dependency, installed by
-Vercel at deploy only: `@vercel/blob`, for the review notes.
+Vercel at deploy only: `@vercel/blob`, for the old review notes.
 
 | | |
 |---|---|
-| `public/index.html` + `public/review/` | **The review site**: the option in a frame, a notes chat beside it, arrows, a wrap-up. How it works and how to put it online: `docs/REVIEW-SITE.md` |
-| `public/option-1/` `-2/` `-3/` | First round, saved as they were (Cutting Mat, Gallery Wall, Sticker Pop). Dre: "okay, not my favorite"; they keep their top bar |
-| `public/option-4/` `-5/` `-6/` | From Camila's Pinterest board (The Poster, The Archive, Inside the Piece). Dre: "I like these" |
-| `public/option-7/` `-8/` `-9/` | Three more (The Cover, The Floor, The Orbit) |
-| `public/site-a/` `site-b/` | **Round 3, what she reviews now**: Saturn on the Mat (9 on 1's mat) and The Work Table (1 without a top bar, 9's ring and planet). Notes in `docs/site-a/`, `docs/site-b/` |
-| `public/shared/` | What every option stands on: pictures, logos, fonts, the shop layer (`shop/shop.js`), forms (`forms.js`), motion (`motion.js`, `motion.css`), switches (`config.js`) |
-| `public/404.html` | What the frame shows for a page that is not built yet |
-| `api/contact.js`, `api/notes.js` | The form function (Resend) and the review-notes function (Vercel Blob) |
-| `dev/` | `server.mjs` previews locally, never sends mail, keeps review notes in `_notes/`; `*.test.mjs` check the shop layer and both functions |
+| `public/*.html` | **The site**: Home, About, Shop, Product (`product.html?handle=`), Services, Exhibition, Commissions, Contact, Shipping & Returns, Privacy, 404 (root-absolute links: it opens at any depth) |
+| `public/css/` `public/js/` `public/img/` | `site.css` + `site.js` are shared by every page (site.js exports `orbit()` and `addToCart()`); `pages-content.*` serve About to Contact, `pages-shop.*` serve Shop, Product and the legal pages |
+| `public/shared/` | Pictures, logos, fonts, the shop layer (`shop/shop.js`), forms (`forms.js`), motion (`motion.js`, `motion.css`), switches (`config.js`: the public Storefront token, `formsLive: true`) |
+| `public/robots.txt`, `sitemap.xml` | For search engines; `vercel.json` turns on clean addresses (`/about` serves `about.html`) |
+| `api/contact.js` | The form function: contact, commission and newsletter go to her inbox through FormSubmit (no account; she activates it once) |
+| `api/notes.js` | The old review-notes function (Vercel Blob / GitHub `notes` branch). Unused since launch prep |
+| `mockups/` | Not deployed. Options 1–9, site A and the review site, kept as they were (their `../shared` paths no longer resolve) |
+| `dev/` | `server.mjs` previews locally (forms are caught there and never sent); `*.test.mjs` check the shop layer and both functions |
 | `tools/` | `shot.mjs` (real-Chrome screenshots, scripted steps, page health), `prepare-assets.py` (Drive folder → web images), `merge-catalogue.py`, `cutout.swift` |
-| `docs/` | `COPY.md` (her final words, verbatim), `BRIEF.md` then `ROUND-2.md` (the build rules; round 2 wins), `references/` (her Pinterest board, never used on a page), `manifest.json` / `catalogue.json` / `cutouts.json`, each option's `DESIGN.md` and `DECISIONS.md` |
+| `docs/` | `LAUNCH.md` (**the domain switch, step by step**), `COPY.md` (her final words, verbatim), `BRIEF.md` then `ROUND-2.md` then `ROUND-3.md` (build rules; later wins), `site-b/DESIGN.md` + `DECISIONS.md` (the chosen site), each old option's notes, `manifest.json` / `catalogue.json` / `cutouts.json` |
 | `_source/` | Camila's original files from Google Drive (not in git, never linked from a page) |
 | `TO-CONFIRM.md` | What Camila and Dre still have to supply or decide |
 
 ```bash
 npm run dev    # http://localhost:4180
 npm test
-node tools/shot.mjs /option-1/index.html _shots/x --mobile
+node tools/shot.mjs /shop.html _shots/x --mobile
 ```
 
 ## Rules that hold here
 
 - **Words come from `docs/COPY.md`, verbatim.** The artist statement is one fixed block.
 - **Nothing invented**: no prices, sizes, client names or dates. Missing things are loud placeholders
-  (class `needs-content`) and a line in `TO-CONFIRM.md`.
+  (class `needs-content`) and a line in `TO-CONFIRM.md`. Prices, titles and the one-line stories come from her Shopify.
 - **Look, colours, type, layout and wording are Dre's and Camila's to change, not a chat's.**
-  The nine options are proposals.
-- **No top bar on anything new** (Dre, 2026-10-13: "what I really don't like is the top bar and this
-  feeling of like old technology"). Pages glide into each other, things slide in and out.
-- **The shop layer is shared.** Sites never fetch Shopify or keep a cart themselves.
-  With no token in `public/shared/config.js` it serves the sample catalogue and says so on the page.
-- **Links are relative and name the file** (`shop.html`, `../shared/...`) so an option works from
-  any folder. Clean addresses are a launch task.
-- Navigation, footer and cart markup are repeated in each page of an option.
+- **Every headline is Neco in cut-paper strips** (her round-3 note). No top bar (Dre, 2026-10-13).
+- **The shop layer is shared.** Pages never fetch Shopify or keep a cart themselves. Her Shopify products
+  have no pictures yet, so `shop.js` borrows the site's own files per piece (three Shopify handles differ:
+  `let-it-out`, `gaga-ate`, `dibujo-libre`).
+- **Checkout is real.** Tests may add to a cart but never complete a checkout.
+- Links are relative and name the file (`shop.html`, `shared/...`); Vercel serves them at clean addresses.
+- Navigation, footer and cart markup are repeated in each page.
 - Pictures come in fixed widths (`name-480.webp` … `-2400.webp`), made by `tools/prepare-assets.py`.
 
-## Where it stands (2026-10-13)
+## Where it stands (2026-10-16)
 
-- **Live for review** at https://the-global-collage.vercel.app (unlisted, noindex). Published with
-  `vercel deploy --prod --yes --scope dres-projects-6e4b1739` from this folder; **Dre runs it** (a chat's
-  auto mode refuses production deploys). GitHub `andressimonc/the-global-collage` (private) is not
-  connected to Vercel, so a push does not publish.
-- Camila reviews at `/?who=camila&k=<key>`; her notes are committed to the `notes` branch as
-  `notes/camila.json`. The key is in `.review-key` (not in git). Details: `docs/REVIEW-SITE.md`.
-- Every option is its Home page only. Round 3 (2026-10-14): the review shows only `site-a` and `site-b`;
-  her round-2 notes are kept as `notes/round-2/camila.json`. **She chose `site-b`, The Work Table** (Dre, 2026-10-14).
-  Her one note on it: "make all headlines with the same font as the first hero quote". Paused until she sends
-  the Shopify Storefront token; then the headline note, site B's other pages, and the token (`TO-CONFIRM.md`).
-- This folder was moved here from a scratch workspace on 2026-10-13; `.git`, `.claude/launch.json` and
-  `tools/bin/cutout` were rebuilt after the move (`swiftc -O tools/cutout.swift -o tools/bin/cutout`).
+- **Finished, waiting for the domain switch.** Every page is built and checked on desktop and phone. Her 25
+  Shopify products were set Active by Dre's go-ahead on 2026-10-16 (they were drafts), so they also sell on
+  her stock Shopify theme until the switch.
+- **The switch is `docs/LAUNCH.md`**: Dre deploys and adds the domain to Vercel (a chat's auto mode refuses
+  production deploys), then Camila follows her steps in Shopify and activates the forms.
+- Vercel project `the-global-collage`, team `dres-projects-6e4b1739`; live preview
+  https://the-global-collage.vercel.app. GitHub `andressimonc/the-global-collage` (private) is not connected to
+  Vercel, so a push does not publish.
+- The body typeface (TT Interphases) is a trial; Dre chose to swap it for a free one (2026-10-16, pick pending).
+- Open content from Camila: `TO-CONFIRM.md`.

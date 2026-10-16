@@ -2,7 +2,7 @@
 
 **The idea.** Option 1's world, which Camila loved: her work table seen from above, with the green cutting mat, paper lying on it and her hands at work. Option 9's Saturn ring sits on top of it as the way her art is shown and the way you move around. There is no top bar. Her logo sits alone in the corner, and her planet at the foot of the screen opens the menu. Her About section is option 4's orange poster, made smaller and laid on the mat as a sheet of orange paper.
 
-Files: `public/site-b/index.html`, `css/site.css` (sections 1–12 are shared by every page, 13 is Home only), `js/site.js` (arrivals, the hero's parting layers, scraps, the logo's colour, `orbit()`, the planet and menu, the cart, forms), `img/` (option 1's cut-outs and drawn mat parts, copied).
+Files: `public/index.html`, `css/site.css` (sections 1–12 are shared by every page, 13 is Home only), `js/site.js` (arrivals, the hero's parting layers, scraps, the logo's colour, `orbit()`, the planet and menu, the cart, forms), `img/` (option 1's cut-outs and drawn mat parts, copied).
 
 ## Colour
 | Token | Value | Where |
