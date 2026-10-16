@@ -18,8 +18,9 @@ cd "/Users/dre/Documents/General - Codebases/Essentials/The Global Collage" && v
 cd "/Users/dre/Documents/General - Codebases/Essentials/The Global Collage" && vercel domains add theglobalcollage.com the-global-collage --scope dres-projects-6e4b1739 && vercel domains add www.theglobalcollage.com the-global-collage --scope dres-projects-6e4b1739
 ```
 
-The second prints the DNS records Vercel wants. If they differ from the ones in step 2 below, the printed
-ones win: change Camila's steps before sending them.
+Both done 2026-10-16 (Dre). Vercel's domain config then recommended A `216.198.79.1` + `64.29.17.1` or
+`76.76.21.21`, and CNAME `a1691c9c954b1901.vercel-dns-017.com` or `cname.vercel-dns.com`. Her steps use the
+single-value pair (`76.76.21.21`, `cname.vercel-dns.com`): fewer records to type, and Vercel accepts them.
 
 ## 2. Camila (her Shopify admin, on a computer)
 
