@@ -1,0 +1,195 @@
+/* The Global Collage — Site B, "The Work Table": the content pages.
+   About, Services, Exhibition, Commissions and Contact. Linked after site.css on those five pages only;
+   site.css (sections 1–12) is the system, this file only lays out these pages.
+   Order: 0 shared by these pages · ABOUT · SERVICES · EXHIBITION · COMMISSIONS · CONTACT.
+   Spec: docs/site-b/DESIGN.md and docs/option-1/DESIGN.md "Page plan". */
+
+/* ---------- 0. Shared by these pages ---------- */
+/* a page's first section clears the logo in the corner */
+.page-top { padding-top: calc(var(--top) + clamp(.4rem, 1.6vw, 1.5rem)); }
+/* the page title: one word cut in two strips of paper, like the hero's "frag|ments." */
+.page-title { --strip-size: clamp(3rem, 1.1rem + 6.3vw, 6.5rem); }
+.page-title .strip { font-weight: 800; }
+.page-title .s-a { --r: -1.4deg; padding-right: .1em; }
+.page-title .s-b { --r: 2.2deg; padding-left: .1em; margin-left: -.02em; margin-top: .14em; }
+.strips--h3 { --strip-size: clamp(1.7rem, 1.1rem + 2.2vw, 2.9rem); }
+.strips { row-gap: .1em; }
+
+.card--white::before { background: var(--white); }
+.torn--white::before { background: var(--white); }
+/* site.css draws focus white on the mat; on a paper card lying on the mat it has to be ink to show */
+.on-mat .card :focus-visible { outline-color: var(--ink); }
+
+/* forms: every field a line to write on, like the inputs in site.css */
+.form-card { padding: clamp(1.3rem, .9rem + 1.8vw, 2.5rem); --r: .4deg; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; }
+.form-grid .field--wide { grid-column: 1 / -1; }
+.field select, .field textarea {
+  width: 100%; min-height: 50px; padding: .6em .75em; border: 0; border-bottom: 2px solid currentColor; border-radius: 0;
+  background-color: var(--white); color: var(--cobalt); font-size: 1.05rem;
+}
+.field textarea { min-height: 7.5rem; resize: vertical; line-height: 1.45; }
+.field select {
+  appearance: none; padding-right: 2.6em; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 6l5 5 5-5' fill='none' stroke='%23122FAB' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right .8em center; background-size: 1em;
+}
+.field select:focus-visible, .field textarea:focus-visible { outline-offset: 0; }
+.form-send { margin-top: 1.5rem; }
+@media (max-width: 559px) { .form-grid { grid-template-columns: 1fr; } }
+
+/* ======================================================================================================
+   ABOUT
+   ====================================================================================================== */
+/* opening: Home's orange sheet (site.css 13, .about-*) with the page title in strips across its top edge */
+.about-open { --hang: clamp(2.3rem, 4.4vw, 4.2rem); padding-top: calc(var(--top) + var(--hang)); }
+.about-title { position: relative; z-index: 4; margin: calc(-1 * clamp(1.8rem, 3.2vw, 3rem) - var(--hang)) 0 clamp(.6rem, 1.4vw, 1.2rem) clamp(.6rem, 1.6vw, 1.6rem); --strip-size: clamp(3rem, 1.1rem + 6.3vw, 6.5rem); }
+.about-title .s-a { font-size: .6em; font-weight: 600; --r: -3deg; z-index: 2; }
+.about-title .s-b { font-weight: 800; --r: 1.4deg; margin-left: -.06em; }
+.about-open .about-lead { font-size: clamp(1.25rem, .95rem + 1.1vw, 1.95rem); line-height: 1.28; }
+@media (max-width: 859px) {
+  .about-open { padding-top: calc(var(--top) + var(--hang)); }
+  .about-open .about-cut { margin-top: -10vw; }
+}
+
+/* the artist statement: the fixed block on a white card, on a sheet */
+.statement .wrap { display: grid; justify-items: center; }
+.statement-card { max-width: 54rem; padding: clamp(1.6rem, 1rem + 3vw, 3.6rem); --r: -.5deg; }
+.statement-card blockquote { margin: 0; }
+.statement-text { font: 500 clamp(1.2rem, .95rem + 1vw, 1.75rem)/1.45 var(--font-display); letter-spacing: -.005em; text-wrap: pretty; }
+.statement-card figcaption { margin-top: clamp(1.2rem, 2.4vw, 1.8rem); }
+
+/* the story on a card on the mat, beside three overlapping process prints */
+.story .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.story-card { --r: -.6deg; }
+.story-prints { display: grid; padding-block: .8rem; }
+.story-prints .photo { width: 66%; }
+.story-prints .photo:nth-child(1) { --r: -2.6deg; }
+.story-prints .photo:nth-child(2) { justify-self: end; z-index: 1; margin-top: -15%; --r: 2.2deg; --tape-r: 4deg; }
+.story-prints .photo:nth-child(3) { z-index: 2; margin: -13% 0 0 8%; --r: -1.2deg; }
+@media (max-width: 859px) { .story .wrap { grid-template-columns: 1fr; } .story-prints .photo { width: 72%; } }
+
+/* selected exhibitions: a torn strip on a sheet */
+.about-shows .wrap { display: grid; justify-items: start; gap: clamp(1.4rem, 2.6vw, 2.2rem); }
+.shows-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 2.4rem; width: 100%; padding: 1.7rem clamp(1.2rem, 3vw, 2.6rem); --r: .5deg; }
+.shows-strip p { flex: 1 1 26rem; }
+
+/* soft close: the line in strips, then the two buttons */
+.soft-close .wrap { display: grid; justify-items: center; gap: clamp(1.6rem, 3vw, 2.4rem); }
+.soft-close-line { justify-content: center; max-width: 62rem; --strip-size: clamp(2rem, 1.2rem + 3.2vw, 3.8rem); }
+.soft-close .actions { justify-content: center; }
+
+/* ======================================================================================================
+   SERVICES
+   ====================================================================================================== */
+.svc-top .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 1.4rem clamp(2rem, 5vw, 5rem); align-items: start; }
+.svc-head { position: relative; min-height: 100%; }
+.svc-head .scrap { --r: -10deg; }
+.svc-head .scrap:nth-of-type(1) { left: 18%; top: calc(100% - 9rem); width: clamp(80px, 8vw, 120px); }
+.svc-head .scrap:nth-of-type(2) { left: 46%; top: calc(100% - 7.5rem); width: clamp(110px, 12vw, 180px); --r: 8deg; }
+.svc-intro { margin-top: clamp(.5rem, 3vw, 2.6rem); --r: .6deg; }
+@media (max-width: 859px) {
+  .svc-top .wrap { grid-template-columns: 1fr; }
+  .svc-head .scrap { display: none; }
+  .svc-intro { margin-top: 0; }
+}
+
+/* the three services: three cards in a row, each name a pair of strips hanging over the card's top edge */
+.svc-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(3rem, 5vw, 3.6rem) clamp(1rem, 2.4vw, 2rem); padding-top: 1.6rem; }
+.svc-card { padding-top: 0; }
+.svc-card:nth-child(1) { --r: -.8deg; }
+.svc-card:nth-child(2) { --r: .7deg; margin-top: 1.4rem; }
+.svc-card:nth-child(3) { --r: -.4deg; }
+.svc-name { margin: -.62em 0 1rem -.6rem; }
+@media (max-width: 859px) { .svc-cards { grid-template-columns: 1fr; } .svc-card:nth-child(2) { margin-top: 0; } }
+
+/* past projects: a row of prints that scrolls sideways (nothing supplied yet: loud placeholders) */
+.svc-past .past-row { overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter); scrollbar-width: thin; scrollbar-color: var(--white) transparent; }
+.svc-past ul { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(230px, 24vw, 330px); gap: clamp(1.2rem, 2.6vw, 2.4rem); width: max-content; padding: 2.2rem var(--gutter) 2.4rem; }
+.svc-past li { scroll-snap-align: start; }
+.past-card { aspect-ratio: 4 / 5; --r: -1.6deg; }
+.svc-past li:nth-child(even) .past-card { --r: 1.4deg; --tape-r: 3deg; }
+.past-card .needs-content { display: grid; place-items: center; height: 100%; text-align: center; }
+.svc-past .actions { justify-content: center; margin-top: .6rem; }
+
+/* ======================================================================================================
+   EXHIBITION
+   ====================================================================================================== */
+.exh-top { padding-bottom: clamp(3rem, 6vw, 5rem); }
+.exh-intro { margin: clamp(1rem, 2vw, 1.6rem) 0 0 clamp(.4rem, 5vw, 5rem); }
+.exh-top .scrap { --r: -9deg; }
+.exh-top .scrap:nth-of-type(1) { right: clamp(1rem, 12vw, 13rem); top: calc(var(--top) + 1rem); width: clamp(90px, 10vw, 150px); }
+.exh-top .scrap:nth-of-type(2) { right: clamp(1rem, 4vw, 4rem); top: calc(var(--top) + 6rem); width: clamp(140px, 17vw, 250px); --r: 12deg; }
+@media (max-width: 859px) { .exh-top .scrap { display: none; } }
+
+/* the four shows, most recent first: torn strips laid down the sheet, each name in strips across its top edge */
+.shows { display: grid; gap: clamp(3.2rem, 5vw, 4.4rem); padding-top: 1.4rem; }
+.show { padding: 0 clamp(1.2rem, 3vw, 2.6rem) clamp(1.7rem, 2.6vw, 2.3rem); }
+.show:nth-child(odd) { --r: -.45deg; margin-right: 5%; }
+.show:nth-child(even) { --r: .4deg; margin-left: 5%; }
+.show-name { margin: -.6em 0 .9rem -.5rem; }
+.show-facts { max-width: 50rem; font-size: clamp(1.05rem, .95rem + .4vw, 1.3rem); line-height: 1.48; text-wrap: pretty; }
+.show-prints { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.3rem 1.5rem; margin-top: clamp(1.4rem, 2.4vw, 2rem); }
+.show-prints .photo:nth-child(odd) { --r: -1.6deg; }
+.show-prints .photo:nth-child(even) { --r: 1.3deg; }
+.show-prints .photo img, .show-prints video { display: block; width: auto; height: clamp(140px, 13.5vw, 210px); }
+.show-prints video { aspect-ratio: 720 / 1280; background: var(--ink); }
+@media (max-width: 699px) {
+  .show:nth-child(n) { margin-inline: 0; }
+  .show-prints { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .show-prints .photo img, .show-prints video { width: 100%; height: auto; }
+}
+
+/* the local collage, on the mat */
+.lc .wrap { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+.lc-title { --strip-size: clamp(2.6rem, 1.2rem + 5.2vw, 5.6rem); }
+.lc-title .s-a { --r: -1.4deg; }
+.lc-title .s-b { --r: 1.8deg; margin-left: .4em; }
+.lc-card { max-width: 36rem; margin-top: clamp(1.1rem, 2vw, 1.6rem); --r: -.5deg; }
+.lc .actions { margin-top: clamp(1.2rem, 2vw, 1.7rem); }
+.lc-prints { position: relative; width: min(100%, 560px); margin-left: auto; padding: 16% 0 20% 30%; }
+.lc-prints .lc-main { --r: 2.4deg; }
+.lc-prints .lc-a { position: absolute; z-index: 1; left: 0; top: 0; width: 58%; --r: -3deg; }
+.lc-prints .lc-b { position: absolute; z-index: 2; left: 5%; bottom: 0; width: 54%; --r: 2deg; }
+@media (max-width: 859px) { .lc .wrap { grid-template-columns: 1fr; } .lc-prints { margin-inline: auto; } }
+
+/* ======================================================================================================
+   COMMISSIONS
+   ====================================================================================================== */
+.com-top .wrap { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: 0 clamp(2rem, 4.5vw, 4.5rem); align-items: start; }
+.com-top .page-title { grid-column: 1 / -1; }   /* too long for one column: the title runs across the top */
+.com-card { margin-top: clamp(1rem, 2vw, 1.6rem); --r: -.6deg; }
+.steps-card { margin-top: clamp(3rem, 4.6vw, 3.8rem); padding-top: 0; --r: .5deg; }
+.steps-head { margin: -.62em 0 1.1rem -.6rem; }
+.steps { display: grid; gap: .95rem; padding: 0; }
+.steps li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; align-items: start; }
+.steps .sticker { font-size: 1.05rem; }
+.steps p { padding-top: .35em; }
+.com-form { margin-top: clamp(1rem, 2vw, 1.6rem); }
+@media (max-width: 859px) { .com-top .wrap { grid-template-columns: 1fr; } .com-form { margin-top: 2.4rem; } }
+
+/* the finished commission and the pictures still to come */
+.com-work .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2.4rem, 5vw, 5rem); align-items: center; }
+.com-piece { width: min(100%, 440px); margin-inline: auto; }
+.com-piece .piece { --r: -1.8deg; }
+.com-piece .slip { position: relative; z-index: 1; margin: -1rem 0 0 1rem; transform: rotate(1.2deg); }
+.com-wip { aspect-ratio: 4 / 3; --r: 1.6deg; }
+.com-wip .needs-content { display: grid; place-items: center; height: 100%; text-align: center; }
+@media (max-width: 859px) { .com-work .wrap { grid-template-columns: 1fr; } }
+
+/* ======================================================================================================
+   CONTACT
+   ====================================================================================================== */
+.contact .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 2.2rem clamp(2rem, 4.5vw, 4.5rem); align-items: start; }
+.contact-lead { grid-area: 1 / 1; }
+.contact-form { grid-area: 1 / 2 / span 2; margin-top: clamp(0rem, 3vw, 2.4rem); }
+.contact-photo { grid-area: 2 / 1; width: min(72%, 320px); margin: 0 6% 0 auto; --r: 3deg; }
+.contact-intro { margin-top: clamp(1rem, 2vw, 1.6rem); --r: -.6deg; }
+.contact-details { display: grid; gap: .45rem; margin-top: clamp(1.2rem, 2vw, 1.6rem); padding: 1.6rem clamp(1.2rem, 2.6vw, 2rem); --r: .5deg; font-size: 1.05rem; }
+.contact-details span { font-weight: 700; }
+.contact-details a { font-weight: 500; overflow-wrap: anywhere; text-decoration-thickness: 1.5px; text-underline-offset: .2em; }
+@media (max-width: 859px) {
+  .contact .wrap { grid-template-columns: 1fr; }
+  .contact-lead, .contact-form, .contact-photo { grid-area: auto; }
+  .contact-form { margin-top: 0; }
+}
