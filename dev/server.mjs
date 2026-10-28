@@ -1,5 +1,4 @@
-// Local preview: serves public/, runs the form function without sending anything, and runs the
-// review-notes function against the folder _notes/ (one file per reviewer, made on the first save).
+// Local preview: serves public/ and runs the form function without sending anything.
 //   node dev/server.mjs        → http://localhost:4180
 // tools/shot.mjs imports startServer() to get a private copy on a free port.
 import { createServer } from 'node:http';
@@ -27,17 +26,8 @@ async function formFunction() {
   } catch { return null; }
 }
 
-// The review-notes function, keeping its files in <project>/_notes unless NOTES_DIR already names another folder.
-async function notesFunction() {
-  try {
-    process.env.NOTES_DIR ??= fileURLToPath(new URL('../_notes', import.meta.url));
-    const { GET, POST } = await import('../api/notes.js');
-    return { GET, POST };
-  } catch { return {}; }
-}
-
 export async function startServer(port = 4180) {
-  const functions = { '/api/contact': { POST: await formFunction() }, '/api/notes': await notesFunction() };
+  const functions = { '/api/contact': { POST: await formFunction() } };
   const server = createServer(async (req, res) => {
     const { pathname } = new URL(req.url, 'http://local');
     const run = Object.hasOwn(functions, pathname) && ['GET', 'POST'].includes(req.method) ? functions[pathname][req.method] : null;

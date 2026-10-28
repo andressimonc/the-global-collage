@@ -4,10 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "node dev/server.mjs",
-    "test": "node dev/shop.test.mjs && node dev/contact.test.mjs && node dev/notes.test.mjs",
+    "test": "node dev/shop.test.mjs && node dev/contact.test.mjs",
     "shot": "node tools/shot.mjs"
-  },
-  "dependencies": {
-    "@vercel/blob": "^2"
   }
 }

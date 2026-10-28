@@ -1,6 +1,5 @@
-_source/
+_source
 _shots/
-_notes/
 .vercel/
 .DS_Store
 node_modules/
